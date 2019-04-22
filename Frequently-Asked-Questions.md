@@ -1,3 +1,8 @@
+# Accessories
+## Serial cable
+The 3-pin serial JST-ZH header has ground closest to the mounting hole with RX next and TX furthest away. There are several cable options available. Further, Embest has developed a JTT-ZH to 100-mil male header for connection to a standard [FTDI cable](https://www.amazon.com/FTDI-Cable-5V-VCC-3-3V-I/dp/B00DJBPIGI).
+* [Pololu 30xm fly-lead](https://www.pololu.com/product/2411)
+* [Amazon female-to-female](https://www.amazon.com/1-5MM-Female-Double-Connector-Cable/dp/B075CBGM9P)
 # Kernel status
 ## Upstream
 ## -ti LTS kernels
