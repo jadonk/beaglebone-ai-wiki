@@ -1,3 +1,10 @@
+# Kernel status
+## Upstream
+## -ti LTS kernels
+### [4.9.147-ti-r120](https://github.com/beagleboard/linux/commit/1a5e38ab998448a2f8c9fa2d25f6d4ce02f5d5aa)
+* Works pretty well, with some gaps to be documented here
+* Requires an out-of-tree build of WiFi driver, currently being built with buildroot, but working on integrating the build in with Robert's patches
+
 # Extra included software
 ### Pinmux status script: show-pins.pl
 
