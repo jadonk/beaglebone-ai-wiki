@@ -1,4 +1,9 @@
 # Accessories
+## Power cable
+A 5V 2.5A (25W) adapter should be sufficient. It needs to be type-C. Most laptops with type-C should put out enough power to provide both power and a super-speed data connection over this cable.
+* [Wall brick without USB type-C cable](https://www.amazon.com/d/Laptop-Chargers-Adapters/Apple-USB-C-Adapter-MJ262LL-Included/B00VU2Z3J0)
+* [USB type-C cable](https://www.amazon.com/Apple-Thunderbolt-USB-C-Cable-0-8m/dp/B078H9VQ5V)
+* [USB type-C multiport adapter](https://www.amazon.com/USB-HDMI-Digital-Multiport-Adapter/dp/B07P2WW7B3)
 ## Serial cable
 The 3-pin serial JST-ZH header has ground closest to the mounting hole with RX next and TX furthest away. There are several cable options available. Further, Embest has developed a JTT-ZH to 100-mil male header for connection to a standard [FTDI cable](https://www.amazon.com/FTDI-Cable-5V-VCC-3-3V-I/dp/B00DJBPIGI).
 * [Pololu 30xm fly-lead](https://www.pololu.com/product/2411)
