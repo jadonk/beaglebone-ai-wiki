@@ -1,3 +1,8 @@
+---
+title: BeagleBone AI System Reference Manual
+mainfont: Nimbus Sans L
+...
+
 (BB AI Image)
 
 ### BeagleBone AI
@@ -6,7 +11,7 @@
 
 ### THIS DOCUMENT
 
-[![Creative Commons CC-BY-SA](cc-by-sa-88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
+[![Creative Commons CC-BY-SA](images/cc-by-sa-88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/)
 
 All derivative works are to be attributed to [Jason Kridner of BeagleBoard.org](https://beagleboard.org/about/jkridner).
