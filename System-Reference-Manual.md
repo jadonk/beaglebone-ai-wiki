@@ -1,6 +1,7 @@
 ---
 title: BeagleBone AI System Reference Manual
 mainfont: Nimbus Sans L
+linkcolor: blue
 ...
 
 (BB AI Image)
