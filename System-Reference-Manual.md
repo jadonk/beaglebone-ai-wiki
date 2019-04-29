@@ -51,6 +51,7 @@ Initial prototype revision. Not taken to production.
 #### 2.2.2 Rev A1
 
 Second round prototype.
+
 * Fixed size of mounting holes.
 * Added LED for WiFi status.
 * Added microHDMI.
@@ -60,11 +61,15 @@ Second round prototype.
 * Switched expansion header from UART4 to UART5. The UART4 pins were used for the microHDMI.
 
 #### 2.2.3 Rev A1a
+
 Pilot run.
+
 * Added pull-down resistor on serial debug header RX line.
 
 #### 2.2.4 Rev A2
+
 Proposed changes.
+
 * Moved microSD card cage closer to microHDMI to fit cases better.
 * Connected AM5729 ball AB10 to to P9.13 to provide a GPIO.
 * HDMI hot-plug detection fixes planned (TBD). 
@@ -90,6 +95,7 @@ Proposed changes.
 
 
 **Main Processor Features**
+
 * Dual 1.5GHz ARM® Cortex®-A15 with out-of-order speculative issue 3-way superscalar execution pipeline for the fastest execution of existing 32-bit code
 * 2 466x Floating-Point VLIW DSP supported by OpenCL
 * 4 Embedded Vision Engines (EVEs) supported by TIDL machine learning library
@@ -100,6 +106,7 @@ Proposed changes.
 * Dual-Core PowerVR® SGX544™ 3D GPU
 
 **Communications**
+
 * BeagleBone Black header and mechanical compatibility
 * 16-bit LCD interfaces
 * 4+ UARTs
@@ -108,15 +115,18 @@ Proposed changes.
 * Lots of PRU I/O pins
 
 **Memory**
+
 * 1GB RAM
 * 16GB on-board eMMC flash
 
 **Connectors**
+
 * USB Type-C connector for power and SuperSpeed dual-role controller
 * Gigabit Ethernet
 * 802.11ac 2.4/5GHz WiFi
 
 **Out of Box Software**
+
 * Zero-download out of box software environment
 
 ### 4.3 Board Component Locations
@@ -125,15 +135,15 @@ Proposed changes.
 
 # 5.0 BeagleBone AI High Level Specification
 
-Block Diagram
-Processor
-DSP
-EVEs
-PRUs
-Graphics Accelerator
-Memory
-Power
-Connectivity
+### Block Diagram
+### Processor
+### DSP
+### EVEs
+### PRUs
+### Graphics Accelerator
+### Memory
+### Power
+### Connectivity
 
 # 6.0 Detailed Hardware Design
 
