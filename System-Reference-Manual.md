@@ -17,13 +17,13 @@ This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Inter
 
 All derivative works are to be attributed to [Jason Kridner of BeagleBoard.org](https://beagleboard.org/about/jkridner).
 
-Supply comments and errors via https://github.com/beagleboard/beaglebone-ai/issues.
+Supply comments and errors via [https://github.com/beagleboard/beaglebone-ai/issues](https://github.com/beagleboard/beaglebone-ai/issues).
 
 All information in this document is subject to change without notice.
 
 For an up to date version of this document refer to:
 
-https://github.com/beagleboard/beaglebone-ai/wiki/System-Reference-Manual
+[https://github.com/beagleboard/beaglebone-ai/wiki/System-Reference-Manual](https://github.com/beagleboard/beaglebone-ai/wiki/System-Reference-Manual)
 
 ## BeagleBone AI Design
 
