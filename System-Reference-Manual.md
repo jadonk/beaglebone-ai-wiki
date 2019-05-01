@@ -7,11 +7,9 @@ footer: BeagleBoard.org®
 
 (BB AI Image)
 
-### BeagleBone AI
+# BeagleBone AI System Reference Manual (SRM)
 
-### System Reference Manual (SRM)
-
-### THIS DOCUMENT
+## THIS DOCUMENT
 
 [![Creative Commons CC-BY-SA](images/cc-by-sa-88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/)
@@ -26,7 +24,7 @@ For an up to date version of this document refer to:
 
 [https://github.com/beagleboard/beaglebone-ai/wiki/System-Reference-Manual](https://github.com/beagleboard/beaglebone-ai/wiki/System-Reference-Manual)
 
-## BeagleBone AI Design
+# BeagleBone AI Design
 
 ## REGULATORY AND COMPLIANCE INFORMATION
 
@@ -181,11 +179,11 @@ This section provides a detailed description of the Hardware design. This can be
 
 ### 7.1 Expansion Connectors
 
-The expansion interface on the board is comprised of two 46 pin connectors. All signals on the expansion headers are **3.3V unless otherwise indicated.
+The expansion interface on the board is comprised of two 46 pin connectors. All signals on the expansion headers are **3.3V** unless otherwise indicated.
 
-**NOTE: Do not connect 5V logic level signals to these pins or the board will be damaged.
+**NOTE**: Do not connect 5V logic level signals to these pins or the board will be damaged.
 
-**NOTE: DO NOT APPLY VOLTAGE TO ANY I/O PIN WHEN POWER IS NOT SUPPLIED TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.**
+**NOTE**: DO NOT APPLY VOLTAGE TO ANY I/O PIN WHEN POWER IS NOT SUPPLIED TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.
 
 **NO PINS ARE TO BE DRIVEN UNTIL AFTER THE SYS_RESET LINE GOES HIGH.**
 
@@ -205,11 +203,11 @@ The **PIN** column is the pin number on the expansion header.
 
 The **MODE** columns are the mode setting for each pin. Setting each mode to align with the mode column will give that function on that pin.
 
-**NOTE: DO NOT APPLY VOLTAGE TO ANY I/O PIN WHEN POWER IS NOT SUPPLIED TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.**
+**NOTE**: DO NOT APPLY VOLTAGE TO ANY I/O PIN WHEN POWER IS NOT SUPPLIED TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.
 
 **NO PINS ARE TO BE DRIVEN UNTIL AFTER THE SYS_RESET LINE GOES HIGH.**
 
-**Table ?. Expansion Header P8 Pinout**
+**Table ?** Expansion Header P8 Pinout
 
 | PIN | PROC | NAME           | MODE0        | MODE1        | MODE2        | MODE3         |
 | --- | ---- | -------------- | ------------ | ------------ | ------------ | ------------- |
@@ -487,11 +485,19 @@ In the table are the following notations:
 
 **PWR_BUT** is a 5V level as pulled up internally by the TPS6590377. It is activated by pulling the signal to GND.
 
+(Actually, on BeagleBone AI, I believe PWR_BUT is pulled to 3.3V, but activation is still done by pulling the signal to GND. Also, a quick
+grounding of PWR_BUT will trigger a system event where shutdown can occur, but there is no hardware power-off function like on
+BeagleBone Black via this signal. It does, however, act as a hardware power-on.)
+
 **NOTE: DO NOT APPLY VOLTAGE TO ANY I/O PIN WHEN POWER IS NOT SUPPLIED TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.**
 
 **NO PINS ARE TO BE DRIVEN UNTIL AFTER THE SYS_RESET LINE GOES HIGH.**
 
+(On BeagleBone Black, SYS_RESET was a bi-directional signal, but it is only an output from BeagleBone AI to capes on BeagleBone AI.)
+
 **Table ?. Expansion Header P9 Pinout**
+
+(Please update the table to look reasonable on both web pages and in PDF.)
 
 | PIN | PROC | NAME | MODE0 | MODE1 | MODE2 | MODE3 | MODE4 | MODE5 | MODE6 | MODE7 | MODE8 | MODE9 | MODE10 | MODE11 | MODE12 | MODE13 | MODE14 |
 | --- | ---- | ---- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ------ | ------ | ------ | ------ | ------ |
