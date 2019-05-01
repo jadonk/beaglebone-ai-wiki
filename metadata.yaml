@@ -1,7 +1,7 @@
 ---
 title: BeagleBone AI System Reference Manual (SRM)
 mainfont: Nimbus Sans L
-linkcolor: blue
+linkcolor: Blue
 geometry:
 - top=1in
 - bottom=1in
@@ -15,4 +15,10 @@ header-includes: |
     \fancyfoot[LO,LE]{BeagleBoard.org® logo here}
     \fancyfoot[CO,CE]{page \thepage  of \pageref{LastPage}}
     \fancyfoot[RO,RE]{\today}
+    \usepackage[table]{xcolor}
+    \definecolor{lightgray}{gray}{0.95}
+    \definecolor{Blue}{rgb}{0,0,0.93}
+    \let\OldLongtable\longtable
+    \let\OldEndLongtable\endlongtable
+    \renewenvironment{longtable}{\rowcolors{1}{white}{lightgray}\OldLongtable}{\OldEndLongtable}
 ---
