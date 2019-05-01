@@ -7,18 +7,24 @@ geometry:
 - bottom=1in
 - left=0.8in
 - right=0.8in
-header-includes: |
-    \usepackage{lastpage}
-    \usepackage{fancyhdr}
-    \pagestyle{fancy}
-    \fancyhead[LO,LE]{BeagleBone AI SRM}
-    \fancyfoot[LO,LE]{BeagleBoard.org® logo here}
-    \fancyfoot[CO,CE]{page \thepage  of \pageref{LastPage}}
-    \fancyfoot[RO,RE]{\today}
-    \usepackage[table]{xcolor}
-    \definecolor{lightgray}{gray}{0.95}
-    \definecolor{Blue}{rgb}{0,0,0.93}
-    \let\OldLongtable\longtable
-    \let\OldEndLongtable\endlongtable
-    \renewenvironment{longtable}{\rowcolors{1}{white}{lightgray}\OldLongtable}{\OldEndLongtable}
+header-includes:
+- \usepackage{lastpage}
+- \usepackage{fancyhdr}
+- \usepackage{multicol}
+- \newcommand{\hideFromPandoc}[1]{#1}
+- \hideFromPandoc{
+     \let\Begin\begin
+     \let\End\end
+  }
+- \pagestyle{fancy}
+- \fancyhead[LO,LE]{BeagleBone AI SRM}
+- \fancyfoot[LO,LE]{BeagleBoard.org® logo here}
+- \fancyfoot[CO,CE]{page \thepage  of \pageref{LastPage}}
+- \fancyfoot[RO,RE]{\today}
+- \usepackage[table]{xcolor}
+- \definecolor{lightgray}{gray}{0.95}
+- \definecolor{Blue}{rgb}{0,0,0.93}
+- \let\OldLongtable\longtable
+- \let\OldEndLongtable\endlongtable
+- \renewenvironment{longtable}{\rowcolors{1}{white}{lightgray}\OldLongtable}{\OldEndLongtable}
 ---

@@ -32,6 +32,8 @@ Built on the proven BeagleBoard.org® open source Linux approach, BeagleBone® A
 
 # 2.0 Change History
 
+\Begin{multicols}{2}
+
 ### 2.1 Document Change History
 
 ### 2.2 Board changes
@@ -197,6 +199,8 @@ The **MODE** columns are the mode setting for each pin. Setting each mode to ali
 **NOTE**: DO NOT APPLY VOLTAGE TO ANY I/O PIN WHEN POWER IS NOT SUPPLIED TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.
 
 **NO PINS ARE TO BE DRIVEN UNTIL AFTER THE SYS_RESET LINE GOES HIGH.**
+
+\End{multicols}
 
 **Table ?** Expansion Header P8 Pinout
 
