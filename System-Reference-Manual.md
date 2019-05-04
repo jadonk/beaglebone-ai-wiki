@@ -172,6 +172,8 @@ This section provides a detailed description of the Hardware design. This can be
 
 # 7.0 Connectors
 
+![beaglebone ai connector placement](images/BB_AI_Connectorplacement_500px.png)
+
 ### 7.1 Expansion Connectors
 
 The expansion interface on the board is comprised of two 46 pin connectors. All signals on the expansion headers are **3.3V** unless otherwise indicated.
