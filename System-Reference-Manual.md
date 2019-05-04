@@ -444,119 +444,118 @@ BeagleBone Black via this signal. It does, however, act as a hardware power-on.)
 |10   |      | SYS_RESETn2    |              |              |              |               |               |
 |11   | B19  | UART5_RXD      | mcasp3_axr0  |              | mcasp2_axr14 | uart7_ctsn    | uart5_rxd     |
 |     | B8   |                | vout1_d17    |              | uart7_txd    | vin4a_d1      | vin3a_d1      |
-													
-|12   |      |                |              |              |              |               |               |
-|13   |      |                |              |              |              |               |               |
-|     |      |                |              |              |              |               |               |
-|14   |      |                |              |              |              |               |               |
-|15   |      |                |              |              |              |               |               |
-|16   |      |                |              |              |              |               |               |
-|17   |      |                |              |              |              |               |               |
-|     |      |                |              |              |              |               |               |
-|18   |      |                |              |              |              |               |               |
-|     |      |                |              |              |              |               |               |
-|19   |      |                |              |              |              |               |               |
-|     |      |                |              |              |              |               |               |
-|20   |      |                |              |              |              |               |               |
-|     |      |                |              |              |              |               |               |
-|21   |      |                |              |              |              |               |               |
-|     |      |                |              |              |              |               |               |
-|22   |      |                |              |              |              |               |               |
-|     |      |                |              |              |              |               |               |
-|23   |      |                |              |              |              |               |               |
-|24   |      |                |              |              |              |               |               |
-|25   |      |                |              |              |              |               |               |
-|26   |      |                |              |              |              |               |               |
-|     |      |                |              |              |              |               |               |
-|27   |      |                |              |              |              |               |               |
-|     |      |                |              |              |              |               |               |
-|28   |      |                |              |              |              |               |               |
-|29   |      |                |              |              |              |               |               |
-|     |      |                |              |              |              |               |               |
-|30   |      |                |              |              |              |               |               |
-|31   |      |                |              |              |              |               |               |
-|     |      |                |              |              |              |               |               |
-|32   |      |                |              |              |              |               |               |
-|33   |      |                |              |              |              |               |               |
-|34   |      |                |              |              |              |               |               |
-|35   |      |                |              |              |              |               |               |
-|36   |      |                |              |              |              |               |               |
-|37   |      |                |              |              |              |               |               |
-|38   |      |                |              |              |              |               |               |
-|39   |      |                |              |              |              |               |               |
-|40   |      |                |              |              |              |               |               |
-|41   |      |                |              |              |              |               |               |
-|     |      |                |              |              |              |               |               |
-|42   |      |                |              |              |              |               |               |
-|     |      |                |              |              |              |               |               |
-|43   |      |                |              |              |              |               |               |
-|44   |      |                |              |              |              |               |               |
-|45   |      |                |              |              |              |               |               |
-|46   |      |                |              |              |              |               |               |
+|12   | B14  | B14_MCASP_ACLKR| mcasp1_aclkr | mcasp7_axr2  |              |               |               |
+|13   | C17  | C17_UART5_TXD  | mcasp3_axr1  |              | mcasp2_axr15 | uart7_rtsn    | uart5_txd     |
+|     | AB10 |                | usb1_drvvbus |              |              |               |               |
+|14   | D6   | D6_EHRPWM3A    | vin2a_d17    |              | vin2b_d6     | rgmii1_txd0   | vout2_d6      |
+|15   | AG4  | AG4_GPIO3_12   | vin1a_d8     | vin1b_d7     |              |               | vout3_d15     |
+|16   | C5   | C5_EHRPWM3B    | vin2a_d18    |              | vin2b_d5     | rgmii1_rxc    | vout2_d5      |
+|17   | B24  | I2C5_SCL       | spi2_cs0     | uart3_rtsn   | uart5_txd    |               |               |
+|     | F12  |                | mcasp1_axr1  |              |              | uart6_txd     |               |
+|18   | G17  | I2C5_SDA       | spi2_d0      | uart3_ctsn   | uart5_rxd    |               |               |
+|     | G12  |                | mcasp1_axr0  |              |              | uart6_rxd     |               |
+|19   | R6   | I2C4_SCL       | gpmc_a0      |              | vin3a_d16    | vout3_d16     | vin4a_d0      |
+|     | F4   |                | vin2a_d5     |              |              |               | vout2_d18     |
+|20   | T9   | I2C4_SDA       | gpmc_a1      |              | vin3a_d17    | vout3_d17     | vin4a_d1      |
+|     | D2   |                | vin2a_d4     |              |              |               | vout2_d19     |
+|21   | AF8  | UART3_TXD      | vin1a_vsync0 | vin1b_de1    |              |               | vout3_vsync   |
+|     | B22  |                | spi2_d1      | uart3_txd    |              |               |               |
+|22   | B26  | UART3_RXD      | xref_clk2    | mcasp2_axr10 | mcasp1_axr6  | mcasp3_ahclkx | mcasp7_ahclk  |
+|     | A26  |                | spi2_sclk    | uart3_rxd    |              |               |               |
+|23   | A22  | A22_SPI2_CS1   | spi1_cs1     |              | sata1_led    | spi2_cs1      |               |
+|24   | F20  | F20_UART10_TXD | gpio6_15     | mcasp1_axr9  | dcan2_rx     | uart10_txd    |               |
+|25   | D18  | D18_GPIO6_17   | xref_clk0    | mcasp2_axr8  | mcasp1_axr4  | mcasp1_ahclkx | mcasp5_ahclkx |
+|26   | E21  | UART10_RXD     | gpio6_14     | mcasp1_axr8  | dcan2_tx     | uart10_rxd    |               |
+|     | AE2  |                | vin1a_d20    | vin1b_d3     |              |               | vout3_d3      |
+|27   | C3   | MCASP_FSR      | vin2a_d14    |              |              | rgmii1_txd3   | vout2_d9      |
+|     | J14  |                | mcasp1_fsr   | mcasp7_axr3  |              |               |               |
+|28   | A12  | A12_SPI3_CS0   | mcasp1_axr11 | mcasp6_fsx   | mcasp6_fsr   | spi3_cs0      |               |
+|29   | A11  | SPI3_D1        | mcasp1_axr9  | mcasp6_axr1  |              | spi3_d1       |               |
+|     | D14  |                | mcasp1_fsx   |              |              |               |               |
+|30   | B13  | B13_SPI3_D0    | mcasp1_axr10 | mcasp6_aclkx | mcasp6_aclkr | spi3_d0       |               |
+|31   | B12  | SPI3_SCLK      | mcasp1_axr8  | mcasp6_axr0  |              | spi3_sclk     |               |
+|     | C14  |                | mcasp1_aclkx |              |              |               |               |
+|32   |      | VDD_ADC        |              |              |              |               |               |
+|33   |      | AIN4           |              |              |              |               |               |
+|34   |      | AGND           |              |              |              |               |               |
+|35   |      | AIN6           |              |              |              |               |               |
+|36   |      | AIN5           |              |              |              |               |               |
+|37   |      | AIN2           |              |              |              |               |               |
+|38   |      | AIN3           |              |              |              |               |               |
+|39   |      | AIN0           |              |              |              |               |               |
+|40   |      | AIN1           |              |              |              |               |               |
+|41   | C23  | CLKOUT3        | xref_clk3    | mcasp2_axr11 | mcasp1_axr7  | mcasp4_ahclkx | mcasp8_ahclkx |
+|     | C1   |                | vin2a_d6     |              |              |               | vout2_d17     |
+|42   | E14  | GPIO4_18       | mcasp1_axr12 | mcasp7_axr0  |              | spi3_cs1      |               |
+|     | C2   |                | vin2a_d13    |              |              | rgmii1_txctl  | vout2_d10     |
+|43   |      | GND            |              |              |              |               |               |
+|44   |      | GND            |              |              |              |               |               |
+|45   |      | GND            |              |              |              |               |               |
+|46   |      | GND            |              |              |              |               |               |
 
 
-| PIN | PROC | MODE5      | MODE6     | MODE7      | MODE8        | MODE9        | MODE10                      |
-| --- | ---- | ---------- | --------- | ---------- | ------------ | ------------ | --------------------------- |
-|1    |      |            |           |            |              |              |                             |
-|2    |      |            |           |            |              |              |                             |
-|3    |      |            |           |            |              |              |                             |
-|4    |      |            |           |            |              |              |                             |
-|5    |      |            |           |            |              |              |                             |
-|6    |      |            |           |            |              |              |                             |
-|7    |      |            |           |            |              |              |                             |
-|8    |      |            |           |            |              |              |                             |
-|9    |      |            |           |            |              |              |                             |
-|10   |      |            |           |            |              |              |                             |
-|11   | B19  |            |           | vin6a_d1   |              |              |                             |
-|     | B8   |            |           |            |              |              | pr2_edio_data_in1           |
-|12   |      |            |           |            |              |              |                             |
-|13   |      |            |           |            |              |              |                             |
-|     |      |            |           |            |              |              |                             |
-|14   |      |            |           |            |              |              |                             |
-|15   |      |            |           |            |              |              |                             |
-|16   |      |            |           |            |              |              |                             |
-|17   |      |            |           |            |              |              |                             |
-|     |      |            |           |            |              |              |                             |
-|18   |      |            |           |            |              |              |                             |
-|     |      |            |           |            |              |              |                             |
-|19   |      |            |           |            |              |              |                             |
-|     |      |            |           |            |              |              |                             |
-|20   |      |            |           |            |              |              |                             |
-|     |      |            |           |            |              |              |                             |
-|21   |      |            |           |            |              |              |                             |
-|     |      |            |           |            |              |              |                             |
-|22   |      |            |           |            |              |              |                             |
-|     |      |            |           |            |              |              |                             |
-|23   |      |            |           |            |              |              |                             |
-|24   |      |            |           |            |              |              |                             |
-|25   |      |            |           |            |              |              |                             |
-|26   |      |            |           |            |              |              |                             |
-|     |      |            |           |            |              |              |                             |
-|27   |      |            |           |            |              |              |                             |
-|     |      |            |           |            |              |              |                             |
-|28   |      |            |           |            |              |              |                             |
-|29   |      |            |           |            |              |              |                             |
-|     |      |            |           |            |              |              |                             |
-|30   |      |            |           |            |              |              |                             |
-|31   |      |            |           |            |              |              |                             |
-|     |      |            |           |            |              |              |                             |
-|32   |      |            |           |            |              |              |                             |
-|33   |      |            |           |            |              |              |                             |
-|34   |      |            |           |            |              |              |                             |
-|35   |      |            |           |            |              |              |                             |
-|36   |      |            |           |            |              |              |                             |
-|37   |      |            |           |            |              |              |                             |
-|38   |      |            |           |            |              |              |                             |
-|39   |      |            |           |            |              |              |                             |
-|40   |      |            |           |            |              |              |                             |
-|41   |      |            |           |            |              |              |                             |
-|     |      |            |           |            |              |              |                             |
-|42   |      |            |           |            |              |              |                             |
-|     |      |            |           |            |              |              |                             |
-|43   |      |            |           |            |              |              |                             |
-|44   |      |            |           |            |              |              |                             |
-|45   |      |            |           |            |              |              |                             |
-|46   |      |            |           |            |              |              |                             |
+| PIN | PROC | MODE5      | MODE6      | MODE7       | MODE8        | MODE9        | MODE10                      |
+| --- | ---- | ---------- | ---------- | ----------- | ------------ | ------------ | --------------------------- |
+|1    |      |            |            |             |              |              |                             |
+|2    |      |            |            |             |              |              |                             |
+|3    |      |            |            |             |              |              |                             |
+|4    |      |            |            |             |              |              |                             |
+|5    |      |            |            |             |              |              |                             |
+|6    |      |            |            |             |              |              |                             |
+|7    |      |            |            |             |              |              |                             |
+|8    |      |            |            |             |              |              |                             |
+|9    |      |            |            |             |              |              |                             |
+|10   |      |            |            |             |              |              |                             |
+|11   | B19  |            |            | vin6a_d1    |              |              |                             |
+|     | B8   |            |            |             |              |              | pr2_edio_data_in1           |
+|12   | B14  |            | vout2_d0   |             | vin4a_d0     |              | i2c4_sda                    |
+|13   | C17  |            |            | vin6a_d0    |              | vin5a_fld0   |                             |
+|     | AB10 |            |            | timer16     |              |              |                             |
+|14   | D6   |            | vin3a_d9   |             | mii1_txd2    |              | ehrpwm3A                    |
+|15   | AG4  |            |            |             |              | kbd_row2     | eQEP2_index                 |
+|16   | C5   |            | vin3a_d10  |             | mii1_txd3    |              | ehrpwm3B                    |
+|17   | B24  |            |            |             |              |              |                             |
+|     | F12  |            |            | vin6a_hsync0|              |              | i2c5_scl                    |
+|18   | G17  |            |            |             |              |              |                             |
+|     | G12  |            |            | vin6a_vsync0|              |              | i2c5_sda                    |
+|19   | R6   |            | vin4b_d0   | i2c4_scl    | uart5_rxd    |              |                             |
+|     | F4   | emu15      |            |             | uart10_rtsn  | kbd_col2     | eQEP2A_in                   |
+|20   | T9   |            | vin4b_d1   | i2c4_sda    | uart5_txd    |              |                             |
+|     | D2   | emu14      |            |             | uart10_ctsn  | kbd_col1     | ehrpwm1_synco               |
+|21   | AF8  | uart7_rtsn |            | timer13     | spi3_cs0     |              | eQEP1_strobe                |
+|     | B22  |            |            |             |              |              |                             |
+|22   | B26  |            | vout2_clk  |             | vin4a_clk0   |              | timer15                     |
+|     | A26  |            |            |             |              |              |                             |
+|23   | A22  |            |            |             |              |              |                             |
+|24   | F20  |            | vout2_vsync|             | vin4a_vsync0 | i2c3_scl     | timer2                      |
+|25   | D18  |            |            | vin6a_d0    | hdq0         | clkout2      | timer13                     |
+|26   | E21  |            | vout2_hsync|             | vin4a_hsync0 | i2c3_sda     | timer1                      |
+|     | AE2  |            | vin3a_d4   |             |              | kbd_col5     | pr1_edio_data_in4           |
+|27   | C3   |            |            |             | mii1_txclk   |              | eQEP3B_in                   |
+|     | J14  |            | vout2_d1   |             | vin4a_d1     |              | i2c4_scl                    |
+|28   | A12  |            |            | vin6a_d12   |              |              | timer8                      |
+|29   | A11  |            |            | vin6a_d14   |              |              | timer6                      |
+|     | D14  |            |            | vin6a_de0   |              |              | i2c3_scl                    |
+|30   | B13  |            |            | vin6a_d13   |              |              | timer7                      |
+|31   | B12  |            |            | vin6a_d15   |              |              | timer5                      |
+|     | C14  |            |            | vin6a_fld0  |              |              | i2c3_sda                    |
+|32   |      |            |            |             |              |              |                             |
+|33   |      |            |            |             |              |              |                             |
+|34   |      |            |            |             |              |              |                             |
+|35   |      |            |            |             |              |              |                             |
+|36   |      |            |            |             |              |              |                             |
+|37   |      |            |            |             |              |              |                             |
+|38   |      |            |            |             |              |              |                             |
+|39   |      |            |            |             |              |              |                             |
+|40   |      |            |            |             |              |              |                             |
+|41   | C23  |            | vout2_de   | hdq0        | vin4a_de0    | clkout3      | timer16                     |
+|     | C1   | emu16      |            |             | mii1_rxd1    | kbd_col3     | eQEP2B_in                   |
+|42   | E14  |            |            | vin6a_d11   |              |              | timer9                      |
+|     | C2   |            |            |             | mii1_rxdv    | kbd_row8     | eQEP3A_in                   |
+|43   |      |            |            |             |              |              |                             |
+|44   |      |            |            |             |              |              |                             |
+|45   |      |            |            |             |              |              |                             |
+|46   |      |            |            |             |              |              |                             |
 
 
 
@@ -575,37 +574,37 @@ BeagleBone Black via this signal. It does, however, act as a hardware power-on.)
 |10   |      |                             |                   |                    |          |
 |11   | B19  | pr2_mii1_rxer               | pr2_pru0_gpi14    | pr2_pru0_gpo14     |          |
 |     | B8   | pr2_edio_data_out1          | pr2_pru0_gpi14    | pr2_pru0_gpo14     | gpio8_17 |
-|12   |      |                             |                   |                    |          |
-|13   |      |                             |                   |                    |          |
-|     |      |                             |                   |                    |          |
-|14   |      |                             |                   |                    |          |
-|15   |      |                             |                   |                    |          |
-|16   |      |                             |                   |                    |          |
-|17   |      |                             |                   |                    |          |
-|     |      |                             |                   |                    |          |
-|18   |      |                             |                   |                    |          |
-|     |      |                             |                   |                    |          |
-|19   |      |                             |                   |                    |          |
-|     |      |                             |                   |                    |          |
-|20   |      |                             |                   |                    |          |
-|     |      |                             |                   |                    |          |
-|21   |      |                             |                   |                    |          |
-|     |      |                             |                   |                    |          |
-|22   |      |                             |                   |                    |          |
-|     |      |                             |                   |                    |          |
-|23   |      |                             |                   |                    |          |
-|24   |      |                             |                   |                    |          |
-|25   |      |                             |                   |                    |          |
-|26   |      |                             |                   |                    |          |
-|     |      |                             |                   |                    |          |
-|27   |      |                             |                   |                    |          |
-|     |      |                             |                   |                    |          |
-|28   |      |                             |                   |                    |          |
-|29   |      |                             |                   |                    |          |
-|     |      |                             |                   |                    |          |
-|30   |      |                             |                   |                    |          |
-|31   |      |                             |                   |                    |          |
-|     |      |                             |                   |                    |          |
+|12   | B14  |                             |                   |                    | gpio5_0  |
+|13   | C17  | pr2_mii1_rxlink             | pr2_pru0_gpi15    | pr2_pru0_gpo15     |          |
+|     | AB10 |                             |                   |                    | gpio6_12 |
+|14   | D6   | pr1_mii1_rxd2               | pr1_pru1_gpi14    | pr1_pru1_gpo14     | gpio4_25 |
+|15   | AG4  |                             | pr1_pru0_gpi5     | pr1_pru0_gpo5      | gpio3_12 |
+|16   | C5   | pr1_mii1_rxd1               | pr1_pru1_gpi15    | pr1_pru1_gpo15     | gpio4_26 |
+|17   | B24  |                             |                   |                    | gpio7_17 |
+|     | F12  | pr2_mii_mt0_clk             | pr2_pru1_gpi9     | pr2_pru1_gpo9      | gpio5_3  |
+|18   | G17  |                             |                   |                    | gpio7_16 |
+|     | G12  | pr2_mii0_rxer               | pr2_pru1_gpi8     | pr2_pru1_gpo8      | gpio5_2  |
+|19   | R6   |                             |                   |                    | gpio7_3  |
+|     | F4   | pr1_edio_sof                | pr1_pru1_gpi2     | pr1_pru1_gpo2      | gpio4_6  |
+|20   | T9   |                             |                   |                    | gpio7_4  |
+|     | D2   | pr1_edc_sync0_out           | pr1_pru1_gpi1     | pr1_pru1_gpo1      | gpio4_5  |
+|21   | AF8  |                             |                   |                    | gpio3_3  |
+|     | B22  |                             |                   |                    | gpio7_15 |
+|22   | B26  |                             |                   |                    | gpio6_19 |
+|     | A26  |                             |                   |                    | gpio7_14 |
+|23   | A22  |                             |                   |                    | gpio7_11 |
+|24   | F20  |                             |                   |                    | gpio6_15 |
+|25   | D18  | pr2_mii1_col                | pr2_pru1_gpi5     | pr2_pru1_gpo5      | gpio6_17 |
+|26   | E21  |                             |                   |                    | gpio6_14 |
+|     | AE2  | pr1_edio_data_out4          | pr1_pru0_gpi17    | pr1_pru0_gpo17     | gpio3_24 |
+|27   | C3   | pr1_mii_mr1_clk             | pr1_pru1_gpi11    | pr1_pru1_gpo11     | gpio4_15 |
+|     | J14  |                             |                   |                    | gpio5_1  |
+|28   | A12  | pr2_mii0_txd1               | pr2_pru1_gpi13    | pr2_pru1_gpo13     | gpio4_17 |
+|29   | A11  | pr2_mii0_txd3               | pr2_pru1_gpi11    | pr2_pru1_gpo11     | gpio5_11 |
+|     | D14  | pr2_mdio_data               |                   |                    | gpio7_30 |
+|30   | B13  | pr2_mii0_txd2               | pr2_pru1_gpi12    | pr2_pru1_gpo12     | gpio5_12 |
+|31   | B12  | pr2_mii0_txen               | pr2_pru1_gpi10    | pr2_pru1_gpo10     | gpio5_10 |
+|     | C14  | pr2_mdio_mdclk              | pr2_pru1_gpi7     | pr2_pru1_gpo7      | gpio7_31 |
 |32   |      |                             |                   |                    |          |
 |33   |      |                             |                   |                    |          |
 |34   |      |                             |                   |                    |          |
@@ -615,10 +614,10 @@ BeagleBone Black via this signal. It does, however, act as a hardware power-on.)
 |38   |      |                             |                   |                    |          |
 |39   |      |                             |                   |                    |          |
 |40   |      |                             |                   |                    |          |
-|41   |      |                             |                   |                    |          |
-|     |      |                             |                   |                    |          |
-|42   |      |                             |                   |                    |          |
-|     |      |                             |                   |                    |          |
+|41   | C23  |                             |                   |                    | gpio6_20 |
+|     | C1   | pr1_mii_mt1_clk             | pr1_pru1_gpi3     | pr1_pru1_gpo3      | gpio4_7  |
+|42   | E14  | pr2_mii0_txd0               | pr2_pru1_gpi14    | pr2_pru1_gpo14     | gpio4_18 |
+|     | C2   | pr1_mii1_txd0               | pr1_pru1_gpi10    | pr1_pru1_gpo10     | gpio4_14 |
 |43   |      |                             |                   |                    |          |
 |44   |      |                             |                   |                    |          |
 |45   |      |                             |                   |                    |          |
