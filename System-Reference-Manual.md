@@ -123,7 +123,7 @@ Proposed changes.
 * Zero-download out of box software environment
 
 ### 4.3 Board Component Locations
-
+![beaglebone ai component placement](images/BB_AI_ICPlacement_500px.png)
 
 # 5.0 BeagleBone AI High Level Specification
 
@@ -166,6 +166,7 @@ This section provides a detailed description of the Hardware design. This can be
 (Schematic screenshoot)
 
 #### 6.1.3 Power Button
+![beaglebone ai user interface placement](images/BB_AI_Userinterface_500px.png)
 
 #### 6.1.4  
 
@@ -176,7 +177,7 @@ This section provides a detailed description of the Hardware design. This can be
 
 ### 7.1 Expansion Connectors
 
-The expansion interface on the board is comprised of two 46 pin connectors. All signals on the expansion headers are **3.3V** unless otherwise indicated.
+The expansion interface on the board is comprised of two 46 pin connectors, the P8 and P9 Headers. All signals on the expansion headers are **3.3V** unless otherwise indicated.
 
 **NOTE**: Do not connect 5V logic level signals to these pins or the board will be damaged.
 
@@ -186,7 +187,7 @@ The expansion interface on the board is comprised of two 46 pin connectors. All 
 
 **Figure ?** shows the location of the expansion connectors.
 
-Insert Figure Here
+![beaglebone ai header placement](images/BB_AI_Headerplacement_500px.png)
 
 The location and spacing of the expansion headers are the same as on the BeagleBone Black.
 
