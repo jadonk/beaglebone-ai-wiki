@@ -97,6 +97,21 @@ Heat Sink and Antenna in place
 
 ### 3.3 Tethered to a PC
 
+
+
+* Connect a USB type-C cable to BeagleBone® AI USB type-C port.
+
+* Connect the other end of the USB cable to the PC USB 3 port.
+
+* BeagleBone® AI will boot.
+
+* Look for a new mass storage drive to appear on the PC.
+
+* Open the drive and open START.HTM with your web browser.
+
+* Follow the instructions in the browser window.
+
+
 ### 3.4 Standalone w/Display and Keyboard/Mouse
 
 
