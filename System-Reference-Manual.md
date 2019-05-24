@@ -73,6 +73,12 @@ Proposed changes.
 # 3.0 Connecting Up Your BeagleBone AI
 
 ### 3.1 What's In the Box
+BeagleBone AI Comes in the Box with 4 items:
+![BeagleBone AI Overview](images/BB_AI_outofbox_box_500px.jpg)
+1)
+2)
+3)
+4)
 
 ### 3.2 Main Connection Scenarios
 
