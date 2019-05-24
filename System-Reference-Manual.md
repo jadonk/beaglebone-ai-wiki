@@ -82,11 +82,17 @@ BeagleBone® AI Comes in the Box with 4 items
 * Heat Sink
 
 Connecting the Heat Sink
+
 ![BeagleBone AI Overview](images/BB_AI_Heat_Sink_500px.jpg)
+
 Conneccting the Antenna
+
 ![BeagleBone AI Overview](images/BB_AI_Antenna_placement_500px.jpg)
+
 Heat Sink and Antenna in place
+
 ![BeagleBone AI Overview](images/BB_AI_antenna_heat_sink place 500px.jpg)
+
 ### 3.2 Main Connection Scenarios
 
 ### 3.3 Tethered to a PC
