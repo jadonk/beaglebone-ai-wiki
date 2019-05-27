@@ -82,12 +82,15 @@ BeagleBone® AI Comes in the Box with 4 items
 * Heat Sink
 
 #### Connecting the Heat Sink
-To connect the heat sink to the board, remove the thin blue cover from the back revealing the sticky tape.  Postiion the heat sink over the AM5729 device.
+To connect the heat sink to the board, remove the thin blue cover from the back revealing the sticky tape.  Position the heat sink over the AM5729 device and press gently for it to adhere.
 
 ![BeagleBone AI Overview](images/BB_AI_Heat_Sink_500px.jpg)
 
 #### Connecting the Antenna
+Locate the round Coaxial connection on the BeagleBone® AI near the Ethernet connection.  
+![BeagleBone AI Overview](images/BB_AI_CoaxConn__250px.png)
 
+Press the Antenna connector into the Coaxial connection firmly.
 
 ![BeagleBone AI Overview](images/BB_AI_Antenna_placement_500px.jpg)
 
