@@ -83,9 +83,6 @@ BeagleBone® AI Comes in the Box with 4 items
 * Heat Sink  
 https://www.digikey.com/product-detail/en/cts-thermal-management-products/BDN10-3CB-A01/294-1098-ND/272736
 
-* Heat Sink 
-
-https://www.digikey.com/product-detail/en/cts-thermal-management-products/BDN10-3CB-A01/294-1098-ND/272736
 
 #### Connecting the Heat Sink
 To connect the heat sink to the board, remove the thin blue cover from the back revealing the sticky tape.  Position the heat sink over the AM5729 device and press gently for it to adhere.
@@ -124,6 +121,9 @@ Locate the 3 PIN debug header on BeagleBone® AI, near the USB C connection.
 Press the small white connector into the 3 PIN debug header.
 
 ![BeagleBone AI Overview](images/BB_AI_3pincableattach_500px.jpg)
+
+You may find it helpful to connect a fan to BeagleBone® AI.  This one has been used by Alpha testers.  
+https://www.digikey.com/product-detail/en/digi-key-electronics/X15FANKIT/X15FANKIT-ND/5822502
 
 ### 3.2 Main Connection Scenarios
 
