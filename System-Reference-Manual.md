@@ -87,14 +87,15 @@ To connect the heat sink to the board, remove the thin blue cover from the back 
 ![BeagleBone AI Overview](images/BB_AI_Heat_Sink_500px.jpg)
 
 Heat sink in place
+
 ![BeagleBone AI Overview](images/BB_AI_heatsinkon_500px.jpg)
 
 #### Connecting the Antenna
 The antenna that comes with BeagleBone® AI  (link to purchase a new one)
 
-![BeagleBone AI Overview](images/BB_AI_Antenna_500px.png)
+![BeagleBone AI Overview](images/BB_AI_Antenna_500px.jpg)
 
-Locate the round Coaxial connection on the BeagleBone® AI near the Ethernet connection.  
+Locate the round Coaxial connection on BeagleBone® AI near the Ethernet connection.  
 
 ![BeagleBone AI Overview](images/BB_AI_CoaxConn__250px.png)
 
@@ -108,36 +109,98 @@ Heat Sink and Antenna in place
 
 #### Connecting the 3 PIN Debug Cable (optional for most BeagleBone® AI Boot Up Scenarios)
 
+A 3 PIN Debug Cable is included with your BeagleBone® AI.  This cable is not needed for most BeagleBone® AI boot up scenarios.  The use of this cable will be covered later in this document.  
 
+Locate the 3 PIN debug header on BeagleBone® AI, near the USB C connection.
 
+![BeagleBone AI Overview](images/BB_AI_USBC_and_3pin_500px.jpg)
+
+Press the small white connector into the 3 PIN debug header.
+
+![BeagleBone AI Overview](images/BB_AI_3pincableattach_500px.jpg)
 
 ### 3.2 Main Connection Scenarios
 
 ### 3.3 Tethered to a PC
+The most common way to program BeagleBone® AI is via a USB connection to a PC.  If your computer has a USB C type port, BeagleBone® AI will both communicate and receive power directly from the PC.  If your computer does not support USB C type, you can utilize a powered USB C hub to power and connect to BeagleBone® AI.
 
+* Locate the USBC connector on BeagleBone® AI
 
+![BeagleBone AI Overview](images/BB_AI_USBC_and_3pin_500px.jpg)
 
 * Connect a USB type-C cable to BeagleBone® AI USB type-C port.
 
+![BeagleBone AI Overview](images/BB_AI_connectingUSBC_500px.jpg)
+
 * Connect the other end of the USB cable to the PC USB 3 port.
+
+![BeagleBone AI Overview](images/BB_AI_PlugIn_500px.jpg)
 
 * BeagleBone® AI will boot.
 
 * Look for a new mass storage drive to appear on the PC.
 
+![BeagleBone AI Overview](images/BB_AI_asadrive_500px.jpg)
+
 * Open the drive and open START.HTM with your web browser.
+
+![BeagleBone AI Overview](images/BB_AI_starthtm_500px.png)
 
 * Follow the instructions in the browser window.
 
+![BeagleBone AI Overview](images/BB_AI_connectedscreen_500px.jpg)
+
+* Go to Cloud9 IDE
+
+![BeagleBone AI Overview](images/BB_AI_ss_cloud9_500px.jpg)
+
+* Open the directories in the left navigation of Cloud9
+
+![BeagleBone AI Overview](images/BB_AI_ss_cloud9_dir_500px.jpg)
 
 ### 3.4 Standalone w/Display and Keyboard/Mouse
+
+* Connect a combo keyboard and mouse to BeagleBone® AI's USB host port.
+
+* Connect a microHDMI-to-HDMI cable to BeagleBone® AI's microHDMI port.
+
+* Connect the microHDMI-to-HDMI cable to an HDMI monitor.
+
+* Plug a 5V 3A USB type-C power supply into BeagleBone® AI's USB type-C port.
+
+* BeagleBone® AI will boot. No need to enter any passwords.
+
+* Desktop will appear on the monitor. Click the "Getting Started" icon.
+
+* Follow the instructions in the browser window.
+
+ 
+
+ 
+ 
+
+Wireless Connection
+
+1 Plug a 5V 3A USB type-C power supply into BeagleBone® AI's USB type-C port.
+
+2 BeagleBone® AI will boot.
+
+3 Connect your PC's WiFi to SSID "BeagleBone-XXXX" where XXXX varies for your BeagleBone® AI.
+
+4 Use password "BeagleBone" to complete the WiFi connection.
+
+5 Open http://192.168.8.1 in your web browser.
+
+6 Follow the instructions in the browser window.
+
+
 
 
 # 4.0 BeagleBone AI Overview
 
 ![BeagleBone AI Overview](images/BB_AI_overview_image.png)
 
-### 4.1 BeagleBone Compatibility (Do we want this?)
+### 4.1 BeagleBone Compatibility 
 
 ### 4.2 BeagleBone AI Features
 
