@@ -113,7 +113,7 @@ A 3 PIN Debug Cable is included with your BeagleBone® AI.  This cable is not ne
 
 Locate the 3 PIN debug header on BeagleBone® AI, near the USB C connection.
 
-![BeagleBone AI Overview](images/BB_AI_USBC_and_3pin_500px.jpg)
+![BeagleBone AI Overview](images/BB_AI_USBC_and_3pin_500px.png)
 
 Press the small white connector into the 3 PIN debug header.
 
@@ -126,7 +126,7 @@ The most common way to program BeagleBone® AI is via a USB connection to a PC. 
 
 * Locate the USBC connector on BeagleBone® AI
 
-![BeagleBone AI Overview](images/BB_AI_USBC_and_3pin_500px.jpg)
+![BeagleBone AI Overview](images/BB_AI_USBC_and_3pin_500px.png)
 
 * Connect a USB type-C cable to BeagleBone® AI USB type-C port.
 
