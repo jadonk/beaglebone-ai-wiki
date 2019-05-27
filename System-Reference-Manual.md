@@ -77,9 +77,15 @@ BeagleBone® AI Comes in the Box with 4 items
 
 ![BeagleBone AI Overview](images/BB_AI_outofbox_box_500px.jpg)
 * BeagleBone® AI Single Board Computer
+
 * 3 Pin Debug Cable
 * Antenna
-* Heat Sink
+* Heat Sink  
+https://www.digikey.com/product-detail/en/cts-thermal-management-products/BDN10-3CB-A01/294-1098-ND/272736
+
+* Heat Sink 
+
+https://www.digikey.com/product-detail/en/cts-thermal-management-products/BDN10-3CB-A01/294-1098-ND/272736
 
 #### Connecting the Heat Sink
 To connect the heat sink to the board, remove the thin blue cover from the back revealing the sticky tape.  Position the heat sink over the AM5729 device and press gently for it to adhere.
