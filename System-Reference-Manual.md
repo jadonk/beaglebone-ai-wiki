@@ -86,8 +86,16 @@ To connect the heat sink to the board, remove the thin blue cover from the back 
 
 ![BeagleBone AI Overview](images/BB_AI_Heat_Sink_500px.jpg)
 
+Heat sink in place
+![BeagleBone AI Overview](images/BB_AI_heatsinkon_500px.jpg)
+
 #### Connecting the Antenna
+The antenna that comes with BeagleBone® AI  (link to purchase a new one)
+
+![BeagleBone AI Overview](images/BB_AI_Antenna_500px.png)
+
 Locate the round Coaxial connection on the BeagleBone® AI near the Ethernet connection.  
+
 ![BeagleBone AI Overview](images/BB_AI_CoaxConn__250px.png)
 
 Press the Antenna connector into the Coaxial connection firmly.
@@ -97,6 +105,11 @@ Press the Antenna connector into the Coaxial connection firmly.
 Heat Sink and Antenna in place
 
 ![BeagleBone AI Overview](images/BB_AI_antenna_heat_sink_place_500px.jpg)
+
+#### Connecting the 3 PIN Debug Cable (optional for most BeagleBone® AI Boot Up Scenarios)
+
+
+
 
 ### 3.2 Main Connection Scenarios
 
