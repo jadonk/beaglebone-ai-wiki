@@ -91,7 +91,7 @@ To connect the heat sink to the board, remove the thin blue cover from the back 
 
 Heat sink in place
 
-![BeagleBone AI Overview](images/BB_AI_heatsinkon_500px.jpg)
+![BeagleBone AI Overview](images/BB_AI_Heatsinkon_750px.jpg)
 
 #### Connecting the Antenna
 The antenna that comes with BeagleBone® AI  (link to purchase a new one)
