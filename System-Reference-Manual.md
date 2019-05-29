@@ -250,7 +250,14 @@ Wireless Connection
 
 # 5.0 BeagleBone AI High Level Specification
 
-### Block Diagram
+### 5.1 Block Diagram
+The Texas Instruments AM572x Sitara™ processor family of SOC devices brings high processing performance through the maximum flexibility of a fully integrated mixed processor solution. The devices also combine programmable video processing	with a highly integrated peripheral set ideal for AI applications.  The AM5729 used on BeagleBone® AI is the super-set device of the family. 
+
+Texas Instruments AM572x Sitara™ Processor Family Block Diagram* 
+
+![beaglebone ai component placement](images/BB_AI_AM5729_blockdiagram.jpg)
+
+
 ### Processor
 ### DSP
 ### EVEs
@@ -259,6 +266,8 @@ Wireless Connection
 ### Memory
 ### Power
 ### Connectivity
+
+*BeagleBone® AI supports the majority of the functions of the AM5729 SOC through connectors or expansion header pin accessibility.  See section 7 for more information on expansion header pinouts.  There are a few functions that are not accessible which are:  (TBD)
 
 # 6.0 Detailed Hardware Design
 
