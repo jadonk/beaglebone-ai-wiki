@@ -166,6 +166,8 @@ The most common way to program BeagleBone® AI is via a USB connection to a PC. 
 
 ### 3.4 Standalone w/Display and Keyboard/Mouse
 
+![BeagleBone AI Overview](images/BB_AI_Standalone_setup_1000px.jpg)
+
 * Connect a combo keyboard and mouse to BeagleBone® AI's USB host port.
 
 * Connect a microHDMI-to-HDMI cable to BeagleBone® AI's microHDMI port.
