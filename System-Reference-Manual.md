@@ -291,7 +291,7 @@ This section provides a detailed description of the Hardware design. This can be
 
 (Info from Datasheet)
 
-(Block Diagram from Datasheet)
+![beaglebone ai user interface placement](images/BB_AI_PMIC_schematicpg3_900px.png)
 
 #### 6.1.2 USB-C Power
 
