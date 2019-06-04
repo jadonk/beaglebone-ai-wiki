@@ -17,7 +17,7 @@ For an up to date version of this document refer to:
 
 [https://github.com/beagleboard/beaglebone-ai/wiki/System-Reference-Manual](https://github.com/beagleboard/beaglebone-ai/wiki/System-Reference-Manual)
 
-A [PDF rendering](BeagleBone-AI.pdf) is also available.
+A [PDF rendering](images/BeagleBone-AI.pdf) is also available.
 
 # BeagleBone AI Design
 
