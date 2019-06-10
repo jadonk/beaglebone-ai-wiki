@@ -241,7 +241,7 @@ The most common way to program BeagleBone® AI is via a USB connection to a PC. 
 
 * USB Type-C connector for power and SuperSpeed dual-role controller
 * Gigabit Ethernet
-* 802.11ac 2.4/5GHz WiFi
+* 802.11ac 2.4/5GHz WiFi via the AzureWave AW-CM256SM
 
 **Out of Box Software**
 
@@ -310,6 +310,22 @@ One dedicated pin in each package can be configured as part of the power-up sequ
 ![beaglebone ai user interface placement](images/BB_AI_Userinterface_500px.png)
 
 #### 6.1.4  
+
+#### 6.9  802.11 ac & Bluetooth: AzureWave AW-CM256SM
+Wireless connectivity is provided on BeagleBone® AI via the AzureWave Technologies AW-CM256SM IEEE 802.11a/b/g/n/ac Wi-Fi with
+Bluetooth 4.2 Combo Stamp Module.  
+
+This highly integrated wireless local area network (WLAN) solution combines Bluetooth 4.2 and provides a complete 2.4GHz Bluetooth system which is fully compliant to Bluetooth 4.2 and v2.1 that supports EDR of 2Mbps and 3Mbps for data and audio
+communications. It enables a high performance, cost effective, low power, compact solution that easily fits onto the SDIO and UART combo stamp module.
+
+Compliant with the IEEE 802.11a/b/g/n/ac standard, AW-CM256SM uses Direct Sequence Spread Spectrum (DSSS), Orthogonal Frequency Division Multiplexing (OFDM), BPSK, QPSK, CCK and QAM baseband modulation technologies. Compare to 802.11n technology, 802.11ac provides a big improvement on speed and range.
+
+The AW-CM256SM module adopts a Cypress solution. The module design is based on the Cypress CYP43455 single chip.
+
+
+Placeholder for datasheet link 
+https://storage.googleapis.com/wzukusers/user-26561200/documents/5b7d0fe3c3f29Ct6k0QI/AW-CM256SM_DS_Rev%2015_CYW.pdf
+
 
 
 # 7.0 Connectors
