@@ -311,7 +311,8 @@ One dedicated pin in each package can be configured as part of the power-up sequ
 
 #### 6.1.4  
 
-#### 6.9  802.11 ac & Bluetooth: AzureWave AW-CM256SM
+#### 6.9  Wireless Communication: 802.11 ac & Bluetooth: AzureWave AW-CM256SM
+Datasheet https://storage.googleapis.com/wzukusers/user-26561200/documents/5b7d0fe3c3f29Ct6k0QI/AW-CM256SM_DS_Rev%2015_CYW.pdf
 Wireless connectivity is provided on BeagleBone® AI via the AzureWave Technologies AW-CM256SM IEEE 802.11a/b/g/n/ac Wi-Fi with
 Bluetooth 4.2 Combo Stamp Module.  
 
@@ -322,10 +323,22 @@ Compliant with the IEEE 802.11a/b/g/n/ac standard, AW-CM256SM uses Direct Sequen
 
 The AW-CM256SM module adopts a Cypress solution. The module design is based on the Cypress CYP43455 single chip.
 
+6.9.1 WLAN on the AzureWave AW-CM256SM
+High speed wireless connection up to 433.3Mbps transmit/receive PHY rate using 80MHz bandwidth
+* 1 antennas to support 1(Transmit) and  1(Receive) technology and Bluetooth
+* WCS (Wireless Coexistence System)
+* Low power consumption and high performance
+* Enhanced wireless security
+* Fully speed operation with Piconet and Scatternet support
+* 12mm(L) x 12mm(W) x1.65mm(H) LGA package
+* Dual - band 2.4 GHz and 5GHz 802.11 a/b/g/n/ac
+* External Crystal
 
-Placeholder for datasheet link 
-https://storage.googleapis.com/wzukusers/user-26561200/documents/5b7d0fe3c3f29Ct6k0QI/AW-CM256SM_DS_Rev%2015_CYW.pdf
-
+6.9.2 Bluetooth on the AzureWave AW-CM256S
+* 1 antennas to support 1(Transmit) and 1(Receive) technology and Bluetooth
+* Fully qualified Bluetooth BT4.2
+* Enhanced Data Rate(EDR) compliant for both 2Mbps and 3Mbps supported
+* High speed UART and PCM for Bluetooth 
 
 
 # 7.0 Connectors
