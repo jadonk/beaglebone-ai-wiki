@@ -344,10 +344,11 @@ High speed wireless connection up to 433.3Mbps transmit/receive PHY rate using 8
 The Texas Instruments AM5729 Sitara™ provides 2 Programmable Real-Time Unit Subsystem and Industrial Communciation Subsystems. (PRU-ICSS1 and PRU-ICSS2).  
 
 Within each PRU-ICSS are dual 32-bit Load / Store RISC CPU cores: Programmable Real-Time Units (PRU0 and PRU1), shared data and instruction memories, internal peripheral modules and an interrupt controller.  Therefore the SoC is providing a total of 4 PRU 32-bit RISC CPU's:  
-PRU-ICSS1 PRU0
-PRU-ICSS1 PRU1
-PRU-ICSS2 PRU0
-PRU-ICSS2 PRU1
+
+* PRU-ICSS1 PRU0
+* PRU-ICSS1 PRU1
+* PRU-ICSS2 PRU0
+* PRU-ICSS2 PRU1
 
 The programmable nature of the PRUs, along with their access to pins, events and all SoC resources, provides flexibility in implmenting fast real-time responses, specialized data handling operations, peripheral interfaces and in off-loading tasks from the other processor cores of the SoC.
 
