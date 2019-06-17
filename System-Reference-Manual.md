@@ -29,7 +29,7 @@ For an up to date version of this document refer to:
 * MXHTS: 84733001
 * TARIC: 8473302000
 * ECCN: 5A992.C
-* CCATS: TBD
+* CCATS: Z1613110
 
 ## WARNINGS, RESTRICTIONS, AND DISCLAIMERS
 
