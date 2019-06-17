@@ -343,9 +343,13 @@ High speed wireless connection up to 433.3Mbps transmit/receive PHY rate using 8
 ### 6.12 PRU-ICSS
 The Texas Instruments AM5729 Sitara™ provides 2 Programmable Real-Time Unit Subsystem and Industrial Communciation Subsystems. (PRU-ICSS1 and PRU-ICSS2).  
 
-Within each PRU-ICSS are dual 32-bit Load / Store RISC CPU cores: Programmable Real-Time Units (PRU0 and PRU1), shared data and instruction memories, internal peripheral modules and an interrupt controller.  Therefore the SoC is providing a total of 4 PRU 32-bit RISC CPU's.  PRU-ICSS1 PRU0, PRU-ICSS1 PRU1 and PRU-ICSS2 PRU0, PRU-ICSS2 PRU1.
+Within each PRU-ICSS are dual 32-bit Load / Store RISC CPU cores: Programmable Real-Time Units (PRU0 and PRU1), shared data and instruction memories, internal peripheral modules and an interrupt controller.  Therefore the SoC is providing a total of 4 PRU 32-bit RISC CPU's:  
+PRU-ICSS1 PRU0
+PRU-ICSS1 PRU1
+PRU-ICSS2 PRU0
+PRU-ICSS2 PRU1
 
-The programmable nature of the PRUs, along with their access to pins, events and all SoC resources, provides flexibility in implmenting fast real-time responses, specialized data handling operations, peripheral interfaces and in off-loading tasks from the other processor cores of the SoC.  processor provides 4 PRU 32-bit RISC CPUs.
+The programmable nature of the PRUs, along with their access to pins, events and all SoC resources, provides flexibility in implmenting fast real-time responses, specialized data handling operations, peripheral interfaces and in off-loading tasks from the other processor cores of the SoC.
 
 #### 6.12.1 PRU-ICSS Features
 
@@ -376,7 +380,7 @@ The PRU Cookbook provides examples and getting started information https://githu
 Detailed specification is availble at http://processors.wiki.ti.com/index.php/PRU-ICSS
 
 **FAQ**
-Q:Is it possible to configure the Ethernet MII to be accessed via a PRU MII?
+Q: Is it possible to configure the Ethernet MII to be accessed via a PRU MII?
 A: TBD
 
 #### 6.12.4  PRU-ICSS1 Pin Access
