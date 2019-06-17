@@ -251,7 +251,7 @@ The most common way to program BeagleBone® AI is via a USB connection to a PC. 
 
 * USB Type-C connector for power and SuperSpeed dual-role controller
 * Gigabit Ethernet
-* 802.11ac 2.4/5GHz WiFi
+* 802.11ac 2.4/5GHz WiFi via the AzureWave AW-CM256SM
 
 **Out of Box Software**
 
@@ -320,6 +320,214 @@ One dedicated pin in each package can be configured as part of the power-up sequ
 ![beaglebone ai user interface placement](images/BB_AI_Userinterface_500px.png)
 
 #### 6.1.4  
+
+#### 6.9  Wireless Communication: 802.11 ac & Bluetooth: AzureWave AW-CM256SM
+Datasheet https://storage.googleapis.com/wzukusers/user-26561200/documents/5b7d0fe3c3f29Ct6k0QI/AW-CM256SM_DS_Rev%2015_CYW.pdf
+Wireless connectivity is provided on BeagleBone® AI via the AzureWave Technologies AW-CM256SM IEEE 802.11a/b/g/n/ac Wi-Fi with
+Bluetooth 4.2 Combo Stamp Module.  
+
+This highly integrated wireless local area network (WLAN) solution combines Bluetooth 4.2 and provides a complete 2.4GHz Bluetooth system which is fully compliant to Bluetooth 4.2 and v2.1 that supports EDR of 2Mbps and 3Mbps for data and audio
+communications. It enables a high performance, cost effective, low power, compact solution that easily fits onto the SDIO and UART combo stamp module.
+
+Compliant with the IEEE 802.11a/b/g/n/ac standard, AW-CM256SM uses Direct Sequence Spread Spectrum (DSSS), Orthogonal Frequency Division Multiplexing (OFDM), BPSK, QPSK, CCK and QAM baseband modulation technologies. Compare to 802.11n technology, 802.11ac provides a big improvement on speed and range.
+
+The AW-CM256SM module adopts a Cypress solution. The module design is based on the Cypress CYP43455 single chip.
+
+6.9.1 WLAN on the AzureWave AW-CM256SM
+High speed wireless connection up to 433.3Mbps transmit/receive PHY rate using 80MHz bandwidth
+* 1 antennas to support 1(Transmit) and  1(Receive) technology and Bluetooth
+* WCS (Wireless Coexistence System)
+* Low power consumption and high performance
+* Enhanced wireless security
+* Fully speed operation with Piconet and Scatternet support
+* 12mm(L) x 12mm(W) x1.65mm(H) LGA package
+* Dual - band 2.4 GHz and 5GHz 802.11 a/b/g/n/ac
+* External Crystal
+
+6.9.2 Bluetooth on the AzureWave AW-CM256S
+* 1 antennas to support 1(Transmit) and 1(Receive) technology and Bluetooth
+* Fully qualified Bluetooth BT4.2
+* Enhanced Data Rate(EDR) compliant for both 2Mbps and 3Mbps supported
+* High speed UART and PCM for Bluetooth 
+
+### 6.12 PRU-ICSS
+The Texas Instruments AM5729 Sitara™ processor provides 4 PRU 32-bit RISC CPUs.  This is accopmlished because the SoC provides 2 Programmable Real-Time Unit Subsystem and Industrial Communciation Subsystem. (PRU-ICSS).  Within each PRU-ICSS are dual 32-bit Load / Store RISC CPU cores: Programmable Real-Time Units (PRU0 and PRU1) shared data and instruction memories, internal peripheral modules and an interrupt controller.  The prgrammable nature of the PRUs, along with their access to pins, events and all SoC resources, provides flexibility in implmenting fast real-time responses, specialized data handling operations, peripheral interfaces and in off-loading tasks from the other processor cores of the SoC.
+
+#### 6.12.1 PRU-ICSS Features
+
+Each of the 2 PRU-ICSS includes the following main features:
+* 2 Independent programmable real-time (PRU) cores
+* 21x Enhanced GPIs (EGPIs) and 21x Enhanced GPOs (EGPOs) with asynchronous capture and serial support per each PRU CPU core
+* One Ethernet MII_RT module (PRU-ICSS_MII_RT) with two MII ports and configurable connections to PRUs
+* 1 MDIO Port (PRU-ICSS_MII_MDIO)
+* One Industrial Ethernet Peripheral (IEP) to manage/generate Industrial Ethernet functions
+* 1 x 16550-compatible UART with a dedicated 192 MHz clock to support 12Mbps Profibus
+* 1 Industrial Ethernet timer with 7/9 capture and 8 compare events
+* 1 Enhanced Capture Module (ECAP)
+* 1 Interrupt Controller (PRU-ICSS_INTC)
+* A flexible power management support
+* Integrated switched central resource with programmable priority
+* Parity control supported by all memories
+
+Detailed specification is availble at http://processors.wiki.ti.com/index.php/PRU-ICSS
+
+#### 6.12.2 PRU-ICSS Block Diagram
+
+Below is a high level block diagram of the PRU-ICSS
+![beaglebone ai component placement](images/BB_AI_PRU_block_diagram.jpg)
+
+#### 6.12.3  PRU-ICSS Pin Access
+(see BBBlack 6.12.3 with intro materials)
+The table below shows which PRU-ICSS signals can be accessed on the BeagleBone® AI and on which connector and pins they are accessible from. Some signals are accessible on the same pins.
+
+
+| SIGNAL NAME                 | DESCRIPTION                 | TYPE | PROC   | HEADER_PIN | MODE   |       |        |
+|-----------------------------|-----------------------------|------|--------|------------|--------|-------|--------|
+| pr1_pru0_gpo0               | PRU0 General-Purpose Output | O    | AH6    | NA         |        |       |        |
+| pr1_pru0_gpo1               | PRU0 General-Purpose Output | O    | AH3    | NA         |        |       |        |
+| pr1_pru0_gpo2               | PRU0 General-Purpose Output | O    | AH5    | NA         |        |       |        |
+| pr1_pru0_gpo3               | PRU0 General-Purpose Output | O    | AG6    | P8_12      | MODE13 |       |        |
+| pr1_pru0_gpo4               | PRU0 General-Purpose Output | O    | AH4    | P8_11      | MODE13 |       |        |
+| pr1_pru0_gpo5               | PRU0 General-Purpose Output | O    | AG4    | P9_15      | MODE13 |       |        |
+| pr1_pru0_gpo6               | PRU0 General-Purpose Output | O    | AG2    | NA         |        |       |        |
+| pr1_pru0_gpo7               | PRU0 General-Purpose Output | O    | AG3    | NA         |        |       |        |
+| pr1_pru0_gpo8               | PRU0 General-Purpose Output | O    | AG5    | NA         |        |       |        |
+| pr1_pru0_gpo9               | PRU0 General-Purpose Output | O    | AF2    | NA         |        |       |        |
+| pr1_pru0_gpo10              | PRU0 General-Purpose Output | O    | AF6    | NA         |        |       |        |
+| pr1_pru0_gpo11              | PRU0 General-Purpose Output | O    | AF3    | NA         |        |       |        |
+| pr1_pru0_gpo12              | PRU0 General-Purpose Output | O    | AF4    | NA         |        |       |        |
+| pr1_pru0_gpo13              | PRU0 General-Purpose Output | O    | AF1    | NA         |        |       |        |
+| pr1_pru0_gpo14              | PRU0 General-Purpose Output | O    | AE3    | NA         |        |       |        |
+| pr1_pru0_gpo15              | PRU0 General-Purpose Output | O    | AE5    | NA         |        |       |        |
+| pr1_pru0_gpo16              | PRU0 General-Purpose Output | O    | AE1    | NA         |        |       |        |
+| pr1_pru0_gpo17              | PRU0 General-Purpose Output | O    | AE2    | P9_26      | MODE13 |       |        |
+| pr1_pru0_gpo18              | PRU0 General-Purpose Output | O    | AE6    | NA         |        |       |        |
+| pr1_pru0_gpo19              | PRU0 General-Purpose Output | O    | AD2    | NA         |        |       |        |
+| pr1_pru0_gpo20              | PRU0 General-Purpose Output | O    | AD3    | NA         |        |       |        |
+| pr1_pru0_gpi0               | PRU0 General-Purpose Input  | I    | AH6    | NA         |        |       |        |
+| pr1_pru0_gpi1               | PRU0 General-Purpose Input  | I    | AH3    | NA         |        |       |        |
+| pr1_pru0_gpi2               | PRU0 General-Purpose Input  | I    | AH5    | NA         |        |       |        |
+| pr1_pru0_gpi3               | PRU0 General-Purpose Input  | I    | AG6    | P8_12      | MODE12 |       |        |
+| pr1_pru0_gpi4               | PRU0 General-Purpose Input  | I    | AH4    | P8_11      | MODE12 |       |        |
+| pr1_pru0_gpi5               | PRU0 General-Purpose Input  | I    | AG4    | P9_15      | MODE12 |       |        |
+| pr1_pru0_gpi6               | PRU0 General-Purpose Input  | I    | AG2    | NA         |        |       |        |
+| pr1_pru0_gpi7               | PRU0 General-Purpose Input  | I    | AG3    | NA         |        |       |        |
+| pr1_pru0_gpi8               | PRU0 General-Purpose Input  | I    | AG5    | NA         |        |       |        |
+| pr1_pru0_gpi9               | PRU0 General-Purpose Input  | I    | AF2    | NA         |        |       |        |
+| pr1_pru0_gpi10              | PRU0 General-Purpose Input  | I    | AF6    | NA         |        |       |        |
+| pr1_pru0_gpi11              | PRU0 General-Purpose Input  | I    | AF3    | NA         |        |       |        |
+| pr1_pru0_gpi12              | PRU0 General-Purpose Input  | I    | AF4    | NA         |        |       |        |
+| pr1_pru0_gpi13              | PRU0 General-Purpose Input  | I    | AF1    | NA         |        |       |        |
+| pr1_pru0_gpi14              | PRU0 General-Purpose Input  | I    | AE3    | NA         |        |       |        |
+| pr1_pru0_gpi15              | PRU0 General-Purpose Input  | I    | AE5    | NA         |        |       |        |
+| pr1_pru0_gpi16              | PRU0 General-Purpose Input  | I    | AE1    | NA         |        |       |        |
+| pr1_pru0_gpi17              | PRU0 General-Purpose Input  | I    | AE2    | P9_26      | MODE12 |       |        |
+| pr1_pru0_gpi18              | PRU0 General-Purpose Input  | I    | AE6    | NA         |        |       |        |
+| pr1_pru0_gpi19              | PRU0 General-Purpose Input  | I    | AD2    | NA         |        |       |        |
+| pr1_pru0_gpi20              | PRU0 General-Purpose Input  | I    | AD3    | NA         |        |       |        |
+| pr1_pru1_gpo0               | PRU1 General-Purpose Output | O    | E2     | NA         |        |       |        |
+| pr1_pru1_gpo1               | PRU1 General-Purpose Output | O    | D2     | P9_20      | MODE13 |       |        |
+| pr1_pru1_gpo2               | PRU1 General-Purpose Output | O    | F4     | P9_19      | MODE13 |       |        |
+| pr1_pru1_gpo3               | PRU1 General-Purpose Output | O    | C1     | P9_41      | MODE13 |       |        |
+| pr1_pru1_gpo4               | PRU1 General-Purpose Output | O    | E4     | NA         |        |       |        |
+| pr1_pru1_gpo5               | PRU1 General-Purpose Output | O    | F5     | P8_18      | MODE13 |       |        |
+| pr1_pru1_gpo6               | PRU1 General-Purpose Output | O    | E6     | P8_19      | MODE13 |       |        |
+| pr1_pru1_gpo7               | PRU1 General-Purpose Output | O    | D3     | P8_13      | MODE13 |       |        |
+| pr1_pru1_gpo8               | PRU1 General-Purpose Output | O    | F6     | NA         |        |       |        |
+| pr1_pru1_gpo9               | PRU1 General-Purpose Output | O    | D5     | P8_14      | MODE13 |       |        |
+| pr1_pru1_gpo10              | PRU1 General-Purpose Output | O    | C2     | P9_42      | MODE13 |       |        |
+| pr1_pru1_gpo11              | PRU1 General-Purpose Output | O    | C3     | P9_27      | MODE13 |       |        |
+| pr1_pru1_gpo12              | PRU1 General-Purpose Output | O    | C4     | NA         |        |       |        |
+| pr1_pru1_gpo13              | PRU1 General-Purpose Output | O    | B2     | NA         |        |       |        |
+| pr1_pru1_gpo14              | PRU1 General-Purpose Output | O    | D6     | P9_14      | MODE13 |       |        |
+| pr1_pru1_gpo15              | PRU1 General-Purpose Output | O    | C5     | P9_16      | MODE13 |       |        |
+| pr1_pru1_gpo16              | PRU1 General-Purpose Output | O    | A3     | P8_15      | MODE13 |       |        |
+| pr1_pru1_gpo17              | PRU1 General-Purpose Output | O    | B3     | P8_26      | MODE13 |       |        |
+| pr1_pru1_gpo18              | PRU1 General-Purpose Output | O    | B4     | P8_16      | MODE13 |       |        |
+| pr1_pru1_gpo19              | PRU1 General-Purpose Output | O    | B5     | NA         |        |       |        |
+| pr1_pru1_gpo20              | PRU1 General-Purpose Output | O    | A4     | NA         |        |       |        |
+| pr1_pru1_gpi0               | PRU1 General-Purpose Input  | I    | E2     | NA         |        |       |        |
+| pr1_pru1_gpi1               | PRU1 General-Purpose Input  | I    | D2     | P9_20      | MODE12 |       |        |
+| pr1_pru1_gpi2               | PRU1 General-Purpose Input  | I    | F4     | P9_19      | MODE12 |       |        |
+| pr1_pru1_gpi3               | PRU1 General-Purpose Input  | I    | C1     | P9_41      | MODE12 |       |        |
+| pr1_pru1_gpi4               | PRU1 General-Purpose Input  | I    | E4     | NA         |        |       |        |
+| pr1_pru1_gpi5               | PRU1 General-Purpose Input  | I    | F5     | P8_18      | MODE12 |       |        |
+| pr1_pru1_gpi6               | PRU1 General-Purpose Input  | I    | E6     | P8_19      | MODE12 |       |        |
+| pr1_pru1_gpi7               | PRU1 General-Purpose Input  | I    | D3     | P8_13      | MODE12 |       |        |
+| pr1_pru1_gpi8               | PRU1 General-Purpose Input  | I    | F6     | NA         |        |       |        |
+| pr1_pru1_gpi9               | PRU1 General-Purpose Input  | I    | D5     | P8_14      | MODE12 |       |        |
+| pr1_pru1_gpi10              | PRU1 General-Purpose Input  | I    | C2     | P9_42      | MODE12 |       |        |
+| pr1_pru1_gpi11              | PRU1 General-Purpose Input  | I    | C3     | P9_27      | MODE12 |       |        |
+| pr1_pru1_gpi12              | PRU1 General-Purpose Input  | I    | C4     | NA         |        |       |        |
+| pr1_pru1_gpi13              | PRU1 General-Purpose Input  | I    | B2     | NA         |        |       |        |
+| pr1_pru1_gpi14              | PRU1 General-Purpose Input  | I    | D6     | P9_14      | MODE12 |       |        |
+| pr1_pru1_gpi15              | PRU1 General-Purpose Input  | I    | C5     | P9_16      | MODE12 |       |        |
+| pr1_pru1_gpi16              | PRU1 General-Purpose Input  | I    | A3     | P8_15      | MODE12 |       |        |
+| pr1_pru1_gpi17              | PRU1 General-Purpose Input  | I    | B3     | P8_26      | MODE12 |       |        |
+| pr1_pru1_gpi18              | PRU1 General-Purpose Input  | I    | B4     | P8_16      | MODE12 |       |        |
+| pr1_pru1_gpi19              | PRU1 General-Purpose Input  | I    | B5     | NA         |        |       |        |
+| pr1_pru1_gpi20              | PRU1 General-Purpose Input  | I    | A4     | NA         |        |       |        |
+| pr1_mii_mt0_clk             | MII0 Transmit Clock         | I    | U5     | NA         |        |       |        |
+| pr1_mii0_txen               | MII0 Transmit Enable        | O    | V3     | NA         |        |       |        |
+| pr1_mii0_txd3               | MII0 Transmit Data          | O    | V5     | NA         |        |       |        |
+| pr1_mii0_txd2               | MII0 Transmit Data          | O    | V4     | NA         |        |       |        |
+| pr1_mii0_txd1               | MII0 Transmit Data          | O    | Y2     | NA         |        |       |        |
+| pr1_mii0_txd0               | MII0 Transmit Data          | O    | W2     | NA         |        |       |        |
+| pr1_mii0_rxdv               | MII0 Data Valid             | I    | V2     | NA         |        |       |        |
+| pr1_mii_mr0_clk             | MII0 Receive Clock          | I    | Y1     | NA         |        |       |        |
+| pr1_mii0_rxd3               | MII0 Receive Data           | I    | W9     | NA         |        |       |        |
+| pr1_mii0_rxd2               | MII0 Receive Data           | I    | V9     | NA         |        |       |        |
+| pr1_mii0_crs                | MII0 Carrier Sense          | I    | V7     | NA         |        |       |        |
+| pr1_mii0_rxer               | MII0 Receive Error          | I    | U7     | NA         |        |       |        |
+| pr1_mii0_rxd1               | MII0 Receive Data           | I    | V6     | NA         |        |       |        |
+| pr1_mii0_rxd0               | MII0 Receive Data           | I    | U6     | NA         |        |       |        |
+| pr1_mii0_col                | MII0 Collision Detect       | I    | V1     | NA         |        |       |        |
+| pr1_mii0_rxlink             | MII0 Receive Link           | I    | U4     | NA         |        |       |        |
+| pr1_mii_mt1_clk             | MII1 Transmit Clock         | I    | C1     | P9_41      | MODE11 |       |        |
+| pr1_mii1_txen               | MII1 Transmit Enable        | O    | E4     | NA         |        |       |        |
+| pr1_mii1_txd3               | MII1 Transmit Data          | O    | F5     | P8_18      | MODE11 |       |        |
+| pr1_mii1_txd2               | MII1 Transmit Data          | O    | E6     | P8_19      | MODE11 |       |        |
+| pr1_mii1_txd1               | MII1 Transmit Data          | O    | D5     | P8_14      | MODE11 |       |        |
+| pr1_mii1_txd0               | MII1 Transmit Data          | O    | C2     | P9_42      | MODE11 |       |        |
+| pr1_mii_mr1_clk             | MII1 Receive Clock          | I    | C3     | P9_27      | MODE11 |       |        |
+| pr1_mii1_rxdv               | MII1 Data Valid             | I    | C4     | NA         |        |       |        |
+| pr1_mii1_rxd3               | MII1 Receive Data           | I    | B2     | NA         |        |       |        |
+| pr1_mii1_rxd2               | MII1 Receive Data           | I    | D6     | P9_14      | MODE11 |       |        |
+| pr1_mii1_rxd1               | MII1 Receive Data           | I    | C5     | P9_16      | MODE11 |       |        |
+| pr1_mii1_rxd0               | MII1 Receive Data           | I    | A3     | P8_15      | MODE11 |       |        |
+| pr1_mii1_rxer               | MII1 Receive Error          | I    | B3     | P8_26      | MODE11 |       |        |
+| pr1_mii1_rxlink             | MII1 Receive Link           | I    | B4     | P8_16      | MODE11 |       |        |
+| pr1_mii1_col                | MII1 Collision Detect       | I    | B5     | NA         |        |       |        |
+| pr1_mii1_crs                | MII1 Carrier Sense          | I    | A4     | NA         |        |       |        |
+| pr1_mdio_mdclk              | MDIO Clock                  | O    | D3     | P8_13      | MODE11 |       |        |
+| pr1_mdio_data               | MDIO Data                   | IO   | F6     | NA         |        |       |        |
+| pr1_edc_latch0_in           | Latch Input 0               | I    | AG3/E2 | NA         |        |       |        |
+| pr1_edc_latch1_in           | Latch Input 1               | I    | AG5    | NA         |        |       |        |
+| pr1_edc_sync0_out           | SYNC0 Output                | O    | AF2/D2 | P9_20      | MODE11 |       |        |
+| pr1_edc_sync1_out           | SYNC1 Output                | O    | AF6    | NA         |        |       |        |
+| pr1_edio_latch_in           | Latch Input                 | I    | AF3    | NA         |        |       |        |
+| pr1_edio_sof                | Start Of Frame              | O    | AF4/F4 | P9_19      | MODE11 |       |        |
+| pr1_edio_data_in0           | Ethernet Digital Input      | I    | AF1/E1 | NA         |        |       |        |
+| pr1_edio_data_in1           | Ethernet Digital Input      | I    | AE3/G2 | NA         |        |       |        |
+| pr1_edio_data_in2           | Ethernet Digital Input      | I    | AE5/H7 | NA         |        |       |        |
+| pr1_edio_data_in3           | Ethernet Digital Input      | I    | AE1/G1 | NA         |        |       |        |
+| pr1_edio_data_in4           | Ethernet Digital Input      | I    | AE2/G6 | P9_26      | MODE10 | P8_34 | MODE12 |
+| pr1_edio_data_in5           | Ethernet Digital Input      | I    | AE6/F2 | P8_36      | MODE12 |       |        |
+| pr1_edio_data_in6           | Ethernet Digital Input      | I    | AD2/F3 | NA         |        |       |        |
+| pr1_edio_data_in7           | Ethernet Digital Input      | I    | AD3/D1 | P8_15      | MODE12 |       |        |
+| pr1_edio_data_out0          | Ethernet Digital Output     | O    | AF1/E1 | NA         |        |       |        |
+| pr1_edio_data_out1          | Ethernet Digital Output     | O    | AE3/G2 | NA         |        |       |        |
+| pr1_edio_data_out2          | Ethernet Digital Output     | O    | AE5/H7 | NA         |        |       |        |
+| pr1_edio_data_out3          | Ethernet Digital Output     | O    | AE1/G1 | NA         |        |       |        |
+| pr1_edio_data_out4          | Ethernet Digital Output     | O    | AE2/G6 | P9_26      | MODE11 | P8_34 | MODE13 |
+| pr1_edio_data_out5          | Ethernet Digital Output     | O    | AE6/F2 | P8_36      | MODE13 |       |        |
+| pr1_edio_data_out6          | Ethernet Digital Output     | O    | AD2/F3 | NA         |        |       |        |
+| pr1_edio_data_out7          | Ethernet Digital Output     | O    | AD3/D1 | P8_15      | MODE13 |       |        |
+| pr1_uart0_cts_n             | UART Clear-To-Send          | I    | G1/F11 | P8_45      | MODE10 |       |        |
+| pr1_uart0_rts_n             | UART Ready-To-Send          | O    | G6/G10 | P8_34      | MODE11 | P8_46 | MODE10 |
+| pr1_uart0_rxd               | UART Receive Data           | I    | F2/F10 | P8_36      | MODE11 | P8_43 | MODE10 |
+| pr1_uart0_txd               | UART Transmit Data          | O    | F3/G11 | P8_44      | MODE10 |       |        |
+| pr1_ecap0_ecap_capin_apwm_o | Capture Input/PWM Output    | IO   | D1/E9  | P8_15      | MODE11 | P8_41 | MODE10 |
 
 
 # 7.0 Connectors
@@ -794,3 +1002,5 @@ BeagleBone AI Back of Board Image
 ![beaglebone ai back of board](images/BB_AI_Back.jpg)
 
 # 11.0 Support Information
+
+
