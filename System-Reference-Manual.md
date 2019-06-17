@@ -375,14 +375,14 @@ Below is a high level block diagram of one of the PRU-ICSS Subsystems
 
 #### 6.12.3 PRU-ICSS Resources and FAQ's
 
-**Resources**
-Great resources for PRU and BeagleBone® has been compiled here https://beagleboard.org/pru
-The PRU Cookbook provides examples and getting started information https://github.com/MarkAYoder/PRUCookbook
-Detailed specification is availble at http://processors.wiki.ti.com/index.php/PRU-ICSS
+##### Resources
+* Great resources for PRU and BeagleBone® has been compiled here https://beagleboard.org/pru
+* The PRU Cookbook provides examples and getting started information https://github.com/MarkAYoder/PRUCookbook
+* Detailed specification is availble at http://processors.wiki.ti.com/index.php/PRU-ICSS
 
-**FAQ**
-Q: Is it possible to configure the Ethernet MII to be accessed via a PRU MII?
-A: TBD
+##### FAQ
+* Q: Is it possible to configure the Ethernet MII to be accessed via a PRU MII?
+* A: TBD
 
 #### 6.12.4  PRU-ICSS1 Pin Access
 (note to editor - this chart still in work for PRU-ICSS2 see BBBlack 6.12.3 with intro materials)
