@@ -341,12 +341,16 @@ High speed wireless connection up to 433.3Mbps transmit/receive PHY rate using 8
 * High speed UART and PCM for Bluetooth 
 
 ### 6.12 PRU-ICSS
-The Texas Instruments AM5729 Sitara™ processor provides 4 PRU 32-bit RISC CPUs.  This is accopmlished because the SoC provides 2 Programmable Real-Time Unit Subsystem and Industrial Communciation Subsystem. (PRU-ICSS).  Within each PRU-ICSS are dual 32-bit Load / Store RISC CPU cores: Programmable Real-Time Units (PRU0 and PRU1) shared data and instruction memories, internal peripheral modules and an interrupt controller.  The prgrammable nature of the PRUs, along with their access to pins, events and all SoC resources, provides flexibility in implmenting fast real-time responses, specialized data handling operations, peripheral interfaces and in off-loading tasks from the other processor cores of the SoC.
+The Texas Instruments AM5729 Sitara™ provides 2 Programmable Real-Time Unit Subsystem and Industrial Communciation Subsystems. (PRU-ICSS1 and PRU-ICSS2).  
+
+Within each PRU-ICSS are dual 32-bit Load / Store RISC CPU cores: Programmable Real-Time Units (PRU0 and PRU1), shared data and instruction memories, internal peripheral modules and an interrupt controller.  Therefore the SoC is providing a total of 4 PRU 32-bit RISC CPU's.  PRU-ICSS1 PRU0, PRU-ICSS1 PRU1 and PRU-ICSS2 PRU0, PRU-ICSS2 PRU1.
+
+The programmable nature of the PRUs, along with their access to pins, events and all SoC resources, provides flexibility in implmenting fast real-time responses, specialized data handling operations, peripheral interfaces and in off-loading tasks from the other processor cores of the SoC.  processor provides 4 PRU 32-bit RISC CPUs.
 
 #### 6.12.1 PRU-ICSS Features
 
-Each of the 2 PRU-ICSS includes the following main features:
-* 2 Independent programmable real-time (PRU) cores
+Each of the 2 PRU-ICSS (PRU-ICSS1 and PRU-ICSS2) includes the following main features:
+* 2 Independent programmable real-time (PRU) cores (PRU0 and PRU1)
 * 21x Enhanced GPIs (EGPIs) and 21x Enhanced GPOs (EGPOs) with asynchronous capture and serial support per each PRU CPU core
 * One Ethernet MII_RT module (PRU-ICSS_MII_RT) with two MII ports and configurable connections to PRUs
 * 1 MDIO Port (PRU-ICSS_MII_MDIO)
@@ -359,19 +363,31 @@ Each of the 2 PRU-ICSS includes the following main features:
 * Integrated switched central resource with programmable priority
 * Parity control supported by all memories
 
-Detailed specification is availble at http://processors.wiki.ti.com/index.php/PRU-ICSS
-
 #### 6.12.2 PRU-ICSS Block Diagram
 
-Below is a high level block diagram of the PRU-ICSS
+Below is a high level block diagram of one of the PRU-ICSS Subsystems
 ![beaglebone ai component placement](images/BB_AI_PRU_block_diagram.jpg)
 
-#### 6.12.3  PRU-ICSS Pin Access
-(see BBBlack 6.12.3 with intro materials)
-The table below shows which PRU-ICSS signals can be accessed on the BeagleBone® AI and on which connector and pins they are accessible from. Some signals are accessible on the same pins.
+#### 6.12.3 PRU-ICSS Resources and FAQ's
+
+**Resources**
+Great resources for PRU and BeagleBone® has been compiled here https://beagleboard.org/pru
+The PRU Cookbook provides examples and getting started information https://github.com/MarkAYoder/PRUCookbook
+Detailed specification is availble at http://processors.wiki.ti.com/index.php/PRU-ICSS
+
+**FAQ**
+Q:Is it possible to configure the Ethernet MII to be accessed via a PRU MII?
+A: TBD
+
+#### 6.12.4  PRU-ICSS1 Pin Access
+(note to editor - this chart still in work for PRU-ICSS2 see BBBlack 6.12.3 with intro materials)
+The table below shows which PRU-ICSS1 signals can be accessed on BeagleBone® AI and on which connector and pins they are accessible from. Some signals are accessible on the same pins. 
+Signal Names reveal which PRU-ICSS Subsystem is being addressed. pr1 is PRU-ICSS1 and pr2 is PRU-ICSS2  
 
 
-| SIGNAL NAME                 | DESCRIPTION                 | TYPE | PROC   | HEADER_PIN | MODE   |       |        |
+
+| SIGNAL NAME                 | DESCRIPTION                 | TYPE | PROC   | HEADER_PIN | MODE   |HEADER |MODE    |
+|                             |                             |      |        |            |        |PIN    |        |
 |-----------------------------|-----------------------------|------|--------|------------|--------|-------|--------|
 | pr1_pru0_gpo0               | PRU0 General-Purpose Output | O    | AH6    | NA         |        |       |        |
 | pr1_pru0_gpo1               | PRU0 General-Purpose Output | O    | AH3    | NA         |        |       |        |
