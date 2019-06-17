@@ -364,7 +364,7 @@ Detailed specification is availble at http://processors.wiki.ti.com/index.php/PR
 #### 6.12.2 PRU-ICSS Block Diagram
 
 Below is a high level block diagram of the PRU-ICSS
-![beaglebone ai component placement](images/BB_AI_ICPlacement_750px.png)
+![beaglebone ai component placement](images/BB_AI_PRU_block_diagram.jpg)
 
 #### 6.12.3  PRU-ICSS Pin Access
 (see BBBlack 6.12.3 with intro materials)
