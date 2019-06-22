@@ -689,10 +689,7 @@ Signal Names reveal which PRU-ICSS Subsystem is being addressed. pr1 is PRU-ICSS
 | pr2_mii1_rxd2               | MII1 Receive Data           | I    | AD6     | P8_22      | MODE11 |            |        |
 | pr2_mii1_rxd1               | MII1 Receive Data           | I    | AB8     | P8_3       | MODE11 |            |        |
 | pr2_mii1_rxd0               | MII1 Receive Data           | I    | AB5     | P8_4       | MODE11 |            |        |
-
-
-
-
+| end                         | end                         | end  | end     | end        | end    | end        | end    |
 
 # 7.0 Connectors
 
