@@ -541,7 +541,10 @@ Signal Names reveal which PRU-ICSS Subsystem is being addressed. pr1 is PRU-ICSS
 #### 6.12.4  PRU-ICSS2 Pin Access
 
 The table below shows which PRU-ICSS2 signals can be accessed on BeagleBone® AI and on which connector and pins they are accessible from. Some signals are accessible on the same pins. 
-Signal Names reveal which PRU-ICSS Subsystem is being addressed. pr1 is PRU-ICSS1 and pr2 is PRU-ICSS2  
+Signal Names reveal which PRU-ICSS Subsystem is being addressed. pr1 is PRU-ICSS1 and pr2 is PRU-ICSS2 
+
+
+
 | SIGNAL NAME                 | DESCRIPTION                 | TYPE | PROC    | HEADER_PIN | MODE   | HEADER_PIN | MODE   |
 |-----------------------------|-----------------------------|------|---------|------------|--------|------------|--------|
 | pr2_pru0_gpo0               | PRU0 General-Purpose Output | O    | G11/AC5 | P8_44      | MODE13 |            |        |
@@ -690,6 +693,7 @@ Signal Names reveal which PRU-ICSS Subsystem is being addressed. pr1 is PRU-ICSS
 | pr2_mii1_rxd1               | MII1 Receive Data           | I    | AB8     | P8_3       | MODE11 |            |        |
 | pr2_mii1_rxd0               | MII1 Receive Data           | I    | AB5     | P8_4       | MODE11 |            |        |
 | end                         | end                         | end  | end     | end        | end    | end        | end    |
+
 
 # 7.0 Connectors
 
