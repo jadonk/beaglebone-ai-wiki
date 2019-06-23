@@ -385,7 +385,7 @@ Below is a high level block diagram of one of the PRU-ICSS Subsystems
 * A: TBD
 
 #### 6.12.4  PRU-ICSS1 Pin Access
-(note to editor - this chart still in work for PRU-ICSS2 see BBBlack 6.12.3 with intro materials)
+
 The table below shows which PRU-ICSS1 signals can be accessed on BeagleBone® AI and on which connector and pins they are accessible from. Some signals are accessible on the same pins. 
 Signal Names reveal which PRU-ICSS Subsystem is being addressed. pr1 is PRU-ICSS1 and pr2 is PRU-ICSS2  
 
@@ -538,7 +538,7 @@ Signal Names reveal which PRU-ICSS Subsystem is being addressed. pr1 is PRU-ICSS
 | pr1_uart0_txd               | UART Transmit Data          | O    | F3/G11 | P8_44      | MODE10 |            |        |
 | pr1_ecap0_ecap_capin_apwm_o | Capture Input/PWM Output    | IO   | D1/E9  | P8_15      | MODE11 | P8_41      | MODE10 |
 
-#### 6.12.4  PRU-ICSS2 Pin Access
+#### 6.12.5  PRU-ICSS2 Pin Access
 
 The table below shows which PRU-ICSS2 signals can be accessed on BeagleBone® AI and on which connector and pins they are accessible from. Some signals are accessible on the same pins. 
 Signal Names reveal which PRU-ICSS Subsystem is being addressed. pr1 is PRU-ICSS1 and pr2 is PRU-ICSS2 
