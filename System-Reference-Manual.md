@@ -73,9 +73,9 @@ Proposed changes.
 # 3.0 Connecting Up Your BeagleBone AI
 
 ### 3.1 What's In the Box
-BeagleBone® AI Comes in the Box with 4 items
+BeagleBone® AI Comes in the Box with the heat sink and antennae already attached.  Get up and running in 5 mins, no microSD card needed.  BeagleBone® AI comes preloaded with a distro.
 
-![BeagleBone AI Overview](images/BB_AI_outofbox_box_500px.jpg)
+
 * BeagleBone® AI Single Board Computer
 
 * 3 Pin Debug Cable
