@@ -73,44 +73,19 @@ Proposed changes.
 # 3.0 Connecting Up Your BeagleBone AI
 
 ### 3.1 What's In the Box
-BeagleBone® AI Comes in the Box with the heat sink and antennae already attached.  Get up and running in 5 mins, no microSD card needed.  BeagleBone® AI comes preloaded with a distro.
-
-
-* BeagleBone® AI Single Board Computer
-
-* 3 Pin Debug Cable
-* Antenna
-* Heat Sink  
-https://www.digikey.com/product-detail/en/cts-thermal-management-products/BDN10-3CB-A01/294-1098-ND/272736
-
-
-#### Connecting the Heat Sink
-To connect the heat sink to the board, remove the thin blue cover from the back revealing the sticky tape.  Position the heat sink over the AM5729 device and press gently for it to adhere.
-
-![BeagleBone AI Overview](images/BB_AI_Heat_Sink_500px.jpg)
-
-Heat sink in place
-
-![BeagleBone AI Overview](images/BB_AI_Heatsinkon_750px.jpg)
-
-#### Connecting the Antenna
-The antenna that comes with BeagleBone® AI  (link to purchase a new one)
-
-![BeagleBone AI Overview](images/BB_AI_Antenna_500px.jpg)
-
-Locate the round Coaxial connection on BeagleBone® AI near the Ethernet connection.  
-
-![BeagleBone AI Overview](images/BB_AI_CoaxConn__250px.png)
-
-Press the Antenna connector into the Coaxial connection firmly.
-
-![BeagleBone AI Overview](images/BB_AI_Antenna_placement_500px.jpg)
-
-Heat Sink and Antenna in place
+BeagleBone® AI Comes in the Box with the heat sink and antennae already attached.  Get up and running in 5 mins, no microSD card needed.  BeagleBone® AI comes preloaded with a Linux distro.
 
 ![BeagleBone AI Overview](images/BB_AI_antenna_heat_sink_place_500px.jpg)
 
-#### Connecting the 3 PIN Debug Cable (optional for most BeagleBone® AI Boot Up Scenarios)
+
+More information or to purchase a replacement Heat Sink or Antenna, please to to these web sites:
+* [Antenna](https://www.digikey.com/product-detail/en/anaren/66089-2430/1173-1134-ND/3903374)
+* [Heat Sink}(https://www.digikey.com/product-detail/en/cts-thermal-management-products/BDN10-3CB-A01/294-1098-ND/272736)
+
+
+
+
+#### Connecting a 3 PIN Debug Cable (optional for most BeagleBone® AI Boot Up Scenarios)
 
 A 3 PIN Debug Cable is included with your BeagleBone® AI.  This cable is not needed for most BeagleBone® AI boot up scenarios.  The use of this cable will be covered later in this document.  
 
