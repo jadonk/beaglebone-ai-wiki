@@ -282,7 +282,7 @@ One dedicated pin in each package can be configured as part of the power-up sequ
 (Schematic screenshoot)
 
 #### 6.1.3 Power Button
-![beaglebone ai user interface placement](images/BB_AI_Userinterface_500px.png)
+![beaglebone ai user interface placement](images/BB_AI_Userinterface_800px.png)
 
 #### 6.1.4  
 
