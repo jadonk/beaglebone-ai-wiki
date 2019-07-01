@@ -80,7 +80,7 @@ BeagleBone® AI Comes in the Box with the heat sink and antennae already attache
 
 More information or to purchase a replacement Heat Sink or Antenna, please to to these web sites:
 * [Antenna](https://www.digikey.com/product-detail/en/anaren/66089-2430/1173-1134-ND/3903374)
-* [Heat Sink}(https://www.digikey.com/product-detail/en/cts-thermal-management-products/BDN10-3CB-A01/294-1098-ND/272736)
+* [Heat Sink](https://www.digikey.com/product-detail/en/cts-thermal-management-products/BDN10-3CB-A01/294-1098-ND/272736)
 
 
 
