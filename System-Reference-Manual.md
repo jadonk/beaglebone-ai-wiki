@@ -73,10 +73,16 @@ Proposed changes.
 # 3.0 Connecting Up Your BeagleBone AI
 
 ### 3.1 What's In the Box
-BeagleBone® AI Comes in the box with the heat sink and antenna already attached.  Developers can get up and running in 5 minutes with no microSD card needed.  BeagleBone® AI comes preloaded with a Linux distribution.
+BeagleBone® AI Comes in the box with the heat sink and antenna already attached.  Developers can get up and running in 5 minutes with no microSD card needed.  BeagleBone® AI comes preloaded with a Linux distribution.  
+In the box you will find:
+* BeagleBone® AI
+* Instruction Card
 
 ![BeagleBone AI Overview](images/BB_AI_antenna_heat_sink_place_500px.jpg)
 
+You will need to purchase:
+* USB C cable or USB C to USB A cable
+* MicroSD Card (optional)
 
 More information or to purchase a replacement heat sink or antenna, please go to these web sites:
 * [Antenna](https://www.digikey.com/product-detail/en/anaren/66089-2430/1173-1134-ND/3903374)
@@ -87,8 +93,13 @@ You may find it helpful to connect a fan to BeagleBone® AI.  This one has been 
 
 ### 3.2 Main Connection Scenarios
 
+This section will describe hot to connect the board for use. The board can be configured in several different ways.  Below we will walk through the most common scenarios.
+* Tethered to a PC via USB C cable
+* Standalone Desktop with powered USB hub, display, keyboard and mouse
+* Wireless Connection to BeagleBone® AI
+
 ### 3.3 Tethered to a PC
-The most common way to program BeagleBone® AI is via a USB connection to a PC.  If your computer has a USB C type port, BeagleBone® AI will both communicate and receive power directly from the PC.  If your computer does not support USB C type, you can utilize a powered USB C hub to power and connect to BeagleBone® AI.
+The most common way to program BeagleBone® AI is via a USB connection to a PC.  If your computer has a USB C type port, BeagleBone® AI will both communicate and receive power directly from the PC.  If your computer does not support USB C type, you can utilize a powered USB C hub to power and connect to BeagleBone® AI which in turn will connect to your PC.  You can also use a powered USB C hub to power and connect peripheral devices such as a USB camera.  After booting, the board is accessed either as a USB storage device or via the browser on the PC.  You will need Chrome or Firefox on the PC.
 
 * Locate the USBC connector on BeagleBone® AI
 
@@ -103,6 +114,7 @@ The most common way to program BeagleBone® AI is via a USB connection to a PC. 
 ![BeagleBone AI Overview](images/BB_AI_PlugIn_500px.jpg)
 
 * BeagleBone® AI will boot.
+* You will notice some of the 5 user LEDs flashing
 
 * Look for a new mass storage drive to appear on the PC.
 
@@ -174,9 +186,7 @@ Press the small white connector into the 3 PIN debug header.
 
 ![BeagleBone AI Overview](images/BB_AI_overview_image.png)
 
-### 4.1 BeagleBone Compatibility 
-
-### 4.2 BeagleBone AI Features
+### 4.1 BeagleBone® AI Features
 
 **Main Processor Features**
 
@@ -213,8 +223,10 @@ Press the small white connector into the 3 PIN debug header.
 
 * Zero-download out of box software environment
 
-### 4.3 Board Component Locations
+### 4.2 Board Component Locations
 ![beaglebone ai component placement](images/BB_AI_ICPlacement_800px.png)
+
+### 4.1 BeagleBone® Black Compatibility 
 
 # 5.0 BeagleBone AI High Level Specification
 
