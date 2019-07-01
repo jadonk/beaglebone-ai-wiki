@@ -674,7 +674,7 @@ Signal Names reveal which PRU-ICSS Subsystem is being addressed. pr1 is PRU-ICSS
 # 7.0 Connectors
 
 ![beaglebone ai connector placement](images/BB_AI_Connectorplacement_800px.png)
-![beaglebone ai connector placement back](images/BB_AI_Connectorplacement_back_500px.png)
+![beaglebone ai connector placement back](images/BB_AI_Connectorplacement_back_800px.png)
 
 
 ### 7.1 Expansion Connectors
@@ -689,7 +689,7 @@ The expansion interface on the board is comprised of two 46 pin connectors, the 
 
 **Figure ?** shows the location of the expansion connectors.
 
-![beaglebone ai header placement](images/BB_AI_Headerplacement_500px.png)
+![beaglebone ai header placement](images/BB_AI_Headerplacement_800px.png)
 
 The location and spacing of the expansion headers are the same as on the BeagleBone Black.
 
