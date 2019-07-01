@@ -93,7 +93,8 @@ Locate the 3 PIN debug header on BeagleBone® AI, near the USB C connection.
 
 ![BeagleBone AI Overview](images/BB_AI_USBC_and_3pin_500px.png)
 
-Press the small white connector into the 3 PIN debug header.
+Press the small white 
+into the 3 PIN debug header.
 
 ![BeagleBone AI Overview](images/BB_AI_3pincableattach_500px.jpg)
 
@@ -672,7 +673,7 @@ Signal Names reveal which PRU-ICSS Subsystem is being addressed. pr1 is PRU-ICSS
 
 # 7.0 Connectors
 
-![beaglebone ai connector placement](images/BB_AI_Connectorplacement_500px.png)
+![beaglebone ai connector placement](images/BB_AI_Connectorplacement_800px.png)
 ![beaglebone ai connector placement back](images/BB_AI_Connectorplacement_back_500px.png)
 
 
