@@ -73,33 +73,17 @@ Proposed changes.
 # 3.0 Connecting Up Your BeagleBone AI
 
 ### 3.1 What's In the Box
-BeagleBone® AI Comes in the Box with the heat sink and antennae already attached.  Get up and running in 5 mins, no microSD card needed.  BeagleBone® AI comes preloaded with a Linux distro.
+BeagleBone® AI Comes in the box with the heat sink and antenna already attached.  Developers can get up and running in 5 minutes with no microSD card needed.  BeagleBone® AI comes preloaded with a Linux distribution.
 
 ![BeagleBone AI Overview](images/BB_AI_antenna_heat_sink_place_500px.jpg)
 
 
-More information or to purchase a replacement Heat Sink or Antenna, please to to these web sites:
+More information or to purchase a replacement heat sink or antenna, please go to these web sites:
 * [Antenna](https://www.digikey.com/product-detail/en/anaren/66089-2430/1173-1134-ND/3903374)
 * [Heat Sink](https://www.digikey.com/product-detail/en/cts-thermal-management-products/BDN10-3CB-A01/294-1098-ND/272736)
 
-
-
-
-#### Connecting a 3 PIN Debug Cable (optional for most BeagleBone® AI Boot Up Scenarios)
-
-A 3 PIN Debug Cable is included with your BeagleBone® AI.  This cable is not needed for most BeagleBone® AI boot up scenarios.  The use of this cable will be covered later in this document.  
-
-Locate the 3 PIN debug header on BeagleBone® AI, near the USB C connection.
-
-![BeagleBone AI Overview](images/BB_AI_USBC_and_3pin_500px.png)
-
-Press the small white 
-into the 3 PIN debug header.
-
-![BeagleBone AI Overview](images/BB_AI_3pincableattach_500px.jpg)
-
-You may find it helpful to connect a fan to BeagleBone® AI.  This one has been used by Alpha testers.  
-https://www.digikey.com/product-detail/en/digi-key-electronics/X15FANKIT/X15FANKIT-ND/5822502
+You may find it helpful to connect a fan to BeagleBone® AI.  This one has been used by Alpha testers.
+* [Fan](https://www.digikey.com/product-detail/en/digi-key-electronics/X15FANKIT/X15FANKIT-ND/5822502)
 
 ### 3.2 Main Connection Scenarios
 
@@ -158,10 +142,6 @@ The most common way to program BeagleBone® AI is via a USB connection to a PC. 
 
 * Follow the instructions in the browser window.
 
- 
-
- 
- 
 
 ### 3.5 Wireless Connection
 
@@ -177,7 +157,17 @@ The most common way to program BeagleBone® AI is via a USB connection to a PC. 
 
 6 Follow the instructions in the browser window.
 
+### 3.6 Connecting a 3 PIN Serial Debug Cable 
 
+A 3 PIN serial debug cable can be helpful to debug when you need to view the boot messages through a terminal program such as putty on your host PC.  This cable is not needed for most BeagleBone® AI boot up scenarios.  
+
+Locate the 3 PIN debug header on BeagleBone® AI, near the USB C connection.
+
+![BeagleBone AI Overview](images/BB_AI_USBC_and_3pin_500px.png)
+
+Press the small white connector into the 3 PIN debug header.
+
+![BeagleBone AI Overview](images/BB_AI_3pincableattach_500px.jpg)
 
 
 # 4.0 BeagleBone AI Overview
