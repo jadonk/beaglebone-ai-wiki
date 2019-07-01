@@ -223,7 +223,7 @@ The most common way to program BeagleBone® AI is via a USB connection to a PC. 
 * Zero-download out of box software environment
 
 ### 4.3 Board Component Locations
-![beaglebone ai component placement](images/BB_AI_ICPlacement_750px.png)
+![beaglebone ai component placement](images/BB_AI_ICPlacement_800px.png)
 
 # 5.0 BeagleBone AI High Level Specification
 
