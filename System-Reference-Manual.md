@@ -241,7 +241,7 @@ Texas Instruments AM572x Sitara™ Processor Family Block Diagram*
 ### Processor
 ### DSP
 ### EVEs
-### PRUs
+
 ### Graphics Accelerator
 ### Memory
 ### Power
