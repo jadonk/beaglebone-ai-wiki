@@ -318,6 +318,9 @@ High speed wireless connection up to 433.3Mbps transmit/receive PHY rate using 8
 * Enhanced Data Rate(EDR) compliant for both 2Mbps and 3Mbps supported
 * High speed UART and PCM for Bluetooth 
 
+### 6.10 HDMI
+The HDMI interface is aligned with the HDMI TMDS single stream standard v1.4a (720p @60Hz to 1080p @24Hz) and the HDMI v1.3 (1080p @60Hz): 3 data channels, plus 1 clock channel is supported (differential).
+
 ### 6.12 PRU-ICSS
 The Texas Instruments AM5729 Sitara™ provides 2 Programmable Real-Time Unit Subsystem and Industrial Communciation Subsystems. (PRU-ICSS1 and PRU-ICSS2).  
 
