@@ -678,7 +678,7 @@ Signal Names reveal which PRU-ICSS Subsystem is being addressed. pr1 is PRU-ICSS
 ### 6.5 User LEDs
 
 There are 5 User Programmable LEDs on BeagleBone® AI.  These are connected to GPIO pins on the processor.
-
+![beaglebone ai connector placement](images/BB_AI_USERLEDS_800px.png)
 
 The table shows the signals used to control the LEDs from the processor.  Each LED is user programmable.  However, there is a Default Functions assigned in the device tree for BeagleBone® AI:
 
