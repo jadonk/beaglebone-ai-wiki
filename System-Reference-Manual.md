@@ -93,7 +93,7 @@ You may find it helpful to connect a fan to BeagleBone® AI.  This one has been 
 
 ### 3.2 Main Connection Scenarios
 
-This section will describe hot to connect the board for use. The board can be configured in several different ways.  Below we will walk through the most common scenarios.
+This section will describe how to connect the board for use. The board can be configured in several different ways.  Below we will walk through the most common scenarios.
 * Tethered to a PC via USB C cable
 * Standalone Desktop with powered USB hub, display, keyboard and mouse
 * Wireless Connection to BeagleBone® AI
@@ -675,6 +675,20 @@ Signal Names reveal which PRU-ICSS Subsystem is being addressed. pr1 is PRU-ICSS
 | pr2_mii1_rxd0               | MII1 Receive Data           | I    | AB5     | P8_4       | MODE11 |            |        |
 | end                         | end                         | end  | end     | end        | end    | end        | end    |
 
+### 6.5 User LEDs
+
+There are 5 User Programmable LEDs on BeagleBone® AI.  These are connected to GPIO pins on the processor.
+
+
+The table shows the signals used to control the LEDs from the processor.  Each LED is user programmable.  However, there is a Default Functions assigned in the device tree for BeagleBone® AI:
+
+| LED | GPIO SIGNAL | DEFAULT FUNCTION                |
+|-----|-------------|---------------------------------|
+| D2  | GPIO3_17    | Heartbeat When Linux is Running |
+| D3  | GPIO5_5     | microSD Activity                |
+| D4  | GPIO3_15    | CPU Activity                    |
+| D5  | GPIO3_14    | eMMC Activity                   |
+| D8  | GPIO3_7     | WiFi/Bluetooth Activity         |
 
 # 7.0 Connectors
 
