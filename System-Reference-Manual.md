@@ -346,6 +346,18 @@ pixel and vertex shader functionality
 * Fully virtualized memory addressing for OS operation in a unified memory architecture (MMU)
 
 ### 5.3 Memory
+
+**5.3.1  1GB DDR3L**
+Dual 512 MB x 32 DDR3 memory devices are used, one on each side of the board, for a total of 1 GB. 
+THey will each operate at a clock frequency of 1066 MHz yielding an effective rate of 2133MHz on the DDR3L bus allowing for 1.6GB/S of DDR3L memory bandwidth.
+
+**5.3.2  4GB Embedded MMC**
+A single 4GB embedded MMC (eMMC) device is on the board. 
+
+**5.3.3  microSD Connector**
+The board is equipped with a single microSD connector to act as a secondary boot source for the board and, if selected as such, can be the primary booth source.  The connector will support larger capacity microSD cards.  The microSD card is not provided with the board.
+
+**5.3.4 Booth Modes**
 ### 5.4 Power Management
 ### Connectivity
 
