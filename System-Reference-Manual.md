@@ -260,11 +260,9 @@ Texas Instruments AM572x Sitara™ Processor Family Block Diagram*
 
 This section provides a detailed description of the Hardware design. This can be useful for interfacing, writing drivers, or using it to help modify specifics of your own design.
 
-**Figure ?** below is the high level block diagram of the board.
+The figure below is the high level block diagram of BeagleBone® AI.  For those who may be concerned, this is the same figure found in section 5.  It is placed here again for convenience so it is closer to the topics to follow.
 
-(Block Diagram Picture)
-
-**Figure ?. BeagleBone AI Block Diagram**
+![beaglebone ai component placement](images/BB_AI_Blockdiagram_1000px.jpg)
 
 ### 6.1 Power Section
 
