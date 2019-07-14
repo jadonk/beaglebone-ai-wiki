@@ -246,7 +246,7 @@ Texas Instruments AM572x Sitara™ Processor Family Block Diagram*
 
 **MPU Subsystem**
 The Dual Cortex-A15 MPU subsystem integrates the following submodules:
-• ARM Cortex-A15 MPCore
+* ARM Cortex-A15 MPCore
 – Two central processing units (CPUs)
 – ARM Version 7 ISA: Standard ARM instruction set plus Thumb®-2, Jazelle® RCT Java™
 accelerator, hardware virtualization support, and large physical address extensions (LPAE)
@@ -255,49 +255,49 @@ accelerator, hardware virtualization support, and large physical address extensi
 – One general-purpose timer and one watchdog timer per CPU
 – Debug and trace features
 – 32-KiB instruction and 32-KiB data level 1 (L1) cache per CPU
-• Shared 2-MiB level 2 (L2) cache
-• 48-KiB bootable ROM
-• Local power, reset, and clock management (PRCM) module
-• Emulation features
-• Digital phase-locked loop (DPLL)
+* Shared 2-MiB level 2 (L2) cache
+* 48-KiB bootable ROM
+* Local power, reset, and clock management (PRCM) module
+* Emulation features
+* Digital phase-locked loop (DPLL)
 **DSP Subsystems**
 There are two DSP subsystems in the device. Each DSP subsystem contains the following submodules:
-• TMS320C66x™ Floating-Point VLIW DSP core for audio processing, and general-purpose imaging and video
+* TMS320C66x™ Floating-Point VLIW DSP core for audio processing, and general-purpose imaging and video
 processing. It extends the performance of existing C64x+™ and C647x™ DSPs through
 enhancements and new features.
 – 32-KiB L1D and 32-KiB L1P cache or addressable SRAM
 – 288-KiB L2 cache
-• 256-KiB configurable as cache or SRAM
-• 32-KiB SRAM
-• Enhanced direct memory access (EDMA) engine for video and audio data transfer
-• Memory management units (MMU) for address management.
-• Interrupt controller (INTC)
-• Emulation capabilities
-• Supported by OpenCL
+* 256-KiB configurable as cache or SRAM
+* 32-KiB SRAM
+* Enhanced direct memory access (EDMA) engine for video and audio data transfer
+* Memory management units (MMU) for address management.
+* Interrupt controller (INTC)
+* Emulation capabilities
+* Supported by OpenCL
 **EVE Subsystems**
-• 4 Embedded Vision Engines (EVEs) supported by TIDL machine learning library
+* 4 Embedded Vision Engines (EVEs) supported by TIDL machine learning library
 ![beaglebone ai component placement](images/BB_AI_EVEmodule.jpg)
 The Embedded Vision Engine (EVE) module is a programmable imaging and vision processing engine.
 Software support for the EVE module is available through OpenCL Custom Device model with fixed set of
 functions. More information is available http://www.ti.com/lit/wp/spry251/spry251.pd
 
 **PRU-ICSS Subsystems**
-• 2x Dual-Core Programmable Real-Time Unit (PRU) subsystems (4 PRUs total) for ultra low-latency control and software generated peripherals.  Access to these powerful subsystems is available through through the P8 and P9 headers. These are detailed in Section 7.
+* 2x Dual-Core Programmable Real-Time Unit (PRU) subsystems (4 PRUs total) for ultra low-latency control and software generated peripherals.  Access to these powerful subsystems is available through through the P8 and P9 headers. These are detailed in Section 7.
 
 **IPU Subsystems**
 There are two Dual Cortex-M4 IPU subsystems in the device available for general purpose usage, particularly real-time control.
 Each IPU subsystem includes the following components:
-• Two Cortex-M4 CPUs
-• ARMv7E-M and Thumb-2 instruction set architectures
-• Hardware division and single-cycle multiplication acceleration
-• Dedicated INTC with up to 63 physical interrupt events with 16-level priority
-• Two-level memory subsystem hierarchy
+* Two Cortex-M4 CPUs
+* ARMv7E-M and Thumb-2 instruction set architectures
+* Hardware division and single-cycle multiplication acceleration
+* Dedicated INTC with up to 63 physical interrupt events with 16-level priority
+* Two-level memory subsystem hierarchy
 – L1 (32-KiB shared cache memory)
 – L2 ROM + RAM
-• 64-KiB RAM
-• 16-KiB bootable ROM
-• MMU for address translation
-• Integrated power management
+* 64-KiB RAM
+* 16-KiB bootable ROM
+* MMU for address translation
+* Integrated power management
 • Emulation feature embedded in the Cortex-M4
 **IVA-HD Subsystem**
 * IVA-HD subsystem with support for 4K @ 15fps H.264 encode/decode and other codecs @ 1080p60
@@ -305,10 +305,10 @@ The IVA-HD subsystem is a set of video encoder and decoder hardware accelerators
 supported codecs can be found in the software development kit (SDK) documentation.
 **BB2D Graphics Accelerator Subsystem**
 The Vivante® GC320 2D graphics accelerator is the 2D BitBlt (BB2D) graphics accelerator subsystem on the device with the following features:
-• API support:
+* API support:
 – OpenWF™, DirectFB
 – GDI/DirectDraw
-• BB2D architecture:
+* BB2D architecture:
 – BitBlt and StretchBlt
 – DirectFB hardware acceleration
 – ROP2, ROP3, ROP4 full alpha blending and transparency
@@ -325,20 +325,20 @@ The 3D graphics processing unit (GPU) subsystem is based on POWERVR® SGX544 sub
 Imagination Technologies. It supports general embedded applications. The GPU can process different
 data types simultaneously, such as: pixel data, vertex data, video data, and general-purpose data.
 The GPU subsystem has the following features:
-• Multicore GPU architecture: two SGX544 cores. Shared system level cache of 128 KiB
-• Tile-based deferred rendering architecture
-• Second-generation universal scalable shader engines (USSE2), multithreaded engines incorporating
+* Multicore GPU architecture: two SGX544 cores. Shared system level cache of 128 KiB
+* Tile-based deferred rendering architecture
+* Second-generation universal scalable shader engines (USSE2), multithreaded engines incorporating
 pixel and vertex shader functionality
-• Present and texture load accelerators
+* Present and texture load accelerators
 – Enables to move, rotate, twiddle, and scale texture surfaces.
 – Supports RGB, ARGB, YUV422, and YUV420 surface formats.
 – Supports bilinear upscale.
 – Supports source colorkey.
-• Fine-grained task switching, load balancing, and power management
-• Programmable high-quality image antialiasing
-• Bilinear, trilinear, anisotropic texture filtering
-• Advanced geometry DMA driven operation for minimum CPU interaction
-• Fully virtualized memory addressing for OS operation in a unified memory architecture (MMU)
+* Fine-grained task switching, load balancing, and power management
+* Programmable high-quality image antialiasing
+* Bilinear, trilinear, anisotropic texture filtering
+* Advanced geometry DMA driven operation for minimum CPU interaction
+* Fully virtualized memory addressing for OS operation in a unified memory architecture (MMU)
 
 ### 5.3 Memory
 ### 5.4 Power Management
