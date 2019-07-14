@@ -260,6 +260,7 @@ accelerator, hardware virtualization support, and large physical address extensi
 * Local power, reset, and clock management (PRCM) module
 * Emulation features
 * Digital phase-locked loop (DPLL)
+
 **DSP Subsystems**
 There are two DSP subsystems in the device. Each DSP subsystem contains the following submodules:
 * TMS320C66x™ Floating-Point VLIW DSP core for audio processing, and general-purpose imaging and video
@@ -274,6 +275,7 @@ enhancements and new features.
 * Interrupt controller (INTC)
 * Emulation capabilities
 * Supported by OpenCL
+
 **EVE Subsystems**
 * 4 Embedded Vision Engines (EVEs) supported by TIDL machine learning library
 ![beaglebone ai component placement](images/BB_AI_EVEmodule.jpg)
@@ -299,10 +301,12 @@ Each IPU subsystem includes the following components:
 * MMU for address translation
 * Integrated power management
 • Emulation feature embedded in the Cortex-M4
+
 **IVA-HD Subsystem**
 * IVA-HD subsystem with support for 4K @ 15fps H.264 encode/decode and other codecs @ 1080p60
 The IVA-HD subsystem is a set of video encoder and decoder hardware accelerators. The list of
 supported codecs can be found in the software development kit (SDK) documentation.
+
 **BB2D Graphics Accelerator Subsystem**
 The Vivante® GC320 2D graphics accelerator is the 2D BitBlt (BB2D) graphics accelerator subsystem on the device with the following features:
 * API support:
@@ -320,6 +324,7 @@ The Vivante® GC320 2D graphics accelerator is the 2D BitBlt (BB2D) graphics acc
 – High-quality, 9-tap, 32-phase filter for image and video scaling at 1080p
 – Monochrome expansion for text rendering
 – 32K × 32K coordinate system
+
 **Dual-Core PowerVR® SGX544™ 3D GPU**
 The 3D graphics processing unit (GPU) subsystem is based on POWERVR® SGX544 subsystem from
 Imagination Technologies. It supports general embedded applications. The GPU can process different
