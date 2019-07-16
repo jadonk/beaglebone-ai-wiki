@@ -22,7 +22,7 @@ For an up to date version of this document refer to:
 ## REGULATORY, COMPLIANCE, AND EXPORT INFORMATION
 
 * Country of origin: PRC
-* FCC: TBD
+* FCC: 2ATUT-BBONE-AI
 * CE: TBD
 * CNHTS: 8543909000
 * USHTS: 8473301180
