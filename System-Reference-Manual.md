@@ -29,7 +29,7 @@ For an up to date version of this document refer to:
 * MXHTS: 84733001
 * TARIC: 8473302000
 * ECCN: 5A992.C
-* CCATS: Z1613110
+* CCATS: [Z1613110/G180570](https://github.com/beagleboard/beaglebone-ai/blob/master/regulatory/Validation_Z1613110.pdf)
 
 ## WARNINGS, RESTRICTIONS, AND DISCLAIMERS
 
