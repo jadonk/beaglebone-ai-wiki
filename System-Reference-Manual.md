@@ -86,7 +86,7 @@ Proposed changes.
 BeagleBone® AI Comes in the box with the heat sink and antenna already attached.  Developers can get up and running in 5 minutes with no microSD card needed.  BeagleBone® AI comes preloaded with a Linux distribution.  
 In the box you will find:
 * BeagleBone® AI
-* Instruction Card
+* Quick Start Guide
 
 ![BeagleBone AI Overview](images/BB_AI_antenna_heat_sink_place_500px.jpg)
 
