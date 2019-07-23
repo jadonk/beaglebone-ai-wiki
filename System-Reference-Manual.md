@@ -30,6 +30,7 @@ For an up to date version of this document refer to:
 * TARIC: 8473302000
 * ECCN: 5A992.C
 * CCATS: [Z1613110/G180570](https://github.com/beagleboard/beaglebone-ai/blob/master/regulatory/Validation_Z1613110.pdf)
+* RoHS/REACH: TBD
 
 BeagleBone AI is annotated to comply with Part 15 of the FCC Rules. Operation is subject to the following two conditions: (1) This device may not cause harmful interference, and (2) this device must accept any interference received, including interference that may cause undesired operation. Changes or modifications not expressly approved by the party responsible for compliance could void the user’s authority to operate the equipment.
 
