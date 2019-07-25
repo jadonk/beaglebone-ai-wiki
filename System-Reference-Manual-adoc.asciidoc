@@ -1,0 +1,2251 @@
+(BB AI Image)
+
+[[this-document]]
+THIS DOCUMENT
+-------------
+
+http://creativecommons.org/licenses/by-sa/4.0/[image:images/cc-by-sa-88x31.png[Creative
+Commons CC-BY-SA]] This work is licensed under a
+http://creativecommons.org/licenses/by-sa/4.0/[Creative Commons
+Attribution-ShareAlike 4.0 International License]
+
+All derivative works are to be attributed to
+https://beagleboard.org/about/jkridner[Jason Kridner of
+BeagleBoard.org].
+
+Supply comments and errors via
+https://github.com/beagleboard/beaglebone-ai/issues.
+
+All information in this document is subject to change without notice.
+
+For an up to date version of this document refer to:
+
+https://github.com/beagleboard/beaglebone-ai/wiki/System-Reference-Manual
+
+[[beaglebone-ai-design]]
+BeagleBone AI Design
+--------------------
+
+[[regulatory-compliance-and-export-information]]
+REGULATORY, COMPLIANCE, AND EXPORT INFORMATION
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Country of origin: PRC
+* FCC: 2ATUT-BBONE-AI
+* CE: TBD
+* CNHTS: 8543909000
+* USHTS: 8473301180
+* MXHTS: 84733001
+* TARIC: 8473302000
+* ECCN: 5A992.C
+* CCATS:
+https://github.com/beagleboard/beaglebone-ai/blob/master/regulatory/Validation_Z1613110.pdf[Z1613110/G180570]
+* RoHS/REACH: TBD
+* Volatility: TBD
+
+BeagleBone AI is annotated to comply with Part 15 of the FCC Rules.
+Operation is subject to the following two conditions: (1) This device
+may not cause harmful interference, and (2) this device must accept any
+interference received, including interference that may cause undesired
+operation. Changes or modifications not expressly approved by the party
+responsible for compliance could void the user’s authority to operate
+the equipment.
+
+This Class A or B digital apparatus complies with Canadian ICES-003.
+Changes or modifications not expressly approved by the party responsible
+for compliance could void the user’s authority to operate the equipment.
+Cet appareil numérique de la classe A ou B est conforme à la norme
+NMB-003 du Canada. Les changements ou les modifications pas expressément
+approuvés par la partie responsible de la conformité ont pu vider
+l’autorité de l'utilisateur pour actionner l'équipement.
+
+[[warranty-and-disclaimers]]
+WARRANTY AND DISCLAIMERS
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The design materials referred to in this document are _*NOT SUPPORTED*_
+and *DO NOT* constitute a reference design. Support of the open source
+developer community is provided through the the resources defined at
+https://beagleboard.org/support.
+
+THERE IS NO WARRANTY FOR THE DESIGN MATERIALS, TO THE EXTENT PERMITTED
+BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT
+HOLDERS AND/OR OTHER PARTIES PROVIDE THE DESIGN MATERIALS “AS IS”
+WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING,
+BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND
+PERFORMANCE OF THE DESIGN MATERIALS IS WITH YOU. SHOULD THE DESIGN
+MATERIALS PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY
+SERVICING, REPAIR OR CORRECTION.
+
+This board was designed as an evaluation and development tool. It was
+not designed with any other application in mind. As such, the design
+materials that are provided which include schematic, BOM, and PCB files,
+may or may not be suitable for any other purposes. If used, the design
+material becomes your responsibility as to whether or not it meets your
+specific needs or your specific applications and may require changes to
+meet your requirements.
+
+[[additional-terms]]
+Additional terms
+^^^^^^^^^^^^^^^^
+
+BeagleBoard.org Foundation and logo-licensed manufacturers (together,
+henceforth identified as "Supplier") provide BeagleBone AI under the
+following conditions:
+
+The user assumes all responsibility and liability for proper and safe
+handling of the goods. Further, the user indemnifies Supplier from all
+claims arising from the handling or use of the goods.
+
+Should BeagleBone AI not meet the specifications indicated in the System
+Reference Manual, BeagleBone AI may be returned within 90 days from the
+date of delivery to the distributor of purchase for a full refund. THE
+FOREGOING LIMITED WARRANTY IS THE EXCLUSIVE WARRANTY MADE BY SELLER TO
+BUYER AND IS IN LIEU OF ALL OTHER WARRANTIES, EXPRESSED, IMPLIED, OR
+STATUTORY, INCLUDING ANY WARRANTY OF MERCHANTABILITY OR FITNESS FOR ANY
+PARTICULAR PURPOSE. EXCEPT TO THE EXTENT OF THE INDEMNITY SET FORTH
+ABOVE, NEITHER PARTY SHALL BE LIABLE TO THE OTHER FOR ANY INDIRECT,
+SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES.
+
+Please read the System Reference Manual and, specifically, the Warnings
+and Restrictions notice in the Systems Reference Manual prior to
+handling the product. This notice contains important safety information
+about temperatures and voltages.
+
+No license is granted under any patent right or other intellectual
+property right of Supplier covering or relating to any machine, process,
+or combination in which such Supplier products or services might be or
+are used. The Supplier currently deals with a variety of customers for
+products, and therefore our arrangement with the user is not exclusive.
+The Supplier assume no liability for applications assistance, customer
+product design, software performance, or infringement of patents or
+services described herein.
+
+[[warnings-and-restrictions]]
+Warnings and Restrictions
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[[for-feasibility-evaluation-only-in-laboratorydevelopment-environments]]
+For Feasibility Evaluation Only, in Laboratory/Development Environments
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+BeagleBone AI is not a complete product. It is intended solely for use
+for preliminary feasibility evaluation in laboratory/development
+environments by technically qualified electronics experts who are
+familiar with the dangers and application risks associated with handling
+electrical mechanical components, systems and subsystems. It should not
+be used as all or part of a finished end product.
+
+[[your-sole-responsibility-and-risk]]
+Your Sole Responsibility and Risk
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You acknowledge, represent, and agree that:
+
+1.  You have unique knowledge concerning Federal, State and local
+regulatory requirements (including but not limited to Food and Drug
+Administration regulations, if applicable) which relate to your products
+and which relate to your use (and/or that of your employees, affiliates,
+contractors or designees) of BeagleBone AI for evaluation, testing and
+other purposes.
+2.  You have full and exclusive responsibility to assure the safety and
+compliance of your products with all such laws and other applicable
+regulatory requirements, and also to assure the safety of any activities
+to be conducted by you and/or your employees, affiliates, contractors or
+designees, using BeagleBone AI. Further, you are responsible to assure
+that any interfaces (electronic and/or mechanical) between BeagleBone AI
+and any human body are designed with suitable isolation and means to
+safely limit accessible leakage currents to minimize the risk of
+electrical shock hazard.
+3.  Since BeagleBone AI is not a completed product, it may not meet all
+applicable regulatory and safety compliance standards which may normally
+be associated with similar items. You assume full responsibility to
+determine and/or assure compliance with any such standards and related
+certifications as may be applicable. You will employ reasonable
+safeguards to ensure that your use of BeagleBone AI will not result in
+any property damage, injury or death, even if BeagleBone AI should fail
+to perform as described or expected.
+
+[[certain-instructions]]
+Certain Instructions
+^^^^^^^^^^^^^^^^^^^^
+
+It is important to operate BeagleBone AI within Supplier’s recommended
+specifications and environmental considerations per the user guidelines.
+Exceeding the specified BeagleBone AI ratings (including but not limited
+to input and output voltage, current, power, and environmental ranges)
+may cause property damage, personal injury or death. If there are
+questions concerning these ratings please contact the Supplier
+representative prior to connecting interface electronics including input
+power and intended loads. Any loads applied outside of the specified
+output range may result in unintended and/or inaccurate operation and/or
+possible permanent damage to BeagleBone AI and/or interface electronics.
+Please consult the System Reference Manual prior to connecting any load
+to BeagleBone AI output. If there is uncertainty as to the load
+specification, please contact the Supplier representative. During normal
+operation, some circuit components may have case temperatures greater
+than 60 C as long as the input and output are maintained at a normal
+ambient operating temperature. These components include but are not
+limited to linear regulators, switching transistors, pass transistors,
+and current sense resistors which can be identified using BeagleBone
+AI's schematic located at the link in BeagleBone AI's System Reference
+Manual. When placing measurement probes near these devices during normal
+operation, please be aware that these devices may be very warm to the
+touch. As with all electronic evaluation tools, only qualified personnel
+knowledgeable in electronic measurement and diagnostics normally found
+in development environments should use BeagleBone AI.
+
+[[agreement-to-defend-indemnify-and-hold-harmless]]
+Agreement to Defend, Indemnify and Hold Harmless
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You agree to defend, indemnify and hold Supplier, its licensors and
+their representatives harmless from and against any and all claims,
+damages, losses, expenses, costs and liabilities (collectively,
+"Claims") arising out of or in connection with any use of BeagleBone AI
+that is not in accordance with the terms of the agreement. This
+obligation shall apply whether Claims arise under law of tort or
+contract or any other legal theory, and even if BeagleBone AI fails to
+perform as described or expected.
+
+[[safety-critical-or-life-critical-applications]]
+Safety-Critical or Life-Critical Applications
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you intend to evaluate the components for possible use in safety
+critical applications (such as life support) where a failure of the
+Supplier’s product would reasonably be expected to cause severe personal
+injury or death, such as devices which are classified as FDA Class III
+or similar classification, then you must specifically notify Supplier of
+such intent and enter into a separate Assurance and Indemnity Agreement.
+
+[[table-of-contents-insert-here]]
+Table of Contents (insert here)
+-------------------------------
+
+[[introduction]]
+1.0 Introduction
+----------------
+
+image:images/BB_AI_beautyangle.jpg[BeagleBone AI Beauty Angle]
+
+Built on the proven BeagleBoard.org® open source Linux approach,
+BeagleBone® AI fills the gap between small SBCs and more powerful
+industrial computers. Based on the Texas Instruments AM5729, developers
+have access to the powerful SoC with the ease of BeagleBone® Black
+header and mechanical compatibility. BeagleBone® AI makes it easy to
+explore how artificial intelligence (AI) can be used in everyday life
+via TI C66x digital-signal-processor (DSP) cores and
+embedded-vision-engine (EVE) cores supported through an optimized TIDL
+machine learning OpenCL API with pre-installed tools. Focused on
+everyday automation in industrial, commercial and home applications.
+
+[[change-history]]
+2.0 Change History
+------------------
+
+[[document-change-history]]
+2.1 Document Change History
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+[[board-changes]]
+2.2 Board changes
+^^^^^^^^^^^^^^^^^
+
+[[rev-a0]]
+2.2.1 Rev A0
+++++++++++++
+
+Initial prototype revision. Not taken to production.
+
+[[rev-a1]]
+2.2.2 Rev A1
+++++++++++++
+
+Second round prototype.
+
+* Fixed size of mounting holes.
+* Added LED for WiFi status.
+* Added microHDMI.
+* Changed eMMC voltage from 3.3V to 1.8V to support HS200.
+* Changed eMMC from 4GB to 16GB.
+* Changed serial debug header from 6-pin 100mil pitch to 3-pin 1.5mm
+pitch.
+* Switched expansion header from UART4 to UART5. The UART4 pins were
+used for the microHDMI.
+
+[[rev-a1a]]
+2.2.3 Rev A1a
++++++++++++++
+
+Pilot run.
+
+* Added pull-down resistor on serial debug header RX line.
+
+[[rev-a2]]
+2.2.4 Rev A2
+++++++++++++
+
+Proposed changes.
+
+* Moved microSD card cage closer to microHDMI to fit cases better.
+* Connected AM5729 ball AB10 to to P9.13 to provide a GPIO.
+* HDMI hot-plug detection fixes planned (TBD).
+
+[[connecting-up-your-beaglebone-ai]]
+3.0 Connecting Up Your BeagleBone AI
+------------------------------------
+
+[[whats-in-the-box]]
+3.1 What's In the Box
+^^^^^^^^^^^^^^^^^^^^^
+
+BeagleBone® AI Comes in the box with the heat sink and antenna already
+attached. Developers can get up and running in 5 minutes with no microSD
+card needed. BeagleBone® AI comes preloaded with a Linux distribution. +
+In the box you will find: * BeagleBone® AI * Quick Start Guide
+
+image:images/BB_AI_antenna_heat_sink_place_500px.jpg[BeagleBone AI
+Overview]
+
+You will need to purchase: * USB C cable or USB C to USB A cable *
+MicroSD Card (optional)
+
+More information or to purchase a replacement heat sink or antenna,
+please go to these web sites: *
+https://www.digikey.com/product-detail/en/anaren/66089-2430/1173-1134-ND/3903374[Antenna]
+*
+https://www.digikey.com/product-detail/en/cts-thermal-management-products/BDN10-3CB-A01/294-1098-ND/272736[Heat
+Sink]
+
+You may find it helpful to connect a fan to BeagleBone® AI. This one has
+been used by Alpha testers. *
+https://www.digikey.com/product-detail/en/digi-key-electronics/X15FANKIT/X15FANKIT-ND/5822502[Fan]
+
+[[main-connection-scenarios]]
+3.2 Main Connection Scenarios
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This section will describe how to connect the board for use. The board
+can be configured in several different ways. Below we will walk through
+the most common scenarios. * Tethered to a PC via USB C cable *
+Standalone Desktop with powered USB hub, display, keyboard and mouse *
+Wireless Connection to BeagleBone® AI
+
+[[tethered-to-a-pc]]
+3.3 Tethered to a PC
+^^^^^^^^^^^^^^^^^^^^
+
+The most common way to program BeagleBone® AI is via a USB connection to
+a PC. If your computer has a USB C type port, BeagleBone® AI will both
+communicate and receive power directly from the PC. If your computer
+does not support USB C type, you can utilize a powered USB C hub to
+power and connect to BeagleBone® AI which in turn will connect to your
+PC. You can also use a powered USB C hub to power and connect peripheral
+devices such as a USB camera. After booting, the board is accessed
+either as a USB storage device or via the browser on the PC. You will
+need Chrome or Firefox on the PC.
+
+* Locate the USBC connector on BeagleBone® AI
+
+image:images/BB_AI_USBC_and_3pin_500px.png[BeagleBone AI Overview]
+
+* Connect a USB type-C cable to BeagleBone® AI USB type-C port.
+
+image:images/BB_AI_connectingUSBC_500px.jpg[BeagleBone AI Overview]
+
+* Connect the other end of the USB cable to the PC USB 3 port.
+
+image:images/BB_AI_PlugIn_500px.jpg[BeagleBone AI Overview]
+
+* BeagleBone® AI will boot.
+* You will notice some of the 5 user LEDs flashing
+* Look for a new mass storage drive to appear on the PC.
+
+image:images/BB_AI_asadrive_500px.jpg[BeagleBone AI Overview]
+
+* Open the drive and open START.HTM with your web browser.
+
+image:images/BB_AI_starthtm_500px.png[BeagleBone AI Overview]
+
+* Follow the instructions in the browser window.
+
+image:images/BB_AI_connectedscreen_500px.jpg[BeagleBone AI Overview]
+
+* Go to Cloud9 IDE
+
+image:images/BB_AI_ss_cloud9_500px.jpg[BeagleBone AI Overview]
+
+* Open the directories in the left navigation of Cloud9
+
+image:images/BB_AI_ss_cloud9_dir_500px.jpg[BeagleBone AI Overview]
+
+[[standalone-wdisplay-and-keyboardmouse]]
+3.4 Standalone w/Display and Keyboard/Mouse
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+image:images/BB_AI_Standalone_setup_750px.jpg[BeagleBone AI Overview]
+
+* Connect a combo keyboard and mouse to BeagleBone® AI's USB host port.
+* Connect a microHDMI-to-HDMI cable to BeagleBone® AI's microHDMI port.
+* Connect the microHDMI-to-HDMI cable to an HDMI monitor.
+* Plug a 5V 3A USB type-C power supply into BeagleBone® AI's USB type-C
+port.
+* BeagleBone® AI will boot. No need to enter any passwords.
+* Desktop will appear on the monitor. Click the "Getting Started" icon.
+* Follow the instructions in the browser window.
+
+[[wireless-connection]]
+3.5 Wireless Connection
+^^^^^^^^^^^^^^^^^^^^^^^
+
+1 Plug a 5V 3A USB type-C power supply into BeagleBone® AI's USB type-C
+port.
+
+2 BeagleBone® AI will boot.
+
+3 Connect your PC's WiFi to SSID "BeagleBone-XXXX" where XXXX varies for
+your BeagleBone® AI.
+
+4 Use password "BeagleBone" to complete the WiFi connection.
+
+5 Open http://192.168.8.1 in your web browser.
+
+6 Follow the instructions in the browser window.
+
+[[connecting-a-3-pin-serial-debug-cable]]
+3.6 Connecting a 3 PIN Serial Debug Cable
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A 3 PIN serial debug cable can be helpful to debug when you need to view
+the boot messages through a terminal program such as putty on your host
+PC. This cable is not needed for most BeagleBone® AI boot up scenarios.
+
+Locate the 3 PIN debug header on BeagleBone® AI, near the USB C
+connection.
+
+image:images/BB_AI_USBC_and_3pin_500px.png[BeagleBone AI Overview]
+
+Press the small white connector into the 3 PIN debug header.
+
+image:images/BB_AI_3pincableattach_500px.jpg[BeagleBone AI Overview]
+
+[[beaglebone-ai-overview]]
+4.0 BeagleBone AI Overview
+--------------------------
+
+image:images/BB_AI_overview_image.png[BeagleBone AI Overview]
+
+[[beaglebone-ai-features]]
+4.1 BeagleBone® AI Features
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+*Main Processor Features of the AM5729 Within BeagleBone® AI*
+
+* Dual 1.5GHz ARM® Cortex®-A15 with out-of-order speculative issue 3-way
+superscalar execution pipeline for the fastest execution of existing
+32-bit code
+* 2 466x Floating-Point VLIW DSP supported by OpenCL
+* 4 Embedded Vision Engines (EVEs) supported by TIDL machine learning
+library
+* 2x Dual-Core Programmable Real-Time Unit (PRU) subsystems (4 PRUs
+total) for ultra low-latency control and software generated peripherals
+* 2x Dual ARM® Cortex®-M4 co-processors for real-time control
+* IVA-HD subsystem with support for 4K @ 15fps H.264 encode/decode and
+other codecs @ 1080p60
+* Vivante® GC320 2D graphics accelerator
+* Dual-Core PowerVR® SGX544™ 3D GPU
+
+*Communications*
+
+* BeagleBone Black header and mechanical compatibility
+* 16-bit LCD interfaces
+* 4+ UARTs
+* 2 I2C ports
+* 2 SPI ports
+* Lots of PRU I/O pins
+
+*Memory*
+
+* 1GB RAM
+* 16GB on-board eMMC flash
+
+*Connectors*
+
+* USB Type-C connector for power and SuperSpeed dual-role controller
+* Gigabit Ethernet
+* 802.11ac 2.4/5GHz WiFi via the AzureWave AW-CM256SM
+
+*Out of Box Software*
+
+* Zero-download out of box software environment
+
+[[board-component-locations]]
+4.2 Board Component Locations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+image:images/BB_AI_ICPlacement_800px.png[beaglebone ai component
+placement]
+
+[[beaglebone-black-compatibility]]
+4.1 BeagleBone® Black Compatibility
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+[[beaglebone-ai-high-level-specification]]
+5.0 BeagleBone AI High Level Specification
+------------------------------------------
+
+This section provides the high level specification of BeagleBone® AI ###
+5.1 Block Diagram The figure below is the high level block diagram of
+BeagleBone® AI. For detailed layout information please check the
+schematics.
+
+image:images/BB_AI_Blockdiagram_1000px.jpg[beaglebone ai component
+placement]
+
+[[am572x-sitara-processor]]
+5.2 AM572x Sitara™ Processor
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The Texas Instruments AM572x Sitara™ processor family of SOC devices
+brings high processing performance through the maximum flexibility of a
+fully integrated mixed processor solution. The devices also combine
+programmable video processing with a highly integrated peripheral set
+ideal for AI applications. The AM5729 used on BeagleBone® AI is the
+super-set device of the family.
+
+Programmability is provided by dual-core Arm® Cortex®-A15 RISC CPUs with
+Arm® Neon™ extension, and two TI C66x VLIW floating-point DSP core, and
+Vision AccelerationPac (with 4x EVEs). The Arm allows developers to keep
+control functions separate from other algorithms programmed on the DSPs
+and coprocessors, thus reducing the complexity of the system software.
+
+Texas Instruments AM572x Sitara™ Processor Family Block Diagram*
+
+image:images/BB_AI_AM5729_blockdiagram.jpg[beaglebone ai component
+placement]
+
+*MPU Subsystem* The Dual Cortex-A15 MPU subsystem integrates the
+following submodules: * ARM Cortex-A15 MPCore – Two central processing
+units (CPUs) – ARM Version 7 ISA: Standard ARM instruction set plus
+Thumb®-2, Jazelle® RCT Java™ accelerator, hardware virtualization
+support, and large physical address extensions (LPAE) – Neon™ SIMD
+coprocessor and VFPv4 per CPU – Interrupt controller with up to 160
+interrupt requests – One general-purpose timer and one watchdog timer
+per CPU – Debug and trace features – 32-KiB instruction and 32-KiB data
+level 1 (L1) cache per CPU * Shared 2-MiB level 2 (L2) cache * 48-KiB
+bootable ROM * Local power, reset, and clock management (PRCM) module *
+Emulation features * Digital phase-locked loop (DPLL)
+
+*DSP Subsystems* There are two DSP subsystems in the device. Each DSP
+subsystem contains the following submodules: * TMS320C66x™
+Floating-Point VLIW DSP core for audio processing, and general-purpose
+imaging and video processing. It extends the performance of existing
+C64x+™ and C647x™ DSPs through enhancements and new features. – 32-KiB
+L1D and 32-KiB L1P cache or addressable SRAM – 288-KiB L2 cache *
+256-KiB configurable as cache or SRAM * 32-KiB SRAM * Enhanced direct
+memory access (EDMA) engine for video and audio data transfer * Memory
+management units (MMU) for address management. * Interrupt controller
+(INTC) * Emulation capabilities * Supported by OpenCL
+
+*EVE Subsystems* * 4 Embedded Vision Engines (EVEs) supported by TIDL
+machine learning library image:images/BB_AI_EVEmodule.jpg[beaglebone ai
+component placement] The Embedded Vision Engine (EVE) module is a
+programmable imaging and vision processing engine. Software support for
+the EVE module is available through OpenCL Custom Device model with
+fixed set of functions. More information is available
+http://www.ti.com/lit/wp/spry251/spry251.pd
+
+*PRU-ICSS Subsystems* * 2x Dual-Core Programmable Real-Time Unit (PRU)
+subsystems (4 PRUs total) for ultra low-latency control and software
+generated peripherals. Access to these powerful subsystems is available
+through through the P8 and P9 headers. These are detailed in Section 7.
+
+*IPU Subsystems* There are two Dual Cortex-M4 IPU subsystems in the
+device available for general purpose usage, particularly real-time
+control. Each IPU subsystem includes the following components: * Two
+Cortex-M4 CPUs * ARMv7E-M and Thumb-2 instruction set architectures *
+Hardware division and single-cycle multiplication acceleration *
+Dedicated INTC with up to 63 physical interrupt events with 16-level
+priority * Two-level memory subsystem hierarchy – L1 (32-KiB shared
+cache memory) – L2 ROM + RAM * 64-KiB RAM * 16-KiB bootable ROM * MMU
+for address translation * Integrated power management • Emulation
+feature embedded in the Cortex-M4
+
+*IVA-HD Subsystem* * IVA-HD subsystem with support for 4K @ 15fps H.264
+encode/decode and other codecs @ 1080p60 The IVA-HD subsystem is a set
+of video encoder and decoder hardware accelerators. The list of
+supported codecs can be found in the software development kit (SDK)
+documentation.
+
+*BB2D Graphics Accelerator Subsystem* The Vivante® GC320 2D graphics
+accelerator is the 2D BitBlt (BB2D) graphics accelerator subsystem on
+the device with the following features: * API support: – OpenWF™,
+DirectFB – GDI/DirectDraw * BB2D architecture: – BitBlt and StretchBlt –
+DirectFB hardware acceleration – ROP2, ROP3, ROP4 full alpha blending
+and transparency – Clipping rectangle support – Alpha blending includes
+Java 2 Porter-Duff compositing rules – 90-, 180-, 270-degree rotation on
+every primitive – YUV-to-RGB color space conversion – Programmable
+display format conversion with 14 source and 7 destination formats –
+High-quality, 9-tap, 32-phase filter for image and video scaling at
+1080p – Monochrome expansion for text rendering – 32K × 32K coordinate
+system
+
+*Dual-Core PowerVR® SGX544™ 3D GPU* The 3D graphics processing unit
+(GPU) subsystem is based on POWERVR® SGX544 subsystem from Imagination
+Technologies. It supports general embedded applications. The GPU can
+process different data types simultaneously, such as: pixel data, vertex
+data, video data, and general-purpose data. The GPU subsystem has the
+following features: * Multicore GPU architecture: two SGX544 cores.
+Shared system level cache of 128 KiB * Tile-based deferred rendering
+architecture * Second-generation universal scalable shader engines
+(USSE2), multithreaded engines incorporating pixel and vertex shader
+functionality * Present and texture load accelerators – Enables to move,
+rotate, twiddle, and scale texture surfaces. – Supports RGB, ARGB,
+YUV422, and YUV420 surface formats. – Supports bilinear upscale. –
+Supports source colorkey. * Fine-grained task switching, load balancing,
+and power management * Programmable high-quality image antialiasing *
+Bilinear, trilinear, anisotropic texture filtering * Advanced geometry
+DMA driven operation for minimum CPU interaction * Fully virtualized
+memory addressing for OS operation in a unified memory architecture
+(MMU)
+
+[[memory]]
+5.3 Memory
+^^^^^^^^^^
+
+*5.3.1 1GB DDR3L* Dual 512 MB x 32 DDR3 memory devices are used, one on
+each side of the board, for a total of 1 GB. THey will each operate at a
+clock frequency of 1066 MHz yielding an effective rate of 2133MHz on the
+DDR3L bus allowing for 1.6GB/S of DDR3L memory bandwidth.
+
+*5.3.2 16GB Embedded MMC* A single 16GB embedded MMC (eMMC) device is on
+the board.
+
+*5.3.3 microSD Connector* The board is equipped with a single microSD
+connector to act as a secondary boot source for the board and, if
+selected as such, can be the primary booth source. The connector will
+support larger capacity microSD cards. The microSD card is not provided
+with the board.
+
+*5.3.4 Booth Modes* ### 5.4 Power Management ### Connectivity
+
+*BeagleBone® AI supports the majority of the functions of the AM5729 SOC
+through connectors or expansion header pin accessibility. See section 7
+for more information on expansion header pinouts. There are a few
+functions that are not accessible which are: (TBD)
+
+[[detailed-hardware-design]]
+6.0 Detailed Hardware Design
+----------------------------
+
+This section provides a detailed description of the Hardware design.
+This can be useful for interfacing, writing drivers, or using it to help
+modify specifics of your own design.
+
+The figure below is the high level block diagram of BeagleBone® AI. For
+those who may be concerned, this is the same figure found in section 5.
+It is placed here again for convenience so it is closer to the topics to
+follow.
+
+image:images/BB_AI_Blockdiagram_1000px.jpg[beaglebone ai component
+placement]
+
+[[power-section]]
+6.1 Power Section
+^^^^^^^^^^^^^^^^^
+
+*Figure ?* is the high level block diagram of the power section of the
+board.
+
+(Block Diagram for Power)
+
+[[tps6590377-pmic]]
+6.1.1 TPS6590377 PMIC
++++++++++++++++++++++
+
+The Texas Instruments TPS6590379ZWSR device is an integrated
+power-management IC (PMIC) specifically designed to work well ARM Cortex
+A15 Processors, such as the AM5729 used on BeagleBone® AI. The datasheet
+is located here https://www.ti.com/lit/ds/symlink/tps659037.pdf
+
+The device provides seven configurable step-down converters with up to 6
+A of output current for memory, processor core, input-output (I/O), or
+preregulation of LDOs. One of these configurable step-down converters
+can be combined with another 3-A regulator to allow up to 9 A of output
+current. All of the step-down converters can synchronize to an external
+clock source between 1.7 MHz and 2.7 MHz, or an internal fallback clock
+at 2.2 MHz.
+
+The TPS659037 device contains seven LDO regulators for external use.
+These LDO regulators can be supplied from either a system supply or a
+preregulated supply. The power-up and power-down controller is
+configurable and supports any power-up and power-down sequences (OTP
+based). The TPS659037 device includes a 32-kHz RC oscillator to sequence
+all resources during power up and power down. In cases where a fast
+start up is needed, a 16-MHz crystal oscillator is also included to
+quickly generate a stable 32-kHz for the system. All LDOs and SMPS
+converters can be controlled by the SPI or I2C interface, or by power
+request signals. In addition, voltage scaling registers allow
+transitioning the SMPS to different voltages by SPI, I2C, or roof and
+floor control.
+
+One dedicated pin in each package can be configured as part of the
+power-up sequence to control external resources. General-purpose
+input-output (GPIO) functionality is available and two GPIOs can be
+configured as part of the power-up sequence to control external
+resources. Power request signals enable power mode control for power
+optimization. The device includes a general-purpose sigma-delta
+analog-to-digital converter (GPADC) with three external input channels.
+
+image:images/BB_AI_PMIC_schematicpg3_900px.png[beaglebone ai user
+interface placement]
+
+[[usb-c-power]]
+6.1.2 USB-C Power
++++++++++++++++++
+
+*Figure 23* below shows how the USB-C power input is connected to the
+*TPS6590377*.
+
+(Schematic screenshoot)
+
+[[power-button]]
+6.1.3 Power Button
+++++++++++++++++++
+
+image:images/BB_AI_Userinterface_800px.png[beaglebone ai user interface
+placement]
+
+[[section]]
+6.1.4
++++++
+
+[[wireless-communication-802.11-ac-bluetooth-azurewave-aw-cm256sm]]
+6.9 Wireless Communication: 802.11 ac & Bluetooth: AzureWave AW-CM256SM
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Datasheet
+https://storage.googleapis.com/wzukusers/user-26561200/documents/5b7d0fe3c3f29Ct6k0QI/AW-CM256SM_DS_Rev%2015_CYW.pdf
+Wireless connectivity is provided on BeagleBone® AI via the AzureWave
+Technologies AW-CM256SM IEEE 802.11a/b/g/n/ac Wi-Fi with Bluetooth 4.2
+Combo Stamp Module.
+
+This highly integrated wireless local area network (WLAN) solution
+combines Bluetooth 4.2 and provides a complete 2.4GHz Bluetooth system
+which is fully compliant to Bluetooth 4.2 and v2.1 that supports EDR of
+2Mbps and 3Mbps for data and audio communications. It enables a high
+performance, cost effective, low power, compact solution that easily
+fits onto the SDIO and UART combo stamp module.
+
+Compliant with the IEEE 802.11a/b/g/n/ac standard, AW-CM256SM uses
+Direct Sequence Spread Spectrum (DSSS), Orthogonal Frequency Division
+Multiplexing (OFDM), BPSK, QPSK, CCK and QAM baseband modulation
+technologies. Compare to 802.11n technology, 802.11ac provides a big
+improvement on speed and range.
+
+The AW-CM256SM module adopts a Cypress solution. The module design is
+based on the Cypress CYP43455 single chip.
+
+6.9.1 WLAN on the AzureWave AW-CM256SM High speed wireless connection up
+to 433.3Mbps transmit/receive PHY rate using 80MHz bandwidth * 1
+antennas to support 1(Transmit) and 1(Receive) technology and Bluetooth
+* WCS (Wireless Coexistence System) * Low power consumption and high
+performance * Enhanced wireless security * Fully speed operation with
+Piconet and Scatternet support * 12mm(L) x 12mm(W) x1.65mm(H) LGA
+package * Dual - band 2.4 GHz and 5GHz 802.11 a/b/g/n/ac * External
+Crystal
+
+6.9.2 Bluetooth on the AzureWave AW-CM256S * 1 antennas to support
+1(Transmit) and 1(Receive) technology and Bluetooth * Fully qualified
+Bluetooth BT4.2 * Enhanced Data Rate(EDR) compliant for both 2Mbps and
+3Mbps supported * High speed UART and PCM for Bluetooth
+
+[[hdmi]]
+6.10 HDMI
+^^^^^^^^^
+
+The HDMI interface is aligned with the HDMI TMDS single stream standard
+v1.4a (720p @60Hz to 1080p @24Hz) and the HDMI v1.3 (1080p @60Hz): 3
+data channels, plus 1 clock channel is supported (differential).
+
+[[pru-icss]]
+6.12 PRU-ICSS
+^^^^^^^^^^^^^
+
+The Texas Instruments AM5729 Sitara™ provides 2 Programmable Real-Time
+Unit Subsystem and Industrial Communciation Subsystems. (PRU-ICSS1 and
+PRU-ICSS2).
+
+Within each PRU-ICSS are dual 32-bit Load / Store RISC CPU cores:
+Programmable Real-Time Units (PRU0 and PRU1), shared data and
+instruction memories, internal peripheral modules and an interrupt
+controller. Therefore the SoC is providing a total of 4 PRU 32-bit RISC
+CPU's:
+
+* PRU-ICSS1 PRU0
+* PRU-ICSS1 PRU1
+* PRU-ICSS2 PRU0
+* PRU-ICSS2 PRU1
+
+The programmable nature of the PRUs, along with their access to pins,
+events and all SoC resources, provides flexibility in implmenting fast
+real-time responses, specialized data handling operations, peripheral
+interfaces and in off-loading tasks from the other processor cores of
+the SoC.
+
+[[pru-icss-features]]
+6.12.1 PRU-ICSS Features
+++++++++++++++++++++++++
+
+Each of the 2 PRU-ICSS (PRU-ICSS1 and PRU-ICSS2) includes the following
+main features: * 2 Independent programmable real-time (PRU) cores (PRU0
+and PRU1) * 21x Enhanced GPIs (EGPIs) and 21x Enhanced GPOs (EGPOs) with
+asynchronous capture and serial support per each PRU CPU core * One
+Ethernet MII_RT module (PRU-ICSS_MII_RT) with two MII ports and
+configurable connections to PRUs * 1 MDIO Port (PRU-ICSS_MII_MDIO) * One
+Industrial Ethernet Peripheral (IEP) to manage/generate Industrial
+Ethernet functions * 1 x 16550-compatible UART with a dedicated 192 MHz
+clock to support 12Mbps Profibus * 1 Industrial Ethernet timer with 7/9
+capture and 8 compare events * 1 Enhanced Capture Module (ECAP) * 1
+Interrupt Controller (PRU-ICSS_INTC) * A flexible power management
+support * Integrated switched central resource with programmable
+priority * Parity control supported by all memories
+
+[[pru-icss-block-diagram]]
+6.12.2 PRU-ICSS Block Diagram
++++++++++++++++++++++++++++++
+
+Below is a high level block diagram of one of the PRU-ICSS Subsystems
+image:images/BB_AI_PRU_block_diagram.jpg[beaglebone ai component
+placement]
+
+[[pru-icss-resources-and-faqs]]
+6.12.3 PRU-ICSS Resources and FAQ's
++++++++++++++++++++++++++++++++++++
+
+[[resources]]
+Resources
+
+* Great resources for PRU and BeagleBone® has been compiled here
+https://beagleboard.org/pru
+* The PRU Cookbook provides examples and getting started information
+https://github.com/MarkAYoder/PRUCookbook
+* Detailed specification is availble at
+http://processors.wiki.ti.com/index.php/PRU-ICSS
+
+[[faq]]
+FAQ
+
+* Q: Is it possible to configure the Ethernet MII to be accessed via a
+PRU MII?
+* A: TBD
+
+[[pru-icss1-pin-access]]
+6.12.4 PRU-ICSS1 Pin Access
++++++++++++++++++++++++++++
+
+The table below shows which PRU-ICSS1 signals can be accessed on
+BeagleBone® AI and on which connector and pins they are accessible from.
+Some signals are accessible on the same pins. Signal Names reveal which
+PRU-ICSS Subsystem is being addressed. pr1 is PRU-ICSS1 and pr2 is
+PRU-ICSS2
+
+[width="99%",cols="29%,25%,5%,7%,10%,7%,10%,7%",options="header",]
+|=======================================================================
+|SIGNAL NAME |DESCRIPTION |TYPE |PROC |HEADER_PIN |MODE |HEADER_PIN
+|MODE
+|pr1_pru0_gpo0 |PRU0 General-Purpose Output |O |AH6 |NA | | |
+
+|pr1_pru0_gpo1 |PRU0 General-Purpose Output |O |AH3 |NA | | |
+
+|pr1_pru0_gpo2 |PRU0 General-Purpose Output |O |AH5 |NA | | |
+
+|pr1_pru0_gpo3 |PRU0 General-Purpose Output |O |AG6 |P8_12 |MODE13 | |
+
+|pr1_pru0_gpo4 |PRU0 General-Purpose Output |O |AH4 |P8_11 |MODE13 | |
+
+|pr1_pru0_gpo5 |PRU0 General-Purpose Output |O |AG4 |P9_15 |MODE13 | |
+
+|pr1_pru0_gpo6 |PRU0 General-Purpose Output |O |AG2 |NA | | |
+
+|pr1_pru0_gpo7 |PRU0 General-Purpose Output |O |AG3 |NA | | |
+
+|pr1_pru0_gpo8 |PRU0 General-Purpose Output |O |AG5 |NA | | |
+
+|pr1_pru0_gpo9 |PRU0 General-Purpose Output |O |AF2 |NA | | |
+
+|pr1_pru0_gpo10 |PRU0 General-Purpose Output |O |AF6 |NA | | |
+
+|pr1_pru0_gpo11 |PRU0 General-Purpose Output |O |AF3 |NA | | |
+
+|pr1_pru0_gpo12 |PRU0 General-Purpose Output |O |AF4 |NA | | |
+
+|pr1_pru0_gpo13 |PRU0 General-Purpose Output |O |AF1 |NA | | |
+
+|pr1_pru0_gpo14 |PRU0 General-Purpose Output |O |AE3 |NA | | |
+
+|pr1_pru0_gpo15 |PRU0 General-Purpose Output |O |AE5 |NA | | |
+
+|pr1_pru0_gpo16 |PRU0 General-Purpose Output |O |AE1 |NA | | |
+
+|pr1_pru0_gpo17 |PRU0 General-Purpose Output |O |AE2 |P9_26 |MODE13 | |
+
+|pr1_pru0_gpo18 |PRU0 General-Purpose Output |O |AE6 |NA | | |
+
+|pr1_pru0_gpo19 |PRU0 General-Purpose Output |O |AD2 |NA | | |
+
+|pr1_pru0_gpo20 |PRU0 General-Purpose Output |O |AD3 |NA | | |
+
+|pr1_pru0_gpi0 |PRU0 General-Purpose Input |I |AH6 |NA | | |
+
+|pr1_pru0_gpi1 |PRU0 General-Purpose Input |I |AH3 |NA | | |
+
+|pr1_pru0_gpi2 |PRU0 General-Purpose Input |I |AH5 |NA | | |
+
+|pr1_pru0_gpi3 |PRU0 General-Purpose Input |I |AG6 |P8_12 |MODE12 | |
+
+|pr1_pru0_gpi4 |PRU0 General-Purpose Input |I |AH4 |P8_11 |MODE12 | |
+
+|pr1_pru0_gpi5 |PRU0 General-Purpose Input |I |AG4 |P9_15 |MODE12 | |
+
+|pr1_pru0_gpi6 |PRU0 General-Purpose Input |I |AG2 |NA | | |
+
+|pr1_pru0_gpi7 |PRU0 General-Purpose Input |I |AG3 |NA | | |
+
+|pr1_pru0_gpi8 |PRU0 General-Purpose Input |I |AG5 |NA | | |
+
+|pr1_pru0_gpi9 |PRU0 General-Purpose Input |I |AF2 |NA | | |
+
+|pr1_pru0_gpi10 |PRU0 General-Purpose Input |I |AF6 |NA | | |
+
+|pr1_pru0_gpi11 |PRU0 General-Purpose Input |I |AF3 |NA | | |
+
+|pr1_pru0_gpi12 |PRU0 General-Purpose Input |I |AF4 |NA | | |
+
+|pr1_pru0_gpi13 |PRU0 General-Purpose Input |I |AF1 |NA | | |
+
+|pr1_pru0_gpi14 |PRU0 General-Purpose Input |I |AE3 |NA | | |
+
+|pr1_pru0_gpi15 |PRU0 General-Purpose Input |I |AE5 |NA | | |
+
+|pr1_pru0_gpi16 |PRU0 General-Purpose Input |I |AE1 |NA | | |
+
+|pr1_pru0_gpi17 |PRU0 General-Purpose Input |I |AE2 |P9_26 |MODE12 | |
+
+|pr1_pru0_gpi18 |PRU0 General-Purpose Input |I |AE6 |NA | | |
+
+|pr1_pru0_gpi19 |PRU0 General-Purpose Input |I |AD2 |NA | | |
+
+|pr1_pru0_gpi20 |PRU0 General-Purpose Input |I |AD3 |NA | | |
+
+|pr1_pru1_gpo0 |PRU1 General-Purpose Output |O |E2 |NA | | |
+
+|pr1_pru1_gpo1 |PRU1 General-Purpose Output |O |D2 |P9_20 |MODE13 | |
+
+|pr1_pru1_gpo2 |PRU1 General-Purpose Output |O |F4 |P9_19 |MODE13 | |
+
+|pr1_pru1_gpo3 |PRU1 General-Purpose Output |O |C1 |P9_41 |MODE13 | |
+
+|pr1_pru1_gpo4 |PRU1 General-Purpose Output |O |E4 |NA | | |
+
+|pr1_pru1_gpo5 |PRU1 General-Purpose Output |O |F5 |P8_18 |MODE13 | |
+
+|pr1_pru1_gpo6 |PRU1 General-Purpose Output |O |E6 |P8_19 |MODE13 | |
+
+|pr1_pru1_gpo7 |PRU1 General-Purpose Output |O |D3 |P8_13 |MODE13 | |
+
+|pr1_pru1_gpo8 |PRU1 General-Purpose Output |O |F6 |NA | | |
+
+|pr1_pru1_gpo9 |PRU1 General-Purpose Output |O |D5 |P8_14 |MODE13 | |
+
+|pr1_pru1_gpo10 |PRU1 General-Purpose Output |O |C2 |P9_42 |MODE13 | |
+
+|pr1_pru1_gpo11 |PRU1 General-Purpose Output |O |C3 |P9_27 |MODE13 | |
+
+|pr1_pru1_gpo12 |PRU1 General-Purpose Output |O |C4 |NA | | |
+
+|pr1_pru1_gpo13 |PRU1 General-Purpose Output |O |B2 |NA | | |
+
+|pr1_pru1_gpo14 |PRU1 General-Purpose Output |O |D6 |P9_14 |MODE13 | |
+
+|pr1_pru1_gpo15 |PRU1 General-Purpose Output |O |C5 |P9_16 |MODE13 | |
+
+|pr1_pru1_gpo16 |PRU1 General-Purpose Output |O |A3 |P8_15 |MODE13 | |
+
+|pr1_pru1_gpo17 |PRU1 General-Purpose Output |O |B3 |P8_26 |MODE13 | |
+
+|pr1_pru1_gpo18 |PRU1 General-Purpose Output |O |B4 |P8_16 |MODE13 | |
+
+|pr1_pru1_gpo19 |PRU1 General-Purpose Output |O |B5 |NA | | |
+
+|pr1_pru1_gpo20 |PRU1 General-Purpose Output |O |A4 |NA | | |
+
+|pr1_pru1_gpi0 |PRU1 General-Purpose Input |I |E2 |NA | | |
+
+|pr1_pru1_gpi1 |PRU1 General-Purpose Input |I |D2 |P9_20 |MODE12 | |
+
+|pr1_pru1_gpi2 |PRU1 General-Purpose Input |I |F4 |P9_19 |MODE12 | |
+
+|pr1_pru1_gpi3 |PRU1 General-Purpose Input |I |C1 |P9_41 |MODE12 | |
+
+|pr1_pru1_gpi4 |PRU1 General-Purpose Input |I |E4 |NA | | |
+
+|pr1_pru1_gpi5 |PRU1 General-Purpose Input |I |F5 |P8_18 |MODE12 | |
+
+|pr1_pru1_gpi6 |PRU1 General-Purpose Input |I |E6 |P8_19 |MODE12 | |
+
+|pr1_pru1_gpi7 |PRU1 General-Purpose Input |I |D3 |P8_13 |MODE12 | |
+
+|pr1_pru1_gpi8 |PRU1 General-Purpose Input |I |F6 |NA | | |
+
+|pr1_pru1_gpi9 |PRU1 General-Purpose Input |I |D5 |P8_14 |MODE12 | |
+
+|pr1_pru1_gpi10 |PRU1 General-Purpose Input |I |C2 |P9_42 |MODE12 | |
+
+|pr1_pru1_gpi11 |PRU1 General-Purpose Input |I |C3 |P9_27 |MODE12 | |
+
+|pr1_pru1_gpi12 |PRU1 General-Purpose Input |I |C4 |NA | | |
+
+|pr1_pru1_gpi13 |PRU1 General-Purpose Input |I |B2 |NA | | |
+
+|pr1_pru1_gpi14 |PRU1 General-Purpose Input |I |D6 |P9_14 |MODE12 | |
+
+|pr1_pru1_gpi15 |PRU1 General-Purpose Input |I |C5 |P9_16 |MODE12 | |
+
+|pr1_pru1_gpi16 |PRU1 General-Purpose Input |I |A3 |P8_15 |MODE12 | |
+
+|pr1_pru1_gpi17 |PRU1 General-Purpose Input |I |B3 |P8_26 |MODE12 | |
+
+|pr1_pru1_gpi18 |PRU1 General-Purpose Input |I |B4 |P8_16 |MODE12 | |
+
+|pr1_pru1_gpi19 |PRU1 General-Purpose Input |I |B5 |NA | | |
+
+|pr1_pru1_gpi20 |PRU1 General-Purpose Input |I |A4 |NA | | |
+
+|pr1_mii_mt0_clk |MII0 Transmit Clock |I |U5 |NA | | |
+
+|pr1_mii0_txen |MII0 Transmit Enable |O |V3 |NA | | |
+
+|pr1_mii0_txd3 |MII0 Transmit Data |O |V5 |NA | | |
+
+|pr1_mii0_txd2 |MII0 Transmit Data |O |V4 |NA | | |
+
+|pr1_mii0_txd1 |MII0 Transmit Data |O |Y2 |NA | | |
+
+|pr1_mii0_txd0 |MII0 Transmit Data |O |W2 |NA | | |
+
+|pr1_mii0_rxdv |MII0 Data Valid |I |V2 |NA | | |
+
+|pr1_mii_mr0_clk |MII0 Receive Clock |I |Y1 |NA | | |
+
+|pr1_mii0_rxd3 |MII0 Receive Data |I |W9 |NA | | |
+
+|pr1_mii0_rxd2 |MII0 Receive Data |I |V9 |NA | | |
+
+|pr1_mii0_crs |MII0 Carrier Sense |I |V7 |NA | | |
+
+|pr1_mii0_rxer |MII0 Receive Error |I |U7 |NA | | |
+
+|pr1_mii0_rxd1 |MII0 Receive Data |I |V6 |NA | | |
+
+|pr1_mii0_rxd0 |MII0 Receive Data |I |U6 |NA | | |
+
+|pr1_mii0_col |MII0 Collision Detect |I |V1 |NA | | |
+
+|pr1_mii0_rxlink |MII0 Receive Link |I |U4 |NA | | |
+
+|pr1_mii_mt1_clk |MII1 Transmit Clock |I |C1 |P9_41 |MODE11 | |
+
+|pr1_mii1_txen |MII1 Transmit Enable |O |E4 |NA | | |
+
+|pr1_mii1_txd3 |MII1 Transmit Data |O |F5 |P8_18 |MODE11 | |
+
+|pr1_mii1_txd2 |MII1 Transmit Data |O |E6 |P8_19 |MODE11 | |
+
+|pr1_mii1_txd1 |MII1 Transmit Data |O |D5 |P8_14 |MODE11 | |
+
+|pr1_mii1_txd0 |MII1 Transmit Data |O |C2 |P9_42 |MODE11 | |
+
+|pr1_mii_mr1_clk |MII1 Receive Clock |I |C3 |P9_27 |MODE11 | |
+
+|pr1_mii1_rxdv |MII1 Data Valid |I |C4 |NA | | |
+
+|pr1_mii1_rxd3 |MII1 Receive Data |I |B2 |NA | | |
+
+|pr1_mii1_rxd2 |MII1 Receive Data |I |D6 |P9_14 |MODE11 | |
+
+|pr1_mii1_rxd1 |MII1 Receive Data |I |C5 |P9_16 |MODE11 | |
+
+|pr1_mii1_rxd0 |MII1 Receive Data |I |A3 |P8_15 |MODE11 | |
+
+|pr1_mii1_rxer |MII1 Receive Error |I |B3 |P8_26 |MODE11 | |
+
+|pr1_mii1_rxlink |MII1 Receive Link |I |B4 |P8_16 |MODE11 | |
+
+|pr1_mii1_col |MII1 Collision Detect |I |B5 |NA | | |
+
+|pr1_mii1_crs |MII1 Carrier Sense |I |A4 |NA | | |
+
+|pr1_mdio_mdclk |MDIO Clock |O |D3 |P8_13 |MODE11 | |
+
+|pr1_mdio_data |MDIO Data |IO |F6 |NA | | |
+
+|pr1_edc_latch0_in |Latch Input 0 |I |AG3/E2 |NA | | |
+
+|pr1_edc_latch1_in |Latch Input 1 |I |AG5 |NA | | |
+
+|pr1_edc_sync0_out |SYNC0 Output |O |AF2/D2 |P9_20 |MODE11 | |
+
+|pr1_edc_sync1_out |SYNC1 Output |O |AF6 |NA | | |
+
+|pr1_edio_latch_in |Latch Input |I |AF3 |NA | | |
+
+|pr1_edio_sof |Start Of Frame |O |AF4/F4 |P9_19 |MODE11 | |
+
+|pr1_edio_data_in0 |Ethernet Digital Input |I |AF1/E1 |NA | | |
+
+|pr1_edio_data_in1 |Ethernet Digital Input |I |AE3/G2 |NA | | |
+
+|pr1_edio_data_in2 |Ethernet Digital Input |I |AE5/H7 |NA | | |
+
+|pr1_edio_data_in3 |Ethernet Digital Input |I |AE1/G1 |NA | | |
+
+|pr1_edio_data_in4 |Ethernet Digital Input |I |AE2/G6 |P9_26 |MODE10
+|P8_34 |MODE12
+
+|pr1_edio_data_in5 |Ethernet Digital Input |I |AE6/F2 |P8_36 |MODE12 | |
+
+|pr1_edio_data_in6 |Ethernet Digital Input |I |AD2/F3 |NA | | |
+
+|pr1_edio_data_in7 |Ethernet Digital Input |I |AD3/D1 |P8_15 |MODE12 | |
+
+|pr1_edio_data_out0 |Ethernet Digital Output |O |AF1/E1 |NA | | |
+
+|pr1_edio_data_out1 |Ethernet Digital Output |O |AE3/G2 |NA | | |
+
+|pr1_edio_data_out2 |Ethernet Digital Output |O |AE5/H7 |NA | | |
+
+|pr1_edio_data_out3 |Ethernet Digital Output |O |AE1/G1 |NA | | |
+
+|pr1_edio_data_out4 |Ethernet Digital Output |O |AE2/G6 |P9_26 |MODE11
+|P8_34 |MODE13
+
+|pr1_edio_data_out5 |Ethernet Digital Output |O |AE6/F2 |P8_36 |MODE13 |
+|
+
+|pr1_edio_data_out6 |Ethernet Digital Output |O |AD2/F3 |NA | | |
+
+|pr1_edio_data_out7 |Ethernet Digital Output |O |AD3/D1 |P8_15 |MODE13 |
+|
+
+|pr1_uart0_cts_n |UART Clear-To-Send |I |G1/F11 |P8_45 |MODE10 | |
+
+|pr1_uart0_rts_n |UART Ready-To-Send |O |G6/G10 |P8_34 |MODE11 |P8_46
+|MODE10
+
+|pr1_uart0_rxd |UART Receive Data |I |F2/F10 |P8_36 |MODE11 |P8_43
+|MODE10
+
+|pr1_uart0_txd |UART Transmit Data |O |F3/G11 |P8_44 |MODE10 | |
+
+|pr1_ecap0_ecap_capin_apwm_o |Capture Input/PWM Output |IO |D1/E9 |P8_15
+|MODE11 |P8_41 |MODE10
+|=======================================================================
+
+[[pru-icss2-pin-access]]
+6.12.5 PRU-ICSS2 Pin Access
++++++++++++++++++++++++++++
+
+The table below shows which PRU-ICSS2 signals can be accessed on
+BeagleBone® AI and on which connector and pins they are accessible from.
+Some signals are accessible on the same pins. Signal Names reveal which
+PRU-ICSS Subsystem is being addressed. pr1 is PRU-ICSS1 and pr2 is
+PRU-ICSS2
+
+[cols=",,,,,,,",options="header",]
+|=======================================================================
+|SIGNAL NAME |DESCRIPTION |TYPE |PROC |HEADER_PIN |MODE |HEADER_PIN
+|MODE
+|pr2_pru0_gpo0 |PRU0 General-Purpose Output |O |G11/AC5 |P8_44 |MODE13 |
+|
+
+|pr2_pru0_gpo1 |PRU0 General-Purpose Output |O |E9/AB4 |P8_41 |MODE13 |
+|
+
+|pr2_pru0_gpo2 |PRU0 General-Purpose Output |O |F9/AD4 |P8_42 |MODE13
+|P8_21 |MODE13
+
+|pr2_pru0_gpo3 |PRU0 General-Purpose Output |O |F8/AC4 |P8_39 |MODE13
+|P8_20 |MODE13
+
+|pr2_pru0_gpo4 |PRU0 General-Purpose Output |O |E7/AC7 |P8_40 |MODE13
+|P8_25 |MODE13
+
+|pr2_pru0_gpo5 |PRU0 General-Purpose Output |O |E8/AC6 |P8_37 |MODE13
+|P8_24 |MODE13
+
+|pr2_pru0_gpo6 |PRU0 General-Purpose Output |O |D9/AC9 |P8_38 |MODE13
+|P8_5 |MODE13
+
+|pr2_pru0_gpo7 |PRU0 General-Purpose Output |O |D7/AC3 |P8_36 |MODE13
+|P8_6 |MODE13
+
+|pr2_pru0_gpo8 |PRU0 General-Purpose Output |O |D8/AC8 |P8_34 |MODE13
+|P8_23 |MODE13
+
+|pr2_pru0_gpo9 |PRU0 General-Purpose Output |O |A5/AD6 |P8_35 |MODE13
+|P8_22 |MODE13
+
+|pr2_pru0_gpo10 |PRU0 General-Purpose Output |O |C6/AB8 |P8_33 |MODE13
+|P8_3 |MODE13
+
+|pr2_pru0_gpo11 |PRU0 General-Purpose Output |O |C8/AB5 |P8_31 |MODE13
+|P8_4 |MODE13
+
+|pr2_pru0_gpo12 |PRU0 General-Purpose Output |O |C7/B18 |P8_32 |MODE13 |
+|
+
+|pr2_pru0_gpo13 |PRU0 General-Purpose Output |O |B7/F15 |P8_45 |MODE13 |
+|
+
+|pr2_pru0_gpo14 |PRU0 General-Purpose Output |O |B8/B19 |P9_11 |MODE13
+|P9_11 |MODE13
+
+|pr2_pru0_gpo15 |PRU0 General-Purpose Output |O |A7/C17 |P8_17 |MODE13
+|P9_13 |MODE13
+
+|pr2_pru0_gpo16 |PRU0 General-Purpose Output |O |A8/C15 |P8_27 |MODE13 |
+|
+
+|pr2_pru0_gpo17 |PRU0 General-Purpose Output |O |C9/A16 |P8_28 |MODE13 |
+|
+
+|pr2_pru0_gpo18 |PRU0 General-Purpose Output |O |A9/A19 |P8_29 |MODE13 |
+|
+
+|pr2_pru0_gpo19 |PRU0 General-Purpose Output |O |B9/A18 |P8_30 |MODE13 |
+|
+
+|pr2_pru0_gpo20 |PRU0 General-Purpose Output |O |A10/F14 |P8_46 |MODE13
+|P8_8 |MODE13
+
+|pr2_pru0_gpi0 |PRU0 General-Purpose Input |I |G11/AC5 |P8_44 |MODE12 |
+|
+
+|pr2_pru0_gpi1 |PRU0 General-Purpose Input |I |E9/AB4 |P8_41 |MODE12 | |
+
+|pr2_pru0_gpi2 |PRU0 General-Purpose Input |I |F9/AD4 |P8_42 |MODE12
+|P8_21 |MODE12
+
+|pr2_pru0_gpi3 |PRU0 General-Purpose Input |I |F8/AC4 |P8_39 |MODE12
+|P8_20 |MODE12
+
+|pr2_pru0_gpi4 |PRU0 General-Purpose Input |I |E7/AC7 |P8_40 |MODE12
+|P8_25 |MODE12
+
+|pr2_pru0_gpi5 |PRU0 General-Purpose Input |I |E8/AC6 |P8_37 |MODE12
+|P8_24 |MODE12
+
+|pr2_pru0_gpi6 |PRU0 General-Purpose Input |I |D9/AC9 |P8_38 |MODE12
+|P8_5 |MODE12
+
+|pr2_pru0_gpi7 |PRU0 General-Purpose Input |I |D7/AC3 |P8_36 |MODE12
+|P8_6 |MODE12
+
+|pr2_pru0_gpi8 |PRU0 General-Purpose Input |I |D8/AC8 |P8_34 |MODE12
+|P8_23 |MODE12
+
+|pr2_pru0_gpi9 |PRU0 General-Purpose Input |I |A5/AD6 |P8_35 |MODE12
+|P8_22 |MODE12
+
+|pr2_pru0_gpi10 |PRU0 General-Purpose Input |I |C6/AB8 |P8_33 |MODE12
+|P8_3 |MODE12
+
+|pr2_pru0_gpi11 |PRU0 General-Purpose Input |I |C8/AB5 |P8_31 |MODE12
+|P8_4 |MODE12
+
+|pr2_pru0_gpi12 |PRU0 General-Purpose Input |I |C7/B18 |P8_32 |MODE12 |
+|
+
+|pr2_pru0_gpi13 |PRU0 General-Purpose Input |I |B7/F15 |P8_45 |MODE12 |
+|
+
+|pr2_pru0_gpi14 |PRU0 General-Purpose Input |I |B8/B19 |P9_11 |MODE12
+|P9_11 |MODE12
+
+|pr2_pru0_gpi15 |PRU0 General-Purpose Input |I |A7/C17 |P8_17 |MODE12
+|P9_13 |MODE12
+
+|pr2_pru0_gpi16 |PRU0 General-Purpose Input |I |A8/C15 |P8_27 |MODE12 |
+|
+
+|pr2_pru0_gpi17 |PRU0 General-Purpose Input |I |C9/A16 |P8_28 |MODE12 |
+|
+
+|pr2_pru0_gpi18 |PRU0 General-Purpose Input |I |A9/A19 |P8_29 |MODE12 |
+|
+
+|pr2_pru0_gpi19 |PRU0 General-Purpose Input |I |B9/A18 |P8_30 |MODE12 |
+|
+
+|pr2_pru0_gpi20 |PRU0 General-Purpose Input |I |A10/F14 |P8_46 |MODE12
+|P8_8 |MODE12
+
+|pr2_pru1_gpo0 |PRU1 General-Purpose Output |O |V1/D17 |P8_32 |MODE13 |
+|
+
+|pr2_pru1_gpo1 |PRU1 General-Purpose Output |O |U4/AA3 |NA | | |
+
+|pr2_pru1_gpo2 |PRU1 General-Purpose Output |O |U3/AB9 |NA | | |
+
+|pr2_pru1_gpo3 |PRU1 General-Purpose Output |O |V2/AB3 |NA | | |
+
+|pr2_pru1_gpo4 |PRU1 General-Purpose Output |O |Y1/AA4 |NA | | |
+
+|pr2_pru1_gpo5 |PRU1 General-Purpose Output |O |W9/D18 |P9_25 |MODE13 |
+|
+
+|pr2_pru1_gpo6 |PRU1 General-Purpose Output |O |V9/E17 |P8_9 |MODE13 | |
+
+|pr2_pru1_gpo7 |PRU1 General-Purpose Output |O |V7/C14 |P9_31 |MODE13 |
+|
+
+|pr2_pru1_gpo8 |PRU1 General-Purpose Output |O |U7/G12 |P9_18 |MODE13 |
+|
+
+|pr2_pru1_gpo9 |PRU1 General-Purpose Output |O |V6/F12 |P9_17 |MODE13 |
+|
+
+|pr2_pru1_gpo10 |PRU1 General-Purpose Output |O |U6/B12 |P9_31 |MODE13 |
+|
+
+|pr2_pru1_gpo11 |PRU1 General-Purpose Output |O |U5/A11 |P9_29 |MODE13 |
+|
+
+|pr2_pru1_gpo12 |PRU1 General-Purpose Output |O |V5/B13 |P9_30 |MODE13 |
+|
+
+|pr2_pru1_gpo13 |PRU1 General-Purpose Output |O |V4/A12 |P9_26 |MODE13 |
+|
+
+|pr2_pru1_gpo14 |PRU1 General-Purpose Output |O |V3/E14 |P9_42 |MODE13 |
+|
+
+|pr2_pru1_gpo15 |PRU1 General-Purpose Output |O |Y2/A13 |P8_10 |MODE13 |
+|
+
+|pr2_pru1_gpo16 |PRU1 General-Purpose Output |O |W2/G14 |P8_7 |MODE13 |
+|
+
+|pr2_pru1_gpo17 |PRU1 General-Purpose Output |O |E11 |P8_27 |MODE13 | |
+
+|pr2_pru1_gpo18 |PRU1 General-Purpose Output |O |F11 |P8_45 |MODE13 | |
+
+|pr2_pru1_gpo19 |PRU1 General-Purpose Output |O |G10 |P8_46 |MODE13 | |
+
+|pr2_pru1_gpo20 |PRU1 General-Purpose Output |O |F10 |P8_43 |MODE13 | |
+
+|pr2_pru1_gpi0 |PRU1 General-Purpose Input |I |V1/D17 |P8_32 |MODE12 | |
+
+|pr2_pru1_gpi1 |PRU1 General-Purpose Input |I |U4/AA3 |NA | | |
+
+|pr2_pru1_gpi2 |PRU1 General-Purpose Input |I |U3/AB9 |NA | | |
+
+|pr2_pru1_gpi3 |PRU1 General-Purpose Input |I |V2/AB3 |NA | | |
+
+|pr2_pru1_gpi4 |PRU1 General-Purpose Input |I |Y1/AA4 |NA | | |
+
+|pr2_pru1_gpi5 |PRU1 General-Purpose Input |I |W9/D18 |P9_25 |MODE12 | |
+
+|pr2_pru1_gpi6 |PRU1 General-Purpose Input |I |V9/E17 |P8_9 |MODE12 | |
+
+|pr2_pru1_gpi7 |PRU1 General-Purpose Input |I |V7/C14 |P9_31 |MODE12 | |
+
+|pr2_pru1_gpi8 |PRU1 General-Purpose Input |I |U7/G12 |P9_18 |MODE12 | |
+
+|pr2_pru1_gpi9 |PRU1 General-Purpose Input |I |V6/F12 |P9_17 |MODE12 | |
+
+|pr2_pru1_gpi10 |PRU1 General-Purpose Input |I |U6/B12 |P9_31 |MODE12 |
+|
+
+|pr2_pru1_gpi11 |PRU1 General-Purpose Input |I |U5/A11 |P9_29 |MODE12 |
+|
+
+|pr2_pru1_gpi12 |PRU1 General-Purpose Input |I |V5/B13 |P9_30 |MODE12 |
+|
+
+|pr2_pru1_gpi13 |PRU1 General-Purpose Input |I |V4/A12 |P9_28 |MODE12 |
+|
+
+|pr2_pru1_gpi14 |PRU1 General-Purpose Input |I |V3/E14 |P9_42 |MODE12 |
+|
+
+|pr2_pru1_gpi15 |PRU1 General-Purpose Input |I |Y2/A13 |P8_10 |MODE12 |
+|
+
+|pr2_pru1_gpi16 |PRU1 General-Purpose Input |I |W2/G14 |P8_7 |MODE12 | |
+
+|pr2_pru1_gpi17 |PRU1 General-Purpose Input |I |E11 |P8_27 |MODE12 | |
+
+|pr2_pru1_gpi18 |PRU1 General-Purpose Input |I |F11 |P8_45 |MODE12 | |
+
+|pr2_pru1_gpi19 |PRU1 General-Purpose Input |I |G10 |P8_46 |MODE12 | |
+
+|pr2_pru1_gpi20 |PRU1 General-Purpose Input |I |F10 |P8_43 |MODE12 | |
+
+|pr2_edc_latch0_in |Latch Input 0 |I |F9 |P8_42 |MODE10 | |
+
+|pr2_edc_latch1_in |Latch Input 1 |I |F8 |P8_39 |MODE10 | |
+
+|pr2_edc_sync0_out |SYNC0 Output |O |E7 |P8_40 |MODE10 | |
+
+|pr2_edc_sync1_out |SYNC1 Output |O |E8 |P8_37 |MODE10 | |
+
+|pr2_edio_latch_in |Latch Input |I |D9 |P8_38 |MODE10 | |
+
+|pr2_edio_sof |Start Of Frame |O |D7 |P8_36 |MODE10 | |
+
+|pr2_uart0_cts_n |UART Clear-To-Send |I |D8 |P8_34 |MODE10 | |
+
+|pr2_uart0_rts_n |UART Ready-To-Send |O |A5 |P8_35 |MODE10 | |
+
+|pr2_uart0_rxd |UART Receive Data |I |C6 |P8_33 |MODE10 | |
+
+|pr2_uart0_txd |UART Transmit Data |O |C8 |P8_31 |MODE10 | |
+
+|pr2_ecap0_ecap_capin_apwm_o |Capture Input/PWM output |IO |C7 |P8_32
+|MODE10 | |
+
+|pr2_edio_data_in0 |Ethernet Digital Input |I |B7 |P8_45 |MODE10 | |
+
+|pr2_edio_data_in1 |Ethernet Digital Input |I |B8 |P9_11 |MODE10 | |
+
+|pr2_edio_data_in2 |Ethernet Digital Input |I |A7 |P8_17 |MODE10 | |
+
+|pr2_edio_data_in3 |Ethernet Digital Input |I |A8 |P8_27 |MODE10 | |
+
+|pr2_edio_data_in4 |Ethernet Digital Input |I |C9 |P8_28 |MODE10 | |
+
+|pr2_edio_data_in5 |Ethernet Digital Input |I |A9 |P8_29 |MODE10 | |
+
+|pr2_edio_data_in6 |Ethernet Digital Input |I |B9 |P8_30 |MODE10 | |
+
+|pr2_edio_data_in7 |Ethernet Digital Input |I |A10 |P8_46 |MODE10 | |
+
+|pr2_edio_data_out0 |Ethernet Digital Output |O |B7 |P8_45 |MODE11 | |
+
+|pr2_edio_data_out1 |Ethernet Digital Output |O |B8 |P9_11 |MODE11 | |
+
+|pr2_edio_data_out2 |Ethernet Digital Output |O |A7 |P8_17 |MODE11 | |
+
+|pr2_edio_data_out3 |Ethernet Digital Output |O |A8 |P8_27 |MODE11 | |
+
+|pr2_edio_data_out4 |Ethernet Digital Output |O |C9 |P8_28 |MODE11 | |
+
+|pr2_edio_data_out5 |Ethernet Digital Output |O |A9 |P8_29 |MODE11 | |
+
+|pr2_edio_data_out6 |Ethernet Digital Output |O |B9 |P8_30 |MODE11 | |
+
+|pr2_edio_data_out7 |Ethernet Digital Output |O |A10 |P8_46 |MODE11 | |
+
+|pr2_mii1_col |MII1 Collision Detect |I |D18 |P9_25 |MODE11 | |
+
+|pr2_mii1_crs |MII1 Carrier Sense |I |E17 |P8_9 |MODE11 | |
+
+|pr2_mdio_mdclk |MDIO Clock |O |C14/AB3 |P9_31 |MODE11 | |
+
+|pr2_mdio_data |MDIO Data |IO |D14/AA4 |P9_29 |MODE11 | |
+
+|pr2_mii0_rxer |MII0 Receive Error |I |G12 |P9_18 |MODE11 | |
+
+|pr2_mii_mt0_clk |MII0 Transmit Clock |I |F12 |P9_17 |MODE11 | |
+
+|pr2_mii0_txen |MII0 Transmit Enable |O |B12 |P9_31 |MODE11 | |
+
+|pr2_mii0_txd3 |MII0 Transmit Data |O |A11 |P9_29 |MODE11 | |
+
+|pr2_mii0_txd2 |MII0 Transmit Data |O |B13 |P9_30 |MODE11 | |
+
+|pr2_mii0_txd1 |MII0 Transmit Data |O |A12 |P9_28 |MODE11 | |
+
+|pr2_mii0_txd0 |MII0 Transmit Data |O |E14 |P9_42 |MODE11 | |
+
+|pr2_mii_mr0_clk |MII0 Receive Clock |I |A13 |P8_10 |MODE11 | |
+
+|pr2_mii0_rxdv |MII0 Data Valid |I |G14 |P8_7 |MODE11 | |
+
+|pr2_mii0_rxd3 |MII0 Receive Data |I |F14 |P8_8 |MODE11 | |
+
+|pr2_mii0_rxd2 |MII0 Receive Data |I |A19 |NA | | |
+
+|pr2_mii0_rxd1 |MII0 Receive Data |I |A18 |NA | | |
+
+|pr2_mii0_rxd0 |MII0 Receive Data |I |C15 |NA | | |
+
+|pr2_mii0_rxlink |MII0 Receive Link |I |A16 |NA | | |
+
+|pr2_mii0_crs |MII0 Carrier Sense |I |B18 |NA | | |
+
+|pr2_mii0_col |MII0 Collision Detect |I |F15 |NA | | |
+
+|pr2_mii1_rxer |MII1 Receive Error |I |B19 |P9_11 |MODE11 | |
+
+|pr2_mii1_rxlink |MII1 Receive Link |I |C17 |P9_13 |MODE11 | |
+
+|pr2_mii_mt1_clk |MII1 Transmit Clock |I |AC5 |NA | | |
+
+|pr2_mii1_txen |MII1 Transmit Enable |O |AB4 |NA | | |
+
+|pr2_mii1_txd3 |MII1 Transmit Data |O |AD4 |P8_21 |MODE11 | |
+
+|pr2_mii1_txd2 |MII1 Transmit Data |O |AC4 |P8_20 |MODE11 | |
+
+|pr2_mii1_txd1 |MII1 Transmit Data |O |AC7 |P8_25 |MODE11 | |
+
+|pr2_mii1_txd0 |MII1 Transmit Data |O |AC6 |P8_24 |MODE11 | |
+
+|pr2_mii_mr1_clk |MII1 Receive Clock |I |AC9 |P8_5 |MODE11 | |
+
+|pr2_mii1_rxdv |MII1 Data Valid |I |AC3 |P8_6 |MODE11 | |
+
+|pr2_mii1_rxd3 |MII1 Receive Data |I |AC8 |P8_23 |MODE11 | |
+
+|pr2_mii1_rxd2 |MII1 Receive Data |I |AD6 |P8_22 |MODE11 | |
+
+|pr2_mii1_rxd1 |MII1 Receive Data |I |AB8 |P8_3 |MODE11 | |
+
+|pr2_mii1_rxd0 |MII1 Receive Data |I |AB5 |P8_4 |MODE11 | |
+
+|end |end |end |end |end |end |end |end
+|=======================================================================
+
+[[user-leds]]
+6.5 User LEDs
+^^^^^^^^^^^^^
+
+There are 5 User Programmable LEDs on BeagleBone® AI. These are
+connected to GPIO pins on the processor.
+image:images/BB_AI_USERLEDS_800px.png[beaglebone ai connector placement]
+
+The table shows the signals used to control the LEDs from the processor.
+Each LED is user programmable. However, there is a Default Functions
+assigned in the device tree for BeagleBone® AI:
+
+[cols=",,",options="header",]
+|=============================================
+|LED |GPIO SIGNAL |DEFAULT FUNCTION
+|D2 |GPIO3_17 |Heartbeat When Linux is Running
+|D3 |GPIO5_5 |microSD Activity
+|D4 |GPIO3_15 |CPU Activity
+|D5 |GPIO3_14 |eMMC Activity
+|D8 |GPIO3_7 |WiFi/Bluetooth Activity
+|=============================================
+
+[[connectors]]
+7.0 Connectors
+--------------
+
+image:images/BB_AI_Connectorplacement_800px.png[beaglebone ai connector
+placement]
+image:images/BB_AI_Connectorplacement_back_800px.png[beaglebone ai
+connector placement back]
+
+[[expansion-connectors]]
+7.1 Expansion Connectors
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+The expansion interface on the board is comprised of two 46 pin
+connectors, the P8 and P9 Headers. All signals on the expansion headers
+are *3.3V* unless otherwise indicated.
+
+*NOTE*: Do not connect 5V logic level signals to these pins or the board
+will be damaged.
+
+*NOTE*: DO NOT APPLY VOLTAGE TO ANY I/O PIN WHEN POWER IS NOT SUPPLIED
+TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.
+
+*NO PINS ARE TO BE DRIVEN UNTIL AFTER THE SYS_RESET LINE GOES HIGH.*
+
+*Figure ?* shows the location of the expansion connectors.
+
+image:images/BB_AI_Headerplacement_800px.png[beaglebone ai header
+placement]
+
+The location and spacing of the expansion headers are the same as on
+BeagleBone Black.
+
+[[connector-p8]]
+7.1.1 Connector P8
+++++++++++++++++++
+
+*Table ?* shows the pinout of the *P8* expansion header. Other signals
+can be connected to this connector based on setting the pin mux on the
+processor, but this is the default settings on power up. The SW is
+responsible for setting the default function of each pin. There are some
+signals that have not been listed here. Refer to the processor
+documentation for more information on these pins and detailed
+descriptions of all of the pins listed. In some cases there may not be
+enough signals to complete a group of signals that may be required to
+implement a total interface.
+
+The *PROC* column is the pin number on the processor.
+
+The *PIN* column is the pin number on the expansion header.
+
+The *MODE* columns are the mode setting for each pin. Setting each mode
+to align with the mode column will give that function on that pin.
+
+*NOTE*: DO NOT APPLY VOLTAGE TO ANY I/O PIN WHEN POWER IS NOT SUPPLIED
+TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.
+
+*NO PINS ARE TO BE DRIVEN UNTIL AFTER THE SYS_RESET LINE GOES HIGH.*
+
+*Table ?* Expansion Header P8 Pinout
+
+[cols=",,,,,,,",options="header",]
+|=======================================================================
+|PIN |PROC |NAME |MODE0 |MODE1 |MODE2 |MODE3 |MODE4
+|1 | |GND | | | | |
+
+|2 | |GND | | | | |
+
+|3 |AB8 |AB8_MMC3_DATA6 |mmc3_dat6 |spi4_d0 |uart10_ctsn | |vin2b_de1
+
+|4 |AB5 |AB5_MMC3_DATA7 |mmc3_dat7 |spi4_cs0 |uart10_rtsn | |vin2b_clk1
+
+|5 |AC9 |AC9_MMC3_DATA2 |mmc3_dat2 |spi3_cs0 |uart5_ctsn | |vin2b_d3
+
+|6 |AC3 |AC3_MMC3_DATA3 |mmc3_dat3 |spi3_cs1 |uart5_rtsn | |vin2b_d2
+
+|7 |G14 |G14_TIMER11 |mcasp1_axr14 |mcasp7_aclkx |mcasp7_aclkr | |
+
+|8 |F14 |F14_TIMER12 |mcasp1_axr15 |mcasp7_fsx |mcasp7_fsr | |
+
+|9 |E17 |E17_TIMER14 |xref_clk1 |mcasp2_axr9 |mcasp1_axr5 |mcasp2_ahclkx
+|mcasp6_ahclkx
+
+|10 |A13 |A13_TIMER10 |mcasp1_axr13 |mcasp7_axr1 | | |
+
+|11 |AH4 |AH4_GPIO3_11 |vin1a_d7 | | |vout3_d0 |vout3_d16
+
+|12 |AG6 |AG6_GPIO3_10 |vin1a_d6 | | |vout3_d1 |vout3_d17
+
+|13 |D3 |D3_EHRPWM2B |vin2a_d10 | | |mdio_mclk |vout2_d13
+
+|14 |D5 |D5_GPIO4_13 |vin2a_d12 | | |rgmii1_txc |vout2_d11
+
+|15 |D1 |GPIO4_3 |vin2a_d2 | | | |vout2_d21
+
+| |A3 | |vin2a_d19 | |vin2b_d4 |rgmii1_rxctl |vout2_d4
+
+|16 |B4 |B4_GPIO4_29 |vin2a_d21 | |vin2b_d2 |rgmii1_rxd2 |vout2_d2
+
+|17 |A7 |A7_GPIO8_18 |vout1_d18 | |emu4 |vin4a_d2 |vin3a_d2
+
+|18 |F5 |F5_GPIO4_9 |vin2a_d8 | | | |vout2_d15
+
+|19 |E6 |E6_EHRPWM2A |vin2a_d9 | | | |vout2_d14
+
+|20 |AC4 |AC4_MMC3_CMD |mmc3_cmd |spi3_sclk | | |vin2b_d6
+
+|21 |AD4 |AD4_MMC3_CLK |mmc3_clk | | | |vin2b_d7
+
+|22 |AD6 |AD6_MMC3_DATA5 |mmc3_dat5 |spi4_d1 |uart10_txd | |vin2b_d0
+
+|23 |AC8 |AC8_MMC3_DATA4 |mmc3_dat4 |spi4_sclk |uart10_rxd | |vin2b_d1
+
+|24 |AC6 |AC6_MMC3_DATA1 |mmc3_dat1 |spi3_d0 |uart5_txd | |vin2b_d4
+
+|25 |AC7 |AC7_MMC3_DATA0 |mmc3_dat0 |spi3_d1 |uart5_rxd | |vin2b_d5
+
+|26 |B3 |B3_GPIO4_28 |vin2a_d20 | |vin2b_d3 |rgmii1_rxd3 |vout2_d3
+
+|27 |E11 |LCD_VSYNC |vout1_vsync | | |vin4a_vsync0 |vin3a_vsync0
+
+| |A8 | |vout1_d19 | |emu15 |vin4a_d3 |vin3a_d3
+
+|28 |D11 |LCD_CLK |vout1_clk | | |vin4a_fld0 |vin3a_fld0
+
+| |C9 | |vout1_d20 | |emu16 |vin4a_d4 |vin3a_d4
+
+|29 |C11 |LCD_HSYNC |vout1_hsync | | |vin4a_hsync0 |vin3a_hsync0
+
+| |A9 | |vout1_d21 | |emu17 |vin4a_d5 |vin3a_d5
+
+|30 |B10 |LCD_DE |vout1_de | | |vin4a_de0 |vin3a_de0
+
+| |B9 | |vout1_d22 | |emu18 |vin4a_d6 |vin3a_d6
+
+|31 |C8 |LCD_DATA14 |vout1_d14 | |emu13 |vin4a_d14 |vin3a_d14
+
+| |G16 | |mcasp4_axr0 | |spi3_d0 |uart8_ctsn |uart4_rxd
+
+|32 |C7 |LCD_DATA15 |vout1_d15 | |emu14 |vin4a_d15 |vin3a_d15
+
+| |D17 | |mcasp4_axr1 | |spi3_cs0 |uart8_rtsn |uart4_txd
+
+|33 |C6 |LCD_DATA13 |vout1_d13 | |emu12 |vin4a_d13 |vin3a_d13
+
+| |AF9 | |vin1a_fld0 |vin1b_vsync1 | | |vout3_clk
+
+|34 |D8 |LCD_DATA11 |vout1_d11 | |emu10 |vin4a_d11 |vin3a_d11
+
+| |G6 | |vin2a_vsync0 | | |vin2b_vsync1 |vout2_vsync
+
+|35 |A5 |LCD_DATA12 |vout1_d12 | |emu11 |vin4a_d12 |vin3a_d12
+
+| |AD9 | |vin1a_de0 |vin1b_hsync1 | |vout3_d17 |vout3_de
+
+|36 |D7 |LCD_DATA10 |vout1_d10 | |emu3 |vin4a_d10 |vin3a_d10
+
+| |F2 | |vin2a_d0 | | | |vout2_d23
+
+|37 |E8 |LCD_DATA8 |vout1_d8 | |uart6_rxd |vin4a_d8 |vin3a_d8
+
+| |A21 | |mcasp4_fsx |mcasp4_fsr |spi3_d1 |uart8_txd |i2c4_scl
+
+|38 |D9 |LCD_DATA9 |vout1_d9 | |uart6_txd |vin4a_d9 |vin3a_d9
+
+| |C18 | |mcasp4_aclkx |mcasp4_aclkr |spi3_sclk |uart8_rxd |i2c4_sda
+
+|39 |F8 |F8_LCD_DATA6 |vout1_d6 | |emu8 |vin4a_d22 |vin3a_d22
+
+|40 |E7 |E7_LCD_DATA7 |vout1_d7 | |emu9 |vin4a_d23 |vin3a_d23
+
+|41 |E9 |E9_LCD_DATA4 |vout1_d4 | |emu6 |vin4a_d20 |vin3a_d20
+
+|42 |F9 |F9_LCD_DATA5 |vout1_d5 | |emu7 |vin4a_d21 |vin3a_d21
+
+|43 |F10 |F10_LCD_DATA2 |vout1_d2 | |emu2 |vin4a_d18 |vin3a_d18
+
+|44 |G11 |G11_LCD_DATA3 |vout1_d3 | |emu5 |vin4a_d19 |vin3a_d19
+
+|45 |F11 |LCD_DATA0 |vout1_d0 | |uart5_rxd |vin4a_d16 |vin3a_d16
+
+| |B7 | |vout1_d16 | |uart7_rxd |vin4a_d0 |vin3a_d0
+
+|46 |G10 |LCD_DATA1 |vout1_d1 | |uart5_txd |vin4a_d17 |vin3a_d17
+
+| |A10 | |vout1_d23 | |emu19 |vin4a_d7 |vin3a_d7
+|=======================================================================
+
+[cols=",,,,,,,",options="header",]
+|==============================================================
+|PIN |PROC |MODE5 |MODE6 |MODE7 |MODE8 |MODE9 |MODE10
+|1 | | | | | | |
+|2 | | | | | | |
+|3 |AB8 | | | | |vin5a_hsync0 |ehrpwm3_tripzone_input
+|4 |AB5 | | | | |vin5a_vsync0 |eCAP3_in_PWM3_out
+|5 |AC9 | | | | |vin5a_d3 |eQEP3_index
+|6 |AC3 | | | | |vin5a_d2 |eQEP3_strobe
+|7 |G14 | | |vin6a_d9 | | |timer11
+|8 |F14 | | |vin6a_d8 | | |timer12
+|9 |E17 | | |vin6a_clk0 | | |timer14
+|10 |A13 | | |vin6a_d10 | | |timer10
+|11 |AH4 | | | | | |eQEP2B_in
+|12 |AG6 | | | | | |eQEP2A_in
+|13 |D3 | | | | |kbd_col7 |ehrpwm2B
+|14 |D5 | | | |mii1_rxclk |kbd_col8 |eCAP2_in_PWM2_out
+|15 |D1 |emu12 | | |uart10_rxd |kbd_row6 |eCAP1_in_PWM1_out
+| |A3 | |vin3a_d11 | |mii1_txer | |ehrpwm3_tripzone_input
+|16 |B4 |vin3a_fld0 |vin3a_d13 | |mii1_col | |
+|17 |A7 |obs11 |obs27 | | | |pr2_edio_data_in2
+|18 |F5 |emu18 | | |mii1_rxd3 |kbd_col5 |eQEP2_strobe
+|19 |E6 |emu19 | | |mii1_rxd0 |kbd_col6 |ehrpwm2A
+|20 |AC4 | | | | |vin5a_d6 |eCAP2_in_PWM2_out
+|21 |AD4 | | | | |vin5a_d7 |ehrpwm2_tripzone_input
+|22 |AD6 | | | | |vin5a_d0 |ehrpwm3B
+|23 |AC8 | | | | |vin5a_d1 |ehrpwm3A
+|24 |AC6 | | | | |vin5a_d4 |eQEP3B_in
+|25 |AC7 | | | | |vin5a_d5 |eQEP3A_in
+|26 |B3 |vin3a_de0 |vin3a_d12 | |mii1_rxer | |eCAP3_in_PWM3_out
+|27 |E11 | | | |spi3_sclk | |
+| |A8 |obs12 |obs28 | | | |pr2_edio_data_in3
+|28 |D11 | | | |spi3_cs0 | |
+| |C9 |obs13 |obs29 | | | |pr2_edio_data_in4
+|29 |C11 | | | |spi3_d0 | |
+| |A9 |obs14 |obs30 | | | |pr2_edio_data_in5
+|30 |B10 | | | |spi3_d1 | |
+| |B9 |obs15 |obs31 | | | |pr2_edio_data_in6
+|31 |C8 |obs9 |obs25 | | | |pr2_uart0_txd
+| |G16 | |vout2_d18 | |vin4a_d18 |vin5a_d13 |
+|32 |C7 |obs10 |obs26 | | | |pr2_ecap0_ecap_capin_apwm_o
+| |D17 | |vout2_d19 | |vin4a_d19 |vin5a_d12 |
+|33 |C6 |obs8 |obs24 | | | |pr2_uart0_rxd
+| |AF9 |uart7_txd | |timer15 |spi3_d1 |kbd_row1 |eQEP1B_in
+|34 |D8 |obs6 |obs22 |obs_dmarq2 | | |pr2_uart0_cts_n
+| |G6 |emu9 | |uart9_txd |spi4_d1 |kbd_row3 |ehrpwm1A
+|35 |A5 |obs7 |obs23 | | | |pr2_uart0_rts_n
+| |AD9 |uart7_rxd | |timer16 |spi3_sclk |kbd_row0 |eQEP1A_in
+|36 |D7 |obs5 |obs21 |obs_irq2 | | |pr2_edio_sof
+| |F2 |emu10 | |uart9_ctsn |spi4_d0 |kbd_row4 |ehrpwm1B
+|37 |E8 | | | | | |pr2_edc_sync1_out
+| |A21 | |vout2_d17 | |vin4a_d17 |vin5a_d14 |
+|38 |D9 | | | | | |pr2_edio_latch_in
+| |C18 | |vout2_d16 | |vin4a_d16 |vin5a_d15 |
+|39 |F8 |obs4 |obs20 | | | |pr2_edc_latch1_in
+|40 |E7 | | | | | |pr2_edc_sync0_out
+|41 |E9 |obs2 |obs18 | | | |pr1_ecap0_ecap_capin_apwm_o
+|42 |F9 |obs3 |obs19 | | | |pr2_edc_latch0_in
+|43 |F10 |obs0 |obs16 |obs_irq1 | | |pr1_uart0_rxd
+|44 |G11 |obs1 |obs17 |obs_dmarq1 | | |pr1_uart0_txd
+|45 |F11 | | | |spi3_cs2 | |pr1_uart0_cts_n
+| |B7 | | | | | |pr2_edio_data_in0
+|46 |G10 | | | | | |pr1_uart0_rts_n
+| |A10 | | | |spi3_cs3 | |pr2_edio_data_in7
+|==============================================================
+
+[width="100%",cols="8%,6%,33%,21%,22%,10%",options="header",]
+|=======================================================================
+|PIN |PROC |MODE11 |MODE12 |MODE13 |MODE14
+|1 | | | | |
+
+|2 | | | | |
+
+|3 |AB8 |pr2_mii1_rxd1 |pr2_pru0_gpi10 |pr2_pru0_gpo10 |gpio1_24
+
+|4 |AB5 |pr2_mii1_rxd0 |pr2_pru0_gpi11 |pr2_pru0_gpo11 |gpio1_25
+
+|5 |AC9 |pr2_mii_mr1_clk |pr2_pru0_gpi6 |pr2_pru0_gpo6 |gpio7_1
+
+|6 |AC3 |pr2_mii1_rxdv |pr2_pru0_gpi7 |pr2_pru0_gpo7 |gpio7_2
+
+|7 |G14 |pr2_mii0_rxdv |pr2_pru1_gpi16 |pr2_pru1_gpo16 |gpio6_5
+
+|8 |F14 |pr2_mii0_rxd3 |pr2_pru0_gpi20 |pr2_pru0_gpo20 |gpio6_6
+
+|9 |E17 |pr2_mii1_crs |pr2_pru1_gpi6 |pr2_pru1_gpo6 |gpio6_18
+
+|10 |A13 |pr2_mii_mr0_clk |pr2_pru1_gpi15 |pr2_pru1_gpo15 |gpio6_4
+
+|11 |AH4 | |pr1_pru0_gpi4 |pr1_pru0_gpo4 |gpio3_11
+
+|12 |AG6 | |pr1_pru0_gpi3 |pr1_pru0_gpo3 |gpio3_10
+
+|13 |D3 |pr1_mdio_mdclk |pr1_pru1_gpi7 |pr1_pru1_gpo7 |gpio4_11
+
+|14 |D5 |pr1_mii1_txd1 |pr1_pru1_gpi9 |pr1_pru1_gpo9 |gpio4_13
+
+|15 |D1 |pr1_ecap0_ecap_capin_apwm_o |pr1_edio_data_in7
+|pr1_edio_data_out7 |gpio4_3
+
+| |A3 |pr1_mii1_rxd0 |pr1_pru1_gpi16 |pr1_pru1_gpo16 |gpio4_27
+
+|16 |B4 |pr1_mii1_rxlink |pr1_pru1_gpi18 |pr1_pru1_gpo18 |gpio4_29
+
+|17 |A7 |pr2_edio_data_out2 |pr2_pru0_gpi15 |pr2_pru0_gpo15 |gpio8_18
+
+|18 |F5 |pr1_mii1_txd3 |pr1_pru1_gpi5 |pr1_pru1_gpo5 |gpio4_9
+
+|19 |E6 |pr1_mii1_txd2 |pr1_pru1_gpi6 |pr1_pru1_gpo6 |gpio4_10
+
+|20 |AC4 |pr2_mii1_txd2 |pr2_pru0_gpi3 |pr2_pru0_gpo3 |gpio6_30
+
+|21 |AD4 |pr2_mii1_txd3 |pr2_pru0_gpi2 |pr2_pru0_gpo2 |gpio6_29
+
+|22 |AD6 |pr2_mii1_rxd2 |pr2_pru0_gpi9 |pr2_pru0_gpo9 |gpio1_23
+
+|23 |AC8 |pr2_mii1_rxd3 |pr2_pru0_gpi8 |pr2_pru0_gpo8 |gpio1_22
+
+|24 |AC6 |pr2_mii1_txd0 |pr2_pru0_gpi5 |pr2_pru0_gpo5 |gpio7_0
+
+|25 |AC7 |pr2_mii1_txd1 |pr2_pru0_gpi4 |pr2_pru0_gpo4 |gpio6_31
+
+|26 |B3 |pr1_mii1_rxer |pr1_pru1_gpi17 |pr1_pru1_gpo17 |gpio4_28
+
+|27 |E11 | |pr2_pru1_gpi17 |pr2_pru1_gpo17 |gpio4_23
+
+| |A8 |pr2_edio_data_out3 |pr2_pru0_gpi16 |pr2_pru0_gpo16 |gpio8_19
+
+|28 |D11 | | | |gpio4_19
+
+| |C9 |pr2_edio_data_out4 |pr2_pru0_gpi17 |pr2_pru0_gpo17 |gpio8_20
+
+|29 |C11 | | | |gpio4_22
+
+| |A9 |pr2_edio_data_out5 |pr2_pru0_gpi18 |pr2_pru0_gpo18 |gpio8_21
+
+|30 |B10 | | | |gpio4_20
+
+| |B9 |pr2_edio_data_out6 |pr2_pru0_gpi19 |pr2_pru0_gpo19 |gpio8_22
+
+|31 |C8 | |pr2_pru0_gpi11 |pr2_pru0_gpo11 |gpio8_14
+
+| |G16 | | | |
+
+|32 |C7 | |pr2_pru0_gpi12 |pr2_pru0_gpo12 |gpio8_15
+
+| |D17 | |pr2_pru1_gpi0 |pr2_pru1_gpo0 |
+
+|33 |C6 | |pr2_pru0_gpi10 |pr2_pru0_gpo10 |gpio8_13
+
+| |AF9 | | | |gpio3_1
+
+|34 |D8 | |pr2_pru0_gpi8 |pr2_pru0_gpo8 |gpio8_11
+
+| |G6 |pr1_uart0_rts_n |pr1_edio_data_in4 |pr1_edio_data_out4 |gpio4_0
+
+|35 |A5 | |pr2_pru0_gpi9 |pr2_pru0_gpo9 |gpio8_12
+
+| |AD9 | | | |gpio3_0
+
+|36 |D7 | |pr2_pru0_gpi7 |pr2_pru0_gpo7 |gpio8_10
+
+| |F2 |pr1_uart0_rxd |pr1_edio_data_in5 |pr1_edio_data_out5 |gpio4_1
+
+|37 |E8 | |pr2_pru0_gpi5 |pr2_pru0_gpo5 |gpio8_8
+
+| |A21 | | | |
+
+|38 |D9 | |pr2_pru0_gpi6 |pr2_pru0_gpo6 |gpio8_9
+
+| |C18 | | | |
+
+|39 |F8 | |pr2_pru0_gpi3 |pr2_pru0_gpo3 |gpio8_6
+
+|40 |E7 | |pr2_pru0_gpi4 |pr2_pru0_gpo4 |gpio8_7
+
+|41 |E9 | |pr2_pru0_gpi1 |pr2_pru0_gpo1 |gpio8_4
+
+|42 |F9 | |pr2_pru0_gpi2 |pr2_pru0_gpo2 |gpio8_5
+
+|43 |F10 | |pr2_pru1_gpi20 |pr2_pru1_gpo20 |gpio8_2
+
+|44 |G11 | |pr2_pru0_gpi0 |pr2_pru0_gpo0 |gpio8_3
+
+|45 |F11 | |pr2_pru1_gpi18 |pr2_pru1_gpo18 |gpio8_0
+
+| |B7 |pr2_edio_data_out0 |pr2_pru0_gpi13 |pr2_pru0_gpo13 |gpio8_16
+
+|46 |G10 | |pr2_pru1_gpi19 |pr2_pru1_gpo19 |gpio8_1
+
+| |A10 |pr2_edio_data_out7 |pr2_pru0_gpi20 |pr2_pru0_gpo20 |gpio8_23
+|=======================================================================
+
+Notes regarding the resistors on muxed pins.
+
+[[connector-p9]]
+7.1.2 Connector P9
+++++++++++++++++++
+
+*Table ?* lists the signals on connector *P9*. Other signals can be
+connected to this connector based on setting the pin mux on the
+processor, but this is the default settings on power up.
+
+There are some signals that have not been listed here. Refer to the
+processor documentation for more information on these pins and detailed
+descriptions of all of the pins listed. In some cases there may not be
+enough signals to complete a group of signals that may be required to
+implement a total interface.
+
+The *PROC* column is the pin number on the processor.
+
+The *PIN* column is the pin number on the expansion header.
+
+The *MODE* columns are the mode setting for each pin. Setting each mode
+to align with the mode column will give that function on that pin.
+
+NOTES:
+
+In the table are the following notations:
+
+*PWR_BUT* is a 5V level as pulled up internally by the TPS6590377. It is
+activated by pulling the signal to GND.
+
+(Actually, on BeagleBone AI, I believe PWR_BUT is pulled to 3.3V, but
+activation is still done by pulling the signal to GND. Also, a quick
+grounding of PWR_BUT will trigger a system event where shutdown can
+occur, but there is no hardware power-off function like on BeagleBone
+Black via this signal. It does, however, act as a hardware power-on.)
+
+*NOTE: DO NOT APPLY VOLTAGE TO ANY I/O PIN WHEN POWER IS NOT SUPPLIED TO
+THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.*
+
+*NO PINS ARE TO BE DRIVEN UNTIL AFTER THE SYS_RESET LINE GOES HIGH.*
+
+(On BeagleBone Black, SYS_RESET was a bi-directional signal, but it is
+only an output from BeagleBone AI to capes on BeagleBone AI.)
+
+*Table ?. Expansion Header P9 Pinout*
+
+[width="99%",cols="7%,5%,16%,14%,14%,14%,15%,15%",options="header",]
+|=======================================================================
+|PIN |PROC |NAME |MODE0 |MODE1 |MODE2 |MODE3 |MODE4
+|1 | |GND | | | | |
+
+|2 | |GND | | | | |
+
+|3 | |VDD_3V3 | | | | |
+
+|4 | |VDD_3V3 | | | | |
+
+|5 | |VDD_CAPE_5V | | | | |
+
+|6 | |VDD_CAPE_5V | | | | |
+
+|7 | |VDD_5V | | | | |
+
+|8 | |VDD_5V | | | | |
+
+|9 | |PWR_BUT | | | | |
+
+|10 | |SYS_RESETn2 | | | | |
+
+|11 |B19 |UART5_RXD |mcasp3_axr0 | |mcasp2_axr14 |uart7_ctsn |uart5_rxd
+
+| |B8 | |vout1_d17 | |uart7_txd |vin4a_d1 |vin3a_d1
+
+|12 |B14 |B14_MCASP_ACLKR |mcasp1_aclkr |mcasp7_axr2 | | |
+
+|13 |C17 |C17_UART5_TXD |mcasp3_axr1 | |mcasp2_axr15 |uart7_rtsn
+|uart5_txd
+
+| |AB10 | |usb1_drvvbus | | | |
+
+|14 |D6 |D6_EHRPWM3A |vin2a_d17 | |vin2b_d6 |rgmii1_txd0 |vout2_d6
+
+|15 |AG4 |AG4_GPIO3_12 |vin1a_d8 |vin1b_d7 | | |vout3_d15
+
+|16 |C5 |C5_EHRPWM3B |vin2a_d18 | |vin2b_d5 |rgmii1_rxc |vout2_d5
+
+|17 |B24 |I2C5_SCL |spi2_cs0 |uart3_rtsn |uart5_txd | |
+
+| |F12 | |mcasp1_axr1 | | |uart6_txd |
+
+|18 |G17 |I2C5_SDA |spi2_d0 |uart3_ctsn |uart5_rxd | |
+
+| |G12 | |mcasp1_axr0 | | |uart6_rxd |
+
+|19 |R6 |I2C4_SCL |gpmc_a0 | |vin3a_d16 |vout3_d16 |vin4a_d0
+
+| |F4 | |vin2a_d5 | | | |vout2_d18
+
+|20 |T9 |I2C4_SDA |gpmc_a1 | |vin3a_d17 |vout3_d17 |vin4a_d1
+
+| |D2 | |vin2a_d4 | | | |vout2_d19
+
+|21 |AF8 |UART3_TXD |vin1a_vsync0 |vin1b_de1 | | |vout3_vsync
+
+| |B22 | |spi2_d1 |uart3_txd | | |
+
+|22 |B26 |UART3_RXD |xref_clk2 |mcasp2_axr10 |mcasp1_axr6 |mcasp3_ahclkx
+|mcasp7_ahclk
+
+| |A26 | |spi2_sclk |uart3_rxd | | |
+
+|23 |A22 |A22_SPI2_CS1 |spi1_cs1 | |sata1_led |spi2_cs1 |
+
+|24 |F20 |F20_UART10_TXD |gpio6_15 |mcasp1_axr9 |dcan2_rx |uart10_txd |
+
+|25 |D18 |D18_GPIO6_17 |xref_clk0 |mcasp2_axr8 |mcasp1_axr4
+|mcasp1_ahclkx |mcasp5_ahclkx
+
+|26 |E21 |UART10_RXD |gpio6_14 |mcasp1_axr8 |dcan2_tx |uart10_rxd |
+
+| |AE2 | |vin1a_d20 |vin1b_d3 | | |vout3_d3
+
+|27 |C3 |MCASP_FSR |vin2a_d14 | | |rgmii1_txd3 |vout2_d9
+
+| |J14 | |mcasp1_fsr |mcasp7_axr3 | | |
+
+|28 |A12 |A12_SPI3_CS0 |mcasp1_axr11 |mcasp6_fsx |mcasp6_fsr |spi3_cs0 |
+
+|29 |A11 |SPI3_D1 |mcasp1_axr9 |mcasp6_axr1 | |spi3_d1 |
+
+| |D14 | |mcasp1_fsx | | | |
+
+|30 |B13 |B13_SPI3_D0 |mcasp1_axr10 |mcasp6_aclkx |mcasp6_aclkr |spi3_d0
+|
+
+|31 |B12 |SPI3_SCLK |mcasp1_axr8 |mcasp6_axr0 | |spi3_sclk |
+
+| |C14 | |mcasp1_aclkx | | | |
+
+|32 | |VDD_ADC | | | | |
+
+|33 | |AIN4 | | | | |
+
+|34 | |AGND | | | | |
+
+|35 | |AIN6 | | | | |
+
+|36 | |AIN5 | | | | |
+
+|37 | |AIN2 | | | | |
+
+|38 | |AIN3 | | | | |
+
+|39 | |AIN0 | | | | |
+
+|40 | |AIN1 | | | | |
+
+|41 |C23 |CLKOUT3 |xref_clk3 |mcasp2_axr11 |mcasp1_axr7 |mcasp4_ahclkx
+|mcasp8_ahclkx
+
+| |C1 | |vin2a_d6 | | | |vout2_d17
+
+|42 |E14 |GPIO4_18 |mcasp1_axr12 |mcasp7_axr0 | |spi3_cs1 |
+
+| |C2 | |vin2a_d13 | | |rgmii1_txctl |vout2_d10
+
+|43 | |GND | | | | |
+
+|44 | |GND | | | | |
+
+|45 | |GND | | | | |
+
+|46 | |GND | | | | |
+|=======================================================================
+
+[cols=",,,,,,,",options="header",]
+|========================================================
+|PIN |PROC |MODE5 |MODE6 |MODE7 |MODE8 |MODE9 |MODE10
+|1 | | | | | | |
+|2 | | | | | | |
+|3 | | | | | | |
+|4 | | | | | | |
+|5 | | | | | | |
+|6 | | | | | | |
+|7 | | | | | | |
+|8 | | | | | | |
+|9 | | | | | | |
+|10 | | | | | | |
+|11 |B19 | | |vin6a_d1 | | |
+| |B8 | | | | | |pr2_edio_data_in1
+|12 |B14 | |vout2_d0 | |vin4a_d0 | |i2c4_sda
+|13 |C17 | | |vin6a_d0 | |vin5a_fld0 |
+| |AB10 | | |timer16 | | |
+|14 |D6 | |vin3a_d9 | |mii1_txd2 | |ehrpwm3A
+|15 |AG4 | | | | |kbd_row2 |eQEP2_index
+|16 |C5 | |vin3a_d10 | |mii1_txd3 | |ehrpwm3B
+|17 |B24 | | | | | |
+| |F12 | | |vin6a_hsync0 | | |i2c5_scl
+|18 |G17 | | | | | |
+| |G12 | | |vin6a_vsync0 | | |i2c5_sda
+|19 |R6 | |vin4b_d0 |i2c4_scl |uart5_rxd | |
+| |F4 |emu15 | | |uart10_rtsn |kbd_col2 |eQEP2A_in
+|20 |T9 | |vin4b_d1 |i2c4_sda |uart5_txd | |
+| |D2 |emu14 | | |uart10_ctsn |kbd_col1 |ehrpwm1_synco
+|21 |AF8 |uart7_rtsn | |timer13 |spi3_cs0 | |eQEP1_strobe
+| |B22 | | | | | |
+|22 |B26 | |vout2_clk | |vin4a_clk0 | |timer15
+| |A26 | | | | | |
+|23 |A22 | | | | | |
+|24 |F20 | |vout2_vsync | |vin4a_vsync0 |i2c3_scl |timer2
+|25 |D18 | | |vin6a_d0 |hdq0 |clkout2 |timer13
+|26 |E21 | |vout2_hsync | |vin4a_hsync0 |i2c3_sda |timer1
+| |AE2 | |vin3a_d4 | | |kbd_col5 |pr1_edio_data_in4
+|27 |C3 | | | |mii1_txclk | |eQEP3B_in
+| |J14 | |vout2_d1 | |vin4a_d1 | |i2c4_scl
+|28 |A12 | | |vin6a_d12 | | |timer8
+|29 |A11 | | |vin6a_d14 | | |timer6
+| |D14 | | |vin6a_de0 | | |i2c3_scl
+|30 |B13 | | |vin6a_d13 | | |timer7
+|31 |B12 | | |vin6a_d15 | | |timer5
+| |C14 | | |vin6a_fld0 | | |i2c3_sda
+|32 | | | | | | |
+|33 | | | | | | |
+|34 | | | | | | |
+|35 | | | | | | |
+|36 | | | | | | |
+|37 | | | | | | |
+|38 | | | | | | |
+|39 | | | | | | |
+|40 | | | | | | |
+|41 |C23 | |vout2_de |hdq0 |vin4a_de0 |clkout3 |timer16
+| |C1 |emu16 | | |mii1_rxd1 |kbd_col3 |eQEP2B_in
+|42 |E14 | | |vin6a_d11 | | |timer9
+| |C2 | | | |mii1_rxdv |kbd_row8 |eQEP3A_in
+|43 | | | | | | |
+|44 | | | | | | |
+|45 | | | | | | |
+|46 | | | | | | |
+|========================================================
+
+[cols=",,,,,",options="header",]
+|===================================================================
+|PIN |PROC |MODE11 |MODE12 |MODE13 |MODE14
+|1 | | | | |
+|2 | | | | |
+|3 | | | | |
+|4 | | | | |
+|5 | | | | |
+|6 | | | | |
+|7 | | | | |
+|8 | | | | |
+|9 | | | | |
+|10 | | | | |
+|11 |B19 |pr2_mii1_rxer |pr2_pru0_gpi14 |pr2_pru0_gpo14 |
+| |B8 |pr2_edio_data_out1 |pr2_pru0_gpi14 |pr2_pru0_gpo14 |gpio8_17
+|12 |B14 | | | |gpio5_0
+|13 |C17 |pr2_mii1_rxlink |pr2_pru0_gpi15 |pr2_pru0_gpo15 |
+| |AB10 | | | |gpio6_12
+|14 |D6 |pr1_mii1_rxd2 |pr1_pru1_gpi14 |pr1_pru1_gpo14 |gpio4_25
+|15 |AG4 | |pr1_pru0_gpi5 |pr1_pru0_gpo5 |gpio3_12
+|16 |C5 |pr1_mii1_rxd1 |pr1_pru1_gpi15 |pr1_pru1_gpo15 |gpio4_26
+|17 |B24 | | | |gpio7_17
+| |F12 |pr2_mii_mt0_clk |pr2_pru1_gpi9 |pr2_pru1_gpo9 |gpio5_3
+|18 |G17 | | | |gpio7_16
+| |G12 |pr2_mii0_rxer |pr2_pru1_gpi8 |pr2_pru1_gpo8 |gpio5_2
+|19 |R6 | | | |gpio7_3
+| |F4 |pr1_edio_sof |pr1_pru1_gpi2 |pr1_pru1_gpo2 |gpio4_6
+|20 |T9 | | | |gpio7_4
+| |D2 |pr1_edc_sync0_out |pr1_pru1_gpi1 |pr1_pru1_gpo1 |gpio4_5
+|21 |AF8 | | | |gpio3_3
+| |B22 | | | |gpio7_15
+|22 |B26 | | | |gpio6_19
+| |A26 | | | |gpio7_14
+|23 |A22 | | | |gpio7_11
+|24 |F20 | | | |gpio6_15
+|25 |D18 |pr2_mii1_col |pr2_pru1_gpi5 |pr2_pru1_gpo5 |gpio6_17
+|26 |E21 | | | |gpio6_14
+| |AE2 |pr1_edio_data_out4 |pr1_pru0_gpi17 |pr1_pru0_gpo17 |gpio3_24
+|27 |C3 |pr1_mii_mr1_clk |pr1_pru1_gpi11 |pr1_pru1_gpo11 |gpio4_15
+| |J14 | | | |gpio5_1
+|28 |A12 |pr2_mii0_txd1 |pr2_pru1_gpi13 |pr2_pru1_gpo13 |gpio4_17
+|29 |A11 |pr2_mii0_txd3 |pr2_pru1_gpi11 |pr2_pru1_gpo11 |gpio5_11
+| |D14 |pr2_mdio_data | | |gpio7_30
+|30 |B13 |pr2_mii0_txd2 |pr2_pru1_gpi12 |pr2_pru1_gpo12 |gpio5_12
+|31 |B12 |pr2_mii0_txen |pr2_pru1_gpi10 |pr2_pru1_gpo10 |gpio5_10
+| |C14 |pr2_mdio_mdclk |pr2_pru1_gpi7 |pr2_pru1_gpo7 |gpio7_31
+|32 | | | | |
+|33 | | | | |
+|34 | | | | |
+|35 | | | | |
+|36 | | | | |
+|37 | | | | |
+|38 | | | | |
+|39 | | | | |
+|40 | | | | |
+|41 |C23 | | | |gpio6_20
+| |C1 |pr1_mii_mt1_clk |pr1_pru1_gpi3 |pr1_pru1_gpo3 |gpio4_7
+|42 |E14 |pr2_mii0_txd0 |pr2_pru1_gpi14 |pr2_pru1_gpo14 |gpio4_18
+| |C2 |pr1_mii1_txd0 |pr1_pru1_gpi10 |pr1_pru1_gpo10 |gpio4_14
+|43 | | | | |
+|44 | | | | |
+|45 | | | | |
+|46 | | | | |
+|===================================================================
+
+[[cape-board-support]]
+8.0 Cape Board Support
+----------------------
+
+[[beaglebone-ai-mechanical]]
+9.0 BeagleBone AI Mechanical
+----------------------------
+
+[[pictures]]
+10.0 Pictures
+-------------
+
+BeagleBone AI Back of Board Image
+
+image:images/BB_AI_Front.jpg[beaglebone ai front of board]
+image:images/BB_AI_Back.jpg[beaglebone ai back of board]
+
+[[support-information]]
+11.0 Support Information
+------------------------
