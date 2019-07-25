@@ -433,7 +433,7 @@ The figure below is the high level block diagram of BeagleBone® AI.  For those 
 
 #### 6.1.1 TPS6590377 PMIC
 
-The Texas Instruments TPS659037 device is an integrated power-management IC (PMIC) specifically designed to work well ARM Cortex A15 Processors, such as the AM5729 used on BeagleBone® AI. 
+The Texas Instruments TPS6590379ZWSR device is an integrated power-management IC (PMIC) specifically designed to work well ARM Cortex A15 Processors, such as the AM5729 used on BeagleBone® AI. 
 The datasheet is located here https://www.ti.com/lit/ds/symlink/tps659037.pdf
 
 The device provides seven configurable step-down converters with up to 6 A of output current for memory, processor core, input-output (I/O), or preregulation of LDOs. One of these configurable step-down converters can be combined with another 3-A regulator to allow up to 9 A of output current. All of the step-down converters can synchronize to an external clock source between 1.7 MHz and 2.7 MHz, or an internal fallback clock at 2.2 MHz.
