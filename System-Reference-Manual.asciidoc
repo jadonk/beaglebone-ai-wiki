@@ -304,24 +304,34 @@ Proposed changes.
 BeagleBone® AI Comes in the box with the heat sink and antenna already
 attached. Developers can get up and running in 5 minutes with no microSD
 card needed. BeagleBone® AI comes preloaded with a Linux distribution. +
-In the box you will find: * BeagleBone® AI * Quick Start Guide
+In the box you will find:
+
+* BeagleBone® AI
+* Quick Start Guide
+
+TODO: Add links to the design materials for both
 
 image:images/BB_AI_antenna_heat_sink_place_500px.jpg[BeagleBone AI
 Overview]
 
-You will need to purchase: * USB C cable or USB C to USB A cable *
-MicroSD Card (optional)
+You will need to purchase: 
+
+* USB C cable or USB C to USB A cable 
+* MicroSD Card (optional)
 
 More information or to purchase a replacement heat sink or antenna,
-please go to these web sites: *
-https://www.digikey.com/product-detail/en/anaren/66089-2430/1173-1134-ND/3903374[Antenna]
-*
-https://www.digikey.com/product-detail/en/cts-thermal-management-products/BDN10-3CB-A01/294-1098-ND/272736[Heat
-Sink]
+please go to these web sites: 
+
+* https://www.digikey.com/product-detail/en/anaren/66089-2430/1173-1134-ND/3903374[Antenna]
+* https://www.digikey.com/product-detail/en/cts-thermal-management-products/BDN10-3CB-A01/294-1098-ND/272736[Heat Sink]
+
+TODO: create short-links for any long URLs so that text works.
+TODO: add links to the official products as well.
 
 You may find it helpful to connect a fan to BeagleBone® AI. This one has
-been used by Alpha testers. *
-https://www.digikey.com/product-detail/en/digi-key-electronics/X15FANKIT/X15FANKIT-ND/5822502[Fan]
+been used by Alpha testers. 
+
+* https://www.digikey.com/product-detail/en/digi-key-electronics/X15FANKIT/X15FANKIT-ND/5822502[Fan]
 
 [[main-connection-scenarios]]
 3.2 Main Connection Scenarios
@@ -329,9 +339,13 @@ https://www.digikey.com/product-detail/en/digi-key-electronics/X15FANKIT/X15FANK
 
 This section will describe how to connect the board for use. The board
 can be configured in several different ways. Below we will walk through
-the most common scenarios. * Tethered to a PC via USB C cable *
-Standalone Desktop with powered USB hub, display, keyboard and mouse *
-Wireless Connection to BeagleBone® AI
+the most common scenarios. 
+
+* Tethered to a PC via USB C cable 
+* Standalone Desktop with powered USB hub, display, keyboard and mouse 
+* Wireless Connection to BeagleBone® AI
+
+TODO: add links to each scenario
 
 [[tethered-to-a-pc]]
 3.3 Tethered to a PC
@@ -347,37 +361,37 @@ devices such as a USB camera. After booting, the board is accessed
 either as a USB storage device or via the browser on the PC. You will
 need Chrome or Firefox on the PC.
 
-* Locate the USBC connector on BeagleBone® AI
+1. Locate the USBC connector on BeagleBone® AI
 
 image:images/BB_AI_USBC_and_3pin_500px.png[BeagleBone AI Overview]
 
-* Connect a USB type-C cable to BeagleBone® AI USB type-C port.
+2. Connect a USB type-C cable to BeagleBone® AI USB type-C port.
 
 image:images/BB_AI_connectingUSBC_500px.jpg[BeagleBone AI Overview]
 
-* Connect the other end of the USB cable to the PC USB 3 port.
+3. Connect the other end of the USB cable to the PC USB 3 port.
 
 image:images/BB_AI_PlugIn_500px.jpg[BeagleBone AI Overview]
 
-* BeagleBone® AI will boot.
-* You will notice some of the 5 user LEDs flashing
-* Look for a new mass storage drive to appear on the PC.
+4. BeagleBone® AI will boot.
+5. You will notice some of the 5 user LEDs flashing
+6. Look for a new mass storage drive to appear on the PC.
 
 image:images/BB_AI_asadrive_500px.jpg[BeagleBone AI Overview]
 
-* Open the drive and open START.HTM with your web browser.
+7. Open the drive and open START.HTM with your web browser.
 
 image:images/BB_AI_starthtm_500px.png[BeagleBone AI Overview]
 
-* Follow the instructions in the browser window.
+8. Follow the instructions in the browser window.
 
 image:images/BB_AI_connectedscreen_500px.jpg[BeagleBone AI Overview]
 
-* Go to Cloud9 IDE
+9. Go to Cloud9 IDE
 
 image:images/BB_AI_ss_cloud9_500px.jpg[BeagleBone AI Overview]
 
-* Open the directories in the left navigation of Cloud9
+10. Open the directories in the left navigation of Cloud9
 
 image:images/BB_AI_ss_cloud9_dir_500px.jpg[BeagleBone AI Overview]
 
@@ -387,32 +401,32 @@ image:images/BB_AI_ss_cloud9_dir_500px.jpg[BeagleBone AI Overview]
 
 image:images/BB_AI_Standalone_setup_750px.jpg[BeagleBone AI Overview]
 
-* Connect a combo keyboard and mouse to BeagleBone® AI's USB host port.
-* Connect a microHDMI-to-HDMI cable to BeagleBone® AI's microHDMI port.
-* Connect the microHDMI-to-HDMI cable to an HDMI monitor.
-* Plug a 5V 3A USB type-C power supply into BeagleBone® AI's USB type-C
+1. Connect a combo keyboard and mouse to BeagleBone® AI's USB host port.
+2. Connect a microHDMI-to-HDMI cable to BeagleBone® AI's microHDMI port.
+3. Connect the microHDMI-to-HDMI cable to an HDMI monitor.
+4. Plug a 5V 3A USB type-C power supply into BeagleBone® AI's USB type-C
 port.
-* BeagleBone® AI will boot. No need to enter any passwords.
-* Desktop will appear on the monitor. Click the "Getting Started" icon.
-* Follow the instructions in the browser window.
+5. BeagleBone® AI will boot. No need to enter any passwords.
+6. Desktop will appear on the monitor. Click the "Getting Started" icon.
+7. Follow the instructions in the browser window.
 
 [[wireless-connection]]
 3.5 Wireless Connection
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-1 Plug a 5V 3A USB type-C power supply into BeagleBone® AI's USB type-C
+1. Plug a 5V 3A USB type-C power supply into BeagleBone® AI's USB type-C
 port.
 
-2 BeagleBone® AI will boot.
+2. BeagleBone® AI will boot.
 
-3 Connect your PC's WiFi to SSID "BeagleBone-XXXX" where XXXX varies for
+3. Connect your PC's WiFi to SSID "BeagleBone-XXXX" where XXXX varies for
 your BeagleBone® AI.
 
-4 Use password "BeagleBone" to complete the WiFi connection.
+4. Use password "BeagleBone" to complete the WiFi connection.
 
-5 Open http://192.168.8.1 in your web browser.
+5. Open http://192.168.8.1 in your web browser.
 
-6 Follow the instructions in the browser window.
+6. Follow the instructions in the browser window.
 
 [[connecting-a-3-pin-serial-debug-cable]]
 3.6 Connecting a 3 PIN Serial Debug Cable
@@ -496,8 +510,13 @@ placement]
 5.0 BeagleBone AI High Level Specification
 ------------------------------------------
 
-This section provides the high level specification of BeagleBone® AI ###
-5.1 Block Diagram The figure below is the high level block diagram of
+This section provides the high level specification of BeagleBone® AI
+
+[[block-diagram]]
+5.1 Block Diagram 
+^^^^^^^^^^^^^^^^^
+
+The figure below is the high level block diagram of
 BeagleBone® AI. For detailed layout information please check the
 schematics.
 
@@ -515,7 +534,7 @@ programmable video processing with a highly integrated peripheral set
 ideal for AI applications. The AM5729 used on BeagleBone® AI is the
 super-set device of the family.
 
-Programmability is provided by dual-core Arm® Cortex®-A15 RISC CPUs with
+Programmability is provided by dual-core ARM® Cortex®-A15 RISC CPUs with
 Arm® Neon™ extension, and two TI C66x VLIW floating-point DSP core, and
 Vision AccelerationPac (with 4x EVEs). The Arm allows developers to keep
 control functions separate from other algorithms programmed on the DSPs
@@ -527,53 +546,82 @@ image:images/BB_AI_AM5729_blockdiagram.jpg[beaglebone ai component
 placement]
 
 *MPU Subsystem* The Dual Cortex-A15 MPU subsystem integrates the
-following submodules: * ARM Cortex-A15 MPCore – Two central processing
-units (CPUs) – ARM Version 7 ISA: Standard ARM instruction set plus
+following submodules:
+
+* ARM Cortex-A15 MPCore
+** Two central processing units (CPUs)
+** ARM Version 7 ISA: Standard ARM instruction set plus
 Thumb®-2, Jazelle® RCT Java™ accelerator, hardware virtualization
-support, and large physical address extensions (LPAE) – Neon™ SIMD
-coprocessor and VFPv4 per CPU – Interrupt controller with up to 160
-interrupt requests – One general-purpose timer and one watchdog timer
-per CPU – Debug and trace features – 32-KiB instruction and 32-KiB data
-level 1 (L1) cache per CPU * Shared 2-MiB level 2 (L2) cache * 48-KiB
-bootable ROM * Local power, reset, and clock management (PRCM) module *
-Emulation features * Digital phase-locked loop (DPLL)
+support, and large physical address extensions (LPAE)
+** Neon™ SIMD coprocessor and VFPv4 per CPU
+** Interrupt controller with up to 160 interrupt requests
+** One general-purpose timer and one watchdog timer
+per CPU – Debug and trace features
+** 32-KiB instruction and 32-KiB data level 1 (L1) cache per CPU
+* Shared 2-MiB level 2 (L2) cache
+* 48-KiB bootable ROM
+* Local power, reset, and clock management (PRCM) module
+* Emulation features
+* Digital phase-locked loop (DPLL)
 
 *DSP Subsystems* There are two DSP subsystems in the device. Each DSP
-subsystem contains the following submodules: * TMS320C66x™
-Floating-Point VLIW DSP core for audio processing, and general-purpose
-imaging and video processing. It extends the performance of existing
-C64x+™ and C647x™ DSPs through enhancements and new features. – 32-KiB
-L1D and 32-KiB L1P cache or addressable SRAM – 288-KiB L2 cache *
-256-KiB configurable as cache or SRAM * 32-KiB SRAM * Enhanced direct
-memory access (EDMA) engine for video and audio data transfer * Memory
-management units (MMU) for address management. * Interrupt controller
-(INTC) * Emulation capabilities * Supported by OpenCL
+subsystem contains the following submodules:
 
-*EVE Subsystems* * 4 Embedded Vision Engines (EVEs) supported by TIDL
-machine learning library image:images/BB_AI_EVEmodule.jpg[beaglebone ai
-component placement] The Embedded Vision Engine (EVE) module is a
+* TMS320C66x™ Floating-Point VLIW DSP core for audio processing, and general-purpose
+imaging and video processing. It extends the performance of existing
+C64x+™ and C647x™ DSPs through enhancements and new features.
+** 32-KiB L1D and 32-KiB L1P cache or addressable SRAM
+** 288-KiB L2 cache
+* 256-KiB configurable as cache or SRAM
+* 32-KiB SRAM
+* Enhanced direct memory access (EDMA) engine for video and audio data transfer
+* Memory management units (MMU) for address management.
+* Interrupt controller (INTC)
+* Emulation capabilities
+* Supported by OpenCL
+
+*EVE Subsystems*
+
+* 4 Embedded Vision Engines (EVEs) supported by TIDL
+machine learning library
+
+image:images/BB_AI_EVEmodule.jpg[BeagleBone AI
+component placement]
+
+The Embedded Vision Engine (EVE) module is a
 programmable imaging and vision processing engine. Software support for
 the EVE module is available through OpenCL Custom Device model with
 fixed set of functions. More information is available
 http://www.ti.com/lit/wp/spry251/spry251.pd
 
-*PRU-ICSS Subsystems* * 2x Dual-Core Programmable Real-Time Unit (PRU)
+*PRU-ICSS Subsystems*
+
+* 2x Dual-Core Programmable Real-Time Unit (PRU)
 subsystems (4 PRUs total) for ultra low-latency control and software
 generated peripherals. Access to these powerful subsystems is available
 through through the P8 and P9 headers. These are detailed in Section 7.
 
 *IPU Subsystems* There are two Dual Cortex-M4 IPU subsystems in the
 device available for general purpose usage, particularly real-time
-control. Each IPU subsystem includes the following components: * Two
-Cortex-M4 CPUs * ARMv7E-M and Thumb-2 instruction set architectures *
-Hardware division and single-cycle multiplication acceleration *
-Dedicated INTC with up to 63 physical interrupt events with 16-level
-priority * Two-level memory subsystem hierarchy – L1 (32-KiB shared
-cache memory) – L2 ROM + RAM * 64-KiB RAM * 16-KiB bootable ROM * MMU
-for address translation * Integrated power management • Emulation
-feature embedded in the Cortex-M4
+control. Each IPU subsystem includes the following components:
 
-*IVA-HD Subsystem* * IVA-HD subsystem with support for 4K @ 15fps H.264
+* Two Cortex-M4 CPUs
+* ARMv7E-M and Thumb-2 instruction set architectures
+* Hardware division and single-cycle multiplication acceleration
+* Dedicated INTC with up to 63 physical interrupt events with 16-level
+priority
+* Two-level memory subsystem hierarchy
+** L1 (32-KiB shared cache memory)
+** L2 ROM + RAM
+* 64-KiB RAM
+* 16-KiB bootable ROM
+* MMU for address translation
+* Integrated power management
+* Emulation feature embedded in the Cortex-M4
+
+*IVA-HD Subsystem*
+
+* IVA-HD subsystem with support for 4K @ 15fps H.264
 encode/decode and other codecs @ 1080p60 The IVA-HD subsystem is a set
 of video encoder and decoder hardware accelerators. The list of
 supported codecs can be found in the software development kit (SDK)
@@ -581,34 +629,50 @@ documentation.
 
 *BB2D Graphics Accelerator Subsystem* The Vivante® GC320 2D graphics
 accelerator is the 2D BitBlt (BB2D) graphics accelerator subsystem on
-the device with the following features: * API support: – OpenWF™,
-DirectFB – GDI/DirectDraw * BB2D architecture: – BitBlt and StretchBlt –
-DirectFB hardware acceleration – ROP2, ROP3, ROP4 full alpha blending
-and transparency – Clipping rectangle support – Alpha blending includes
-Java 2 Porter-Duff compositing rules – 90-, 180-, 270-degree rotation on
-every primitive – YUV-to-RGB color space conversion – Programmable
-display format conversion with 14 source and 7 destination formats –
-High-quality, 9-tap, 32-phase filter for image and video scaling at
-1080p – Monochrome expansion for text rendering – 32K × 32K coordinate
-system
+the device with the following features:
+
+* API support:
+** OpenWF™, DirectFB
+** GDI/DirectDraw
+* BB2D architecture:
+** BitBlt and StretchBlt 
+** DirectFB hardware acceleration
+** ROP2, ROP3, ROP4 full alpha blending and transparency
+** Clipping rectangle support
+** Alpha blending includes
+Java 2 Porter-Duff compositing rules
+** 90-, 180-, 270-degree rotation on
+every primitive
+** YUV-to-RGB color space conversion
+** Programmable display format conversion with 14 source and 7 destination formats
+** High-quality, 9-tap, 32-phase filter for image and video scaling at
+1080p
+** Monochrome expansion for text rendering
+** 32K × 32K coordinate system
 
 *Dual-Core PowerVR® SGX544™ 3D GPU* The 3D graphics processing unit
 (GPU) subsystem is based on POWERVR® SGX544 subsystem from Imagination
 Technologies. It supports general embedded applications. The GPU can
 process different data types simultaneously, such as: pixel data, vertex
 data, video data, and general-purpose data. The GPU subsystem has the
-following features: * Multicore GPU architecture: two SGX544 cores.
-Shared system level cache of 128 KiB * Tile-based deferred rendering
-architecture * Second-generation universal scalable shader engines
+following features:
+
+* Multicore GPU architecture: two SGX544 cores.
+* Shared system level cache of 128 KiB
+* Tile-based deferred rendering architecture
+* Second-generation universal scalable shader engines
 (USSE2), multithreaded engines incorporating pixel and vertex shader
-functionality * Present and texture load accelerators – Enables to move,
-rotate, twiddle, and scale texture surfaces. – Supports RGB, ARGB,
-YUV422, and YUV420 surface formats. – Supports bilinear upscale. –
-Supports source colorkey. * Fine-grained task switching, load balancing,
-and power management * Programmable high-quality image antialiasing *
-Bilinear, trilinear, anisotropic texture filtering * Advanced geometry
-DMA driven operation for minimum CPU interaction * Fully virtualized
-memory addressing for OS operation in a unified memory architecture
+functionality
+* Present and texture load accelerators
+** Enables to move, rotate, twiddle, and scale texture surfaces.
+** Supports RGB, ARGB, YUV422, and YUV420 surface formats.
+** Supports bilinear upscale.
+** Supports source colorkey.
+* Fine-grained task switching, load balancing, and power management
+* Programmable high-quality image antialiasing
+* Bilinear, trilinear, anisotropic texture filtering
+* Advanced geometry DMA driven operation for minimum CPU interaction
+* Fully virtualized memory addressing for OS operation in a unified memory architecture
 (MMU)
 
 [[memory]]
@@ -629,12 +693,26 @@ selected as such, can be the primary booth source. The connector will
 support larger capacity microSD cards. The microSD card is not provided
 with the board.
 
-*5.3.4 Booth Modes* ### 5.4 Power Management ### Connectivity
+[[boot-modes]]
+5.4 Boot Modes
+^^^^^^^^^^^^^^
 
-*BeagleBone® AI supports the majority of the functions of the AM5729 SOC
+[[power-management]]
+5.5 Power Management
+^^^^^^^^^^^^^^^^^^^^
+
+[[connectivity]]
+5.6 Connectivity
+^^^^^^^^^^^^^^^^
+
+TODO: Add WiFi/Bluetooth/Ethernet
+
+BeagleBone® AI supports the majority of the functions of the AM5729 SOC
 through connectors or expansion header pin accessibility. See section 7
 for more information on expansion header pinouts. There are a few
 functions that are not accessible which are: (TBD)
+
+TODO: This text needs to go somewhere.
 
 [[detailed-hardware-design]]
 6.0 Detailed Hardware Design
@@ -818,6 +896,7 @@ priority * Parity control supported by all memories
 +++++++++++++++++++++++++++++
 
 Below is a high level block diagram of one of the PRU-ICSS Subsystems
+
 image:images/BB_AI_PRU_block_diagram.jpg[beaglebone ai component
 placement]
 
