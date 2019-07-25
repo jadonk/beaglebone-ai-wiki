@@ -645,8 +645,7 @@ interfaces and in off-loading tasks from the other processor cores of
 the SoC.
 
 [[pru-icss-features]]
-6.12.1 PRU-ICSS Features
-++++++++++++++++++++++++
+==== 6.12.1 PRU-ICSS Features
 
 Each of the 2 PRU-ICSS (PRU-ICSS1 and PRU-ICSS2) includes the following
 main features: * 2 Independent programmable real-time (PRU) cores (PRU0
@@ -663,8 +662,7 @@ support * Integrated switched central resource with programmable
 priority * Parity control supported by all memories
 
 [[pru-icss-block-diagram]]
-6.12.2 PRU-ICSS Block Diagram
-+++++++++++++++++++++++++++++
+==== 6.12.2 PRU-ICSS Block Diagram
 
 Below is a high level block diagram of one of the PRU-ICSS Subsystems
 
@@ -672,8 +670,7 @@ image:images/BB_AI_PRU_block_diagram.jpg[beaglebone ai component
 placement]
 
 [[pru-icss-resources-and-faqs]]
-6.12.3 PRU-ICSS Resources and FAQ's
-+++++++++++++++++++++++++++++++++++
+==== 6.12.3 PRU-ICSS Resources and FAQ's
 
 [[resources]]
 Resources
@@ -693,8 +690,7 @@ PRU MII?
 * A: TBD
 
 [[pru-icss1-pin-access]]
-6.12.4 PRU-ICSS1 Pin Access
-+++++++++++++++++++++++++++
+==== 6.12.4 PRU-ICSS1 Pin Access
 
 The table below shows which PRU-ICSS1 signals can be accessed on
 BeagleBone® AI and on which connector and pins they are accessible from.
@@ -1005,8 +1001,7 @@ PRU-ICSS2
 |=======================================================================
 
 [[pru-icss2-pin-access]]
-6.12.5 PRU-ICSS2 Pin Access
-+++++++++++++++++++++++++++
+==== 6.12.5 PRU-ICSS2 Pin Access
 
 The table below shows which PRU-ICSS2 signals can be accessed on
 BeagleBone® AI and on which connector and pins they are accessible from.
@@ -1372,8 +1367,7 @@ PRU-ICSS2
 |=======================================================================
 
 [[user-leds]]
-6.5 User LEDs
-^^^^^^^^^^^^^
+=== 6.5 User LEDs
 
 There are 5 User Programmable LEDs on BeagleBone® AI. These are
 connected to GPIO pins on the processor.
@@ -1402,8 +1396,7 @@ image:images/BB_AI_Connectorplacement_back_800px.png[beaglebone ai
 connector placement back]
 
 [[expansion-connectors]]
-7.1 Expansion Connectors
-^^^^^^^^^^^^^^^^^^^^^^^^
+=== 7.1 Expansion Connectors
 
 The expansion interface on the board is comprised of two 46 pin
 connectors, the P8 and P9 Headers. All signals on the expansion headers
@@ -1426,8 +1419,7 @@ The location and spacing of the expansion headers are the same as on
 BeagleBone Black.
 
 [[connector-p8]]
-7.1.1 Connector P8
-++++++++++++++++++
+==== 7.1.1 Connector P8
 
 *Table ?* shows the pinout of the *P8* expansion header. Other signals
 can be connected to this connector based on setting the pin mux on the
@@ -1776,8 +1768,7 @@ TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.
 Notes regarding the resistors on muxed pins.
 
 [[connector-p9]]
-7.1.2 Connector P9
-++++++++++++++++++
+==== 7.1.2 Connector P9
 
 *Table ?* lists the signals on connector *P9*. Other signals can be
 connected to this connector based on setting the pin mux on the
@@ -2131,8 +2122,7 @@ approuvés par la partie responsible de la conformité ont pu vider
 l’autorité de l'utilisateur pour actionner l'équipement.
 
 [[warranty-and-disclaimers]]
-12.2 WARRANTY AND DISCLAIMERS
-~~~~~~~~~~~~~~~~~~~~~~~~
+=== 12.2 WARRANTY AND DISCLAIMERS
 
 The design materials referred to in this document are _*NOT SUPPORTED*_
 and *DO NOT* constitute a reference design. Support of the open source
@@ -2158,8 +2148,7 @@ specific needs or your specific applications and may require changes to
 meet your requirements.
 
 [[additional-terms]]
-12.2.1 Additional terms
-^^^^^^^^^^^^^^^^
+==== 12.2.1 Additional terms
 
 BeagleBoard.org Foundation and logo-licensed manufacturers (together,
 henceforth identified as "Supplier") provide BeagleBone AI under the
@@ -2194,12 +2183,10 @@ product design, software performance, or infringement of patents or
 services described herein.
 
 [[warnings-and-restrictions]]
-12.3 Warnings and Restrictions
-~~~~~~~~~~~~~~~~~~~~~~~~~
+=== 12.3 Warnings and Restrictions
 
 [[for-feasibility-evaluation-only-in-laboratorydevelopment-environments]]
-12.3.1 For Feasibility Evaluation Only, in Laboratory/Development Environments
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== 12.3.1 For Feasibility Evaluation Only, in Laboratory/Development Environments
 
 BeagleBone AI is not a complete product. It is intended solely for use
 for preliminary feasibility evaluation in laboratory/development
@@ -2209,8 +2196,7 @@ electrical mechanical components, systems and subsystems. It should not
 be used as all or part of a finished end product.
 
 [[your-sole-responsibility-and-risk]]
-12.3.2 Your Sole Responsibility and Risk
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== 12.3.2 Your Sole Responsibility and Risk
 
 You acknowledge, represent, and agree that:
 
@@ -2239,8 +2225,7 @@ any property damage, injury or death, even if BeagleBone AI should fail
 to perform as described or expected.
 
 [[certain-instructions]]
-12.3.3 Certain Instructions
-^^^^^^^^^^^^^^^^^^^^
+==== 12.3.3 Certain Instructions
 
 It is important to operate BeagleBone AI within Supplier’s recommended
 specifications and environmental considerations per the user guidelines.
@@ -2268,8 +2253,7 @@ knowledgeable in electronic measurement and diagnostics normally found
 in development environments should use BeagleBone AI.
 
 [[agreement-to-defend-indemnify-and-hold-harmless]]
-12.3.4 Agreement to Defend, Indemnify and Hold Harmless
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== 12.3.4 Agreement to Defend, Indemnify and Hold Harmless
 
 You agree to defend, indemnify and hold Supplier, its licensors and
 their representatives harmless from and against any and all claims,
@@ -2281,8 +2265,7 @@ contract or any other legal theory, and even if BeagleBone AI fails to
 perform as described or expected.
 
 [[safety-critical-or-life-critical-applications]]
-12.3.5 Safety-Critical or Life-Critical Applications
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== 12.3.5 Safety-Critical or Life-Critical Applications
 
 If you intend to evaluate the components for possible use in safety
 critical applications (such as life support) where a failure of the
