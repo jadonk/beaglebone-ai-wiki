@@ -22,203 +22,7 @@ For an up to date version of this document refer to:
 
 https://github.com/beagleboard/beaglebone-ai/wiki/System-Reference-Manual
 
-[[beaglebone-ai-design]]
-BeagleBone AI Design
---------------------
-
-[[regulatory-compliance-and-export-information]]
-REGULATORY, COMPLIANCE, AND EXPORT INFORMATION
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-* Country of origin: PRC
-* FCC: 2ATUT-BBONE-AI
-* CE: TBD
-* CNHTS: 8543909000
-* USHTS: 8473301180
-* MXHTS: 84733001
-* TARIC: 8473302000
-* ECCN: 5A992.C
-* CCATS:
-https://github.com/beagleboard/beaglebone-ai/blob/master/regulatory/Validation_Z1613110.pdf[Z1613110/G180570]
-* RoHS/REACH: TBD
-* Volatility: TBD
-
-BeagleBone AI is annotated to comply with Part 15 of the FCC Rules.
-Operation is subject to the following two conditions: (1) This device
-may not cause harmful interference, and (2) this device must accept any
-interference received, including interference that may cause undesired
-operation. Changes or modifications not expressly approved by the party
-responsible for compliance could void the user’s authority to operate
-the equipment.
-
-This Class A or B digital apparatus complies with Canadian ICES-003.
-Changes or modifications not expressly approved by the party responsible
-for compliance could void the user’s authority to operate the equipment.
-Cet appareil numérique de la classe A ou B est conforme à la norme
-NMB-003 du Canada. Les changements ou les modifications pas expressément
-approuvés par la partie responsible de la conformité ont pu vider
-l’autorité de l'utilisateur pour actionner l'équipement.
-
-[[warranty-and-disclaimers]]
-WARRANTY AND DISCLAIMERS
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-The design materials referred to in this document are _*NOT SUPPORTED*_
-and *DO NOT* constitute a reference design. Support of the open source
-developer community is provided through the the resources defined at
-https://beagleboard.org/support.
-
-THERE IS NO WARRANTY FOR THE DESIGN MATERIALS, TO THE EXTENT PERMITTED
-BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT
-HOLDERS AND/OR OTHER PARTIES PROVIDE THE DESIGN MATERIALS “AS IS”
-WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING,
-BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
-FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND
-PERFORMANCE OF THE DESIGN MATERIALS IS WITH YOU. SHOULD THE DESIGN
-MATERIALS PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY
-SERVICING, REPAIR OR CORRECTION.
-
-This board was designed as an evaluation and development tool. It was
-not designed with any other application in mind. As such, the design
-materials that are provided which include schematic, BOM, and PCB files,
-may or may not be suitable for any other purposes. If used, the design
-material becomes your responsibility as to whether or not it meets your
-specific needs or your specific applications and may require changes to
-meet your requirements.
-
-[[additional-terms]]
-Additional terms
-^^^^^^^^^^^^^^^^
-
-BeagleBoard.org Foundation and logo-licensed manufacturers (together,
-henceforth identified as "Supplier") provide BeagleBone AI under the
-following conditions:
-
-The user assumes all responsibility and liability for proper and safe
-handling of the goods. Further, the user indemnifies Supplier from all
-claims arising from the handling or use of the goods.
-
-Should BeagleBone AI not meet the specifications indicated in the System
-Reference Manual, BeagleBone AI may be returned within 90 days from the
-date of delivery to the distributor of purchase for a full refund. THE
-FOREGOING LIMITED WARRANTY IS THE EXCLUSIVE WARRANTY MADE BY SELLER TO
-BUYER AND IS IN LIEU OF ALL OTHER WARRANTIES, EXPRESSED, IMPLIED, OR
-STATUTORY, INCLUDING ANY WARRANTY OF MERCHANTABILITY OR FITNESS FOR ANY
-PARTICULAR PURPOSE. EXCEPT TO THE EXTENT OF THE INDEMNITY SET FORTH
-ABOVE, NEITHER PARTY SHALL BE LIABLE TO THE OTHER FOR ANY INDIRECT,
-SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES.
-
-Please read the System Reference Manual and, specifically, the Warnings
-and Restrictions notice in the Systems Reference Manual prior to
-handling the product. This notice contains important safety information
-about temperatures and voltages.
-
-No license is granted under any patent right or other intellectual
-property right of Supplier covering or relating to any machine, process,
-or combination in which such Supplier products or services might be or
-are used. The Supplier currently deals with a variety of customers for
-products, and therefore our arrangement with the user is not exclusive.
-The Supplier assume no liability for applications assistance, customer
-product design, software performance, or infringement of patents or
-services described herein.
-
-[[warnings-and-restrictions]]
-Warnings and Restrictions
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-[[for-feasibility-evaluation-only-in-laboratorydevelopment-environments]]
-For Feasibility Evaluation Only, in Laboratory/Development Environments
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-BeagleBone AI is not a complete product. It is intended solely for use
-for preliminary feasibility evaluation in laboratory/development
-environments by technically qualified electronics experts who are
-familiar with the dangers and application risks associated with handling
-electrical mechanical components, systems and subsystems. It should not
-be used as all or part of a finished end product.
-
-[[your-sole-responsibility-and-risk]]
-Your Sole Responsibility and Risk
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-You acknowledge, represent, and agree that:
-
-1.  You have unique knowledge concerning Federal, State and local
-regulatory requirements (including but not limited to Food and Drug
-Administration regulations, if applicable) which relate to your products
-and which relate to your use (and/or that of your employees, affiliates,
-contractors or designees) of BeagleBone AI for evaluation, testing and
-other purposes.
-2.  You have full and exclusive responsibility to assure the safety and
-compliance of your products with all such laws and other applicable
-regulatory requirements, and also to assure the safety of any activities
-to be conducted by you and/or your employees, affiliates, contractors or
-designees, using BeagleBone AI. Further, you are responsible to assure
-that any interfaces (electronic and/or mechanical) between BeagleBone AI
-and any human body are designed with suitable isolation and means to
-safely limit accessible leakage currents to minimize the risk of
-electrical shock hazard.
-3.  Since BeagleBone AI is not a completed product, it may not meet all
-applicable regulatory and safety compliance standards which may normally
-be associated with similar items. You assume full responsibility to
-determine and/or assure compliance with any such standards and related
-certifications as may be applicable. You will employ reasonable
-safeguards to ensure that your use of BeagleBone AI will not result in
-any property damage, injury or death, even if BeagleBone AI should fail
-to perform as described or expected.
-
-[[certain-instructions]]
-Certain Instructions
-^^^^^^^^^^^^^^^^^^^^
-
-It is important to operate BeagleBone AI within Supplier’s recommended
-specifications and environmental considerations per the user guidelines.
-Exceeding the specified BeagleBone AI ratings (including but not limited
-to input and output voltage, current, power, and environmental ranges)
-may cause property damage, personal injury or death. If there are
-questions concerning these ratings please contact the Supplier
-representative prior to connecting interface electronics including input
-power and intended loads. Any loads applied outside of the specified
-output range may result in unintended and/or inaccurate operation and/or
-possible permanent damage to BeagleBone AI and/or interface electronics.
-Please consult the System Reference Manual prior to connecting any load
-to BeagleBone AI output. If there is uncertainty as to the load
-specification, please contact the Supplier representative. During normal
-operation, some circuit components may have case temperatures greater
-than 60 C as long as the input and output are maintained at a normal
-ambient operating temperature. These components include but are not
-limited to linear regulators, switching transistors, pass transistors,
-and current sense resistors which can be identified using BeagleBone
-AI's schematic located at the link in BeagleBone AI's System Reference
-Manual. When placing measurement probes near these devices during normal
-operation, please be aware that these devices may be very warm to the
-touch. As with all electronic evaluation tools, only qualified personnel
-knowledgeable in electronic measurement and diagnostics normally found
-in development environments should use BeagleBone AI.
-
-[[agreement-to-defend-indemnify-and-hold-harmless]]
-Agreement to Defend, Indemnify and Hold Harmless
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-You agree to defend, indemnify and hold Supplier, its licensors and
-their representatives harmless from and against any and all claims,
-damages, losses, expenses, costs and liabilities (collectively,
-"Claims") arising out of or in connection with any use of BeagleBone AI
-that is not in accordance with the terms of the agreement. This
-obligation shall apply whether Claims arise under law of tort or
-contract or any other legal theory, and even if BeagleBone AI fails to
-perform as described or expected.
-
-[[safety-critical-or-life-critical-applications]]
-Safety-Critical or Life-Critical Applications
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If you intend to evaluate the components for possible use in safety
-critical applications (such as life support) where a failure of the
-Supplier’s product would reasonably be expected to cause severe personal
-injury or death, such as devices which are classified as FDA Class III
-or similar classification, then you must specifically notify Supplier of
-such intent and enter into a separate Assurance and Indemnity Agreement.
+EOX
 
 [[table-of-contents-insert-here]]
 Table of Contents (insert here)
@@ -2328,3 +2132,202 @@ image:images/BB_AI_Back.jpg[beaglebone ai back of board]
 [[support-information]]
 11.0 Support Information
 ------------------------
+
+[[terms-and-conditions]]
+12.0 Terms and Conditions
+-------------------------
+
+[[regulatory-compliance-and-export-information]]
+12.1 REGULATORY, COMPLIANCE, AND EXPORT INFORMATION
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Country of origin: PRC
+* FCC: 2ATUT-BBONE-AI
+* CE: TBD
+* CNHTS: 8543909000
+* USHTS: 8473301180
+* MXHTS: 84733001
+* TARIC: 8473302000
+* ECCN: 5A992.C
+* CCATS:
+https://github.com/beagleboard/beaglebone-ai/blob/master/regulatory/Validation_Z1613110.pdf[Z1613110/G180570]
+* RoHS/REACH: TBD
+* Volatility: TBD
+
+BeagleBone AI is annotated to comply with Part 15 of the FCC Rules.
+Operation is subject to the following two conditions: (1) This device
+may not cause harmful interference, and (2) this device must accept any
+interference received, including interference that may cause undesired
+operation. Changes or modifications not expressly approved by the party
+responsible for compliance could void the user’s authority to operate
+the equipment.
+
+This Class A or B digital apparatus complies with Canadian ICES-003.
+Changes or modifications not expressly approved by the party responsible
+for compliance could void the user’s authority to operate the equipment.
+Cet appareil numérique de la classe A ou B est conforme à la norme
+NMB-003 du Canada. Les changements ou les modifications pas expressément
+approuvés par la partie responsible de la conformité ont pu vider
+l’autorité de l'utilisateur pour actionner l'équipement.
+
+[[warranty-and-disclaimers]]
+12.2 WARRANTY AND DISCLAIMERS
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The design materials referred to in this document are _*NOT SUPPORTED*_
+and *DO NOT* constitute a reference design. Support of the open source
+developer community is provided through the the resources defined at
+https://beagleboard.org/support.
+
+THERE IS NO WARRANTY FOR THE DESIGN MATERIALS, TO THE EXTENT PERMITTED
+BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT
+HOLDERS AND/OR OTHER PARTIES PROVIDE THE DESIGN MATERIALS “AS IS”
+WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING,
+BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND
+PERFORMANCE OF THE DESIGN MATERIALS IS WITH YOU. SHOULD THE DESIGN
+MATERIALS PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY
+SERVICING, REPAIR OR CORRECTION.
+
+This board was designed as an evaluation and development tool. It was
+not designed with any other application in mind. As such, the design
+materials that are provided which include schematic, BOM, and PCB files,
+may or may not be suitable for any other purposes. If used, the design
+material becomes your responsibility as to whether or not it meets your
+specific needs or your specific applications and may require changes to
+meet your requirements.
+
+[[additional-terms]]
+12.2.1 Additional terms
+^^^^^^^^^^^^^^^^
+
+BeagleBoard.org Foundation and logo-licensed manufacturers (together,
+henceforth identified as "Supplier") provide BeagleBone AI under the
+following conditions:
+
+The user assumes all responsibility and liability for proper and safe
+handling of the goods. Further, the user indemnifies Supplier from all
+claims arising from the handling or use of the goods.
+
+Should BeagleBone AI not meet the specifications indicated in the System
+Reference Manual, BeagleBone AI may be returned within 90 days from the
+date of delivery to the distributor of purchase for a full refund. THE
+FOREGOING LIMITED WARRANTY IS THE EXCLUSIVE WARRANTY MADE BY SELLER TO
+BUYER AND IS IN LIEU OF ALL OTHER WARRANTIES, EXPRESSED, IMPLIED, OR
+STATUTORY, INCLUDING ANY WARRANTY OF MERCHANTABILITY OR FITNESS FOR ANY
+PARTICULAR PURPOSE. EXCEPT TO THE EXTENT OF THE INDEMNITY SET FORTH
+ABOVE, NEITHER PARTY SHALL BE LIABLE TO THE OTHER FOR ANY INDIRECT,
+SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES.
+
+Please read the System Reference Manual and, specifically, the Warnings
+and Restrictions notice in the Systems Reference Manual prior to
+handling the product. This notice contains important safety information
+about temperatures and voltages.
+
+No license is granted under any patent right or other intellectual
+property right of Supplier covering or relating to any machine, process,
+or combination in which such Supplier products or services might be or
+are used. The Supplier currently deals with a variety of customers for
+products, and therefore our arrangement with the user is not exclusive.
+The Supplier assume no liability for applications assistance, customer
+product design, software performance, or infringement of patents or
+services described herein.
+
+[[warnings-and-restrictions]]
+12.3 Warnings and Restrictions
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[[for-feasibility-evaluation-only-in-laboratorydevelopment-environments]]
+12.3.1 For Feasibility Evaluation Only, in Laboratory/Development Environments
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+BeagleBone AI is not a complete product. It is intended solely for use
+for preliminary feasibility evaluation in laboratory/development
+environments by technically qualified electronics experts who are
+familiar with the dangers and application risks associated with handling
+electrical mechanical components, systems and subsystems. It should not
+be used as all or part of a finished end product.
+
+[[your-sole-responsibility-and-risk]]
+12.3.2 Your Sole Responsibility and Risk
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You acknowledge, represent, and agree that:
+
+1.  You have unique knowledge concerning Federal, State and local
+regulatory requirements (including but not limited to Food and Drug
+Administration regulations, if applicable) which relate to your products
+and which relate to your use (and/or that of your employees, affiliates,
+contractors or designees) of BeagleBone AI for evaluation, testing and
+other purposes.
+2.  You have full and exclusive responsibility to assure the safety and
+compliance of your products with all such laws and other applicable
+regulatory requirements, and also to assure the safety of any activities
+to be conducted by you and/or your employees, affiliates, contractors or
+designees, using BeagleBone AI. Further, you are responsible to assure
+that any interfaces (electronic and/or mechanical) between BeagleBone AI
+and any human body are designed with suitable isolation and means to
+safely limit accessible leakage currents to minimize the risk of
+electrical shock hazard.
+3.  Since BeagleBone AI is not a completed product, it may not meet all
+applicable regulatory and safety compliance standards which may normally
+be associated with similar items. You assume full responsibility to
+determine and/or assure compliance with any such standards and related
+certifications as may be applicable. You will employ reasonable
+safeguards to ensure that your use of BeagleBone AI will not result in
+any property damage, injury or death, even if BeagleBone AI should fail
+to perform as described or expected.
+
+[[certain-instructions]]
+12.3.3 Certain Instructions
+^^^^^^^^^^^^^^^^^^^^
+
+It is important to operate BeagleBone AI within Supplier’s recommended
+specifications and environmental considerations per the user guidelines.
+Exceeding the specified BeagleBone AI ratings (including but not limited
+to input and output voltage, current, power, and environmental ranges)
+may cause property damage, personal injury or death. If there are
+questions concerning these ratings please contact the Supplier
+representative prior to connecting interface electronics including input
+power and intended loads. Any loads applied outside of the specified
+output range may result in unintended and/or inaccurate operation and/or
+possible permanent damage to BeagleBone AI and/or interface electronics.
+Please consult the System Reference Manual prior to connecting any load
+to BeagleBone AI output. If there is uncertainty as to the load
+specification, please contact the Supplier representative. During normal
+operation, some circuit components may have case temperatures greater
+than 60 C as long as the input and output are maintained at a normal
+ambient operating temperature. These components include but are not
+limited to linear regulators, switching transistors, pass transistors,
+and current sense resistors which can be identified using BeagleBone
+AI's schematic located at the link in BeagleBone AI's System Reference
+Manual. When placing measurement probes near these devices during normal
+operation, please be aware that these devices may be very warm to the
+touch. As with all electronic evaluation tools, only qualified personnel
+knowledgeable in electronic measurement and diagnostics normally found
+in development environments should use BeagleBone AI.
+
+[[agreement-to-defend-indemnify-and-hold-harmless]]
+12.3.4 Agreement to Defend, Indemnify and Hold Harmless
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You agree to defend, indemnify and hold Supplier, its licensors and
+their representatives harmless from and against any and all claims,
+damages, losses, expenses, costs and liabilities (collectively,
+"Claims") arising out of or in connection with any use of BeagleBone AI
+that is not in accordance with the terms of the agreement. This
+obligation shall apply whether Claims arise under law of tort or
+contract or any other legal theory, and even if BeagleBone AI fails to
+perform as described or expected.
+
+[[safety-critical-or-life-critical-applications]]
+12.3.5 Safety-Critical or Life-Critical Applications
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you intend to evaluate the components for possible use in safety
+critical applications (such as life support) where a failure of the
+Supplier’s product would reasonably be expected to cause severe personal
+injury or death, such as devices which are classified as FDA Class III
+or similar classification, then you must specifically notify Supplier of
+such intent and enter into a separate Assurance and Indemnity Agreement.
+
