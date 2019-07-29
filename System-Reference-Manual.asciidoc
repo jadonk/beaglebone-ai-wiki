@@ -2065,6 +2065,11 @@ only an output from BeagleBone AI to capes on BeagleBone AI.)
 [[beaglebone-ai-mechanical]]
 == 9 BeagleBone AI Mechanical
 
+* Board Dimensions: 8.9cm x 5.4cm x 1.5cm
+* Board Net Weight 48g
+
+TODO: 3D model
+
 [[pictures]]
 == 10 Pictures
 
@@ -2075,6 +2080,8 @@ image:images/BB_AI_Back.jpg[beaglebone ai back of board]
 
 [[support-information]]
 == 11 Support Information
+
+TODO: Reference https://beagleboard.org/support and https://beagleboard.org/resources
 
 [[terms-and-conditions]]
 == 12 Terms and Conditions
