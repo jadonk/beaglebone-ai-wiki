@@ -2074,8 +2074,8 @@ only an output from BeagleBone AI to capes on BeagleBone AI.)
 [[cape-board-support]]
 == 8 Cape Board Support
 
-[[beaglebone-ai-mechanical]]
-== 9 BeagleBone AI Mechanical
+[[mechanical-information]]
+== 9 Mechanical Information
 
 * Board Dimensions: 8.9cm x 5.4cm x 1.5cm
 * Board Net Weight 48g
