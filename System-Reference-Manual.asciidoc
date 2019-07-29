@@ -448,6 +448,8 @@ each side of the board, for a total of 1 GB. THey will each operate at a
 clock frequency of 1066 MHz yielding an effective rate of 2133MHz on the
 DDR3L bus allowing for 1.6GB/S of DDR3L memory bandwidth.
 
+TODO: Verify as I don't think the above is correct.
+
 ==== 5.3.2 16GB Embedded MMC
 A single 16GB embedded MMC (eMMC) device is on
 the board.
