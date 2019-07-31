@@ -445,6 +445,8 @@ each side of the board, for a total of 1 GB. THey will each operate at a
 clock frequency of 1066 MHz yielding an effective rate of 2133MHz on the
 DDR3L bus allowing for 1.6GB/S of DDR3L memory bandwidth.
 
+TODO: Verify as I don't think the above is correct.
+
 ==== 5.3.2 16GB Embedded MMC
 A single 16GB embedded MMC (eMMC) device is on
 the board.
@@ -633,18 +635,30 @@ the SoC.
 ==== 6.12.1 PRU-ICSS Features
 
 Each of the 2 PRU-ICSS (PRU-ICSS1 and PRU-ICSS2) includes the following
-main features: * 2 Independent programmable real-time (PRU) cores (PRU0
-and PRU1) * 21x Enhanced GPIs (EGPIs) and 21x Enhanced GPOs (EGPOs) with
-asynchronous capture and serial support per each PRU CPU core * One
+main features: 
+* 2 Independent programmable real-time (PRU) cores (PRU0
+and PRU1) 
+* 21x Enhanced GPIs (EGPIs) and 21x Enhanced GPOs (EGPOs) with
+asynchronous capture and serial support per each PRU CPU core 
+* One
 Ethernet MII_RT module (PRU-ICSS_MII_RT) with two MII ports and
-configurable connections to PRUs * 1 MDIO Port (PRU-ICSS_MII_MDIO) * One
+configurable connections to PRUs 
+* 1 MDIO Port (PRU-ICSS_MII_MDIO) 
+* One
 Industrial Ethernet Peripheral (IEP) to manage/generate Industrial
-Ethernet functions * 1 x 16550-compatible UART with a dedicated 192 MHz
-clock to support 12Mbps Profibus * 1 Industrial Ethernet timer with 7/9
-capture and 8 compare events * 1 Enhanced Capture Module (ECAP) * 1
-Interrupt Controller (PRU-ICSS_INTC) * A flexible power management
-support * Integrated switched central resource with programmable
-priority * Parity control supported by all memories
+Ethernet functions 
+* 1 x 16550-compatible UART with a dedicated 192 MHz
+clock to support 12Mbps Profibus 
+* 1 Industrial Ethernet timer with 7/9
+capture and 8 compare events 
+* 1 Enhanced Capture Module (ECAP) 
+* 1
+Interrupt Controller (PRU-ICSS_INTC) 
+* A flexible power management
+support 
+* Integrated switched central resource with programmable
+priority 
+* Parity control supported by all memories
 
 [[pru-icss-block-diagram]]
 ==== 6.12.2 PRU-ICSS Block Diagram
@@ -2062,8 +2076,15 @@ only an output from BeagleBone AI to capes on BeagleBone AI.)
 [[cape-board-support]]
 == 8 Cape Board Support
 
-[[beaglebone-ai-mechanical]]
-== 9 BeagleBone AI Mechanical
+[[mechanical-information]]
+== 9 Mechanical Information
+
+* Board Dimensions: 8.9cm x 5.4cm x 1.5cm
+* Board Net Weight 48g
+* Packaging Dimensions: 13.8cm x 10cm x 4cm
+* Gross Weight (including packaging):  110g
+
+TODO: 3D model
 
 [[pictures]]
 == 10 Pictures
@@ -2075,6 +2096,8 @@ image:images/BB_AI_Back.jpg[beaglebone ai back of board]
 
 [[support-information]]
 == 11 Support Information
+
+TODO: Reference https://beagleboard.org/support and https://beagleboard.org/resources
 
 [[terms-and-conditions]]
 == 12 Terms and Conditions
