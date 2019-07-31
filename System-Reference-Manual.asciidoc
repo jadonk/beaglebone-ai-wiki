@@ -134,8 +134,7 @@ the most common scenarios.
 TODO: add links to each scenario
 
 [[tethered-to-a-pc]]
-3.3 Tethered to a PC
-^^^^^^^^^^^^^^^^^^^^
+=== 3.3 Tethered to a PC
 
 The most common way to program BeagleBone® AI is via a USB connection to
 a PC. If your computer has a USB C type port, BeagleBone® AI will both
@@ -167,8 +166,7 @@ image:images/BB_AI_ss_cloud9_500px.jpg[BeagleBone AI Overview]
 image:images/BB_AI_ss_cloud9_dir_500px.jpg[BeagleBone AI Overview]
 
 [[standalone-wdisplay-and-keyboardmouse]]
-3.4 Standalone w/Display and Keyboard/Mouse
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=== 3.4 Standalone w/Display and Keyboard/Mouse
 
 image:images/BB_AI_Standalone_setup_750px.jpg[BeagleBone AI Overview]
 
@@ -182,8 +180,7 @@ port.
 7. Follow the instructions in the browser window.
 
 [[wireless-connection]]
-3.5 Wireless Connection
-^^^^^^^^^^^^^^^^^^^^^^^
+=== 3.5 Wireless Connection
 
 1. Plug a 5V 3A USB type-C power supply into BeagleBone® AI's USB type-C
 port.
@@ -1432,6 +1429,11 @@ TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.
 *NO PINS ARE TO BE DRIVEN UNTIL AFTER THE SYS_RESET LINE GOES HIGH.*
 
 *Table ?* Expansion Header P8 Pinout
+
+[cols="Board or signal detail,ID,Addr",format=csv,options="header,]
+|===
+include::BeagleBone_Cape_Header_Pins.csv[]
+|===
 
 [cols=",,,,,,,",options="header",]
 |=======================================================================
