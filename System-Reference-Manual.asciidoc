@@ -2093,6 +2093,8 @@ TODO
 TODO
 [[uart-or-pru-uart]]
 === 8.6 UART or PRU UART
+This section is about both UART pins on the header and PRU UART pins on the headers
+we will include a chart and later some code
 TODO
 [[spi]]
 === 8.7 SPI
@@ -2109,7 +2111,7 @@ TODO
 [[can]]
 === 8.11 CAN
 TODO
-[[mcasp=audio-serial-like-i2c-and-ac97]]
+[[mcasp-audio-serial-like-i2c-and-ac97]]
 === 8.12 McASP (audio serial like I2S and AC97)
 TODO
 [[mmc]]
