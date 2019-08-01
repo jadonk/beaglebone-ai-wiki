@@ -2076,7 +2076,7 @@ only an output from BeagleBone AI to capes on BeagleBone AI.)
 [[cape-board-support]]
 == 8 Cape Board Support
 TODO
-[[beaglebone®-black-cape-compatibility]]
+[[beaglebone-black-cape-compatibility]]
 === 8.1 BeagleBone® Black Cape Compatibility
 TODO
 [[connecting-up-your-beaglebone-ai]]
