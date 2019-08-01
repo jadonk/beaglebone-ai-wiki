@@ -1444,7 +1444,7 @@ TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.
 
 *Table ?* Expansion Header P8 Pinout
 
-[cols="Board or signal detail,ID,Addr",format=csv,options="header,]
+[cols="Board or signal detail,ID,Addr",format=csv,options="header"]
 |===
 include::BeagleBone_Cape_Header_Pins.csv[]
 |===
