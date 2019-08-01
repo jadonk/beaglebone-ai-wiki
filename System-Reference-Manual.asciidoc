@@ -2079,32 +2079,63 @@ TODO
 [[beaglebone-black-cape-compatibility]]
 === 8.1 BeagleBone® Black Cape Compatibility
 TODO
-[[connecting-up-your-beaglebone-ai]]
-== 3 Connecting Up Your BeagleBone AI
-
-[[whats-in-the-box]]
-=== 3.1 What's In the Box
-[[lcd-pins]]
-==== 8.1.1 LCD Pins
-TODO
-==== 8.1.2 eMMC Pins
-TODO
+[[eeprom]]
 === 8.2 EEPROM
 TODO
-==== 8.2.1 EEPROM Address
-TODO
-==== 8.2.2 I2C Bus
-TODO
-==== 8.2.3 EEPROM Write Protect
-TODO
-==== 8.2.4 EEPROM Data Format
-TODO
+[[pin-usage-consideration]]
 === 8.3 Pin Usage Consideration
 TODO
-gpio, i2c, uart, spi,...
-==== 8.3.1 gpi
-=== 8.4 Expansion Connectors
-
+[[gpio]]
+=== 8.4 GPIO
+TODO
+[[i2c]]
+=== 8.5 I2C
+TODO
+[[uart-or-pru-uart]]
+=== 8.6 UART or PRU UART
+TODO
+[[spi]]
+=== 8.7 SPI
+TODO
+[[analog]]
+=== 8.8 Analog
+TODO
+[[pwm-timer-ecap-or-pru-pwm-ecap]]
+=== 8.9 PWM, TIMER, eCAP or PRU PWM/eCAP
+TODO
+[[eqep]]
+=== 8.10 eQEP
+TODO
+[[can]]
+=== 8.11 CAN
+TODO
+[[mcasp=audio-serial-like-i2c-and-ac97]]
+=== 8.12 McASP (audio serial like I2S and AC97)
+TODO
+[[mmc]]
+=== 8.13 MMC
+TODO
+[[lcd]]
+=== 8.14 LCD
+TODO
+[[pru-gpio]]
+=== 8.15 PRU GPIO
+TODO
+[[clkout]]
+=== 8.16 CLKOUT
+TODO
+[[expansion-connectors]]
+=== 8.17 Expansion Connectors
+TODO
+[[signal-usage]]
+=== 8.18 Signal Usage
+TODO
+[[cape-power]]
+=== 8.19 Cape Power
+TODO
+[[mechanical]]
+=== 8.20 Mechanical
+TODO
 [[mechanical-information]]
 == 9 Mechanical Information
 
