@@ -2076,6 +2076,28 @@ only an output from BeagleBone AI to capes on BeagleBone AI.)
 [[cape-board-support]]
 == 8 Cape Board Support
 
+=== 8.1 BeagleBone® Black Cape Compatibility
+TODO
+==== 8.1.1 LCD Pins
+TODO
+==== 8.1.2 eMMC Pins
+TODO
+=== 8.2 EEPROM
+TODO
+==== 8.2.1 EEPROM Address
+TODO
+==== 8.2.2 I2C Bus
+TODO
+==== 8.2.3 EEPROM Write Protect
+TODO
+==== 8.2.4 EEPROM Data Format
+TODO
+=== 8.3 Pin Usage Consideration
+TODO
+gpio, i2c, uart, spi,...
+==== 8.3.1 gpi
+=== 8.4 Expansion Connectors
+
 [[mechanical-information]]
 == 9 Mechanical Information
 
