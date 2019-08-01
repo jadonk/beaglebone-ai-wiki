@@ -2095,6 +2095,9 @@ TODO
 === 8.6 UART or PRU UART
 This section is about both UART pins on the header and PRU UART pins on the headers
 we will include a chart and later some code
+|===
+include::tables/bb_ai_pincharts_3_UART.csv[uart pin table]
+|===
 TODO
 [[spi]]
 === 8.7 SPI
