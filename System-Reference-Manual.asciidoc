@@ -1,7 +1,7 @@
 = BeagleBone AI System Reference Manual
 :toc: preamble
 
-image:images/BB_AI_beautyangle.jpg[BeagleBone AI Beauty Angle]
+image:images/BB_AI_BeautyAngle_800px.jpg[BeagleBone AI Beauty Angle]
 
 TODO: Update image
 
