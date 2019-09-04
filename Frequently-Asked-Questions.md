@@ -1,3 +1,9 @@
+# Is USB type-C only for power?
+No, the dual-role controller offers USB 3.0 SuperSpeed connections at 5,000Mbps, over 10 times faster than USB 2.0 high-speed connections at 480Mbps.
+
+# Will the board cost over $200 like BeagleBoard-X15?
+No, the board will be around $100, despite having similar features. Much of the savings comes from fewer USB 3.0 ports, removal of SATA and PCIe and lower-speed board interconnect. The RAM is also reduced from 2GB to 1GB and from 2 Gigabit Ethernet ports to just 1. We feel this is a good tradeoff for many people looking to experiment. The additional flash and addition of WiFi can largely be covered by the newer design and larger expected sales.
+
 # Accessories
 ## Power cable
 A 5V 2.5A (25W) adapter should be sufficient. It needs to be type-C. Most laptops with type-C should put out enough power to provide both power and a super-speed data connection over this cable.
