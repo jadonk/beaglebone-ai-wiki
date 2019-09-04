@@ -2,6 +2,10 @@ _**NOTE**_: For the latest online instructions, troubleshooting tips and support
 
 _**NOTE**_: Usage of Chrome or Firefox web browsers is recommended.
 
+# Connection options
+* [Tethered to a PC](#tethered-to-a-pc)
+* [Standalone with Keyboard and Mouse](#standalone-with-keyboard-and-mouse)
+* [Wireless Connection][#wireless-connection)
 
 # Tethered to a PC
 
@@ -17,9 +21,6 @@ _**NOTE**_: Usage of Chrome or Firefox web browsers is recommended.
 
 6. Follow the instructions in the browser window.
 
- 
-
- 
 
 # Standalone with Keyboard and Mouse
 
@@ -36,13 +37,9 @@ _**NOTE**_: Usage of Chrome or Firefox web browsers is recommended.
 6. Desktop will appear on the monitor. Click the "Getting Started" icon.
 
 7. Follow the instructions in the browser window.
-
  
 
- 
- 
-
-# Wireless Connection:
+# Wireless Connection
 
 1. Plug a 5V 3A USB type-C power supply into BeagleBone® AI's USB type-C port.
 
