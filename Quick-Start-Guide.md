@@ -56,7 +56,3 @@ _**NOTE**_: Usage of Chrome or Firefox web browsers is recommended.
 
 6. Follow the instructions in the browser window.
 
-
-# Other notes:
-* If the heat sink and antenna are not attached, instructions will be added for attaching them.
-* The content of the page served up by the board will change.
