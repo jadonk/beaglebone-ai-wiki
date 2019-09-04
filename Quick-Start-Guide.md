@@ -5,7 +5,7 @@ _**NOTE**_: Usage of Chrome or Firefox web browsers is recommended.
 # Connection options
 * [Tethered to a PC](#tethered-to-a-pc)
 * [Standalone with Keyboard and Mouse](#standalone-with-keyboard-and-mouse)
-* [Wireless Connection][#wireless-connection)
+* [Wireless Connection](#wireless-connection)
 
 # Tethered to a PC
 
