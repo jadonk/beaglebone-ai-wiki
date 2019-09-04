@@ -1,4 +1,4 @@
-_**NOTE**_: For the latest online instructions, troubleshooting tips and support go to: beagleboard.org/getting-started.
+_**NOTE**_: For the latest online instructions, troubleshooting tips and support go to: [beagleboard.org/getting-started](https://beagleboard.org/getting-started).
 
 _**NOTE**_: Usage of Chrome or Firefox web browsers is recommended.
 
