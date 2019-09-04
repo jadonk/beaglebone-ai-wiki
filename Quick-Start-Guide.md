@@ -45,7 +45,7 @@ _**NOTE**_: Usage of Chrome or Firefox web browsers is recommended.
 
 2. BeagleBone® AI will boot.
 
-3. Connect your PC's WiFi to SSID "BeagleBone-XXXX" where XXXX varies for your BeagleBone® AI.
+3. Connect your PC's WiFi to SSID "BeagleBone-_XXXX_" where _XXXX_ varies for your BeagleBone® AI.
 
 4. Use password "BeagleBone" to complete the WiFi connection.
 
