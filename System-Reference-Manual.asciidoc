@@ -607,6 +607,8 @@ The HDMI interface is aligned with the HDMI TMDS single stream standard
 v1.4a (720p @60Hz to 1080p @24Hz) and the HDMI v1.3 (1080p @60Hz): 3
 data channels, plus 1 clock channel is supported (differential).
 
+TODO: Verify it isn't better than this. Doesn't seem right.
+
 [[pru-icss]]
 === 6.12 PRU-ICSS
 
@@ -1443,11 +1445,6 @@ TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.
 *NO PINS ARE TO BE DRIVEN UNTIL AFTER THE SYS_RESET LINE GOES HIGH.*
 
 *Table ?* Expansion Header P8 Pinout
-
-[cols="Board or signal detail,ID,Addr",format=csv,options="header"]
-|===
-include::BeagleBone_Cape_Header_Pins.csv[]
-|===
 
 [cols=",,,,,,,",options="header",]
 |=======================================================================
