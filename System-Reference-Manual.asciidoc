@@ -1447,129 +1447,128 @@ TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.
 *Table ?* Expansion Header P8 Pinout
 
 
-
 [%header,format=csv]
 ,===
-BeagleBone AI,P8.03,P8.04,P8.05,P8.06
-GPIO,24,25,193,194
-AM5729 ABC ball,AB8,AB5,AC9,AC3
-AM5729 pinctrl register,0x179C,0x17A0,0x178C,0x1790
-AM5729 mux mode 0,mmc3_dat6,mmc3_dat7,mmc3_dat2,mmc3_dat3
-1,spi4_d0,spi4_cs0,spi3_cs0,spi3_cs1
-2,uart10_ctsn,uart10_rtsn,uart5_ctsn,uart5_rtsn
-3,,,,
-4,vin2b_de1,vin2b_clk1,vin2b_d3,vin2b_d2
-5,,,,
-6,,,,
-7,,,,
-8,,,,
-9,vin5a_hsync0,vin5a_vsync0,vin5a_d3,vin5a_d2
-10,ehrpwm3_tripzone_input,eCAP3_in_PWM3_out,eQEP3_index,eQEP3_strobe
-11,pr2_mii1_rxd1,pr2_mii1_rxd0,pr2_mii_mr1_clk,pr2_mii1_rxdv
-12,pr2_pru0_gpi10,pr2_pru0_gpi11,pr2_pru0_gpi6,pr2_pru0_gpi7
-13,pr2_pru0_gpo10,pr2_pru0_gpo11,pr2_pru0_gpo6,pr2_pru0_gpo7
-14,gpio1_24,gpio1_25,gpio7_1,gpio7_2
-15,Driver off,Driver off,Driver off,Driver off
-AM5729 ABC 2nd ball,,,,
-AM5729 2nd pinctrl register,,,,
-AM5729 2nd ball mux mode 0,,,,
-1,,,,
-2,,,,
-3,,,,
-4,,,,
-5,,,,
-6,,,,
-7,,,,
-8,,,,
-9,,,,
-10,,,,
-11,,,,
-12,,,,
-13,,,,
-,===
-
-
-
-[%header,format=csv]
-,===
-BeagleBone AI,P8.07,P8.08,P8.09,P8.10
-GPIO,165,166,178,164
-AM5729 ABC ball,G14,F14,E17,A13
-AM5729 pinctrl register,0x16EC,0x16F0,0x1698,0x16E8
-AM5729 mux mode 0,mcasp1_axr14,mcasp1_axr15,xref_clk1,mcasp1_axr13
-1,mcasp7_aclkx,mcasp7_fsx,mcasp2_axr9,mcasp7_axr1
-2,mcasp7_aclkr,mcasp7_fsr,mcasp1_axr5,
-3,,,mcasp2_ahclkx,
-4,,,mcasp6_ahclkx,
-5,,,,
-6,,,,
-7,vin6a_d9,vin6a_d8,vin6a_clk0,vin6a_d10
-8,,,,
-9,,,,
-10,timer11,timer12,timer14,timer10
-11,pr2_mii0_rxdv,pr2_mii0_rxd3,pr2_mii1_crs,pr2_mii_mr0_clk
-12,pr2_pru1_gpi16,pr2_pru0_gpi20,pr2_pru1_gpi6,pr2_pru1_gpi15
-13,pr2_pru1_gpo16,pr2_pru0_gpo20,pr2_pru1_gpo6,pr2_pru1_gpo15
-14,gpio6_5,gpio6_6,gpio6_18,gpio6_4
-15,Driver off,Driver off,Driver off,Driver off
-AM5729 ABC 2nd ball,,,,
-AM5729 2nd pinctrl register,,,,
-AM5729 2nd ball mux mode 0,,,,
-1,,,,
-2,,,,
-3,,,,
-4,,,,
-5,,,,
-6,,,,
-7,,,,
-8,,,,
-9,,,,
-10,,,,
-11,,,,
-12,,,,
-13,,,,
+BeagleBone AI,P8.03,P8.04,P8.05
+GPIO,24,25,193
+AM5729 ABC ball,AB8,AB5,AC9
+AM5729 pinctrl register,0x179C,0x17A0,0x178C
+AM5729 mux mode 0,mmc3_dat6,mmc3_dat7,mmc3_dat2
+1,spi4_d0,spi4_cs0,spi3_cs0
+2,uart10_ctsn,uart10_rtsn,uart5_ctsn
+3,,,
+4,vin2b_de1,vin2b_clk1,vin2b_d3
+5,,,
+6,,,
+7,,,
+8,,,
+9,vin5a_hsync0,vin5a_vsync0,vin5a_d3
+10,ehrpwm3_tripzone_input,eCAP3_in_PWM3_out,eQEP3_index
+11,pr2_mii1_rxd1,pr2_mii1_rxd0,pr2_mii_mr1_clk
+12,pr2_pru0_gpi10,pr2_pru0_gpi11,pr2_pru0_gpi6
+13,pr2_pru0_gpo10,pr2_pru0_gpo11,pr2_pru0_gpo6
+14,gpio1_24,gpio1_25,gpio7_1
+15,Driver off,Driver off,Driver off
+AM5729 ABC 2nd ball,,,
+AM5729 2nd pinctrl register,,,
+AM5729 2nd ball mux mode 0,,,
+1,,,
+2,,,
+3,,,
+4,,,
+5,,,
+6,,,
+7,,,
+8,,,
+9,,,
+10,,,
+11,,,
+12,,,
+13,,,
 ,===
 
 
 
 [%header,format=csv]
 ,===
-BeagleBone AI,P8.11,P8.12,P8.13,P8.14
-GPIO,75,74,107,109
-AM5729 ABC ball,AH4,AG6,D3,D5
-AM5729 pinctrl register,0x1510,0x150C,0x1590,0x1598
-AM5729 mux mode 0,vin1a_d7,vin1a_d6,vin2a_d10,vin2a_d12
-1,,,,
-2,,,,
-3,vout3_d0,vout3_d1,mdio_mclk,rgmii1_txc
-4,vout3_d16,vout3_d17,vout2_d13,vout2_d11
-5,,,,
-6,,,,
-7,,,,
-8,,,,mii1_rxclk
-9,,,kbd_col7,kbd_col8
-10,eQEP2B_in,eQEP2A_in,ehrpwm2B,eCAP2_in_PWM2_out
-11,,,pr1_mdio_mdclk,pr1_mii1_txd1
-12,pr1_pru0_gpi4,pr1_pru0_gpi3,pr1_pru1_gpi7,pr1_pru1_gpi9
-13,pr1_pru0_gpo4,pr1_pru0_gpo3,pr1_pru1_gpo7,pr1_pru1_gpo9
-14,gpio3_11,gpio3_10,gpio4_11,gpio4_13
-15,Driver off,Driver off,Driver off,Driver off
-AM5729 ABC 2nd ball,,,,
-AM5729 2nd pinctrl register,,,,
-AM5729 2nd ball mux mode 0,,,,
-1,,,,
-2,,,,
-3,,,,
-4,,,,
-5,,,,
-6,,,,
-7,,,,
-8,,,,
-9,,,,
-10,,,,
-11,,,,
-12,,,,
-13,,,,
+BeagleBone AI,P8.06,P8.07,P8.08
+GPIO,194,165,166
+AM5729 ABC ball,AC3,G14,F14
+AM5729 pinctrl register,0x1790,0x16EC,0x16F0
+AM5729 mux mode 0,mmc3_dat3,mcasp1_axr14,mcasp1_axr15
+1,spi3_cs1,mcasp7_aclkx,mcasp7_fsx
+2,uart5_rtsn,mcasp7_aclkr,mcasp7_fsr
+3,,,
+4,vin2b_d2,,
+5,,,
+6,,,
+7,,vin6a_d9,vin6a_d8
+8,,,
+9,vin5a_d2,,
+10,eQEP3_strobe,timer11,timer12
+11,pr2_mii1_rxdv,pr2_mii0_rxdv,pr2_mii0_rxd3
+12,pr2_pru0_gpi7,pr2_pru1_gpi16,pr2_pru0_gpi20
+13,pr2_pru0_gpo7,pr2_pru1_gpo16,pr2_pru0_gpo20
+14,gpio7_2,gpio6_5,gpio6_6
+15,Driver off,Driver off,Driver off
+AM5729 ABC 2nd ball,,,
+AM5729 2nd pinctrl register,,,
+AM5729 2nd ball mux mode 0,,,
+1,,,
+2,,,
+3,,,
+4,,,
+5,,,
+6,,,
+7,,,
+8,,,
+9,,,
+10,,,
+11,,,
+12,,,
+13,,,
+,===
+
+
+
+[%header,format=csv]
+,===
+BeagleBone AI,P8.09,P8.10,P8.11
+GPIO,178,164,75
+AM5729 ABC ball,E17,A13,AH4
+AM5729 pinctrl register,0x1698,0x16E8,0x1510
+AM5729 mux mode 0,xref_clk1,mcasp1_axr13,vin1a_d7
+1,mcasp2_axr9,mcasp7_axr1,
+2,mcasp1_axr5,,
+3,mcasp2_ahclkx,,vout3_d0
+4,mcasp6_ahclkx,,vout3_d16
+5,,,
+6,,,
+7,vin6a_clk0,vin6a_d10,
+8,,,
+9,,,
+10,timer14,timer10,eQEP2B_in
+11,pr2_mii1_crs,pr2_mii_mr0_clk,
+12,pr2_pru1_gpi6,pr2_pru1_gpi15,pr1_pru0_gpi4
+13,pr2_pru1_gpo6,pr2_pru1_gpo15,pr1_pru0_gpo4
+14,gpio6_18,gpio6_4,gpio3_11
+15,Driver off,Driver off,Driver off
+AM5729 ABC 2nd ball,,,
+AM5729 2nd pinctrl register,,,
+AM5729 2nd ball mux mode 0,,,
+1,,,
+2,,,
+3,,,
+4,,,
+5,,,
+6,,,
+7,,,
+8,,,
+9,,,
+10,,,
+11,,,
+12,,,
+13,,,
 ,===
 
 

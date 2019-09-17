@@ -56,17 +56,17 @@ function extractHeaders(table, title, columns, rows) {
 function extractTables(table, rowCount) {
   extractHeaders(table, 
     "",
-    ["Board or signal detail","1","2","3","4"],
+    ["Board or signal detail","1","2","3"],
     36
   );
   extractHeaders(table, 
     "",
-    ["Board or signal detail","5","6","7","8"],
+    ["Board or signal detail","4","5","6"],
     36
   );
   extractHeaders(table, 
     "",
-    ["Board or signal detail","9","10","11","12"],
+    ["Board or signal detail","7","8","9"],
     36
   );
 }
