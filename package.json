@@ -1,0 +1,23 @@
+{
+  "name": "make-csv-tables",
+  "version": "0.0.1",
+  "description": "Create csv tables for BeagleBone-AI wiki",
+  "main": "make-csv-tables.js",
+  "dependencies": {
+    "fast-csv": "^3.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beagleboard/beaglebone-ai.wiki.git"
+  },
+  "author": "Jason Kridner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/beagleboard/beaglebone-ai/issues"
+  },
+  "homepage": "https://github.com/beagleboard/beaglebone-ai/wiki"
+}
