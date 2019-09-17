@@ -1,7 +1,11 @@
-_**NOTE**_: For the latest online instructions, troubleshooting tips and support go to: beagleboard.org/getting-started.
+_**NOTE**_: For the latest online instructions, troubleshooting tips and support go to: [beagleboard.org/getting-started](https://beagleboard.org/getting-started).
 
 _**NOTE**_: Usage of Chrome or Firefox web browsers is recommended.
 
+# Connection options
+* [Tethered to a PC](#tethered-to-a-pc)
+* [Standalone with Keyboard and Mouse](#standalone-with-keyboard-and-mouse)
+* [Wireless Connection](#wireless-connection)
 
 # Tethered to a PC
 
@@ -17,9 +21,6 @@ _**NOTE**_: Usage of Chrome or Firefox web browsers is recommended.
 
 6. Follow the instructions in the browser window.
 
- 
-
- 
 
 # Standalone with Keyboard and Mouse
 
@@ -36,19 +37,15 @@ _**NOTE**_: Usage of Chrome or Firefox web browsers is recommended.
 6. Desktop will appear on the monitor. Click the "Getting Started" icon.
 
 7. Follow the instructions in the browser window.
-
  
 
- 
- 
-
-# Wireless Connection:
+# Wireless Connection
 
 1. Plug a 5V 3A USB type-C power supply into BeagleBone® AI's USB type-C port.
 
 2. BeagleBone® AI will boot.
 
-3. Connect your PC's WiFi to SSID "BeagleBone-XXXX" where XXXX varies for your BeagleBone® AI.
+3. Connect your PC's WiFi to SSID "BeagleBone-_XXXX_" where _XXXX_ varies for your BeagleBone® AI.
 
 4. Use password "BeagleBone" to complete the WiFi connection.
 
@@ -56,7 +53,3 @@ _**NOTE**_: Usage of Chrome or Firefox web browsers is recommended.
 
 6. Follow the instructions in the browser window.
 
-
-# Other notes:
-* If the heat sink and antenna are not attached, instructions will be added for attaching them.
-* The content of the page served up by the board will change.
