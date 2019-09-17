@@ -28,4 +28,29 @@ function formatOutput(table, rowCount) {
   process.stdout.write("\n");
 }
 
-parseInput(table1, formatOutput);
+function extractHeaders(table, rowCount) {
+  console.log("[%header,format=csv]");
+  console.log(",===");
+  var newTable = [];
+  var columns = ["Board or signal detail","1","2","3","4"];
+  for(var i in table) {
+    //console.error("row = " + i);
+    if(table[i]["Board or signal detail"] == "BeagleBone AI") {
+      //console.error(JSON.stringify(table[i]));
+      //console.log(columnTitles);
+      //for(var k = 0; k < 20; k++) {
+      for(var k = 0; k < 36; k++) {
+        var row = [];
+        for(var j in columns) {
+          row.push(table[parseInt(i,10)+k][columns[j]]);
+        }
+        console.log(row.join(","));
+      }
+      console.log(",===");
+      console.log("");
+      break;
+    }
+  }
+}
+
+parseInput(table1, extractHeaders);
