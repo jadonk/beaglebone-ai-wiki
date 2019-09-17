@@ -28,18 +28,18 @@ function formatOutput(table, rowCount) {
   process.stdout.write("\n");
 }
 
-function extractHeaders(table, rowCount) {
+function extractHeaders(table, title, columns, rows) {
+  console.log(title);
+  console.log("");
   console.log("[%header,format=csv]");
   console.log(",===");
   var newTable = [];
-  var columns = ["Board or signal detail","1","2","3","4"];
   for(var i in table) {
     //console.error("row = " + i);
     if(table[i]["Board or signal detail"] == "BeagleBone AI") {
       //console.error(JSON.stringify(table[i]));
       //console.log(columnTitles);
-      //for(var k = 0; k < 20; k++) {
-      for(var k = 0; k < 36; k++) {
+      for(var k = 0; k < rows; k++) {
         var row = [];
         for(var j in columns) {
           row.push(table[parseInt(i,10)+k][columns[j]]);
@@ -53,4 +53,22 @@ function extractHeaders(table, rowCount) {
   }
 }
 
-parseInput(table1, extractHeaders);
+function extractTables(table, rowCount) {
+  extractHeaders(table, 
+    "",
+    ["Board or signal detail","1","2","3","4"],
+    36
+  );
+  extractHeaders(table, 
+    "",
+    ["Board or signal detail","5","6","7","8"],
+    36
+  );
+  extractHeaders(table, 
+    "",
+    ["Board or signal detail","9","10","11","12"],
+    36
+  );
+}
+
+parseInput(table1, extractTables);
