@@ -82,7 +82,12 @@ function extractTables(table, rowCount) {
   );
   extractHeaders(table, 
     "",
-    ["Board or signal detail","12","13","14","15"],
+    ["Board or signal detail","12","13","14"],
+    rows2ball
+  );
+  extractHeaders(table, 
+    "",
+    ["Board or signal detail","15","16","17","18"],
     rows2ball
   );
 }
