@@ -58,11 +58,11 @@ function extractHeaders(table, title, columns, rows) {
 }
 
 var rows2ball = 
-    ["","GPIO","BALL","PINCTRL","MODE0","MODE1","MOdE2","MODE3","MODE4","MODE5","MODE6","MODE7","MODE8","MODE9","MODE10","MODE11","MODE12","MODE13","MODE14","MODE15",
-               "BALL","PINCTRL","MODE0","MODE1","MOdE2","MODE3","MODE4","MODE5","MODE6","MODE7","MODE8","MODE9","MODE10","MODE11","MODE12","MODE13","MODE14","MODE15"];
+    ["","*GPIO*","*BALL*","*REG*","*MODE 0*","*1*","*2*","*3*","*4*","*5*","*6*","*7*","*8*","*9*","*10*","*11*","*12*","*13*","*14*","*15*",
+               "*2nd BALL*","*2nd REG*","*2nd MODE 0*","*2nd 1*","*2nd 2*","*2nd 3*","*2nd 4*","*2nd 5*","*2nd 6*","*2nd 7*","*2nd 8*","*2nd 9*","*2nd 10*","*2nd 11*","*2nd 12*","*2nd 13*","*2nd 14*","*2nd 15*"];
 
 var rows1ball = 
-    ["","GPIO","BALL","PINCTRL","MODE0","MODE1","MOdE2","MODE3","MODE4","MODE5","MODE6","MODE7","MODE8","MODE9","MODE10","MODE11","MODE12","MODE13","MODE14","MODE15"];
+    ["","*GPIO*","*BALL*","*REG*","*MODE 0*","*1*","*2*","*3*","*4*","*5*","*6*","*7*","*8*","*9*","*10*","*11*","*12*","*13*","*14*","*15*"];
 
 function extractTables(table, rowCount) {
   extractHeaders(table, 
@@ -88,11 +88,16 @@ function extractTables(table, rowCount) {
   extractHeaders(table, 
     "",
     ["Board or signal detail","15","16","17"],
-    rows2ball
+    rows1ball
   );
   extractHeaders(table, 
     "",
-    ["Board or signal detail","18","19","20","21"],
+    ["Board or signal detail","18","19","20"],
+    rows1ball
+  );
+  extractHeaders(table, 
+    "",
+    ["Board or signal detail","20","21","22"],
     rows2ball
   );
 }
