@@ -1737,44 +1737,88 @@ TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.
 
 [%header,format=csv]
 ,===
-,P8.33,P8.34,P8.35,P8.36
-*GPIO*,237,235,236,234
-*BALL*,C6,D8,A5,D7
-*REG*,0x1610,0x1608,0x160C,0x1604
-*MODE 0*,vout1_d13,vout1_d11,vout1_d12,vout1_d10
+,P8.33,P8.34,P8.35
+*GPIO*,237,235,236
+*BALL*,C6,D8,A5
+*REG*,0x1610,0x1608,0x160C
+*MODE 0*,vout1_d13,vout1_d11,vout1_d12
+*1*,,,
+*2*,emu12,emu10,emu11
+*3*,vin4a_d13,vin4a_d11,vin4a_d12
+*4*,vin3a_d13,vin3a_d11,vin3a_d12
+*5*,obs8,obs6,obs7
+*6*,obs24,obs22,obs23
+*7*,,obs_dmarq2,
+*8*,,,
+*9*,,,
+*10*,pr2_uart0_rxd,pr2_uart0_cts_n,pr2_uart0_rts_n
+*11*,,,
+*12*,pr2_pru0_gpi10,pr2_pru0_gpi8,pr2_pru0_gpi9
+*13*,pr2_pru0_gpo10,pr2_pru0_gpo8,pr2_pru0_gpo9
+*14*,gpio8_13,gpio8_11,gpio8_12
+*15*,Driver off,Driver off,Driver off
+*2nd BALL*,AF9,G6,AD9
+*2nd REG*,0x14E8,0x1564,0x14E4
+*2nd MODE 0*,vin1a_fld0,vin2a_vsync0,vin1a_de0
+*2nd 1*,vin1b_vsync1,,vin1b_hsync1
+*2nd 2*,,,
+*2nd 3*,,vin2b_vsync1,vout3_d17
+*2nd 4*,vout3_clk,vout2_vsync,vout3_de
+*2nd 5*,uart7_txd,emu9,uart7_rxd
+*2nd 6*,,,
+*2nd 7*,timer15,uart9_txd,timer16
+*2nd 8*,spi3_d1,spi4_d1,spi3_sclk
+*2nd 9*,kbd_row1,kbd_row3,kbd_row0
+*2nd 10*,eQEP1B_in,ehrpwm1A,eQEP1A_in
+*2nd 11*,,pr1_uart0_rts_n,
+*2nd 12*,,pr1_edio_data_in4,
+*2nd 13*,,pr1_edio_data_out4,
+*2nd 14*,gpio3_1,gpio4_0,gpio3_0
+*2nd 15*,Driver off,Driver off,Driver off
+,===
+
+
+
+[%header,format=csv]
+,===
+,P8.36,P8.37,P8.38,P8.39
+*GPIO*,234,232,233,230
+*BALL*,D7,E8,D9,F8
+*REG*,0x1604,0x15FC,0x1600,0x15F4
+*MODE 0*,vout1_d10,vout1_d8,vout1_d9,vout1_d6
 *1*,,,,
-*2*,emu12,emu10,emu11,emu3
-*3*,vin4a_d13,vin4a_d11,vin4a_d12,vin4a_d10
-*4*,vin3a_d13,vin3a_d11,vin3a_d12,vin3a_d10
-*5*,obs8,obs6,obs7,obs5
-*6*,obs24,obs22,obs23,obs21
-*7*,,obs_dmarq2,,obs_irq2
+*2*,emu3,uart6_rxd,uart6_txd,emu8
+*3*,vin4a_d10,vin4a_d8,vin4a_d9,vin4a_d22
+*4*,vin3a_d10,vin3a_d8,vin3a_d9,vin3a_d22
+*5*,obs5,,,obs4
+*6*,obs21,,,obs20
+*7*,obs_irq2,,,
 *8*,,,,
 *9*,,,,
-*10*,pr2_uart0_rxd,pr2_uart0_cts_n,pr2_uart0_rts_n,pr2_edio_sof
+*10*,pr2_edio_sof,pr2_edc_sync1_out,pr2_edio_latch_in,pr2_edc_latch1_in
 *11*,,,,
-*12*,pr2_pru0_gpi10,pr2_pru0_gpi8,pr2_pru0_gpi9,pr2_pru0_gpi7
-*13*,pr2_pru0_gpo10,pr2_pru0_gpo8,pr2_pru0_gpo9,pr2_pru0_gpo7
-*14*,gpio8_13,gpio8_11,gpio8_12,gpio8_10
+*12*,pr2_pru0_gpi7,pr2_pru0_gpi5,pr2_pru0_gpi6,pr2_pru0_gpi3
+*13*,pr2_pru0_gpo7,pr2_pru0_gpo5,pr2_pru0_gpo6,pr2_pru0_gpo3
+*14*,gpio8_10,gpio8_8,gpio8_9,gpio8_6
 *15*,Driver off,Driver off,Driver off,Driver off
-*2nd BALL*,AF9,G6,AD9,F2
-*2nd REG*,0x14E8,0x1564,0x14E4,0x1568
-*2nd MODE 0*,vin1a_fld0,vin2a_vsync0,vin1a_de0,vin2a_d0
-*2nd 1*,vin1b_vsync1,,vin1b_hsync1,
-*2nd 2*,,,,
-*2nd 3*,,vin2b_vsync1,vout3_d17,
-*2nd 4*,vout3_clk,vout2_vsync,vout3_de,vout2_d23
-*2nd 5*,uart7_txd,emu9,uart7_rxd,emu10
-*2nd 6*,,,,
-*2nd 7*,timer15,uart9_txd,timer16,uart9_ctsn
-*2nd 8*,spi3_d1,spi4_d1,spi3_sclk,spi4_d0
-*2nd 9*,kbd_row1,kbd_row3,kbd_row0,kbd_row4
-*2nd 10*,eQEP1B_in,ehrpwm1A,eQEP1A_in,ehrpwm1B
-*2nd 11*,,pr1_uart0_rts_n,,pr1_uart0_rxd
-*2nd 12*,,pr1_edio_data_in4,,pr1_edio_data_in5
-*2nd 13*,,pr1_edio_data_out4,,pr1_edio_data_out5
-*2nd 14*,gpio3_1,gpio4_0,gpio3_0,gpio4_1
-*2nd 15*,Driver off,Driver off,Driver off,Driver off
+*2nd BALL*,F2,A21,C18,
+*2nd REG*,0x1568,0x1738,0x1734,
+*2nd MODE 0*,vin2a_d0,mcasp4_fsx,mcasp4_aclkx,
+*2nd 1*,,mcasp4_fsr,mcasp4_aclkr,
+*2nd 2*,,spi3_d1,spi3_sclk,
+*2nd 3*,,uart8_txd,uart8_rxd,
+*2nd 4*,vout2_d23,i2c4_scl,i2c4_sda,
+*2nd 5*,emu10,,,
+*2nd 6*,,vout2_d17,vout2_d16,
+*2nd 7*,uart9_ctsn,,,
+*2nd 8*,spi4_d0,vin4a_d17,vin4a_d16,
+*2nd 9*,kbd_row4,vin5a_d14,vin5a_d15,
+*2nd 10*,ehrpwm1B,,,
+*2nd 11*,pr1_uart0_rxd,,,
+*2nd 12*,pr1_edio_data_in5,,,
+*2nd 13*,pr1_edio_data_out5,,,
+*2nd 14*,gpio4_1,,,
+*2nd 15*,Driver off,Driver off,Driver off,
 ,===
 
 EOF
