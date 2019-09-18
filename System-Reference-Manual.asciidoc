@@ -143,7 +143,7 @@ This section will describe how to connect the board for use. The board
 can be configured in several different ways. Below we will walk through
 the most common scenarios. 
 
-* link:#33-tethered-to-a-pc[Tethered to a PC via USB C cable] 
+* <<tethered-to-a-pc>> via USB C cable
 * Standalone Desktop with powered USB hub, display, keyboard and mouse 
 * Wireless Connection to BeagleBone® AI
 
