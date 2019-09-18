@@ -96,6 +96,7 @@ Proposed changes.
 * Move microSD card cage closer to microHDMI to fit cases better.
 * Connect AM5729 ball AB10 to to P9.13 to provide a GPIO.
 * HDMI hot-plug detection fixes.
+* Add additional CAN port to the expansion headers.
 
 [[connecting-up-your-beaglebone-ai]]
 == 3 Connecting Up Your BeagleBone AI
