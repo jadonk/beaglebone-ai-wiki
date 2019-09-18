@@ -1421,32 +1421,47 @@ BeagleBone Black.
 
 [[connector-p8]]
 ==== 7.1.1 Connector P8
-
-*Table ?* shows the pinout of the *P8* expansion header. Other signals
-can be connected to this connector based on setting the pin mux on the
-processor, but this is the default settings on power up. The SW is
-responsible for setting the default function of each pin. There are some
-signals that have not been listed here. Refer to the processor
+The following tables show the pinout of the *P8* expansion header.
+The SW is responsible for setting the default function of each pin.
+Refer to the processor
 documentation for more information on these pins and detailed
 descriptions of all of the pins listed. In some cases there may not be
 enough signals to complete a group of signals that may be required to
 implement a total interface.
 
-The *PROC* column is the pin number on the processor.
+The column heading is the pin number on the expansion header.
 
-The *PIN* column is the pin number on the expansion header.
+The *GPIO* row is the expected gpio identifier number in the Linux kernel.
 
-The *MODE* columns are the mode setting for each pin. Setting each mode
+The *BALL* row is the pin number on the processor.
+
+The *REG* row is the offset of the control register for the processor pin.
+
+The *MODE #* rows are the mode setting for each pin. Setting each mode
 to align with the mode column will give that function on that pin.
+
+If included, the *2nd BALL* row is the pin number on the processor for a
+second processor pin connected to the same pin on the expansion header.
+Similarly, all row headings starting with *2nd* refer to data for this
+second processor pin.
 
 *NOTE*: DO NOT APPLY VOLTAGE TO ANY I/O PIN WHEN POWER IS NOT SUPPLIED
 TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.
 
 *NO PINS ARE TO BE DRIVEN UNTIL AFTER THE SYS_RESET LINE GOES HIGH.*
 
-*Table ?* Expansion Header P8 Pinout
+[[p8.01-p8.02]]
+===== 7.1.1.1 P8.01-P8.02
+P8.01 and P8.02 are ground pins.
 
+[%header,format=csv]
+,===
+,P8.01,P8.02
+,GND,GND
+,===
 
+[[p8.03-p8.05]]
+===== 7.1.1.2 P8.03-P8.05
 [%header,format=csv]
 ,===
 ,P8.03,P8.04,P8.05
@@ -1471,8 +1486,8 @@ TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.
 *15*,Driver off,Driver off,Driver off
 ,===
 
-
-
+[[p8.06-p8.09]]
+===== 7.1.1.2 P8.06-P8.09
 [%header,format=csv]
 ,===
 ,P8.06,P8.07,P8.08,P8.09
@@ -1497,8 +1512,8 @@ TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.
 *15*,Driver off,Driver off,Driver off,Driver off
 ,===
 
-
-
+[[p8.10-p8.13]]
+===== 7.1.1.2 P8.10-P8.13
 [%header,format=csv]
 ,===
 ,P8.10,P8.11,P8.12,P8.13
@@ -1523,8 +1538,8 @@ TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.
 *15*,Driver off,Driver off,Driver off,Driver off
 ,===
 
-
-
+[[p8.14-p8.16]]
+===== 7.1.1.2 P8.14-P8.16
 [%header,format=csv]
 ,===
 ,P8.14,P8.15,P8.16
@@ -1567,8 +1582,8 @@ TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.
 *2nd 15*,,Driver off,
 ,===
 
-
-
+[[p8.17-p8.19]]
+===== 7.1.1.2 P8.17-P8.19
 [%header,format=csv]
 ,===
 ,P8.17,P8.18,P8.19
@@ -1593,8 +1608,8 @@ TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.
 *15*,Driver off,Driver off,Driver off
 ,===
 
-
-
+[[p8.20-p8.22]]
+===== 7.1.1.2 P8.20-P8.22
 [%header,format=csv]
 ,===
 ,P8.20,P8.21,P8.22
@@ -1619,8 +1634,8 @@ TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.
 *15*,Driver off,Driver off,Driver off
 ,===
 
-
-
+[[p8.23-p8.26]]
+===== 7.1.1.2 P8.23-P8.26
 [%header,format=csv]
 ,===
 ,P8.23,P8.24,P8.25,P8.26
@@ -1645,8 +1660,8 @@ TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.
 *15*,Driver off,Driver off,Driver off,Driver off
 ,===
 
-
-
+[[p8.27-p8.29]]
+===== 7.1.1.2 P8.27-P8.29
 [%header,format=csv]
 ,===
 ,P8.27,P8.28,P8.29
@@ -1689,8 +1704,8 @@ TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.
 *2nd 15*,Driver off,Driver off,Driver off
 ,===
 
-
-
+[[p8.30-p8.32]]
+===== 7.1.1.2 P8.30-P8.32
 [%header,format=csv]
 ,===
 ,P8.30,P8.31,P8.32
@@ -1733,8 +1748,8 @@ TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.
 *2nd 15*,Driver off,Driver off,Driver off
 ,===
 
-
-
+[[p8.33-p8.35]]
+===== 7.1.1.2 P8.33-P8.35
 [%header,format=csv]
 ,===
 ,P8.33,P8.34,P8.35
@@ -1777,8 +1792,8 @@ TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.
 *2nd 15*,Driver off,Driver off,Driver off
 ,===
 
-
-
+[[p8.36-p8.38]]
+===== 7.1.1.2 P8.36-P8.38
 [%header,format=csv]
 ,===
 ,P8.36,P8.37,P8.38
@@ -1821,8 +1836,8 @@ TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.
 *2nd 15*,Driver off,Driver off,Driver off
 ,===
 
-
-
+[[p8.39-p8.41]]
+===== 7.1.1.2 P8.39-P8.41
 [%header,format=csv]
 ,===
 ,P8.39,P8.40,P8.41
@@ -1847,55 +1862,81 @@ TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.
 *15*,Driver off,Driver off,Driver off
 ,===
 
-
-
+[[p8.42-p8.44]]
+===== 7.1.1.2 P8.42-P8.44
 [%header,format=csv]
 ,===
-,P8.42,P8.43,P8.44,P8.45
-*GPIO*,229,226,227,224
-*BALL*,F9,F10,G11,F11
-*REG*,0x15F0,0x15E4,0x15E8,0x15DC
-*MODE 0*,vout1_d5,vout1_d2,vout1_d3,vout1_d0
-*1*,,,,
-*2*,emu7,emu2,emu5,uart5_rxd
-*3*,vin4a_d21,vin4a_d18,vin4a_d19,vin4a_d16
-*4*,vin3a_d21,vin3a_d18,vin3a_d19,vin3a_d16
-*5*,obs3,obs0,obs1,
-*6*,obs19,obs16,obs17,
-*7*,,obs_irq1,obs_dmarq1,
-*8*,,,,spi3_cs2
-*9*,,,,
-*10*,pr2_edc_latch0_in,pr1_uart0_rxd,pr1_uart0_txd,pr1_uart0_cts_n
-*11*,,,,
-*12*,pr2_pru0_gpi2,pr2_pru1_gpi20,pr2_pru0_gpi0,pr2_pru1_gpi18
-*13*,pr2_pru0_gpo2,pr2_pru1_gpo20,pr2_pru0_gpo0,pr2_pru1_gpo18
-*14*,gpio8_5,gpio8_2,gpio8_3,gpio8_0
-*15*,Driver off,Driver off,Driver off,Driver off
-*2nd BALL*,,,,B7
-*2nd REG*,,,,0x161C
-*2nd MODE 0*,,,,vout1_d16
-*2nd 1*,,,,
-*2nd 2*,,,,uart7_rxd
-*2nd 3*,,,,vin4a_d0
-*2nd 4*,,,,vin3a_d0
-*2nd 5*,,,,
-*2nd 6*,,,,
-*2nd 7*,,,,
-*2nd 8*,,,,
-*2nd 9*,,,,
-*2nd 10*,,,,pr2_edio_data_in0
-*2nd 11*,,,,pr2_edio_data_out0
-*2nd 12*,,,,pr2_pru0_gpi13
-*2nd 13*,,,,pr2_pru0_gpo13
-*2nd 14*,,,,gpio8_16
-*2nd 15*,,,,Driver off
+,P8.42,P8.43,P8.44
+*GPIO*,229,226,227
+*BALL*,F9,F10,G11
+*REG*,0x15F0,0x15E4,0x15E8
+*MODE 0*,vout1_d5,vout1_d2,vout1_d3
+*1*,,,
+*2*,emu7,emu2,emu5
+*3*,vin4a_d21,vin4a_d18,vin4a_d19
+*4*,vin3a_d21,vin3a_d18,vin3a_d19
+*5*,obs3,obs0,obs1
+*6*,obs19,obs16,obs17
+*7*,,obs_irq1,obs_dmarq1
+*8*,,,
+*9*,,,
+*10*,pr2_edc_latch0_in,pr1_uart0_rxd,pr1_uart0_txd
+*11*,,,
+*12*,pr2_pru0_gpi2,pr2_pru1_gpi20,pr2_pru0_gpi0
+*13*,pr2_pru0_gpo2,pr2_pru1_gpo20,pr2_pru0_gpo0
+*14*,gpio8_5,gpio8_2,gpio8_3
+*15*,Driver off,Driver off,Driver off
+,===
+
+[[p8.45-p8.46]]
+===== 7.1.1.2 P8.45-P8.46
+[%header,format=csv]
+,===
+,P8.45,P8.46
+*GPIO*,224,225
+*BALL*,F11,G10
+*REG*,0x15DC,0x15E0
+*MODE 0*,vout1_d0,vout1_d1
+*1*,,
+*2*,uart5_rxd,uart5_txd
+*3*,vin4a_d16,vin4a_d17
+*4*,vin3a_d16,vin3a_d17
+*5*,,
+*6*,,
+*7*,,
+*8*,spi3_cs2,
+*9*,,
+*10*,pr1_uart0_cts_n,pr1_uart0_rts_n
+*11*,,
+*12*,pr2_pru1_gpi18,pr2_pru1_gpi19
+*13*,pr2_pru1_gpo18,pr2_pru1_gpo19
+*14*,gpio8_0,gpio8_1
+*15*,Driver off,Driver off
+*2nd BALL*,B7,A10
+*2nd REG*,0x161C,0x1638
+*2nd MODE 0*,vout1_d16,vout1_d23
+*2nd 1*,,
+*2nd 2*,uart7_rxd,emu19
+*2nd 3*,vin4a_d0,vin4a_d7
+*2nd 4*,vin3a_d0,vin3a_d7
+*2nd 5*,,
+*2nd 6*,,
+*2nd 7*,,
+*2nd 8*,,spi3_cs3
+*2nd 9*,,
+*2nd 10*,pr2_edio_data_in0,pr2_edio_data_in7
+*2nd 11*,pr2_edio_data_out0,pr2_edio_data_out7
+*2nd 12*,pr2_pru0_gpi13,pr2_pru0_gpi20
+*2nd 13*,pr2_pru0_gpo13,pr2_pru0_gpo20
+*2nd 14*,gpio8_16,gpio8_23
+*2nd 15*,Driver off,Driver off
 ,===
 
 EOF
 
 
 
-Notes regarding the resistors on muxed pins.
+TODO: Notes regarding the resistors on muxed pins.
 
 [[connector-p9]]
 ==== 7.1.2 Connector P9

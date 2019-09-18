@@ -28,9 +28,10 @@ function formatOutput(table, rowCount) {
   process.stdout.write("\n");
 }
 
+var tableId = 2;
 function extractHeaders(table, title, columns, rows) {
-  console.log(title);
-  console.log("");
+  console.log("[[" + title.toLowerCase() + "]]");
+  console.log("===== 7.1.1." + tableId + " " + title);
   console.log("[%header,format=csv]");
   console.log(",===");
   var newTable = [];
@@ -65,82 +66,74 @@ var rows1ball =
     ["","*GPIO*","*BALL*","*REG*","*MODE 0*","*1*","*2*","*3*","*4*","*5*","*6*","*7*","*8*","*9*","*10*","*11*","*12*","*13*","*14*","*15*"];
 
 function extractTables(table, rowCount) {
-  // P8.03
   extractHeaders(table, 
-    "",
+    "P8.03-P8.05",
     ["Board or signal detail","1","2","3"],
     rows1ball
   );
-  // P8.06
   extractHeaders(table, 
-    "",
+    "P8.06-P8.09",
     ["Board or signal detail","4","5","6","7"],
     rows1ball,
   );
-  // P8.10
   extractHeaders(table, 
-    "",
+    "P8.10-P8.13",
     ["Board or signal detail","8","9","10","11"],
     rows1ball
   );
-  // P8.14
   extractHeaders(table, 
-    "",
+    "P8.14-P8.16",
     ["Board or signal detail","12","13","14"],
     rows2ball
   );
-  // P8.17
   extractHeaders(table, 
-    "",
+    "P8.17-P8.19",
     ["Board or signal detail","15","16","17"],
     rows1ball
   );
-  // P8.20
   extractHeaders(table, 
-    "",
+    "P8.20-P8.22",
     ["Board or signal detail","18","19","20"],
     rows1ball
   );
-  // P8.23
   extractHeaders(table, 
-    "",
+    "P8.23-P8.26",
     ["Board or signal detail","21","22","23","24"],
     rows1ball
   );
-  // P8.27
   extractHeaders(table, 
-    "",
+    "P8.27-P8.29",
     ["Board or signal detail","25","26","27"],
     rows2ball
   );
-  // P8.30
   extractHeaders(table, 
-    "",
+    "P8.30-P8.32",
     ["Board or signal detail","28","29","30"],
     rows2ball
   );
-  // P8.33
   extractHeaders(table, 
-    "",
+    "P8.33-P8.35",
     ["Board or signal detail","31","32","33"],
     rows2ball
   );
-  // P8.36
   extractHeaders(table, 
-    "",
+    "P8.36-P8.38",
     ["Board or signal detail","34","35","36"],
     rows2ball
   );
-  // P8.39
   extractHeaders(table, 
-    "",
+    "P8.39-P8.41",
     ["Board or signal detail","37","38","39"],
     rows1ball
   );
-  // P8.42
   extractHeaders(table, 
-    "",
-    ["Board or signal detail","40","41","42","43"],
+    "P8.42-P8.44",
+    ["Board or signal detail","40","41","42"],
+    rows1ball
+  );
+  extractHeaders(table, 
+    "P8.45-P8.46",
+    ["Board or signal detail","43","44"],
     rows2ball
   );
 }
