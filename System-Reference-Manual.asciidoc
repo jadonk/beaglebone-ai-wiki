@@ -125,8 +125,8 @@ You will need to purchase:
 More information or to purchase a replacement heat sink or antenna,
 please go to these web sites: 
 
-* https://www.digikey.com/product-detail/en/anaren/66089-2430/1173-1134-ND/3903374[Antenna]
-* https://www.digikey.com/product-detail/en/cts-thermal-management-products/BDN10-3CB-A01/294-1098-ND/272736[Heat Sink]
+* https://bit.ly/2kmXAzF[Antenna]
+* https://bit.ly/2klxxJa[Heat Sink]
 
 TODO: create short-links for any long URLs so that text works.
 TODO: add links to the official products as well.
@@ -143,7 +143,7 @@ This section will describe how to connect the board for use. The board
 can be configured in several different ways. Below we will walk through
 the most common scenarios. 
 
-* Tethered to a PC via USB C cable 
+* https://github.com/jadonk/beaglebone-ai-wiki/blob/master/System-Reference-Manual.asciidoc#33-tethered-to-a-pc[Tethered to a PC via USB C cable] 
 * Standalone Desktop with powered USB hub, display, keyboard and mouse 
 * Wireless Connection to BeagleBone® AI
 
