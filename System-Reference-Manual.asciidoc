@@ -560,7 +560,7 @@ interface placement]
 *Figure 23* below shows how the USB-C power input is connected to the
 *TPS6590379*.
 
-(Schematic screenshoot)
+TODO: (Schematic screenshoot)
 
 [[power-button]]
 ==== 6.1.3 Power Button
@@ -2332,6 +2332,35 @@ only an output from BeagleBone AI to capes on BeagleBone AI.)
 
 [[p9.43-p9.46]]
 ===== 7.1.2.13 P9.43-P9.46
+TODO
+
+[[serial-debug]]
+=== 7.2 Serial Debug
+TODO
+
+[[usb-3-type-c]]
+=== 7.3 USB 3 Type-C
+TODO
+
+[[usb-2-type-a]]
+=== 7.4 USB 2 Type-A
+TODO
+
+[[gigabit-ethernet]]
+=== 7.5 Gigabit Ethernet
+TODO
+
+[[coaxial]]
+=== 7.6 Coaxial
+TODO
+
+[[microsd-memory]]
+=== 7.7 microSD Memory
+TODO
+
+[[microhdmi]]
+=== 7.8 microHDMI
+TODO
 
 [[cape-board-support]]
 == 8 Cape Board Support
