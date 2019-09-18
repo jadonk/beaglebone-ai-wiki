@@ -57,24 +57,28 @@ function extractHeaders(table, title, columns, rows) {
   }
 }
 
+var rows2ball = 
+    ["","GPIO","BALL","PINCTRL","MODE0","MODE1","MOdE2","MODE3","MODE4","MODE5","MODE6","MODE7","MODE8","MODE9","MODE10","MODE11","MODE12","MODE13","MODE14","MODE15",
+               "BALL","PINCTRL","MODE0","MODE1","MOdE2","MODE3","MODE4","MODE5","MODE6","MODE7","MODE8","MODE9","MODE10","MODE11","MODE12","MODE13","MODE14","MODE15"];
+
+var rows1ball = 
+    ["","GPIO","BALL","PINCTRL","MODE0","MODE1","MOdE2","MODE3","MODE4","MODE5","MODE6","MODE7","MODE8","MODE9","MODE10","MODE11","MODE12","MODE13","MODE14","MODE15"];
+
 function extractTables(table, rowCount) {
   extractHeaders(table, 
     "",
     ["Board or signal detail","1","2","3"],
-    ["","GPIO","BALL","PINCTRL","MODE0","MODE1","MOdE2","MODE3","MODE4","MODE5","MODE6","MODE7","MODE8","MODE9","MODE10","MODE11","MODE12","MODE13","MODE14","MODE15",
-               "BALL","PINCTRL","MODE0","MODE1","MOdE2","MODE3","MODE4","MODE5","MODE6","MODE7","MODE8","MODE9","MODE10","MODE11","MODE12","MODE13","MODE14","MODE15"]
+    rows1ball
   );
   extractHeaders(table, 
     "",
-    ["Board or signal detail","4","5","6"],
-    ["","GPIO","BALL","PINCTRL","MODE0","MODE1","MOdE2","MODE3","MODE4","MODE5","MODE6","MODE7","MODE8","MODE9","MODE10","MODE11","MODE12","MODE13","MODE14","MODE15",
-               "BALL","PINCTRL","MODE0","MODE1","MOdE2","MODE3","MODE4","MODE5","MODE6","MODE7","MODE8","MODE9","MODE10","MODE11","MODE12","MODE13","MODE14","MODE15"]
+    ["Board or signal detail","4","5","6","7"],
+    rows1ball,
   );
   extractHeaders(table, 
     "",
-    ["Board or signal detail","7","8","9"],
-    ["","GPIO","BALL","PINCTRL","MODE0","MODE1","MOdE2","MODE3","MODE4","MODE5","MODE6","MODE7","MODE8","MODE9","MODE10","MODE11","MODE12","MODE13","MODE14","MODE15",
-               "BALL","PINCTRL","MODE0","MODE1","MOdE2","MODE3","MODE4","MODE5","MODE6","MODE7","MODE8","MODE9","MODE10","MODE11","MODE12","MODE13","MODE14","MODE15"]
+    ["Board or signal detail","8","9","10","11"],
+    rows2ball
   );
 }
 
