@@ -2064,24 +2064,6 @@ only an output from BeagleBone AI to capes on BeagleBone AI.)
 *13*,pr1_pru1_gpo14,pr1_pru0_gpo5,pr1_pru1_gpo15
 *14*,gpio4_25,gpio3_12,gpio4_26
 *15*,Driver off,Driver off,Driver off
-*2nd BALL*,,,
-*2nd REG*,,,
-*2nd MODE 0*,,,
-*2nd 1*,,,
-*2nd 2*,,,
-*2nd 3*,,,
-*2nd 4*,,,
-*2nd 5*,,,
-*2nd 6*,,,
-*2nd 7*,,,
-*2nd 8*,,,
-*2nd 9*,,,
-*2nd 10*,,,
-*2nd 11*,,,
-*2nd 12*,,,
-*2nd 13*,,,
-*2nd 14*,,,
-*2nd 15*,,,
 ,===
 
 [[p9.17-p9.19]]
@@ -2172,92 +2154,74 @@ only an output from BeagleBone AI to capes on BeagleBone AI.)
 *2nd 15*,Driver off,Driver off,Driver off
 ,===
 
-[[p9.23-p9.26]]
-===== 7.1.2.4 P9.23-P9.26
+[[p9.23-p9.25]]
+===== 7.1.2.4 P9.23-P9.25
 [%header,format=csv]
 ,===
-,P9.23,P9.24,P9.25,P9.26
-*GPIO*,203,175,177,174
-*BALL*,A22,F20,D18,E21
-*REG*,0x17B4,0x168C,0x1694,0x1688
-*MODE 0*,spi1_cs1,gpio6_15,xref_clk0,gpio6_14
-*1*,,mcasp1_axr9,mcasp2_axr8,mcasp1_axr8
-*2*,sata1_led,dcan2_rx,mcasp1_axr4,dcan2_tx
-*3*,spi2_cs1,uart10_txd,mcasp1_ahclkx,uart10_rxd
-*4*,,,mcasp5_ahclkx,
-*5*,,,,
-*6*,,vout2_vsync,,vout2_hsync
-*7*,,,vin6a_d0,
-*8*,,vin4a_vsync0,hdq0,vin4a_hsync0
-*9*,,i2c3_scl,clkout2,i2c3_sda
-*10*,,timer2,timer13,timer1
-*11*,,,pr2_mii1_col,
-*12*,,,pr2_pru1_gpi5,
-*13*,,,pr2_pru1_gpo5,
-*14*,gpio7_11,gpio6_15,gpio6_17,gpio6_14
-*15*,Driver off,Driver off,Driver off,Driver off
-*2nd BALL*,,,,AE2
-*2nd REG*,,,,0x1544
-*2nd MODE 0*,,,,vin1a_d20
-*2nd 1*,,,,vin1b_d3
-*2nd 2*,,,,
-*2nd 3*,,,,
-*2nd 4*,,,,vout3_d3
-*2nd 5*,,,,
-*2nd 6*,,,,vin3a_d4
-*2nd 7*,,,,
-*2nd 8*,,,,
-*2nd 9*,,,,kbd_col5
-*2nd 10*,,,,pr1_edio_data_in4
-*2nd 11*,,,,pr1_edio_data_out4
-*2nd 12*,,,,pr1_pru0_gpi17
-*2nd 13*,,,,pr1_pru0_gpo17
-*2nd 14*,,,,gpio3_24
-*2nd 15*,,,,Driver off
+,P9.23,P9.24,P9.25
+*GPIO*,203,175,177
+*BALL*,A22,F20,D18
+*REG*,0x17B4,0x168C,0x1694
+*MODE 0*,spi1_cs1,gpio6_15,xref_clk0
+*1*,,mcasp1_axr9,mcasp2_axr8
+*2*,sata1_led,dcan2_rx,mcasp1_axr4
+*3*,spi2_cs1,uart10_txd,mcasp1_ahclkx
+*4*,,,mcasp5_ahclkx
+*5*,,,
+*6*,,vout2_vsync,
+*7*,,,vin6a_d0
+*8*,,vin4a_vsync0,hdq0
+*9*,,i2c3_scl,clkout2
+*10*,,timer2,timer13
+*11*,,,pr2_mii1_col
+*12*,,,pr2_pru1_gpi5
+*13*,,,pr2_pru1_gpo5
+*14*,gpio7_11,gpio6_15,gpio6_17
+*15*,Driver off,Driver off,Driver off
 ,===
 
-[[p9.27-p9.29]]
-===== 7.1.2.4 P9.27-P9.29
+[[p9.26-p9.29]]
+===== 7.1.2.4 P9.26-P9.29
 [%header,format=csv]
 ,===
-,P9.27,P9.28,P9.29
-*GPIO*,111,113,139
-*BALL*,C3,A12,A11
-*REG*,0x15A0,0x16E0,0x16D8
-*MODE 0*,vin2a_d14,mcasp1_axr11,mcasp1_axr9
-*1*,,mcasp6_fsx,mcasp6_axr1
-*2*,,mcasp6_fsr,
-*3*,rgmii1_txd3,spi3_cs0,spi3_d1
-*4*,vout2_d9,,
-*5*,,,
-*6*,,,
-*7*,,vin6a_d12,vin6a_d14
-*8*,mii1_txclk,,
-*9*,,,
-*10*,eQEP3B_in,timer8,timer6
-*11*,pr1_mii_mr1_clk,pr2_mii0_txd1,pr2_mii0_txd3
-*12*,pr1_pru1_gpi11,pr2_pru1_gpi13,pr2_pru1_gpi11
-*13*,pr1_pru1_gpo11,pr2_pru1_gpo13,pr2_pru1_gpo11
-*14*,gpio4_15,gpio4_17,gpio5_11
-*15*,Driver off,Driver off,Driver off
-*2nd BALL*,J14,,D14
-*2nd REG*,0x16B0,,0x16A8
-*2nd MODE 0*,mcasp1_fsr,,mcasp1_fsx
-*2nd 1*,mcasp7_axr3,,
-*2nd 2*,,,
-*2nd 3*,,,
-*2nd 4*,,,
-*2nd 5*,,,
-*2nd 6*,vout2_d1,,
-*2nd 7*,,,vin6a_de0
-*2nd 8*,vin4a_d1,,
-*2nd 9*,,,
-*2nd 10*,i2c4_scl,,i2c3_scl
-*2nd 11*,,,pr2_mdio_data
-*2nd 12*,,,
-*2nd 13*,,,
-*2nd 14*,gpio5_1,,gpio7_30
-*2nd 15*,Driver off,,Driver off
+,P9.26,P9.27,P9.28,P9.29
+*GPIO*,174,111,113,139
+*BALL*,E21,C3,A12,A11
+*REG*,0x1688,0x15A0,0x16E0,0x16D8
+*MODE 0*,gpio6_14,vin2a_d14,mcasp1_axr11,mcasp1_axr9
+*1*,mcasp1_axr8,,mcasp6_fsx,mcasp6_axr1
+*2*,dcan2_tx,,mcasp6_fsr,
+*3*,uart10_rxd,rgmii1_txd3,spi3_cs0,spi3_d1
+*4*,,vout2_d9,,
+*5*,,,,
+*6*,vout2_hsync,,,
+*7*,,,vin6a_d12,vin6a_d14
+*8*,vin4a_hsync0,mii1_txclk,,
+*9*,i2c3_sda,,,
+*10*,timer1,eQEP3B_in,timer8,timer6
+*11*,,pr1_mii_mr1_clk,pr2_mii0_txd1,pr2_mii0_txd3
+*12*,,pr1_pru1_gpi11,pr2_pru1_gpi13,pr2_pru1_gpi11
+*13*,,pr1_pru1_gpo11,pr2_pru1_gpo13,pr2_pru1_gpo11
+*14*,gpio6_14,gpio4_15,gpio4_17,gpio5_11
+*15*,Driver off,Driver off,Driver off,Driver off
+*2nd BALL*,AE2,J14,,D14
+*2nd REG*,0x1544,0x16B0,,0x16A8
+*2nd MODE 0*,vin1a_d20,mcasp1_fsr,,mcasp1_fsx
+*2nd 1*,vin1b_d3,mcasp7_axr3,,
+*2nd 2*,,,,
+*2nd 3*,,,,
+*2nd 4*,vout3_d3,,,
+*2nd 5*,,,,
+*2nd 6*,vin3a_d4,vout2_d1,,
+*2nd 7*,,,,vin6a_de0
+*2nd 8*,,vin4a_d1,,
+*2nd 9*,kbd_col5,,,
+*2nd 10*,pr1_edio_data_in4,i2c4_scl,,i2c3_scl
+*2nd 11*,pr1_edio_data_out4,,,pr2_mdio_data
+*2nd 12*,pr1_pru0_gpi17,,,
+*2nd 13*,pr1_pru0_gpo17,,,
+*2nd 14*,gpio3_24,gpio5_1,,gpio7_30
+*2nd 15*,Driver off,Driver off,,Driver off
 ,===
 
 [[p9.30-p9.31]]
