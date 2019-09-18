@@ -81,7 +81,7 @@ eMMC flash image provided by Embest.
 
 Alpha pilot-run units and initial production.
 
-* Added pull-down resistor on serial debug header RX line.
+* https://github.com/beagleboard/beaglebone-ai/issues/24[Added pull-down resistor on serial debug header RX line].
 
 Alpha pilot-run eMMC flash image: https://debian.beagleboard.org/images/bbai-pilot-20190408.img.xz
 
@@ -92,11 +92,13 @@ Production eMMC flash image: http://debian.beagleboard.org/images/am57xx-eMMC-fl
 
 Proposed changes.
 
-* Add footprint for pull-down resistor on serial debug header RX line.
-* Move microSD card cage closer to microHDMI to fit cases better.
-* Connect AM5729 ball AB10 to to P9.13 to provide a GPIO.
-* HDMI hot-plug detection fixes.
-* Add additional CAN port to the expansion headers.
+* https://github.com/beagleboard/beaglebone-ai/issues/24[Add footprint for pull-down resistor on serial debug header RX line].
+* https://github.com/beagleboard/beaglebone-ai/issues/25[Move microSD card cage closer to microHDMI to fit cases better].
+* https://github.com/beagleboard/beaglebone-ai/issues/22[Connect AM5729 ball AB10 to to P9.13 to provide a GPIO].
+* https://github.com/beagleboard/beaglebone-ai/issues/19[HDMI hot-plug detection fixes].
+* https://github.com/beagleboard/beaglebone-ai/issues/20[Add additional CAN port to the expansion headers].
+* https://github.com/beagleboard/beaglebone-ai/issues/21[Fix JTAG connector to not require wire mods].
+* https://github.com/beagleboard/beaglebone-ai/issues/23[Add I2C EEPROM for board identifier].
 
 [[connecting-up-your-beaglebone-ai]]
 == 3 Connecting Up Your BeagleBone AI
