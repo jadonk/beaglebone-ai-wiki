@@ -1825,44 +1825,70 @@ TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.
 
 [%header,format=csv]
 ,===
-,P8.39,P8.40,P8.41,P8.42
-*GPIO*,230,231,228,229
-*BALL*,F8,E7,E9,F9
-*REG*,0x15F4,0x15F8,0x15EC,0x15F0
-*MODE 0*,vout1_d6,vout1_d7,vout1_d4,vout1_d5
+,P8.39,P8.40,P8.41
+*GPIO*,230,231,228
+*BALL*,F8,E7,E9
+*REG*,0x15F4,0x15F8,0x15EC
+*MODE 0*,vout1_d6,vout1_d7,vout1_d4
+*1*,,,
+*2*,emu8,emu9,emu6
+*3*,vin4a_d22,vin4a_d23,vin4a_d20
+*4*,vin3a_d22,vin3a_d23,vin3a_d20
+*5*,obs4,,obs2
+*6*,obs20,,obs18
+*7*,,,
+*8*,,,
+*9*,,,
+*10*,pr2_edc_latch1_in,pr2_edc_sync0_out,pr1_ecap0_ecap_capin_apwm_o
+*11*,,,
+*12*,pr2_pru0_gpi3,pr2_pru0_gpi4,pr2_pru0_gpi1
+*13*,pr2_pru0_gpo3,pr2_pru0_gpo4,pr2_pru0_gpo1
+*14*,gpio8_6,gpio8_7,gpio8_4
+*15*,Driver off,Driver off,Driver off
+,===
+
+
+
+[%header,format=csv]
+,===
+,P8.42,P8.43,P8.44,P8.45
+*GPIO*,229,226,227,224
+*BALL*,F9,F10,G11,F11
+*REG*,0x15F0,0x15E4,0x15E8,0x15DC
+*MODE 0*,vout1_d5,vout1_d2,vout1_d3,vout1_d0
 *1*,,,,
-*2*,emu8,emu9,emu6,emu7
-*3*,vin4a_d22,vin4a_d23,vin4a_d20,vin4a_d21
-*4*,vin3a_d22,vin3a_d23,vin3a_d20,vin3a_d21
-*5*,obs4,,obs2,obs3
-*6*,obs20,,obs18,obs19
-*7*,,,,
-*8*,,,,
+*2*,emu7,emu2,emu5,uart5_rxd
+*3*,vin4a_d21,vin4a_d18,vin4a_d19,vin4a_d16
+*4*,vin3a_d21,vin3a_d18,vin3a_d19,vin3a_d16
+*5*,obs3,obs0,obs1,
+*6*,obs19,obs16,obs17,
+*7*,,obs_irq1,obs_dmarq1,
+*8*,,,,spi3_cs2
 *9*,,,,
-*10*,pr2_edc_latch1_in,pr2_edc_sync0_out,pr1_ecap0_ecap_capin_apwm_o,pr2_edc_latch0_in
+*10*,pr2_edc_latch0_in,pr1_uart0_rxd,pr1_uart0_txd,pr1_uart0_cts_n
 *11*,,,,
-*12*,pr2_pru0_gpi3,pr2_pru0_gpi4,pr2_pru0_gpi1,pr2_pru0_gpi2
-*13*,pr2_pru0_gpo3,pr2_pru0_gpo4,pr2_pru0_gpo1,pr2_pru0_gpo2
-*14*,gpio8_6,gpio8_7,gpio8_4,gpio8_5
+*12*,pr2_pru0_gpi2,pr2_pru1_gpi20,pr2_pru0_gpi0,pr2_pru1_gpi18
+*13*,pr2_pru0_gpo2,pr2_pru1_gpo20,pr2_pru0_gpo0,pr2_pru1_gpo18
+*14*,gpio8_5,gpio8_2,gpio8_3,gpio8_0
 *15*,Driver off,Driver off,Driver off,Driver off
-*2nd BALL*,,,,
-*2nd REG*,,,,
-*2nd MODE 0*,,,,
+*2nd BALL*,,,,B7
+*2nd REG*,,,,0x161C
+*2nd MODE 0*,,,,vout1_d16
 *2nd 1*,,,,
-*2nd 2*,,,,
-*2nd 3*,,,,
-*2nd 4*,,,,
+*2nd 2*,,,,uart7_rxd
+*2nd 3*,,,,vin4a_d0
+*2nd 4*,,,,vin3a_d0
 *2nd 5*,,,,
 *2nd 6*,,,,
 *2nd 7*,,,,
 *2nd 8*,,,,
 *2nd 9*,,,,
-*2nd 10*,,,,
-*2nd 11*,,,,
-*2nd 12*,,,,
-*2nd 13*,,,,
-*2nd 14*,,,,
-*2nd 15*,,,,
+*2nd 10*,,,,pr2_edio_data_in0
+*2nd 11*,,,,pr2_edio_data_out0
+*2nd 12*,,,,pr2_pru0_gpi13
+*2nd 13*,,,,pr2_pru0_gpo13
+*2nd 14*,,,,gpio8_16
+*2nd 15*,,,,Driver off
 ,===
 
 EOF
