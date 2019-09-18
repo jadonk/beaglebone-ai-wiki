@@ -65,44 +65,56 @@ var rows1ball =
     ["","*GPIO*","*BALL*","*REG*","*MODE 0*","*1*","*2*","*3*","*4*","*5*","*6*","*7*","*8*","*9*","*10*","*11*","*12*","*13*","*14*","*15*"];
 
 function extractTables(table, rowCount) {
+  // P8.03
   extractHeaders(table, 
     "",
     ["Board or signal detail","1","2","3"],
     rows1ball
   );
+  // P8.06
   extractHeaders(table, 
     "",
     ["Board or signal detail","4","5","6","7"],
     rows1ball,
   );
+  // P8.10
   extractHeaders(table, 
     "",
     ["Board or signal detail","8","9","10","11"],
     rows1ball
   );
+  // P8.14
   extractHeaders(table, 
     "",
     ["Board or signal detail","12","13","14"],
     rows2ball
   );
+  // P8.17
   extractHeaders(table, 
     "",
     ["Board or signal detail","15","16","17"],
     rows1ball
   );
+  // P8.20
   extractHeaders(table, 
     "",
     ["Board or signal detail","18","19","20"],
     rows1ball
   );
+  // P8.23
   extractHeaders(table, 
     "",
-    ["Board or signal detail","20","21","22","23"],
+    ["Board or signal detail","21","22","23","24"],
     rows2ball
   );
   extractHeaders(table, 
     "",
-    ["Board or signal detail","24","25","26","27"],
+    ["Board or signal detail","25","26","27"],
+    rows2ball
+  );
+  extractHeaders(table, 
+    "",
+    ["Board or signal detail","27","28","29","30"],
     rows2ball
   );
 }
