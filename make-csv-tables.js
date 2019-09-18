@@ -28,10 +28,12 @@ function formatOutput(table, rowCount) {
   process.stdout.write("\n");
 }
 
-var tableId = 2;
+//var tableId = 2;
+var tableId = 4;
 function extractHeaders(table, title, columns, rows) {
   console.log("[[" + title.toLowerCase() + "]]");
-  console.log("===== 7.1.1." + tableId + " " + title);
+  //console.log("===== 7.1.1." + tableId + " " + title);
+  console.log("===== 7.1.2." + tableId + " " + title);
   console.log("[%header,format=csv]");
   console.log(",===");
   var newTable = [];
@@ -66,6 +68,7 @@ var rows1ball =
     ["","*GPIO*","*BALL*","*REG*","*MODE 0*","*1*","*2*","*3*","*4*","*5*","*6*","*7*","*8*","*9*","*10*","*11*","*12*","*13*","*14*","*15*"];
 
 function extractTables(table, rowCount) {
+  /*
   extractHeaders(table, 
     "P8.03-P8.05",
     ["Board or signal detail","1","2","3"],
@@ -134,6 +137,52 @@ function extractTables(table, rowCount) {
   extractHeaders(table, 
     "P8.45-P8.46",
     ["Board or signal detail","43","44"],
+    rows2ball
+  );
+  */
+  extractHeaders(table, 
+    "P9.11-P9.13",
+    ["Board or signal detail","50","51","52"],
+    rows2ball
+  );
+  extractHeaders(table, 
+    "P9.14-P9.16",
+    ["Board or signal detail","53","54","55"],
+    rows2ball
+  );
+  extractHeaders(table, 
+    "P9.17-P9.19",
+    ["Board or signal detail","56","57","58"],
+    rows2ball
+  );
+  extractHeaders(table, 
+    "P9.20-P9.22",
+    ["Board or signal detail","59","60","61"],
+    rows2ball
+  );
+  extractHeaders(table, 
+    "P9.23-P9.26",
+    ["Board or signal detail","62","63","64","65"],
+    rows2ball
+  );
+  extractHeaders(table, 
+    "P9.27-P9.29",
+    ["Board or signal detail","66","67","68"],
+    rows2ball
+  );
+  extractHeaders(table, 
+    "P9.30-P9.32",
+    ["Board or signal detail","69","70","71"],
+    rows2ball
+  );
+  extractHeaders(table, 
+    "P9.41-P9.44",
+    ["Board or signal detail","82","83","84","85"],
+    rows2ball
+  );
+  extractHeaders(table, 
+    "P9.45-P9.46",
+    ["Board or signal detail","86","87"],
     rows2ball
   );
 }

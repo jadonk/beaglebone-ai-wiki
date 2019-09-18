@@ -543,7 +543,7 @@ interface placement]
 ==== 6.1.2 USB-C Power
 
 *Figure 23* below shows how the USB-C power input is connected to the
-*TPS6590377*.
+*TPS6590379*.
 
 (Schematic screenshoot)
 
@@ -1445,8 +1445,10 @@ second processor pin connected to the same pin on the expansion header.
 Similarly, all row headings starting with *2nd* refer to data for this
 second processor pin.
 
-*NOTE*: DO NOT APPLY VOLTAGE TO ANY I/O PIN WHEN POWER IS NOT SUPPLIED
-TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.
+*NOTES*:
+
+*DO NOT APPLY VOLTAGE TO ANY I/O PIN WHEN POWER IS NOT SUPPLIED
+TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.*
 
 *NO PINS ARE TO BE DRIVEN UNTIL AFTER THE SYS_RESET LINE GOES HIGH.*
 
@@ -1940,305 +1942,457 @@ TODO: Notes regarding the resistors on muxed pins.
 
 [[connector-p9]]
 ==== 7.1.2 Connector P9
-
-*Table ?* lists the signals on connector *P9*. Other signals can be
-connected to this connector based on setting the pin mux on the
-processor, but this is the default settings on power up.
-
-There are some signals that have not been listed here. Refer to the
-processor documentation for more information on these pins and detailed
+The following tables show the pinout of the *P9* expansion header.
+The SW is responsible for setting the default function of each pin.
+Refer to the processor
+documentation for more information on these pins and detailed
 descriptions of all of the pins listed. In some cases there may not be
 enough signals to complete a group of signals that may be required to
 implement a total interface.
 
-The *PROC* column is the pin number on the processor.
+The column heading is the pin number on the expansion header.
 
-The *PIN* column is the pin number on the expansion header.
+The *GPIO* row is the expected gpio identifier number in the Linux kernel.
 
-The *MODE* columns are the mode setting for each pin. Setting each mode
+The *BALL* row is the pin number on the processor.
+
+The *REG* row is the offset of the control register for the processor pin.
+
+The *MODE #* rows are the mode setting for each pin. Setting each mode
 to align with the mode column will give that function on that pin.
 
-NOTES:
+If included, the *2nd BALL* row is the pin number on the processor for a
+second processor pin connected to the same pin on the expansion header.
+Similarly, all row headings starting with *2nd* refer to data for this
+second processor pin.
+
+*NOTES*:
+
+*DO NOT APPLY VOLTAGE TO ANY I/O PIN WHEN POWER IS NOT SUPPLIED
+TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.*
+
+*NO PINS ARE TO BE DRIVEN UNTIL AFTER THE SYS_RESET LINE GOES HIGH.*
 
 In the table are the following notations:
 
-*PWR_BUT* is a 5V level as pulled up internally by the TPS6590377. It is
+*PWR_BUT* is a 5V level as pulled up internally by the TPS6590379. It is
 activated by pulling the signal to GND.
 
-(Actually, on BeagleBone AI, I believe PWR_BUT is pulled to 3.3V, but
+TODO: (Actually, on BeagleBone AI, I believe PWR_BUT is pulled to 3.3V, but
 activation is still done by pulling the signal to GND. Also, a quick
 grounding of PWR_BUT will trigger a system event where shutdown can
 occur, but there is no hardware power-off function like on BeagleBone
 Black via this signal. It does, however, act as a hardware power-on.)
 
-*NOTE: DO NOT APPLY VOLTAGE TO ANY I/O PIN WHEN POWER IS NOT SUPPLIED TO
-THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.*
-
-*NO PINS ARE TO BE DRIVEN UNTIL AFTER THE SYS_RESET LINE GOES HIGH.*
-
-(On BeagleBone Black, SYS_RESET was a bi-directional signal, but it is
+TODO: (On BeagleBone Black, SYS_RESET was a bi-directional signal, but it is
 only an output from BeagleBone AI to capes on BeagleBone AI.)
 
-*Table ?. Expansion Header P9 Pinout*
+[[p9.01-p9.04]]
+==== 7.1.2.1 P9.01-P9.04
 
-[width="99%",cols="7%,5%,16%,14%,14%,14%,15%,15%",options="header",]
-|=======================================================================
-|PIN |PROC |NAME |MODE0 |MODE1 |MODE2 |MODE3 |MODE4
-|1 | |GND | | | | |
+[[p9.05-p9.08]]
+==== 7.1.2.2 P9.05-P9.08
 
-|2 | |GND | | | | |
+[[p9.09-p9.10]]
+==== 7.1.2.3 P9.09-P9.10
 
-|3 | |VDD_3V3 | | | | |
+[[p9.11-p9.13]]
+===== 7.1.2.4 P9.11-P9.13
+[%header,format=csv]
+,===
+,P9.11,P9.12,P9.13
+*GPIO*,241,128,172
+*BALL*,B19,B14,C17
+*REG*,0x172C,0x16AC,0x1730
+*MODE 0*,mcasp3_axr0,mcasp1_aclkr,mcasp3_axr1
+*1*,,mcasp7_axr2,
+*2*,mcasp2_axr14,,mcasp2_axr15
+*3*,uart7_ctsn,,uart7_rtsn
+*4*,uart5_rxd,,uart5_txd
+*5*,,,
+*6*,,vout2_d0,
+*7*,vin6a_d1,,vin6a_d0
+*8*,,vin4a_d0,
+*9*,,,vin5a_fld0
+*10*,,i2c4_sda,
+*11*,pr2_mii1_rxer,,pr2_mii1_rxlink
+*12*,pr2_pru0_gpi14,,pr2_pru0_gpi15
+*13*,pr2_pru0_gpo14,,pr2_pru0_gpo15
+*14*,,gpio5_0,
+*15*,Driver off,Driver off,Driver off
+*2nd BALL*,B8,,AB10**
+*2nd REG*,0x1620,,0x1680
+*2nd MODE 0*,vout1_d17,,usb1_drvvbus
+*2nd 1*,,,
+*2nd 2*,uart7_txd,,
+*2nd 3*,vin4a_d1,,
+*2nd 4*,vin3a_d1,,
+*2nd 5*,,,
+*2nd 6*,,,
+*2nd 7*,,,timer16
+*2nd 8*,,,
+*2nd 9*,,,
+*2nd 10*,pr2_edio_data_in1,,
+*2nd 11*,pr2_edio_data_out1,,
+*2nd 12*,pr2_pru0_gpi14,,
+*2nd 13*,pr2_pru0_gpo14,,
+*2nd 14*,gpio8_17,,gpio6_12
+*2nd 15*,Driver off,,Driver off
+,===
 
-|4 | |VDD_3V3 | | | | |
+[[p9.14-p9.16]]
+===== 7.1.2.4 P9.14-P9.16
+[%header,format=csv]
+,===
+,P9.14,P9.15,
+*GPIO*,121,76,
+*BALL*,D6,AG4,
+*REG*,0x15AC,0x1514,
+*MODE 0*,vin2a_d17,vin1a_d8,
+*1*,,vin1b_d7,
+*2*,vin2b_d6,,
+*3*,rgmii1_txd0,,
+*4*,vout2_d6,vout3_d15,
+*5*,,,
+*6*,vin3a_d9,,
+*7*,,,
+*8*,mii1_txd2,,
+*9*,,kbd_row2,
+*10*,ehrpwm3A,eQEP2_index,
+*11*,pr1_mii1_rxd2,,
+*12*,pr1_pru1_gpi14,pr1_pru0_gpi5,
+*13*,pr1_pru1_gpo14,pr1_pru0_gpo5,
+*14*,gpio4_25,gpio3_12,
+*15*,Driver off,Driver off,
+*2nd BALL*,,,
+*2nd REG*,,,
+*2nd MODE 0*,,,
+*2nd 1*,,,
+*2nd 2*,,,
+*2nd 3*,,,
+*2nd 4*,,,
+*2nd 5*,,,
+*2nd 6*,,,
+*2nd 7*,,,
+*2nd 8*,,,
+*2nd 9*,,,
+*2nd 10*,,,
+*2nd 11*,,,
+*2nd 12*,,,
+*2nd 13*,,,
+*2nd 14*,,,
+*2nd 15*,,,
+,===
 
-|5 | |VDD_CAPE_5V | | | | |
+[[p9.17-p9.19]]
+===== 7.1.2.4 P9.17-P9.19
+[%header,format=csv]
+,===
+,P9.16,P9.17,P9.18
+*GPIO*,122,209,208
+*BALL*,C5,B24,G17
+*REG*,0x15B0,0x17CC,0x17C8
+*MODE 0*,vin2a_d18,spi2_cs0,spi2_d0
+*1*,,uart3_rtsn,uart3_ctsn
+*2*,vin2b_d5,uart5_txd,uart5_rxd
+*3*,rgmii1_rxc,,
+*4*,vout2_d5,,
+*5*,,,
+*6*,vin3a_d10,,
+*7*,,,
+*8*,mii1_txd3,,
+*9*,,,
+*10*,ehrpwm3B,,
+*11*,pr1_mii1_rxd1,,
+*12*,pr1_pru1_gpi15,,
+*13*,pr1_pru1_gpo15,,
+*14*,gpio4_26,gpio7_17,gpio7_16
+*15*,Driver off,Driver off,Driver off
+*2nd BALL*,,F12,G12
+*2nd REG*,,0x16B8,0x16B4
+*2nd MODE 0*,,mcasp1_axr1,mcasp1_axr0
+*2nd 1*,,,
+*2nd 2*,,,
+*2nd 3*,,uart6_txd,uart6_rxd
+*2nd 4*,,,
+*2nd 5*,,,
+*2nd 6*,,,
+*2nd 7*,,vin6a_hsync0,vin6a_vsync0
+*2nd 8*,,,
+*2nd 9*,,,
+*2nd 10*,,i2c5_scl,i2c5_sda
+*2nd 11*,,pr2_mii_mt0_clk,pr2_mii0_rxer
+*2nd 12*,,pr2_pru1_gpi9,pr2_pru1_gpi8
+*2nd 13*,,pr2_pru1_gpo9,pr2_pru1_gpo8
+*2nd 14*,,gpio5_3,gpio5_2
+*2nd 15*,,Driver off,Driver off
+,===
 
-|6 | |VDD_CAPE_5V | | | | |
+[[p9.20-p9.22]]
+===== 7.1.2.4 P9.20-P9.22
+[%header,format=csv]
+,===
+,P9.19,P9.20,P9.21
+*GPIO*,195,196,67
+*BALL*,R6,T9,AF8
+*REG*,0x1440,0x1444,0x14F0
+*MODE 0*,gpmc_a0,gpmc_a1,vin1a_vsync0
+*1*,,,vin1b_de1
+*2*,vin3a_d16,vin3a_d17,
+*3*,vout3_d16,vout3_d17,
+*4*,vin4a_d0,vin4a_d1,vout3_vsync
+*5*,,,uart7_rtsn
+*6*,vin4b_d0,vin4b_d1,
+*7*,i2c4_scl,i2c4_sda,timer13
+*8*,uart5_rxd,uart5_txd,spi3_cs0
+*9*,,,
+*10*,,,eQEP1_strobe
+*11*,,,
+*12*,,,
+*13*,,,
+*14*,gpio7_3,gpio7_4,gpio3_3
+*15*,Driver off,Driver off,Driver off
+*2nd BALL*,F4,D2,B22
+*2nd REG*,0x157C,0x1578,0x17C4
+*2nd MODE 0*,vin2a_d5,vin2a_d4,spi2_d1
+*2nd 1*,,,uart3_txd
+*2nd 2*,,,
+*2nd 3*,,,
+*2nd 4*,vout2_d18,vout2_d19,
+*2nd 5*,emu15,emu14,
+*2nd 6*,,,
+*2nd 7*,,,
+*2nd 8*,uart10_rtsn,uart10_ctsn,
+*2nd 9*,kbd_col2,kbd_col1,
+*2nd 10*,eQEP2A_in,ehrpwm1_synco,
+*2nd 11*,pr1_edio_sof,pr1_edc_sync0_out,
+*2nd 12*,pr1_pru1_gpi2,pr1_pru1_gpi1,
+*2nd 13*,pr1_pru1_gpo2,pr1_pru1_gpo1,
+*2nd 14*,gpio4_6,gpio4_5,gpio7_15
+*2nd 15*,Driver off,Driver off,Driver off
+,===
 
-|7 | |VDD_5V | | | | |
+[[p9.23-p9.26]]
+===== 7.1.2.4 P9.23-P9.26
+[%header,format=csv]
+,===
+,P9.22,P9.23,P9.24,P9.25
+*GPIO*,179,203,175,177
+*BALL*,B26,A22,F20,D18
+*REG*,0x169C,0x17B4,0x168C,0x1694
+*MODE 0*,xref_clk2,spi1_cs1,gpio6_15,xref_clk0
+*1*,mcasp2_axr10,,mcasp1_axr9,mcasp2_axr8
+*2*,mcasp1_axr6,sata1_led,dcan2_rx,mcasp1_axr4
+*3*,mcasp3_ahclkx,spi2_cs1,uart10_txd,mcasp1_ahclkx
+*4*,mcasp7_ahclkx,,,mcasp5_ahclkx
+*5*,,,,
+*6*,vout2_clk,,vout2_vsync,
+*7*,,,,vin6a_d0
+*8*,vin4a_clk0,,vin4a_vsync0,hdq0
+*9*,,,i2c3_scl,clkout2
+*10*,timer15,,timer2,timer13
+*11*,,,,pr2_mii1_col
+*12*,,,,pr2_pru1_gpi5
+*13*,,,,pr2_pru1_gpo5
+*14*,gpio6_19,gpio7_11,gpio6_15,gpio6_17
+*15*,Driver off,Driver off,Driver off,Driver off
+*2nd BALL*,A26,,,
+*2nd REG*,0x17C0,,,
+*2nd MODE 0*,spi2_sclk,,,
+*2nd 1*,uart3_rxd,,,
+*2nd 2*,,,,
+*2nd 3*,,,,
+*2nd 4*,,,,
+*2nd 5*,,,,
+*2nd 6*,,,,
+*2nd 7*,,,,
+*2nd 8*,,,,
+*2nd 9*,,,,
+*2nd 10*,,,,
+*2nd 11*,,,,
+*2nd 12*,,,,
+*2nd 13*,,,,
+*2nd 14*,gpio7_14,,,
+*2nd 15*,Driver off,,,
+,===
 
-|8 | |VDD_5V | | | | |
+[[p9.27-p9.29]]
+===== 7.1.2.4 P9.27-P9.29
+[%header,format=csv]
+,===
+,P9.26,P9.27,P9.28
+*GPIO*,174,111,113
+*BALL*,E21,C3,A12
+*REG*,0x1688,0x15A0,0x16E0
+*MODE 0*,gpio6_14,vin2a_d14,mcasp1_axr11
+*1*,mcasp1_axr8,,mcasp6_fsx
+*2*,dcan2_tx,,mcasp6_fsr
+*3*,uart10_rxd,rgmii1_txd3,spi3_cs0
+*4*,,vout2_d9,
+*5*,,,
+*6*,vout2_hsync,,
+*7*,,,vin6a_d12
+*8*,vin4a_hsync0,mii1_txclk,
+*9*,i2c3_sda,,
+*10*,timer1,eQEP3B_in,timer8
+*11*,,pr1_mii_mr1_clk,pr2_mii0_txd1
+*12*,,pr1_pru1_gpi11,pr2_pru1_gpi13
+*13*,,pr1_pru1_gpo11,pr2_pru1_gpo13
+*14*,gpio6_14,gpio4_15,gpio4_17
+*15*,Driver off,Driver off,Driver off
+*2nd BALL*,AE2,J14,
+*2nd REG*,0x1544,0x16B0,
+*2nd MODE 0*,vin1a_d20,mcasp1_fsr,
+*2nd 1*,vin1b_d3,mcasp7_axr3,
+*2nd 2*,,,
+*2nd 3*,,,
+*2nd 4*,vout3_d3,,
+*2nd 5*,,,
+*2nd 6*,vin3a_d4,vout2_d1,
+*2nd 7*,,,
+*2nd 8*,,vin4a_d1,
+*2nd 9*,kbd_col5,,
+*2nd 10*,pr1_edio_data_in4,i2c4_scl,
+*2nd 11*,pr1_edio_data_out4,,
+*2nd 12*,pr1_pru0_gpi17,,
+*2nd 13*,pr1_pru0_gpo17,,
+*2nd 14*,gpio3_24,gpio5_1,
+*2nd 15*,Driver off,Driver off,
+,===
 
-|9 | |PWR_BUT | | | | |
+[[p9.30-p9.32]]
+===== 7.1.2.4 P9.30-P9.32
+[%header,format=csv]
+,===
+,P9.29,P9.30,P9.31
+*GPIO*,139,140,138
+*BALL*,A11,B13,B12
+*REG*,0x16D8,0x16DC,0x16D4
+*MODE 0*,mcasp1_axr9,mcasp1_axr10,mcasp1_axr8
+*1*,mcasp6_axr1,mcasp6_aclkx,mcasp6_axr0
+*2*,,mcasp6_aclkr,
+*3*,spi3_d1,spi3_d0,spi3_sclk
+*4*,,,
+*5*,,,
+*6*,,,
+*7*,vin6a_d14,vin6a_d13,vin6a_d15
+*8*,,,
+*9*,,,
+*10*,timer6,timer7,timer5
+*11*,pr2_mii0_txd3,pr2_mii0_txd2,pr2_mii0_txen
+*12*,pr2_pru1_gpi11,pr2_pru1_gpi12,pr2_pru1_gpi10
+*13*,pr2_pru1_gpo11,pr2_pru1_gpo12,pr2_pru1_gpo10
+*14*,gpio5_11,gpio5_12,gpio5_10
+*15*,Driver off,Driver off,Driver off
+*2nd BALL*,D14,,C14
+*2nd REG*,0x16A8,,0x16A4
+*2nd MODE 0*,mcasp1_fsx,,mcasp1_aclkx
+*2nd 1*,,,
+*2nd 2*,,,
+*2nd 3*,,,
+*2nd 4*,,,
+*2nd 5*,,,
+*2nd 6*,,,
+*2nd 7*,vin6a_de0,,vin6a_fld0
+*2nd 8*,,,
+*2nd 9*,,,
+*2nd 10*,i2c3_scl,,i2c3_sda
+*2nd 11*,pr2_mdio_data,,pr2_mdio_mdclk
+*2nd 12*,,,pr2_pru1_gpi7
+*2nd 13*,,,pr2_pru1_gpo7
+*2nd 14*,gpio7_30,,gpio7_31
+*2nd 15*,Driver off,,Driver off
+,===
 
-|10 | |SYS_RESETn2 | | | | |
+[[p9.41-p9.44]]
+===== 7.1.2.4 P9.41-P9.44
+[%header,format=csv]
+,===
+,P9.41,P9.42,,user led 0
+*GPIO*,180,114,,81
+*BALL*,C23,E14,,AF6
+*REG*,0x16A0,0x16E4,,0x1528
+*MODE 0*,xref_clk3,mcasp1_axr12,,vin1a_d13
+*1*,mcasp2_axr11,mcasp7_axr0,,vin1b_d2
+*2*,mcasp1_axr7,,,
+*3*,mcasp4_ahclkx,spi3_cs1,,
+*4*,mcasp8_ahclkx,,,vout3_d10
+*5*,,,,gpmc_a25
+*6*,vout2_de,,,
+*7*,hdq0,vin6a_d11,,
+*8*,vin4a_de0,,,
+*9*,clkout3,,,kbd_row7
+*10*,timer16,timer9,,pr1_edc_sync1_out
+*11*,,pr2_mii0_txd0,,
+*12*,,pr2_pru1_gpi14,,pr1_pru0_gpi10
+*13*,,pr2_pru1_gpo14,,pr1_pru0_gpo10
+*14*,gpio6_20,gpio4_18,,gpio3_17
+*15*,Driver off,Driver off,,Driver off
+*2nd BALL*,C1,C2,,
+*2nd REG*,0x1580,0x159C,,
+*2nd MODE 0*,vin2a_d6,vin2a_d13,,
+*2nd 1*,,,,
+*2nd 2*,,,,
+*2nd 3*,,rgmii1_txctl,,
+*2nd 4*,vout2_d17,vout2_d10,,
+*2nd 5*,emu16,,,
+*2nd 6*,,,,
+*2nd 7*,,,,
+*2nd 8*,mii1_rxd1,mii1_rxdv,,
+*2nd 9*,kbd_col3,kbd_row8,,
+*2nd 10*,eQEP2B_in,eQEP3A_in,,
+*2nd 11*,pr1_mii_mt1_clk,pr1_mii1_txd0,,
+*2nd 12*,pr1_pru1_gpi3,pr1_pru1_gpi10,,
+*2nd 13*,pr1_pru1_gpo3,pr1_pru1_gpo10,,
+*2nd 14*,gpio4_7,gpio4_14,,
+*2nd 15*,Driver off,Driver off,,
+,===
 
-|11 |B19 |UART5_RXD |mcasp3_axr0 | |mcasp2_axr14 |uart7_ctsn |uart5_rxd
+[[p9.45-p9.46]]
+===== 7.1.2.4 P9.45-P9.46
+[%header,format=csv]
+,===
+,user led 1,user led 2
+*GPIO*,133,79
+*BALL*,J11,AG5
+*REG*,0x16C0,0x1520
+*MODE 0*,mcasp1_axr3,vin1a_d11
+*1*,mcasp6_axr3,vin1b_d4
+*2*,,
+*3*,uart6_rtsn,
+*4*,,vout3_d12
+*5*,,gpmc_a23
+*6*,vout2_d3,
+*7*,,
+*8*,vin4a_d3,
+*9*,,kbd_row5
+*10*,,pr1_edc_latch1_in
+*11*,,
+*12*,,pr1_pru0_gpi8
+*13*,,pr1_pru0_gpo8
+*14*,gpio5_5,gpio3_15
+*15*,Driver off,Driver off
+*2nd BALL*,,
+*2nd REG*,,
+*2nd MODE 0*,,
+*2nd 1*,,
+*2nd 2*,,
+*2nd 3*,,
+*2nd 4*,,
+*2nd 5*,,
+*2nd 6*,,
+*2nd 7*,,
+*2nd 8*,,
+*2nd 9*,,
+*2nd 10*,,
+*2nd 11*,,
+*2nd 12*,,
+*2nd 13*,,
+*2nd 14*,,
+*2nd 15*,,
+,===
 
-| |B8 | |vout1_d17 | |uart7_txd |vin4a_d1 |vin3a_d1
-
-|12 |B14 |B14_MCASP_ACLKR |mcasp1_aclkr |mcasp7_axr2 | | |
-
-|13 |C17 |C17_UART5_TXD |mcasp3_axr1 | |mcasp2_axr15 |uart7_rtsn
-|uart5_txd
-
-| |AB10 | |usb1_drvvbus | | | |
-
-|14 |D6 |D6_EHRPWM3A |vin2a_d17 | |vin2b_d6 |rgmii1_txd0 |vout2_d6
-
-|15 |AG4 |AG4_GPIO3_12 |vin1a_d8 |vin1b_d7 | | |vout3_d15
-
-|16 |C5 |C5_EHRPWM3B |vin2a_d18 | |vin2b_d5 |rgmii1_rxc |vout2_d5
-
-|17 |B24 |I2C5_SCL |spi2_cs0 |uart3_rtsn |uart5_txd | |
-
-| |F12 | |mcasp1_axr1 | | |uart6_txd |
-
-|18 |G17 |I2C5_SDA |spi2_d0 |uart3_ctsn |uart5_rxd | |
-
-| |G12 | |mcasp1_axr0 | | |uart6_rxd |
-
-|19 |R6 |I2C4_SCL |gpmc_a0 | |vin3a_d16 |vout3_d16 |vin4a_d0
-
-| |F4 | |vin2a_d5 | | | |vout2_d18
-
-|20 |T9 |I2C4_SDA |gpmc_a1 | |vin3a_d17 |vout3_d17 |vin4a_d1
-
-| |D2 | |vin2a_d4 | | | |vout2_d19
-
-|21 |AF8 |UART3_TXD |vin1a_vsync0 |vin1b_de1 | | |vout3_vsync
-
-| |B22 | |spi2_d1 |uart3_txd | | |
-
-|22 |B26 |UART3_RXD |xref_clk2 |mcasp2_axr10 |mcasp1_axr6 |mcasp3_ahclkx
-|mcasp7_ahclk
-
-| |A26 | |spi2_sclk |uart3_rxd | | |
-
-|23 |A22 |A22_SPI2_CS1 |spi1_cs1 | |sata1_led |spi2_cs1 |
-
-|24 |F20 |F20_UART10_TXD |gpio6_15 |mcasp1_axr9 |dcan2_rx |uart10_txd |
-
-|25 |D18 |D18_GPIO6_17 |xref_clk0 |mcasp2_axr8 |mcasp1_axr4
-|mcasp1_ahclkx |mcasp5_ahclkx
-
-|26 |E21 |UART10_RXD |gpio6_14 |mcasp1_axr8 |dcan2_tx |uart10_rxd |
-
-| |AE2 | |vin1a_d20 |vin1b_d3 | | |vout3_d3
-
-|27 |C3 |MCASP_FSR |vin2a_d14 | | |rgmii1_txd3 |vout2_d9
-
-| |J14 | |mcasp1_fsr |mcasp7_axr3 | | |
-
-|28 |A12 |A12_SPI3_CS0 |mcasp1_axr11 |mcasp6_fsx |mcasp6_fsr |spi3_cs0 |
-
-|29 |A11 |SPI3_D1 |mcasp1_axr9 |mcasp6_axr1 | |spi3_d1 |
-
-| |D14 | |mcasp1_fsx | | | |
-
-|30 |B13 |B13_SPI3_D0 |mcasp1_axr10 |mcasp6_aclkx |mcasp6_aclkr |spi3_d0
-|
-
-|31 |B12 |SPI3_SCLK |mcasp1_axr8 |mcasp6_axr0 | |spi3_sclk |
-
-| |C14 | |mcasp1_aclkx | | | |
-
-|32 | |VDD_ADC | | | | |
-
-|33 | |AIN4 | | | | |
-
-|34 | |AGND | | | | |
-
-|35 | |AIN6 | | | | |
-
-|36 | |AIN5 | | | | |
-
-|37 | |AIN2 | | | | |
-
-|38 | |AIN3 | | | | |
-
-|39 | |AIN0 | | | | |
-
-|40 | |AIN1 | | | | |
-
-|41 |C23 |CLKOUT3 |xref_clk3 |mcasp2_axr11 |mcasp1_axr7 |mcasp4_ahclkx
-|mcasp8_ahclkx
-
-| |C1 | |vin2a_d6 | | | |vout2_d17
-
-|42 |E14 |GPIO4_18 |mcasp1_axr12 |mcasp7_axr0 | |spi3_cs1 |
-
-| |C2 | |vin2a_d13 | | |rgmii1_txctl |vout2_d10
-
-|43 | |GND | | | | |
-
-|44 | |GND | | | | |
-
-|45 | |GND | | | | |
-
-|46 | |GND | | | | |
-|=======================================================================
-
-[cols=",,,,,,,",options="header",]
-|========================================================
-|PIN |PROC |MODE5 |MODE6 |MODE7 |MODE8 |MODE9 |MODE10
-|1 | | | | | | |
-|2 | | | | | | |
-|3 | | | | | | |
-|4 | | | | | | |
-|5 | | | | | | |
-|6 | | | | | | |
-|7 | | | | | | |
-|8 | | | | | | |
-|9 | | | | | | |
-|10 | | | | | | |
-|11 |B19 | | |vin6a_d1 | | |
-| |B8 | | | | | |pr2_edio_data_in1
-|12 |B14 | |vout2_d0 | |vin4a_d0 | |i2c4_sda
-|13 |C17 | | |vin6a_d0 | |vin5a_fld0 |
-| |AB10 | | |timer16 | | |
-|14 |D6 | |vin3a_d9 | |mii1_txd2 | |ehrpwm3A
-|15 |AG4 | | | | |kbd_row2 |eQEP2_index
-|16 |C5 | |vin3a_d10 | |mii1_txd3 | |ehrpwm3B
-|17 |B24 | | | | | |
-| |F12 | | |vin6a_hsync0 | | |i2c5_scl
-|18 |G17 | | | | | |
-| |G12 | | |vin6a_vsync0 | | |i2c5_sda
-|19 |R6 | |vin4b_d0 |i2c4_scl |uart5_rxd | |
-| |F4 |emu15 | | |uart10_rtsn |kbd_col2 |eQEP2A_in
-|20 |T9 | |vin4b_d1 |i2c4_sda |uart5_txd | |
-| |D2 |emu14 | | |uart10_ctsn |kbd_col1 |ehrpwm1_synco
-|21 |AF8 |uart7_rtsn | |timer13 |spi3_cs0 | |eQEP1_strobe
-| |B22 | | | | | |
-|22 |B26 | |vout2_clk | |vin4a_clk0 | |timer15
-| |A26 | | | | | |
-|23 |A22 | | | | | |
-|24 |F20 | |vout2_vsync | |vin4a_vsync0 |i2c3_scl |timer2
-|25 |D18 | | |vin6a_d0 |hdq0 |clkout2 |timer13
-|26 |E21 | |vout2_hsync | |vin4a_hsync0 |i2c3_sda |timer1
-| |AE2 | |vin3a_d4 | | |kbd_col5 |pr1_edio_data_in4
-|27 |C3 | | | |mii1_txclk | |eQEP3B_in
-| |J14 | |vout2_d1 | |vin4a_d1 | |i2c4_scl
-|28 |A12 | | |vin6a_d12 | | |timer8
-|29 |A11 | | |vin6a_d14 | | |timer6
-| |D14 | | |vin6a_de0 | | |i2c3_scl
-|30 |B13 | | |vin6a_d13 | | |timer7
-|31 |B12 | | |vin6a_d15 | | |timer5
-| |C14 | | |vin6a_fld0 | | |i2c3_sda
-|32 | | | | | | |
-|33 | | | | | | |
-|34 | | | | | | |
-|35 | | | | | | |
-|36 | | | | | | |
-|37 | | | | | | |
-|38 | | | | | | |
-|39 | | | | | | |
-|40 | | | | | | |
-|41 |C23 | |vout2_de |hdq0 |vin4a_de0 |clkout3 |timer16
-| |C1 |emu16 | | |mii1_rxd1 |kbd_col3 |eQEP2B_in
-|42 |E14 | | |vin6a_d11 | | |timer9
-| |C2 | | | |mii1_rxdv |kbd_row8 |eQEP3A_in
-|43 | | | | | | |
-|44 | | | | | | |
-|45 | | | | | | |
-|46 | | | | | | |
-|========================================================
-
-[cols=",,,,,",options="header",]
-|===================================================================
-|PIN |PROC |MODE11 |MODE12 |MODE13 |MODE14
-|1 | | | | |
-|2 | | | | |
-|3 | | | | |
-|4 | | | | |
-|5 | | | | |
-|6 | | | | |
-|7 | | | | |
-|8 | | | | |
-|9 | | | | |
-|10 | | | | |
-|11 |B19 |pr2_mii1_rxer |pr2_pru0_gpi14 |pr2_pru0_gpo14 |
-| |B8 |pr2_edio_data_out1 |pr2_pru0_gpi14 |pr2_pru0_gpo14 |gpio8_17
-|12 |B14 | | | |gpio5_0
-|13 |C17 |pr2_mii1_rxlink |pr2_pru0_gpi15 |pr2_pru0_gpo15 |
-| |AB10 | | | |gpio6_12
-|14 |D6 |pr1_mii1_rxd2 |pr1_pru1_gpi14 |pr1_pru1_gpo14 |gpio4_25
-|15 |AG4 | |pr1_pru0_gpi5 |pr1_pru0_gpo5 |gpio3_12
-|16 |C5 |pr1_mii1_rxd1 |pr1_pru1_gpi15 |pr1_pru1_gpo15 |gpio4_26
-|17 |B24 | | | |gpio7_17
-| |F12 |pr2_mii_mt0_clk |pr2_pru1_gpi9 |pr2_pru1_gpo9 |gpio5_3
-|18 |G17 | | | |gpio7_16
-| |G12 |pr2_mii0_rxer |pr2_pru1_gpi8 |pr2_pru1_gpo8 |gpio5_2
-|19 |R6 | | | |gpio7_3
-| |F4 |pr1_edio_sof |pr1_pru1_gpi2 |pr1_pru1_gpo2 |gpio4_6
-|20 |T9 | | | |gpio7_4
-| |D2 |pr1_edc_sync0_out |pr1_pru1_gpi1 |pr1_pru1_gpo1 |gpio4_5
-|21 |AF8 | | | |gpio3_3
-| |B22 | | | |gpio7_15
-|22 |B26 | | | |gpio6_19
-| |A26 | | | |gpio7_14
-|23 |A22 | | | |gpio7_11
-|24 |F20 | | | |gpio6_15
-|25 |D18 |pr2_mii1_col |pr2_pru1_gpi5 |pr2_pru1_gpo5 |gpio6_17
-|26 |E21 | | | |gpio6_14
-| |AE2 |pr1_edio_data_out4 |pr1_pru0_gpi17 |pr1_pru0_gpo17 |gpio3_24
-|27 |C3 |pr1_mii_mr1_clk |pr1_pru1_gpi11 |pr1_pru1_gpo11 |gpio4_15
-| |J14 | | | |gpio5_1
-|28 |A12 |pr2_mii0_txd1 |pr2_pru1_gpi13 |pr2_pru1_gpo13 |gpio4_17
-|29 |A11 |pr2_mii0_txd3 |pr2_pru1_gpi11 |pr2_pru1_gpo11 |gpio5_11
-| |D14 |pr2_mdio_data | | |gpio7_30
-|30 |B13 |pr2_mii0_txd2 |pr2_pru1_gpi12 |pr2_pru1_gpo12 |gpio5_12
-|31 |B12 |pr2_mii0_txen |pr2_pru1_gpi10 |pr2_pru1_gpo10 |gpio5_10
-| |C14 |pr2_mdio_mdclk |pr2_pru1_gpi7 |pr2_pru1_gpo7 |gpio7_31
-|32 | | | | |
-|33 | | | | |
-|34 | | | | |
-|35 | | | | |
-|36 | | | | |
-|37 | | | | |
-|38 | | | | |
-|39 | | | | |
-|40 | | | | |
-|41 |C23 | | | |gpio6_20
-| |C1 |pr1_mii_mt1_clk |pr1_pru1_gpi3 |pr1_pru1_gpo3 |gpio4_7
-|42 |E14 |pr2_mii0_txd0 |pr2_pru1_gpi14 |pr2_pru1_gpo14 |gpio4_18
-| |C2 |pr1_mii1_txd0 |pr1_pru1_gpi10 |pr1_pru1_gpo10 |gpio4_14
-|43 | | | | |
-|44 | | | | |
-|45 | | | | |
-|46 | | | | |
-|===================================================================
+EOF
 
 [[cape-board-support]]
 == 8 Cape Board Support
