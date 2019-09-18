@@ -2456,9 +2456,9 @@ TODO
 [[clkout]]
 === 8.16 CLKOUT
 TODO
-[[expansion-connectors]]
-=== 8.17 Expansion Connectors
-TODO
+[[expansion-connector-headers]]
+=== 8.17 Expansion Connector Headers
+TODO: discuss header options for working with the expansion connectors per https://github.com/beagleboard/beaglebone-black/wiki/System-Reference-Manual#84-expansion-connectors
 [[signal-usage]]
 === 8.18 Signal Usage
 TODO
