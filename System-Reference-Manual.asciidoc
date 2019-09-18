@@ -144,13 +144,11 @@ can be configured in several different ways. Below we will walk through
 the most common scenarios. 
 
 * xref:tethered-to-a-pc[Tethered to a PC via USB C cable]
-* Standalone Desktop with powered USB hub, display, keyboard and mouse 
-* Wireless Connection to BeagleBone® AI
-
-TODO: add links to each scenario
+* xref:standalone-wdisplay-and-keyboardmouse[Standalone Desktop with powered USB hub, display, keyboard and mouse]
+* xref:wireless-connection[Wireless Connection to BeagleBone® AI]
 
 [[tethered-to-a-pc]]
-=== 3.3 Tethered to a PC
+==== 3.2.1 Tethered to a PC
 
 The most common way to program BeagleBone® AI is via a USB connection to
 a PC. If your computer has a USB C type port, BeagleBone® AI will both
@@ -182,7 +180,7 @@ image:images/BB_AI_ss_cloud9_500px.jpg[BeagleBone AI Overview]
 image:images/BB_AI_ss_cloud9_dir_500px.jpg[BeagleBone AI Overview]
 
 [[standalone-wdisplay-and-keyboardmouse]]
-=== 3.4 Standalone w/Display and Keyboard/Mouse
+==== 3.2.2 Standalone w/Display and Keyboard/Mouse
 
 image:images/BB_AI_Standalone_setup_750px.jpg[BeagleBone AI Overview]
 
@@ -196,7 +194,7 @@ port.
 7. Follow the instructions in the browser window.
 
 [[wireless-connection]]
-=== 3.5 Wireless Connection
+==== 3.2.3 Wireless Connection
 
 1. Plug a 5V 3A USB type-C power supply into BeagleBone® AI's USB type-C
 port.
@@ -213,8 +211,7 @@ your BeagleBone® AI.
 6. Follow the instructions in the browser window.
 
 [[connecting-a-3-pin-serial-debug-cable]]
-3.6 Connecting a 3 PIN Serial Debug Cable
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=== 3.3 Connecting a 3 PIN Serial Debug Cable
 
 A 3 PIN serial debug cable can be helpful to debug when you need to view
 the boot messages through a terminal program such as putty on your host
