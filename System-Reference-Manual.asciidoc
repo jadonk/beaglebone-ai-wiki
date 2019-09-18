@@ -1988,13 +1988,13 @@ TODO: (On BeagleBone Black, SYS_RESET was a bi-directional signal, but it is
 only an output from BeagleBone AI to capes on BeagleBone AI.)
 
 [[p9.01-p9.04]]
-==== 7.1.2.1 P9.01-P9.04
+===== 7.1.2.1 P9.01-P9.04
 
 [[p9.05-p9.08]]
-==== 7.1.2.2 P9.05-P9.08
+===== 7.1.2.2 P9.05-P9.08
 
 [[p9.09-p9.10]]
-==== 7.1.2.3 P9.09-P9.10
+===== 7.1.2.3 P9.09-P9.10
 
 [[p9.11-p9.13]]
 ===== 7.1.2.4 P9.11-P9.13
@@ -2044,26 +2044,26 @@ only an output from BeagleBone AI to capes on BeagleBone AI.)
 ===== 7.1.2.4 P9.14-P9.16
 [%header,format=csv]
 ,===
-,P9.14,P9.15,
-*GPIO*,121,76,
-*BALL*,D6,AG4,
-*REG*,0x15AC,0x1514,
-*MODE 0*,vin2a_d17,vin1a_d8,
+,P9.14,P9.15,P9.16
+*GPIO*,121,76,122
+*BALL*,D6,AG4,C5
+*REG*,0x15AC,0x1514,0x15B0
+*MODE 0*,vin2a_d17,vin1a_d8,vin2a_d18
 *1*,,vin1b_d7,
-*2*,vin2b_d6,,
-*3*,rgmii1_txd0,,
-*4*,vout2_d6,vout3_d15,
+*2*,vin2b_d6,,vin2b_d5
+*3*,rgmii1_txd0,,rgmii1_rxc
+*4*,vout2_d6,vout3_d15,vout2_d5
 *5*,,,
-*6*,vin3a_d9,,
+*6*,vin3a_d9,,vin3a_d10
 *7*,,,
-*8*,mii1_txd2,,
+*8*,mii1_txd2,,mii1_txd3
 *9*,,kbd_row2,
-*10*,ehrpwm3A,eQEP2_index,
-*11*,pr1_mii1_rxd2,,
-*12*,pr1_pru1_gpi14,pr1_pru0_gpi5,
-*13*,pr1_pru1_gpo14,pr1_pru0_gpo5,
-*14*,gpio4_25,gpio3_12,
-*15*,Driver off,Driver off,
+*10*,ehrpwm3A,eQEP2_index,ehrpwm3B
+*11*,pr1_mii1_rxd2,,pr1_mii1_rxd1
+*12*,pr1_pru1_gpi14,pr1_pru0_gpi5,pr1_pru1_gpi15
+*13*,pr1_pru1_gpo14,pr1_pru0_gpo5,pr1_pru1_gpo15
+*14*,gpio4_25,gpio3_12,gpio4_26
+*15*,Driver off,Driver off,Driver off
 *2nd BALL*,,,
 *2nd REG*,,,
 *2nd MODE 0*,,,
@@ -2088,87 +2088,87 @@ only an output from BeagleBone AI to capes on BeagleBone AI.)
 ===== 7.1.2.4 P9.17-P9.19
 [%header,format=csv]
 ,===
-,P9.16,P9.17,P9.18
-*GPIO*,122,209,208
-*BALL*,C5,B24,G17
-*REG*,0x15B0,0x17CC,0x17C8
-*MODE 0*,vin2a_d18,spi2_cs0,spi2_d0
-*1*,,uart3_rtsn,uart3_ctsn
-*2*,vin2b_d5,uart5_txd,uart5_rxd
-*3*,rgmii1_rxc,,
-*4*,vout2_d5,,
+,P9.17,P9.18,P9.19
+*GPIO*,209,208,195
+*BALL*,B24,G17,R6
+*REG*,0x17CC,0x17C8,0x1440
+*MODE 0*,spi2_cs0,spi2_d0,gpmc_a0
+*1*,uart3_rtsn,uart3_ctsn,
+*2*,uart5_txd,uart5_rxd,vin3a_d16
+*3*,,,vout3_d16
+*4*,,,vin4a_d0
 *5*,,,
-*6*,vin3a_d10,,
-*7*,,,
-*8*,mii1_txd3,,
+*6*,,,vin4b_d0
+*7*,,,i2c4_scl
+*8*,,,uart5_rxd
 *9*,,,
-*10*,ehrpwm3B,,
-*11*,pr1_mii1_rxd1,,
-*12*,pr1_pru1_gpi15,,
-*13*,pr1_pru1_gpo15,,
-*14*,gpio4_26,gpio7_17,gpio7_16
+*10*,,,
+*11*,,,
+*12*,,,
+*13*,,,
+*14*,gpio7_17,gpio7_16,gpio7_3
 *15*,Driver off,Driver off,Driver off
-*2nd BALL*,,F12,G12
-*2nd REG*,,0x16B8,0x16B4
-*2nd MODE 0*,,mcasp1_axr1,mcasp1_axr0
+*2nd BALL*,F12,G12,F4
+*2nd REG*,0x16B8,0x16B4,0x157C
+*2nd MODE 0*,mcasp1_axr1,mcasp1_axr0,vin2a_d5
 *2nd 1*,,,
 *2nd 2*,,,
-*2nd 3*,,uart6_txd,uart6_rxd
-*2nd 4*,,,
-*2nd 5*,,,
+*2nd 3*,uart6_txd,uart6_rxd,
+*2nd 4*,,,vout2_d18
+*2nd 5*,,,emu15
 *2nd 6*,,,
-*2nd 7*,,vin6a_hsync0,vin6a_vsync0
-*2nd 8*,,,
-*2nd 9*,,,
-*2nd 10*,,i2c5_scl,i2c5_sda
-*2nd 11*,,pr2_mii_mt0_clk,pr2_mii0_rxer
-*2nd 12*,,pr2_pru1_gpi9,pr2_pru1_gpi8
-*2nd 13*,,pr2_pru1_gpo9,pr2_pru1_gpo8
-*2nd 14*,,gpio5_3,gpio5_2
-*2nd 15*,,Driver off,Driver off
+*2nd 7*,vin6a_hsync0,vin6a_vsync0,
+*2nd 8*,,,uart10_rtsn
+*2nd 9*,,,kbd_col2
+*2nd 10*,i2c5_scl,i2c5_sda,eQEP2A_in
+*2nd 11*,pr2_mii_mt0_clk,pr2_mii0_rxer,pr1_edio_sof
+*2nd 12*,pr2_pru1_gpi9,pr2_pru1_gpi8,pr1_pru1_gpi2
+*2nd 13*,pr2_pru1_gpo9,pr2_pru1_gpo8,pr1_pru1_gpo2
+*2nd 14*,gpio5_3,gpio5_2,gpio4_6
+*2nd 15*,Driver off,Driver off,Driver off
 ,===
 
 [[p9.20-p9.22]]
 ===== 7.1.2.4 P9.20-P9.22
 [%header,format=csv]
 ,===
-,P9.19,P9.20,P9.21
-*GPIO*,195,196,67
-*BALL*,R6,T9,AF8
-*REG*,0x1440,0x1444,0x14F0
-*MODE 0*,gpmc_a0,gpmc_a1,vin1a_vsync0
-*1*,,,vin1b_de1
-*2*,vin3a_d16,vin3a_d17,
-*3*,vout3_d16,vout3_d17,
-*4*,vin4a_d0,vin4a_d1,vout3_vsync
-*5*,,,uart7_rtsn
-*6*,vin4b_d0,vin4b_d1,
-*7*,i2c4_scl,i2c4_sda,timer13
-*8*,uart5_rxd,uart5_txd,spi3_cs0
+,P9.20,P9.21,P9.22
+*GPIO*,196,67,179
+*BALL*,T9,AF8,B26
+*REG*,0x1444,0x14F0,0x169C
+*MODE 0*,gpmc_a1,vin1a_vsync0,xref_clk2
+*1*,,vin1b_de1,mcasp2_axr10
+*2*,vin3a_d17,,mcasp1_axr6
+*3*,vout3_d17,,mcasp3_ahclkx
+*4*,vin4a_d1,vout3_vsync,mcasp7_ahclkx
+*5*,,uart7_rtsn,
+*6*,vin4b_d1,,vout2_clk
+*7*,i2c4_sda,timer13,
+*8*,uart5_txd,spi3_cs0,vin4a_clk0
 *9*,,,
-*10*,,,eQEP1_strobe
+*10*,,eQEP1_strobe,timer15
 *11*,,,
 *12*,,,
 *13*,,,
-*14*,gpio7_3,gpio7_4,gpio3_3
+*14*,gpio7_4,gpio3_3,gpio6_19
 *15*,Driver off,Driver off,Driver off
-*2nd BALL*,F4,D2,B22
-*2nd REG*,0x157C,0x1578,0x17C4
-*2nd MODE 0*,vin2a_d5,vin2a_d4,spi2_d1
-*2nd 1*,,,uart3_txd
+*2nd BALL*,D2,B22,A26
+*2nd REG*,0x1578,0x17C4,0x17C0
+*2nd MODE 0*,vin2a_d4,spi2_d1,spi2_sclk
+*2nd 1*,,uart3_txd,uart3_rxd
 *2nd 2*,,,
 *2nd 3*,,,
-*2nd 4*,vout2_d18,vout2_d19,
-*2nd 5*,emu15,emu14,
+*2nd 4*,vout2_d19,,
+*2nd 5*,emu14,,
 *2nd 6*,,,
 *2nd 7*,,,
-*2nd 8*,uart10_rtsn,uart10_ctsn,
-*2nd 9*,kbd_col2,kbd_col1,
-*2nd 10*,eQEP2A_in,ehrpwm1_synco,
-*2nd 11*,pr1_edio_sof,pr1_edc_sync0_out,
-*2nd 12*,pr1_pru1_gpi2,pr1_pru1_gpi1,
-*2nd 13*,pr1_pru1_gpo2,pr1_pru1_gpo1,
-*2nd 14*,gpio4_6,gpio4_5,gpio7_15
+*2nd 8*,uart10_ctsn,,
+*2nd 9*,kbd_col1,,
+*2nd 10*,ehrpwm1_synco,,
+*2nd 11*,pr1_edc_sync0_out,,
+*2nd 12*,pr1_pru1_gpi1,,
+*2nd 13*,pr1_pru1_gpo1,,
+*2nd 14*,gpio4_5,gpio7_15,gpio7_14
 *2nd 15*,Driver off,Driver off,Driver off
 ,===
 
@@ -2176,220 +2176,176 @@ only an output from BeagleBone AI to capes on BeagleBone AI.)
 ===== 7.1.2.4 P9.23-P9.26
 [%header,format=csv]
 ,===
-,P9.22,P9.23,P9.24,P9.25
-*GPIO*,179,203,175,177
-*BALL*,B26,A22,F20,D18
-*REG*,0x169C,0x17B4,0x168C,0x1694
-*MODE 0*,xref_clk2,spi1_cs1,gpio6_15,xref_clk0
-*1*,mcasp2_axr10,,mcasp1_axr9,mcasp2_axr8
-*2*,mcasp1_axr6,sata1_led,dcan2_rx,mcasp1_axr4
-*3*,mcasp3_ahclkx,spi2_cs1,uart10_txd,mcasp1_ahclkx
-*4*,mcasp7_ahclkx,,,mcasp5_ahclkx
+,P9.23,P9.24,P9.25,P9.26
+*GPIO*,203,175,177,174
+*BALL*,A22,F20,D18,E21
+*REG*,0x17B4,0x168C,0x1694,0x1688
+*MODE 0*,spi1_cs1,gpio6_15,xref_clk0,gpio6_14
+*1*,,mcasp1_axr9,mcasp2_axr8,mcasp1_axr8
+*2*,sata1_led,dcan2_rx,mcasp1_axr4,dcan2_tx
+*3*,spi2_cs1,uart10_txd,mcasp1_ahclkx,uart10_rxd
+*4*,,,mcasp5_ahclkx,
 *5*,,,,
-*6*,vout2_clk,,vout2_vsync,
-*7*,,,,vin6a_d0
-*8*,vin4a_clk0,,vin4a_vsync0,hdq0
-*9*,,,i2c3_scl,clkout2
-*10*,timer15,,timer2,timer13
-*11*,,,,pr2_mii1_col
-*12*,,,,pr2_pru1_gpi5
-*13*,,,,pr2_pru1_gpo5
-*14*,gpio6_19,gpio7_11,gpio6_15,gpio6_17
+*6*,,vout2_vsync,,vout2_hsync
+*7*,,,vin6a_d0,
+*8*,,vin4a_vsync0,hdq0,vin4a_hsync0
+*9*,,i2c3_scl,clkout2,i2c3_sda
+*10*,,timer2,timer13,timer1
+*11*,,,pr2_mii1_col,
+*12*,,,pr2_pru1_gpi5,
+*13*,,,pr2_pru1_gpo5,
+*14*,gpio7_11,gpio6_15,gpio6_17,gpio6_14
 *15*,Driver off,Driver off,Driver off,Driver off
-*2nd BALL*,A26,,,
-*2nd REG*,0x17C0,,,
-*2nd MODE 0*,spi2_sclk,,,
-*2nd 1*,uart3_rxd,,,
+*2nd BALL*,,,,AE2
+*2nd REG*,,,,0x1544
+*2nd MODE 0*,,,,vin1a_d20
+*2nd 1*,,,,vin1b_d3
 *2nd 2*,,,,
 *2nd 3*,,,,
-*2nd 4*,,,,
+*2nd 4*,,,,vout3_d3
 *2nd 5*,,,,
-*2nd 6*,,,,
+*2nd 6*,,,,vin3a_d4
 *2nd 7*,,,,
 *2nd 8*,,,,
-*2nd 9*,,,,
-*2nd 10*,,,,
-*2nd 11*,,,,
-*2nd 12*,,,,
-*2nd 13*,,,,
-*2nd 14*,gpio7_14,,,
-*2nd 15*,Driver off,,,
+*2nd 9*,,,,kbd_col5
+*2nd 10*,,,,pr1_edio_data_in4
+*2nd 11*,,,,pr1_edio_data_out4
+*2nd 12*,,,,pr1_pru0_gpi17
+*2nd 13*,,,,pr1_pru0_gpo17
+*2nd 14*,,,,gpio3_24
+*2nd 15*,,,,Driver off
 ,===
 
 [[p9.27-p9.29]]
 ===== 7.1.2.4 P9.27-P9.29
 [%header,format=csv]
 ,===
-,P9.26,P9.27,P9.28
-*GPIO*,174,111,113
-*BALL*,E21,C3,A12
-*REG*,0x1688,0x15A0,0x16E0
-*MODE 0*,gpio6_14,vin2a_d14,mcasp1_axr11
-*1*,mcasp1_axr8,,mcasp6_fsx
-*2*,dcan2_tx,,mcasp6_fsr
-*3*,uart10_rxd,rgmii1_txd3,spi3_cs0
-*4*,,vout2_d9,
-*5*,,,
-*6*,vout2_hsync,,
-*7*,,,vin6a_d12
-*8*,vin4a_hsync0,mii1_txclk,
-*9*,i2c3_sda,,
-*10*,timer1,eQEP3B_in,timer8
-*11*,,pr1_mii_mr1_clk,pr2_mii0_txd1
-*12*,,pr1_pru1_gpi11,pr2_pru1_gpi13
-*13*,,pr1_pru1_gpo11,pr2_pru1_gpo13
-*14*,gpio6_14,gpio4_15,gpio4_17
-*15*,Driver off,Driver off,Driver off
-*2nd BALL*,AE2,J14,
-*2nd REG*,0x1544,0x16B0,
-*2nd MODE 0*,vin1a_d20,mcasp1_fsr,
-*2nd 1*,vin1b_d3,mcasp7_axr3,
-*2nd 2*,,,
-*2nd 3*,,,
-*2nd 4*,vout3_d3,,
-*2nd 5*,,,
-*2nd 6*,vin3a_d4,vout2_d1,
-*2nd 7*,,,
-*2nd 8*,,vin4a_d1,
-*2nd 9*,kbd_col5,,
-*2nd 10*,pr1_edio_data_in4,i2c4_scl,
-*2nd 11*,pr1_edio_data_out4,,
-*2nd 12*,pr1_pru0_gpi17,,
-*2nd 13*,pr1_pru0_gpo17,,
-*2nd 14*,gpio3_24,gpio5_1,
-*2nd 15*,Driver off,Driver off,
-,===
-
-[[p9.30-p9.32]]
-===== 7.1.2.4 P9.30-P9.32
-[%header,format=csv]
-,===
-,P9.29,P9.30,P9.31
-*GPIO*,139,140,138
-*BALL*,A11,B13,B12
-*REG*,0x16D8,0x16DC,0x16D4
-*MODE 0*,mcasp1_axr9,mcasp1_axr10,mcasp1_axr8
-*1*,mcasp6_axr1,mcasp6_aclkx,mcasp6_axr0
-*2*,,mcasp6_aclkr,
-*3*,spi3_d1,spi3_d0,spi3_sclk
-*4*,,,
+,P9.27,P9.28,P9.29
+*GPIO*,111,113,139
+*BALL*,C3,A12,A11
+*REG*,0x15A0,0x16E0,0x16D8
+*MODE 0*,vin2a_d14,mcasp1_axr11,mcasp1_axr9
+*1*,,mcasp6_fsx,mcasp6_axr1
+*2*,,mcasp6_fsr,
+*3*,rgmii1_txd3,spi3_cs0,spi3_d1
+*4*,vout2_d9,,
 *5*,,,
 *6*,,,
-*7*,vin6a_d14,vin6a_d13,vin6a_d15
-*8*,,,
+*7*,,vin6a_d12,vin6a_d14
+*8*,mii1_txclk,,
 *9*,,,
-*10*,timer6,timer7,timer5
-*11*,pr2_mii0_txd3,pr2_mii0_txd2,pr2_mii0_txen
-*12*,pr2_pru1_gpi11,pr2_pru1_gpi12,pr2_pru1_gpi10
-*13*,pr2_pru1_gpo11,pr2_pru1_gpo12,pr2_pru1_gpo10
-*14*,gpio5_11,gpio5_12,gpio5_10
+*10*,eQEP3B_in,timer8,timer6
+*11*,pr1_mii_mr1_clk,pr2_mii0_txd1,pr2_mii0_txd3
+*12*,pr1_pru1_gpi11,pr2_pru1_gpi13,pr2_pru1_gpi11
+*13*,pr1_pru1_gpo11,pr2_pru1_gpo13,pr2_pru1_gpo11
+*14*,gpio4_15,gpio4_17,gpio5_11
 *15*,Driver off,Driver off,Driver off
-*2nd BALL*,D14,,C14
-*2nd REG*,0x16A8,,0x16A4
-*2nd MODE 0*,mcasp1_fsx,,mcasp1_aclkx
-*2nd 1*,,,
+*2nd BALL*,J14,,D14
+*2nd REG*,0x16B0,,0x16A8
+*2nd MODE 0*,mcasp1_fsr,,mcasp1_fsx
+*2nd 1*,mcasp7_axr3,,
 *2nd 2*,,,
 *2nd 3*,,,
 *2nd 4*,,,
 *2nd 5*,,,
-*2nd 6*,,,
-*2nd 7*,vin6a_de0,,vin6a_fld0
-*2nd 8*,,,
+*2nd 6*,vout2_d1,,
+*2nd 7*,,,vin6a_de0
+*2nd 8*,vin4a_d1,,
 *2nd 9*,,,
-*2nd 10*,i2c3_scl,,i2c3_sda
-*2nd 11*,pr2_mdio_data,,pr2_mdio_mdclk
-*2nd 12*,,,pr2_pru1_gpi7
-*2nd 13*,,,pr2_pru1_gpo7
-*2nd 14*,gpio7_30,,gpio7_31
+*2nd 10*,i2c4_scl,,i2c3_scl
+*2nd 11*,,,pr2_mdio_data
+*2nd 12*,,,
+*2nd 13*,,,
+*2nd 14*,gpio5_1,,gpio7_30
 *2nd 15*,Driver off,,Driver off
 ,===
 
-[[p9.41-p9.44]]
-===== 7.1.2.4 P9.41-P9.44
+[[p9.30-p9.31]]
+===== 7.1.2.4 P9.30-P9.31
 [%header,format=csv]
 ,===
-,P9.41,P9.42,,user led 0
-*GPIO*,180,114,,81
-*BALL*,C23,E14,,AF6
-*REG*,0x16A0,0x16E4,,0x1528
-*MODE 0*,xref_clk3,mcasp1_axr12,,vin1a_d13
-*1*,mcasp2_axr11,mcasp7_axr0,,vin1b_d2
-*2*,mcasp1_axr7,,,
-*3*,mcasp4_ahclkx,spi3_cs1,,
-*4*,mcasp8_ahclkx,,,vout3_d10
-*5*,,,,gpmc_a25
-*6*,vout2_de,,,
-*7*,hdq0,vin6a_d11,,
-*8*,vin4a_de0,,,
-*9*,clkout3,,,kbd_row7
-*10*,timer16,timer9,,pr1_edc_sync1_out
-*11*,,pr2_mii0_txd0,,
-*12*,,pr2_pru1_gpi14,,pr1_pru0_gpi10
-*13*,,pr2_pru1_gpo14,,pr1_pru0_gpo10
-*14*,gpio6_20,gpio4_18,,gpio3_17
-*15*,Driver off,Driver off,,Driver off
-*2nd BALL*,C1,C2,,
-*2nd REG*,0x1580,0x159C,,
-*2nd MODE 0*,vin2a_d6,vin2a_d13,,
-*2nd 1*,,,,
-*2nd 2*,,,,
-*2nd 3*,,rgmii1_txctl,,
-*2nd 4*,vout2_d17,vout2_d10,,
-*2nd 5*,emu16,,,
-*2nd 6*,,,,
-*2nd 7*,,,,
-*2nd 8*,mii1_rxd1,mii1_rxdv,,
-*2nd 9*,kbd_col3,kbd_row8,,
-*2nd 10*,eQEP2B_in,eQEP3A_in,,
-*2nd 11*,pr1_mii_mt1_clk,pr1_mii1_txd0,,
-*2nd 12*,pr1_pru1_gpi3,pr1_pru1_gpi10,,
-*2nd 13*,pr1_pru1_gpo3,pr1_pru1_gpo10,,
-*2nd 14*,gpio4_7,gpio4_14,,
-*2nd 15*,Driver off,Driver off,,
-,===
-
-[[p9.45-p9.46]]
-===== 7.1.2.4 P9.45-P9.46
-[%header,format=csv]
-,===
-,user led 1,user led 2
-*GPIO*,133,79
-*BALL*,J11,AG5
-*REG*,0x16C0,0x1520
-*MODE 0*,mcasp1_axr3,vin1a_d11
-*1*,mcasp6_axr3,vin1b_d4
-*2*,,
-*3*,uart6_rtsn,
-*4*,,vout3_d12
-*5*,,gpmc_a23
-*6*,vout2_d3,
-*7*,,
-*8*,vin4a_d3,
-*9*,,kbd_row5
-*10*,,pr1_edc_latch1_in
-*11*,,
-*12*,,pr1_pru0_gpi8
-*13*,,pr1_pru0_gpo8
-*14*,gpio5_5,gpio3_15
+,P9.30,P9.31
+*GPIO*,140,138
+*BALL*,B13,B12
+*REG*,0x16DC,0x16D4
+*MODE 0*,mcasp1_axr10,mcasp1_axr8
+*1*,mcasp6_aclkx,mcasp6_axr0
+*2*,mcasp6_aclkr,
+*3*,spi3_d0,spi3_sclk
+*4*,,
+*5*,,
+*6*,,
+*7*,vin6a_d13,vin6a_d15
+*8*,,
+*9*,,
+*10*,timer7,timer5
+*11*,pr2_mii0_txd2,pr2_mii0_txen
+*12*,pr2_pru1_gpi12,pr2_pru1_gpi10
+*13*,pr2_pru1_gpo12,pr2_pru1_gpo10
+*14*,gpio5_12,gpio5_10
 *15*,Driver off,Driver off
-*2nd BALL*,,
-*2nd REG*,,
-*2nd MODE 0*,,
+*2nd BALL*,,C14
+*2nd REG*,,0x16A4
+*2nd MODE 0*,,mcasp1_aclkx
 *2nd 1*,,
 *2nd 2*,,
 *2nd 3*,,
 *2nd 4*,,
 *2nd 5*,,
 *2nd 6*,,
-*2nd 7*,,
+*2nd 7*,,vin6a_fld0
 *2nd 8*,,
 *2nd 9*,,
-*2nd 10*,,
-*2nd 11*,,
-*2nd 12*,,
-*2nd 13*,,
-*2nd 14*,,
-*2nd 15*,,
+*2nd 10*,,i2c3_sda
+*2nd 11*,,pr2_mdio_mdclk
+*2nd 12*,,pr2_pru1_gpi7
+*2nd 13*,,pr2_pru1_gpo7
+*2nd 14*,,gpio7_31
+*2nd 15*,,Driver off
+,===
+
+[[p9.41-p9.42]]
+===== 7.1.2.4 P9.41-P9.42
+[%header,format=csv]
+,===
+,P9.41,P9.42
+*GPIO*,180,114
+*BALL*,C23,E14
+*REG*,0x16A0,0x16E4
+*MODE 0*,xref_clk3,mcasp1_axr12
+*1*,mcasp2_axr11,mcasp7_axr0
+*2*,mcasp1_axr7,
+*3*,mcasp4_ahclkx,spi3_cs1
+*4*,mcasp8_ahclkx,
+*5*,,
+*6*,vout2_de,
+*7*,hdq0,vin6a_d11
+*8*,vin4a_de0,
+*9*,clkout3,
+*10*,timer16,timer9
+*11*,,pr2_mii0_txd0
+*12*,,pr2_pru1_gpi14
+*13*,,pr2_pru1_gpo14
+*14*,gpio6_20,gpio4_18
+*15*,Driver off,Driver off
+*2nd BALL*,C1,C2
+*2nd REG*,0x1580,0x159C
+*2nd MODE 0*,vin2a_d6,vin2a_d13
+*2nd 1*,,
+*2nd 2*,,
+*2nd 3*,,rgmii1_txctl
+*2nd 4*,vout2_d17,vout2_d10
+*2nd 5*,emu16,
+*2nd 6*,,
+*2nd 7*,,
+*2nd 8*,mii1_rxd1,mii1_rxdv
+*2nd 9*,kbd_col3,kbd_row8
+*2nd 10*,eQEP2B_in,eQEP3A_in
+*2nd 11*,pr1_mii_mt1_clk,pr1_mii1_txd0
+*2nd 12*,pr1_pru1_gpi3,pr1_pru1_gpi10
+*2nd 13*,pr1_pru1_gpo3,pr1_pru1_gpo10
+*2nd 14*,gpio4_7,gpio4_14
+*2nd 15*,Driver off,Driver off
 ,===
 
 EOF

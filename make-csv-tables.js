@@ -147,42 +147,37 @@ function extractTables(table, rowCount) {
   );
   extractHeaders(table, 
     "P9.14-P9.16",
-    ["Board or signal detail","53","54","55"],
-    rows2ball
+    ["Board or signal detail","53","54","56"],
+    rows1ball
   );
   extractHeaders(table, 
     "P9.17-P9.19",
-    ["Board or signal detail","56","57","58"],
+    ["Board or signal detail","57","58","59"],
     rows2ball
   );
   extractHeaders(table, 
     "P9.20-P9.22",
-    ["Board or signal detail","59","60","61"],
+    ["Board or signal detail","60","61","62"],
     rows2ball
   );
   extractHeaders(table, 
-    "P9.23-P9.26",
-    ["Board or signal detail","62","63","64","65"],
+    "P9.23-P9.25",
+    ["Board or signal detail","63","64","65"],
+    rows1ball
+  );
+  extractHeaders(table, 
+    "P9.26-P9.29",
+    ["Board or signal detail","66","67","68","69"],
     rows2ball
   );
   extractHeaders(table, 
-    "P9.27-P9.29",
-    ["Board or signal detail","66","67","68"],
+    "P9.30-P9.31",
+    ["Board or signal detail","70","71"],
     rows2ball
   );
   extractHeaders(table, 
-    "P9.30-P9.32",
-    ["Board or signal detail","69","70","71"],
-    rows2ball
-  );
-  extractHeaders(table, 
-    "P9.41-P9.44",
-    ["Board or signal detail","82","83","84","85"],
-    rows2ball
-  );
-  extractHeaders(table, 
-    "P9.45-P9.46",
-    ["Board or signal detail","86","87"],
+    "P9.41-P9.42",
+    ["Board or signal detail","82","83"],
     rows2ball
   );
 }
