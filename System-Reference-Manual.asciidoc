@@ -1489,7 +1489,7 @@ P8.01 and P8.02 are ground pins.
 ,===
 
 [[p8.06-p8.09]]
-===== 7.1.1.2 P8.06-P8.09
+===== 7.1.1.3 P8.06-P8.09
 [%header,format=csv]
 ,===
 ,P8.06,P8.07,P8.08,P8.09
@@ -1515,7 +1515,7 @@ P8.01 and P8.02 are ground pins.
 ,===
 
 [[p8.10-p8.13]]
-===== 7.1.1.2 P8.10-P8.13
+===== 7.1.1.4 P8.10-P8.13
 [%header,format=csv]
 ,===
 ,P8.10,P8.11,P8.12,P8.13
@@ -1541,7 +1541,7 @@ P8.01 and P8.02 are ground pins.
 ,===
 
 [[p8.14-p8.16]]
-===== 7.1.1.2 P8.14-P8.16
+===== 7.1.1.5 P8.14-P8.16
 [%header,format=csv]
 ,===
 ,P8.14,P8.15,P8.16
@@ -1585,7 +1585,7 @@ P8.01 and P8.02 are ground pins.
 ,===
 
 [[p8.17-p8.19]]
-===== 7.1.1.2 P8.17-P8.19
+===== 7.1.1.6 P8.17-P8.19
 [%header,format=csv]
 ,===
 ,P8.17,P8.18,P8.19
@@ -1611,7 +1611,7 @@ P8.01 and P8.02 are ground pins.
 ,===
 
 [[p8.20-p8.22]]
-===== 7.1.1.2 P8.20-P8.22
+===== 7.1.1.7 P8.20-P8.22
 [%header,format=csv]
 ,===
 ,P8.20,P8.21,P8.22
@@ -1637,7 +1637,7 @@ P8.01 and P8.02 are ground pins.
 ,===
 
 [[p8.23-p8.26]]
-===== 7.1.1.2 P8.23-P8.26
+===== 7.1.1.8 P8.23-P8.26
 [%header,format=csv]
 ,===
 ,P8.23,P8.24,P8.25,P8.26
@@ -1663,7 +1663,7 @@ P8.01 and P8.02 are ground pins.
 ,===
 
 [[p8.27-p8.29]]
-===== 7.1.1.2 P8.27-P8.29
+===== 7.1.1.9 P8.27-P8.29
 [%header,format=csv]
 ,===
 ,P8.27,P8.28,P8.29
@@ -1707,7 +1707,7 @@ P8.01 and P8.02 are ground pins.
 ,===
 
 [[p8.30-p8.32]]
-===== 7.1.1.2 P8.30-P8.32
+===== 7.1.1.10 P8.30-P8.32
 [%header,format=csv]
 ,===
 ,P8.30,P8.31,P8.32
@@ -1751,7 +1751,7 @@ P8.01 and P8.02 are ground pins.
 ,===
 
 [[p8.33-p8.35]]
-===== 7.1.1.2 P8.33-P8.35
+===== 7.1.1.11 P8.33-P8.35
 [%header,format=csv]
 ,===
 ,P8.33,P8.34,P8.35
@@ -1795,7 +1795,7 @@ P8.01 and P8.02 are ground pins.
 ,===
 
 [[p8.36-p8.38]]
-===== 7.1.1.2 P8.36-P8.38
+===== 7.1.1.12 P8.36-P8.38
 [%header,format=csv]
 ,===
 ,P8.36,P8.37,P8.38
@@ -1839,7 +1839,7 @@ P8.01 and P8.02 are ground pins.
 ,===
 
 [[p8.39-p8.41]]
-===== 7.1.1.2 P8.39-P8.41
+===== 7.1.1.13 P8.39-P8.41
 [%header,format=csv]
 ,===
 ,P8.39,P8.40,P8.41
@@ -1865,7 +1865,7 @@ P8.01 and P8.02 are ground pins.
 ,===
 
 [[p8.42-p8.44]]
-===== 7.1.1.2 P8.42-P8.44
+===== 7.1.1.14 P8.42-P8.44
 [%header,format=csv]
 ,===
 ,P8.42,P8.43,P8.44
@@ -1891,7 +1891,7 @@ P8.01 and P8.02 are ground pins.
 ,===
 
 [[p8.45-p8.46]]
-===== 7.1.1.2 P8.45-P8.46
+===== 7.1.1.15 P8.45-P8.46
 [%header,format=csv]
 ,===
 ,P8.45,P8.46
@@ -2041,7 +2041,7 @@ only an output from BeagleBone AI to capes on BeagleBone AI.)
 ,===
 
 [[p9.14-p9.16]]
-===== 7.1.2.4 P9.14-P9.16
+===== 7.1.2.5 P9.14-P9.16
 [%header,format=csv]
 ,===
 ,P9.14,P9.15,P9.16
@@ -2067,7 +2067,7 @@ only an output from BeagleBone AI to capes on BeagleBone AI.)
 ,===
 
 [[p9.17-p9.19]]
-===== 7.1.2.4 P9.17-P9.19
+===== 7.1.2.6 P9.17-P9.19
 [%header,format=csv]
 ,===
 ,P9.17,P9.18,P9.19
@@ -2111,7 +2111,7 @@ only an output from BeagleBone AI to capes on BeagleBone AI.)
 ,===
 
 [[p9.20-p9.22]]
-===== 7.1.2.4 P9.20-P9.22
+===== 7.1.2.7 P9.20-P9.22
 [%header,format=csv]
 ,===
 ,P9.20,P9.21,P9.22
@@ -2155,7 +2155,7 @@ only an output from BeagleBone AI to capes on BeagleBone AI.)
 ,===
 
 [[p9.23-p9.25]]
-===== 7.1.2.4 P9.23-P9.25
+===== 7.1.2.8 P9.23-P9.25
 [%header,format=csv]
 ,===
 ,P9.23,P9.24,P9.25
@@ -2181,7 +2181,7 @@ only an output from BeagleBone AI to capes on BeagleBone AI.)
 ,===
 
 [[p9.26-p9.29]]
-===== 7.1.2.4 P9.26-P9.29
+===== 7.1.2.9 P9.26-P9.29
 [%header,format=csv]
 ,===
 ,P9.26,P9.27,P9.28,P9.29
@@ -2225,7 +2225,7 @@ only an output from BeagleBone AI to capes on BeagleBone AI.)
 ,===
 
 [[p9.30-p9.31]]
-===== 7.1.2.4 P9.30-P9.31
+===== 7.1.2.10 P9.30-P9.31
 [%header,format=csv]
 ,===
 ,P9.30,P9.31
@@ -2268,8 +2268,11 @@ only an output from BeagleBone AI to capes on BeagleBone AI.)
 *2nd 15*,,Driver off
 ,===
 
+[[p9.32-p9.40]]
+===== 7.1.2.11 P9.32-P9.40
+
 [[p9.41-p9.42]]
-===== 7.1.2.4 P9.41-P9.42
+===== 7.1.2.12 P9.41-P9.42
 [%header,format=csv]
 ,===
 ,P9.41,P9.42
@@ -2312,7 +2315,8 @@ only an output from BeagleBone AI to capes on BeagleBone AI.)
 *2nd 15*,Driver off,Driver off
 ,===
 
-EOF
+[[p9.43-p9.46]]
+===== 7.1.2.13 P9.43-P9.46
 
 [[cape-board-support]]
 == 8 Cape Board Support

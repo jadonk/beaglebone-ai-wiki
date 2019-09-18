@@ -34,6 +34,7 @@ function extractHeaders(table, title, columns, rows) {
   console.log("[[" + title.toLowerCase() + "]]");
   //console.log("===== 7.1.1." + tableId + " " + title);
   console.log("===== 7.1.2." + tableId + " " + title);
+  tableId++;
   console.log("[%header,format=csv]");
   console.log(",===");
   var newTable = [];
