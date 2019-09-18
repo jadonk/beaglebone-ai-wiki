@@ -39,10 +39,14 @@ function extractHeaders(table, title, columns, rows) {
     if(table[i]["Board or signal detail"] == "BeagleBone AI") {
       //console.error(JSON.stringify(table[i]));
       //console.log(columnTitles);
-      for(var k = 0; k < rows; k++) {
+      for(var k in rows) {
         var row = [];
         for(var j in columns) {
-          row.push(table[parseInt(i,10)+k][columns[j]]);
+          if(j == 0) {
+            row.push(rows[k]);
+          } else {
+            row.push(table[parseInt(i,10)+parseInt(k,10)][columns[j]]);
+          }
         }
         console.log(row.join(","));
       }
@@ -57,17 +61,20 @@ function extractTables(table, rowCount) {
   extractHeaders(table, 
     "",
     ["Board or signal detail","1","2","3"],
-    36
+    ["","GPIO","BALL","PINCTRL","MODE0","MODE1","MOdE2","MODE3","MODE4","MODE5","MODE6","MODE7","MODE8","MODE9","MODE10","MODE11","MODE12","MODE13","MODE14","MODE15",
+               "BALL","PINCTRL","MODE0","MODE1","MOdE2","MODE3","MODE4","MODE5","MODE6","MODE7","MODE8","MODE9","MODE10","MODE11","MODE12","MODE13","MODE14","MODE15"]
   );
   extractHeaders(table, 
     "",
     ["Board or signal detail","4","5","6"],
-    36
+    ["","GPIO","BALL","PINCTRL","MODE0","MODE1","MOdE2","MODE3","MODE4","MODE5","MODE6","MODE7","MODE8","MODE9","MODE10","MODE11","MODE12","MODE13","MODE14","MODE15",
+               "BALL","PINCTRL","MODE0","MODE1","MOdE2","MODE3","MODE4","MODE5","MODE6","MODE7","MODE8","MODE9","MODE10","MODE11","MODE12","MODE13","MODE14","MODE15"]
   );
   extractHeaders(table, 
     "",
     ["Board or signal detail","7","8","9"],
-    36
+    ["","GPIO","BALL","PINCTRL","MODE0","MODE1","MOdE2","MODE3","MODE4","MODE5","MODE6","MODE7","MODE8","MODE9","MODE10","MODE11","MODE12","MODE13","MODE14","MODE15",
+               "BALL","PINCTRL","MODE0","MODE1","MOdE2","MODE3","MODE4","MODE5","MODE6","MODE7","MODE8","MODE9","MODE10","MODE11","MODE12","MODE13","MODE14","MODE15"]
   );
 }
 

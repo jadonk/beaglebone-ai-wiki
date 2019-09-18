@@ -1449,127 +1449,134 @@ TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.
 
 [%header,format=csv]
 ,===
-BeagleBone AI,P8.03,P8.04,P8.05
+,P8.03,P8.04,P8.05
 GPIO,24,25,193
-AM5729 ABC ball,AB8,AB5,AC9
-AM5729 pinctrl register,0x179C,0x17A0,0x178C
-AM5729 mux mode 0,mmc3_dat6,mmc3_dat7,mmc3_dat2
-1,spi4_d0,spi4_cs0,spi3_cs0
-2,uart10_ctsn,uart10_rtsn,uart5_ctsn
-3,,,
-4,vin2b_de1,vin2b_clk1,vin2b_d3
-5,,,
-6,,,
-7,,,
-8,,,
-9,vin5a_hsync0,vin5a_vsync0,vin5a_d3
-10,ehrpwm3_tripzone_input,eCAP3_in_PWM3_out,eQEP3_index
-11,pr2_mii1_rxd1,pr2_mii1_rxd0,pr2_mii_mr1_clk
-12,pr2_pru0_gpi10,pr2_pru0_gpi11,pr2_pru0_gpi6
-13,pr2_pru0_gpo10,pr2_pru0_gpo11,pr2_pru0_gpo6
-14,gpio1_24,gpio1_25,gpio7_1
-15,Driver off,Driver off,Driver off
-AM5729 ABC 2nd ball,,,
-AM5729 2nd pinctrl register,,,
-AM5729 2nd ball mux mode 0,,,
-1,,,
-2,,,
-3,,,
-4,,,
-5,,,
-6,,,
-7,,,
-8,,,
-9,,,
-10,,,
-11,,,
-12,,,
-13,,,
+BALL,AB8,AB5,AC9
+PINCTRL,0x179C,0x17A0,0x178C
+MODE0,mmc3_dat6,mmc3_dat7,mmc3_dat2
+MODE1,spi4_d0,spi4_cs0,spi3_cs0
+MOdE2,uart10_ctsn,uart10_rtsn,uart5_ctsn
+MODE3,,,
+MODE4,vin2b_de1,vin2b_clk1,vin2b_d3
+MODE5,,,
+MODE6,,,
+MODE7,,,
+MODE8,,,
+MODE9,vin5a_hsync0,vin5a_vsync0,vin5a_d3
+MODE10,ehrpwm3_tripzone_input,eCAP3_in_PWM3_out,eQEP3_index
+MODE11,pr2_mii1_rxd1,pr2_mii1_rxd0,pr2_mii_mr1_clk
+MODE12,pr2_pru0_gpi10,pr2_pru0_gpi11,pr2_pru0_gpi6
+MODE13,pr2_pru0_gpo10,pr2_pru0_gpo11,pr2_pru0_gpo6
+MODE14,gpio1_24,gpio1_25,gpio7_1
+MODE15,Driver off,Driver off,Driver off
+BALL,,,
+PINCTRL,,,
+MODE0,,,
+MODE1,,,
+MOdE2,,,
+MODE3,,,
+MODE4,,,
+MODE5,,,
+MODE6,,,
+MODE7,,,
+MODE8,,,
+MODE9,,,
+MODE10,,,
+MODE11,,,
+MODE12,,,
+MODE13,,,
+MODE14,,,
+MODE15,,,
 ,===
 
 
 
 [%header,format=csv]
 ,===
-BeagleBone AI,P8.06,P8.07,P8.08
+,P8.06,P8.07,P8.08
 GPIO,194,165,166
-AM5729 ABC ball,AC3,G14,F14
-AM5729 pinctrl register,0x1790,0x16EC,0x16F0
-AM5729 mux mode 0,mmc3_dat3,mcasp1_axr14,mcasp1_axr15
-1,spi3_cs1,mcasp7_aclkx,mcasp7_fsx
-2,uart5_rtsn,mcasp7_aclkr,mcasp7_fsr
-3,,,
-4,vin2b_d2,,
-5,,,
-6,,,
-7,,vin6a_d9,vin6a_d8
-8,,,
-9,vin5a_d2,,
-10,eQEP3_strobe,timer11,timer12
-11,pr2_mii1_rxdv,pr2_mii0_rxdv,pr2_mii0_rxd3
-12,pr2_pru0_gpi7,pr2_pru1_gpi16,pr2_pru0_gpi20
-13,pr2_pru0_gpo7,pr2_pru1_gpo16,pr2_pru0_gpo20
-14,gpio7_2,gpio6_5,gpio6_6
-15,Driver off,Driver off,Driver off
-AM5729 ABC 2nd ball,,,
-AM5729 2nd pinctrl register,,,
-AM5729 2nd ball mux mode 0,,,
-1,,,
-2,,,
-3,,,
-4,,,
-5,,,
-6,,,
-7,,,
-8,,,
-9,,,
-10,,,
-11,,,
-12,,,
-13,,,
+BALL,AC3,G14,F14
+PINCTRL,0x1790,0x16EC,0x16F0
+MODE0,mmc3_dat3,mcasp1_axr14,mcasp1_axr15
+MODE1,spi3_cs1,mcasp7_aclkx,mcasp7_fsx
+MOdE2,uart5_rtsn,mcasp7_aclkr,mcasp7_fsr
+MODE3,,,
+MODE4,vin2b_d2,,
+MODE5,,,
+MODE6,,,
+MODE7,,vin6a_d9,vin6a_d8
+MODE8,,,
+MODE9,vin5a_d2,,
+MODE10,eQEP3_strobe,timer11,timer12
+MODE11,pr2_mii1_rxdv,pr2_mii0_rxdv,pr2_mii0_rxd3
+MODE12,pr2_pru0_gpi7,pr2_pru1_gpi16,pr2_pru0_gpi20
+MODE13,pr2_pru0_gpo7,pr2_pru1_gpo16,pr2_pru0_gpo20
+MODE14,gpio7_2,gpio6_5,gpio6_6
+MODE15,Driver off,Driver off,Driver off
+BALL,,,
+PINCTRL,,,
+MODE0,,,
+MODE1,,,
+MOdE2,,,
+MODE3,,,
+MODE4,,,
+MODE5,,,
+MODE6,,,
+MODE7,,,
+MODE8,,,
+MODE9,,,
+MODE10,,,
+MODE11,,,
+MODE12,,,
+MODE13,,,
+MODE14,,,
+MODE15,,,
 ,===
 
 
 
 [%header,format=csv]
 ,===
-BeagleBone AI,P8.09,P8.10,P8.11
+,P8.09,P8.10,P8.11
 GPIO,178,164,75
-AM5729 ABC ball,E17,A13,AH4
-AM5729 pinctrl register,0x1698,0x16E8,0x1510
-AM5729 mux mode 0,xref_clk1,mcasp1_axr13,vin1a_d7
-1,mcasp2_axr9,mcasp7_axr1,
-2,mcasp1_axr5,,
-3,mcasp2_ahclkx,,vout3_d0
-4,mcasp6_ahclkx,,vout3_d16
-5,,,
-6,,,
-7,vin6a_clk0,vin6a_d10,
-8,,,
-9,,,
-10,timer14,timer10,eQEP2B_in
-11,pr2_mii1_crs,pr2_mii_mr0_clk,
-12,pr2_pru1_gpi6,pr2_pru1_gpi15,pr1_pru0_gpi4
-13,pr2_pru1_gpo6,pr2_pru1_gpo15,pr1_pru0_gpo4
-14,gpio6_18,gpio6_4,gpio3_11
-15,Driver off,Driver off,Driver off
-AM5729 ABC 2nd ball,,,
-AM5729 2nd pinctrl register,,,
-AM5729 2nd ball mux mode 0,,,
-1,,,
-2,,,
-3,,,
-4,,,
-5,,,
-6,,,
-7,,,
-8,,,
-9,,,
-10,,,
-11,,,
-12,,,
-13,,,
+BALL,E17,A13,AH4
+PINCTRL,0x1698,0x16E8,0x1510
+MODE0,xref_clk1,mcasp1_axr13,vin1a_d7
+MODE1,mcasp2_axr9,mcasp7_axr1,
+MOdE2,mcasp1_axr5,,
+MODE3,mcasp2_ahclkx,,vout3_d0
+MODE4,mcasp6_ahclkx,,vout3_d16
+MODE5,,,
+MODE6,,,
+MODE7,vin6a_clk0,vin6a_d10,
+MODE8,,,
+MODE9,,,
+MODE10,timer14,timer10,eQEP2B_in
+MODE11,pr2_mii1_crs,pr2_mii_mr0_clk,
+MODE12,pr2_pru1_gpi6,pr2_pru1_gpi15,pr1_pru0_gpi4
+MODE13,pr2_pru1_gpo6,pr2_pru1_gpo15,pr1_pru0_gpo4
+MODE14,gpio6_18,gpio6_4,gpio3_11
+MODE15,Driver off,Driver off,Driver off
+BALL,,,
+PINCTRL,,,
+MODE0,,,
+MODE1,,,
+MOdE2,,,
+MODE3,,,
+MODE4,,,
+MODE5,,,
+MODE6,,,
+MODE7,,,
+MODE8,,,
+MODE9,,,
+MODE10,,,
+MODE11,,,
+MODE12,,,
+MODE13,,,
+MODE14,,,
+MODE15,,,
 ,===
+
 
 
 Notes regarding the resistors on muxed pins.
